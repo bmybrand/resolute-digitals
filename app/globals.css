@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@font-face {
+  font-family: 'Urbanist-Bold';
+  src: url('/fonts/Urbanist-Bold.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Urbanist-Regular';
+  src: url('/fonts/Urbanist-Regular.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Urbanist-ExtraLight';
+  src: url('/fonts/Urbanist-ExtraLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: 'Urbanist-Regular', sans-serif;
+  font-weight: 400;
+}
+.ExtraLight {
+  font-family: 'Urbanist-ExtraLight', sans-serif;
+}
+.bold {
+  font-family: 'Urbanist-Bold', sans-serif;
+}
+.regular {
+  font-family: 'Urbanist-Regular', sans-serif;
+}
+@keyframes spin-anticlockwise {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+@keyframes spin-clockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.spin-anticlockwise {
+  animation: spin-anticlockwise var(--spin-duration) linear infinite;
+}
+
+.spin-clockwise {
+  animation: spin-clockwise var(--spin-duration) linear infinite;
+}
+
