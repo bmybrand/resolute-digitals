@@ -3,7 +3,7 @@ import { useState } from "react";
 const cardsData = [
   {
     id: 1,
-    size: 3,
+    size:7,
     title: "Software Development",
     description:
       "We build scalable and secure software solutions tailored to your business goals - modern, efficient, and built to perform.",
@@ -11,13 +11,13 @@ const cardsData = [
     img: "/assets/Group 1597883106.svg",
     icon: "/assets/Group (3).svg",
     updatedIcon: "/assets/Group (16).svg",
-    contentWidth: "lg:w-[60%]",
+    contentWidth: "2xl:w-[55%]",
     imgClass:
       "absolute -right-15 -bottom-10 object-contain opacity-80 w-2/3 xl:w-1/2",
   },
   {
     id: 2,
-    size: 7,
+    size: 3,
     title: "App Development",
     description: "",
     cta: "Start with us",
@@ -30,7 +30,7 @@ const cardsData = [
   },
   {
     id: 3,
-    size: 7,
+    size: 3,
     title: "Digital Marketing",
     description:"",
     cta: "Start with us",
@@ -43,7 +43,7 @@ const cardsData = [
   },
   {
     id: 4,
-    size: 3,
+    size: 7,
     title: "Data & Operations",
     description:
       "We transform data into insight and streamline operations with analytics and intelligent business solutions.",
@@ -53,19 +53,19 @@ const cardsData = [
       "absolute -right-20 -bottom-10 object-contain opacity-80 w-1/2 lg:w-2/3 xl:w-1/2",
     icon: "/assets/Frame.svg",
     updatedIcon: "/assets/Frame2.svg",
-    contentWidth: "w-full lg:w-[65%]",
+    contentWidth: "w-full 2xl:w-[60%]",
     
   },
   
   {
     id: 5,
-    size: 7,
+    size: 2,
     title: "Design & Experience",
     description: "We design intuitive digital experiences that engage users, strengthen brands, and elevate every interaction.",
     cta: "Start with us",
     icon: "/assets/Group (9).svg",
     updatedIcon: "/assets/Group (13).svg",
-    contentWidth: "lg:w-full",
+    contentWidth: "w-full lg:w-[30%] xl:w-full",
     img: "/assets/Frame 1597883656.svg",
     imgClass:
       "absolute -right-4 bottom-0 object-contain opacity-80 w-1/2 lg:w-2/3 xl:w-full",
@@ -76,7 +76,7 @@ export default function BentoGridDynamic() {
   
   const [hovered, setHovered] = useState<number | null>(null);
   return (
-    <div className="flex flex-col xl:flex-row lg:flex-nowrap w-full lg:gap-4 xl:gap-4 gap-4 py-20 2xl:px-42">
+    <div className="flex flex-col xl:flex-row lg:flex-nowrap w-full lg:gap-4 xl:gap-4 gap-4 py-20 2xl:px-42 ">
 
       {/* LEFT CONTAINER */}
       <div className="w-full lg:w-full xl:w-[76%] flex flex-col gap-4 lg:h-[95vh]">
@@ -101,7 +101,7 @@ export default function BentoGridDynamic() {
                         : card.icon
                     }
                     alt=""
-                    className="w-8 h-8 xl:w-9 xl:h-9 transition-all duration-300"
+                    className="lg:w-8 lg:h-8 xl:w-9 xl:h-9 transition-all duration-300"
                   />
                 </div>
                 <h3 className="text-3xl bold">{card.title}</h3>
@@ -168,7 +168,7 @@ export default function BentoGridDynamic() {
           key={card.id}
            onMouseEnter={() => setHovered(card.id)}
               onMouseLeave={() => setHovered(null)}
-          className="relative w-full lg:w-full xl:w-[24%] bg-white/20 p-4 rounded-3xl shadow h-[60vh] xl:h-[95vh]
+          className="relative w-full lg:w-full xl:w-[24%] bg-white/20 p-4 rounded-3xl shadow h-[60vh] lg:h-[50vh] xl:h-[95vh]
                      bg-gradient-to-br from-[#2378DA] to-[#134074] border border-white/30 backdrop-blur-lg
                      hover:from-[#040E24] hover:to-[#052041] transition-all duration-300 text-white flex flex-col overflow-hidden"
         >
