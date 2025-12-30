@@ -79,7 +79,7 @@ export default function BentoGridDynamic() {
     <div className="flex flex-col xl:flex-row lg:flex-nowrap w-full lg:gap-4 xl:gap-4 gap-4 py-20 2xl:px-42 ">
 
       {/* LEFT CONTAINER */}
-      <div className="w-full lg:w-full xl:w-[76%] flex flex-col gap-4 lg:h-[95vh]">
+      <div className="w-full lg:w-full xl:w-[76%] flex flex-col gap-4 2xl:h-[90vh] xl:h-screen">
 
         {/* TOP HALF */}
         <div className="flex flex-col lg:flex-row gap-4  h-1/2">
@@ -101,7 +101,7 @@ export default function BentoGridDynamic() {
                         : card.icon
                     }
                     alt=""
-                    className="lg:w-8 lg:h-8 xl:w-9 xl:h-9 transition-all duration-300"
+                    className="w-7 h-7 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9 transition-all duration-300"
                   />
                 </div>
                 <h3 className="text-3xl bold">{card.title}</h3>
@@ -133,7 +133,7 @@ export default function BentoGridDynamic() {
                          hover:from-[#2378DA] hover:to-[#134074] transition-all duration-300 text-white flex flex-col overflow-hidden`}
             >
               <div className={`flex flex-col gap-4 ${card.contentWidth}`}>
-                <div className="w-17 h-17 rounded-full bg-white/20 flex items-center justify-center shadow">
+                <div className="w-15 h-15 xl:w-16 xl:h-16 rounded-full bg-white/20 flex items-center justify-center shadow">
                   <img
                     src={
                       hovered === card.id && card.updatedIcon
@@ -141,7 +141,7 @@ export default function BentoGridDynamic() {
                         : card.icon
                     }
                     alt=""
-                    className="w-9 h-9 transition-all duration-300"
+                    className="w-7 h-7 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9 transition-all duration-300"
                   />
                 </div>
                 <h3 className="text-3xl bold">{card.title}</h3>
@@ -168,12 +168,12 @@ export default function BentoGridDynamic() {
           key={card.id}
            onMouseEnter={() => setHovered(card.id)}
               onMouseLeave={() => setHovered(null)}
-          className="relative w-full lg:w-full xl:w-[24%] bg-white/20 p-4 rounded-3xl shadow h-[60vh] lg:h-[50vh] xl:h-[95vh]
+          className="relative w-full lg:w-full xl:w-[24%] bg-white/20 p-4 rounded-3xl shadow h-[60vh] lg:h-[50vh] 2xl:h-[90vh] xl:h-screen
                      bg-gradient-to-br from-[#2378DA] to-[#134074] border border-white/30 backdrop-blur-lg
                      hover:from-[#040E24] hover:to-[#052041] transition-all duration-300 text-white flex flex-col overflow-hidden"
         >
           <div className={`flex flex-col gap-4 ${card.contentWidth}`}>
-            <div className="w-17 h-17 rounded-full bg-white/20 flex items-center justify-center shadow">
+            <div className="w-15 h-15 xl:w-16 xl:h-16 rounded-full bg-white/20 flex items-center justify-center shadow">
               <img
                     src={
                       hovered === card.id && card.updatedIcon
@@ -181,7 +181,7 @@ export default function BentoGridDynamic() {
                         : card.icon
                     }
                     alt=""
-                    className="w-9 h-9 transition-all duration-300"
+                    className="w-7 h-7 xl:w-8 xl:h-8 2xl:w-9 2xl:h-9 transition-all duration-300"
                   />
             </div>
             <h3 className="text-3xl bold">{card.title}</h3>
