@@ -135,7 +135,7 @@ const Herobar: React.FC = () => {
         <div className="relative z-20 flex flex-col lg:flex-row justify-center flex-1 text-white gap-10 px-4   sm:px-8 lg:px-16 xl:px-30 ">
 
           {/* LEFT (text) */}
-          <div className="lg:w-1/2 w-full space-y-6 pl-0 xl:pl-10 pt-5 sm:pt-10 lg:pt-18 xl:pt-24 pb-10 flex flex-col items-start justify-center">
+          <div className="lg:w-1/2 w-full space-y-6 pl-0 2xl:pl-10 pt-5 sm:pt-10 lg:pt-18 xl:pt-24 pb-10 flex flex-col items-start justify-center">
             <div className="w-fit border border-transparent rounded-full bg-[#FFFFFF]/10 px-2 py-4 ExtraLight">
               <span className="px-6 py-3 rounded-full bg-[#FFFFFF] text-black bold text-xs lg:text-base">{sectionData.mainbubble}</span>
               <span className="px-4 text-xs lg:text-base">{sectionData.subbubble}</span>
