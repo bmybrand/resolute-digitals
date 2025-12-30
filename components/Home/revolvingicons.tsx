@@ -74,7 +74,7 @@ const RevolvingIcons: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col py-40 px-6 xl:px-53 bg-[url('/assets/Image.svg')] bg-no-repeat bg-cover bg-center h-230 relative overflow-hidden">
+    <div className="flex flex-col py-40 px-6 2xl:px-53 bg-[url('/assets/Image.svg')] bg-no-repeat bg-cover bg-center h-230 relative overflow-hidden">
 
       {/* Content Section */}
       <div className="flex flex-col xl:flex-row xl:gap-50 gap-4 lg:gap-12 z-10 relative ">

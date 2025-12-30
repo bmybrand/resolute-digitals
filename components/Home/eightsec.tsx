@@ -12,7 +12,7 @@ const eightsec = () => {
     <div className="flex flex-col  w-full bg-[url('/assets/Background.png')] bg-no-repeat bg-cover bg-center text-center regular justify-center items-center">
 
       {/* Main Content Section */}
-      <div className='flex flex-col w-full lg:w-[46%] justify-center items-center gap-6 mx-auto py-20 px-4'>
+      <div className='flex flex-col w-full lg:w-[80%] xl:w-[75%] 2xl:w-[46%] justify-center items-center gap-6 mx-auto py-20 px-4'>
         
         {/* Explore Badge */}
         <div className="flex flex-row justify-center items-center w-fit rounded-full bg-white/10 px-3 py-2">
@@ -52,7 +52,7 @@ const eightsec = () => {
         <p className='text-white text-xs lg:text-lg '>Smart Digital Solutions Designed for Measurable Growth</p>
         <img src="/assets/Group 1597883207.svg" alt="hello" className='w-20 lg:w-26' />
       </div>
-      <div className="w-full border-t border-white/30 py-4 lg:py-12 flex flex-wrap justify-center lg:justify-between items-center gap-8 px-6 lg:px-50 ">
+      <div className="w-full border-t border-white/30 py-4 lg:py-12 flex flex-wrap justify-center lg:justify-between items-center gap-8 px-6 xl:px-30 2xl:px-50">
   {features.map((feature, index) => (
     <div key={index} className="flex flex-col lg:flex-row items-center gap-3 text-center lg:text-left max-w-[350px]">
       <img src={feature.image} alt={feature.title} className="w-12 h-12 lg:w-15 lg:h-15" />

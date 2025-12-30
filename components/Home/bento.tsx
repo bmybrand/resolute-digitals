@@ -79,7 +79,7 @@ export default function BentoGridDynamic() {
     <div className="flex flex-col xl:flex-row lg:flex-nowrap w-full lg:gap-4 xl:gap-4 gap-4 py-20 2xl:px-42 ">
 
       {/* LEFT CONTAINER */}
-      <div className="w-full lg:w-full xl:w-[76%] flex flex-col gap-4 2xl:h-[90vh] xl:h-screen">
+      <div className="w-full lg:w-full xl:w-[76%] flex flex-col gap-4 lg:h-screen 2xl:h-[95vh]">
 
         {/* TOP HALF */}
         <div className="flex flex-col lg:flex-row gap-4  h-1/2">
@@ -168,7 +168,7 @@ export default function BentoGridDynamic() {
           key={card.id}
            onMouseEnter={() => setHovered(card.id)}
               onMouseLeave={() => setHovered(null)}
-          className="relative w-full lg:w-full xl:w-[24%] bg-white/20 p-4 rounded-3xl shadow h-[60vh] lg:h-[50vh] 2xl:h-[90vh] xl:h-screen
+          className="relative w-full lg:w-full xl:w-[24%] bg-white/20 p-4 rounded-3xl shadow h-[60vh] lg:h-[50vh] xl:h-screen 
                      bg-gradient-to-br from-[#2378DA] to-[#134074] border border-white/30 backdrop-blur-lg
                      hover:from-[#040E24] hover:to-[#052041] transition-all duration-300 text-white flex flex-col overflow-hidden"
         >
