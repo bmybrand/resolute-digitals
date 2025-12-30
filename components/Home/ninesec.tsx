@@ -33,7 +33,7 @@ const ninesec = () => {
   const section = sections[index];
 
   return (
-    <div className="lg:px-50 px-4 py-20 w-full">
+    <div className="2xl:px-50 px-5 py-20 w-full">
 
       {/* Top Heading */}
       <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 relative">
@@ -69,7 +69,7 @@ const ninesec = () => {
       {/* Main Image Section */}
       <div className="mt-20">
         <div
-          className="flex justify-center items-center w-full lg:h-[70vh] rounded-2xl p-5 relative transition-colors duration-500"
+          className="flex justify-center items-center w-full  rounded-2xl p-5 2xl:p-15 relative transition-colors duration-500"
           style={{ backgroundColor: section.bgColor }}
         >
           {/* Floating Icon */}
@@ -87,7 +87,7 @@ const ninesec = () => {
           <img
             src={section.mainImage}
             alt=""
-            className="max-h-full object-contain transition-all duration-500"
+            className="h-full object-contain transition-all duration-500"
           />
         </div>
 
