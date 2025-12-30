@@ -11,9 +11,9 @@ const cardsData = [
     img: "/assets/Group 1597883106.svg",
     icon: "/assets/Group (3).svg",
     updatedIcon: "/assets/Group (16).svg",
-    contentWidth: "lg:w-[55%]",
+    contentWidth: "lg:w-[60%]",
     imgClass:
-      "absolute -right-10 -bottom-10 object-contain opacity-80 w-2/3 xl:w-1/2",
+      "absolute -right-15 -bottom-10 object-contain opacity-80 w-2/3 xl:w-1/2",
   },
   {
     id: 2,
@@ -50,10 +50,10 @@ const cardsData = [
     cta: "Start with us",
     img: "/assets/Frame 1597883677.svg",
     imgClass:
-      "absolute -right-15 -bottom-10 object-contain opacity-80 w-1/2 lg:w-2/3 xl:w-1/2",
+      "absolute -right-20 -bottom-10 object-contain opacity-80 w-1/2 lg:w-2/3 xl:w-1/2",
     icon: "/assets/Frame.svg",
     updatedIcon: "/assets/Frame2.svg",
-    contentWidth: "w-full lg:w-[55%]",
+    contentWidth: "w-full lg:w-[65%]",
     
   },
   
@@ -76,13 +76,13 @@ export default function BentoGridDynamic() {
   
   const [hovered, setHovered] = useState<number | null>(null);
   return (
-    <div className="flex flex-col xl:flex-row lg:flex-nowrap w-full lg:gap-0 xl:gap-4 gap-4 py-20 2xl:px-42">
+    <div className="flex flex-col xl:flex-row lg:flex-nowrap w-full lg:gap-4 xl:gap-4 gap-4 py-20 2xl:px-42">
 
       {/* LEFT CONTAINER */}
-      <div className="w-full lg:w-full xl:w-[76%] flex flex-col gap-4 lg:h-[87vh]">
+      <div className="w-full lg:w-full xl:w-[76%] flex flex-col gap-4 lg:h-[95vh]">
 
         {/* TOP HALF */}
-        <div className="flex flex-col lg:flex-row gap-4  lg:h-1/2">
+        <div className="flex flex-col lg:flex-row gap-4  h-1/2">
           {cardsData.slice(0, 2).map((card) => (
             <div
               key={card.id}
@@ -101,7 +101,7 @@ export default function BentoGridDynamic() {
                         : card.icon
                     }
                     alt=""
-                    className="w-9 h-9 transition-all duration-300"
+                    className="w-8 h-8 xl:w-9 xl:h-9 transition-all duration-300"
                   />
                 </div>
                 <h3 className="text-3xl bold">{card.title}</h3>
@@ -122,7 +122,7 @@ export default function BentoGridDynamic() {
         </div>
 
         {/* BOTTOM HALF */}
-        <div className="flex flex-col lg:flex-row gap-4 xl:h-1/2">
+        <div className="flex flex-col lg:flex-row gap-4 h-1/2">
           {cardsData.slice(2, 4).map((card) => (
             <div
               key={card.id}
@@ -168,7 +168,7 @@ export default function BentoGridDynamic() {
           key={card.id}
            onMouseEnter={() => setHovered(card.id)}
               onMouseLeave={() => setHovered(null)}
-          className="relative w-full lg:w-full xl:w-[24%] bg-white/20 p-4 rounded-3xl shadow h-[60vh] xl:h-[87vh]
+          className="relative w-full lg:w-full xl:w-[24%] bg-white/20 p-4 rounded-3xl shadow h-[60vh] xl:h-[95vh]
                      bg-gradient-to-br from-[#2378DA] to-[#134074] border border-white/30 backdrop-blur-lg
                      hover:from-[#040E24] hover:to-[#052041] transition-all duration-300 text-white flex flex-col overflow-hidden"
         >

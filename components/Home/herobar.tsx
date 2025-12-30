@@ -132,7 +132,7 @@ const Herobar: React.FC = () => {
         <div className="absolute inset-0 bg-[#295EBF] mix-blend-saturation z-5 rounded-4xl" />
 
         {/* Main content */}
-        <div className="relative z-20 flex flex-col lg:flex-row justify-center flex-1 text-white gap-10 px-4   sm:px-8 lg:px-16 xl:px-20 ">
+        <div className="relative z-20 flex flex-col lg:flex-row justify-center flex-1 text-white gap-10 px-4   sm:px-8 lg:px-16 xl:px-30 ">
 
           {/* LEFT (text) */}
           <div className="lg:w-1/2 w-full space-y-6 pl-0 xl:pl-10 pt-5 sm:pt-10 lg:pt-18 xl:pt-24 pb-10 flex flex-col items-start justify-center">

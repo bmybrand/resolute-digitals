@@ -23,9 +23,14 @@ export const FloatingNav = ({
 
   // Set selected tab based on current route
   useEffect(() => {
-    const current = navItems.find((item) => item.link === pathname);
-    if (current) setSelectedTab(current.name);
-  }, [pathname, navItems]);
+  const current = navItems.find((item) =>
+    pathname === item.link || pathname.startsWith(item.link + "/")
+  );
+
+  if (current) setSelectedTab(current.name);
+  else setSelectedTab(null);
+}, [pathname, navItems]);
+
 
   // Show/hide navbar on scroll (disabled for Case Study)
   useMotionValueEvent(scrollYProgress, "change", (current) => {
