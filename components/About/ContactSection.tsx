@@ -22,7 +22,7 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-[#0F1930] py-16 px-5 xl:px-49">
+    <section className="bg-[#0F1930] py-16 px-5 2xl:px-49">
       <div className="mx-auto flex flex-col lg:flex-row gap-8 lg:gap-30">
 
         {/* Left: Contact Form */}

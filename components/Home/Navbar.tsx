@@ -25,6 +25,11 @@ export function FloatingNavDemo() {
     icon: <IconBriefcase className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
+    name: "Our Team",
+    link: "/OurTeam",
+    icon: <IconBriefcase className="h-4 w-4 text-neutral-500 dark:text-white" />,
+  },
+  {
     name: "Careers",
     link: "/careers",
     icon: <IconIdBadge className="h-4 w-4 text-neutral-500 dark:text-white" />,

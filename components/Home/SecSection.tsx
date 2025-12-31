@@ -18,7 +18,7 @@ const SecSection = () => {
         {/* Text */}
         <span className="px-3 text-white text-sm lg:text-lg">Our Digital Services</span>
       </div>
-      <h1 className="block bold text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-7xl text-white text-center py-10">Innovative Services for <br />
+      <h1 className="block bold text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-[58px] text-white text-center py-6">Innovative Services for <br />
 the Modern Business</h1>
      <BentoGrid />
     </div>

@@ -1,41 +1,41 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useState } from "react"
 
 const servicesData = [
   {
     title: "Software Development",
     image: "/assets/Group (6).svg",
     image1: "/assets/Group (7).svg",
-    link: "#",
+    link: "/services/software-development",
     bubbles: ["Desktop Apps", "Integrations", "Web Apps", "API Systems"],
   },
   {
     title: "App Development",
     image: "/assets/Group 1597883436 (1).svg ",
     image1: "/assets/Group 1597883436.svg",
-    link: "#",
+    link: "/services/app-development",
     bubbles: ["iOS Apps", "Android Apps", "Cross Platform", "App Testing"],
   },
   {
     title: "Design & Experience",
     image: "/assets/Group (9).svg",
     image1: "/assets/Group (8).svg",
-    link: "#",
+    link: "/services/design-experience",
     bubbles: ["UI/UX Design", "Brand Identity", "Visual Design", "Brand Strategy"],
   },
   {
     title: "Digital Marketing",
     image: "/assets/Group 1597883438 (1).svg",
     image1: "/assets/Group 1597883438.svg",
-    link: "#",
+    link: "/services/digital-marketing",
     bubbles: ["SEO Services", "Social Ads", "Paid Campaigns", "Email Marketing"],
   },
   {
     title: "Data & Operations",
     image: "/assets/Group (11).svg",
     image1: "/assets/Group (10).svg",
-    link: "#",
+    link: "/services/data-operations",
     bubbles: ["Data Analytics", "Automation", "Data Modeling", "CRM Systems"],
   },
 ]
@@ -44,7 +44,7 @@ const Services = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
-    <section className="mt-30 mb-30 lg:mt-95 px-6 sm:px-12 md:px-20 lg:px-28 xl:px-40">
+    <section className="mt-30 mb-30 px-6 sm:px-12 md:px-20 lg:px-28 xl:px-40">
       {/* Header */}
       <div className="flex flex-col justify-center items-center mb-16">
         <div className="flex items-center w-fit rounded-full bg-white/10 px-2 py-2 mb-4">
@@ -57,7 +57,7 @@ const Services = () => {
           </span>
         </div>
 
-        <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl xl:text-[58px] text-white text-center">
+        <h1 className="bold text-3xl sm:text-4xl md:text-5xl xl:text-[58px] text-white text-center">
           A{" "}
           <span className="bg-gradient-to-r from-[#2378DA] to-[#134074] bg-clip-text text-transparent">
             Proven Process
@@ -72,8 +72,7 @@ const Services = () => {
           <div
             key={index}
             className={`relative flex items-center justify-between gap-4 border-b border-[#4C5364] transition-all duration-300
-              ${hoveredIndex === index ? "py-16 sm:py-18 md:py-20" : "py-8 sm:py-10"}
-            `}
+              ${hoveredIndex === index ? "py-16 sm:py-18 md:py-20" : "py-8 sm:py-10"}`}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
@@ -119,10 +118,9 @@ const Services = () => {
             {/* Text */}
             <div className="flex-1 text-center px-2 sm:px-4">
               <h2
-                className={`font-semibold transition-colors
+                className={`font-bold transition-colors
                   text-sm sm:text-xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl
-                  ${hoveredIndex === index ? "text-white" : "text-[#4C5364]"}
-                `}
+                  ${hoveredIndex === index ? "text-white" : "text-[#4C5364]"}`}
               >
                 {service.title}
               </h2>

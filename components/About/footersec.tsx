@@ -4,7 +4,7 @@ const FooterSec = () => {
   return (
     <div className="flex flex-col items-center">
         <img src="/assets/Heading 1.svg" alt="" className="w-[70%] mt-10 lg:mt-30"/>
-    <footer className="bg-[#081733] text-white pt-16 pb-8 px-6 md:px-12 lg:px-20 rounded-3xl lg:m-20 lg:mt-0">
+    <footer className="bg-[#081733] text-white pt-16 pb-8 px-6 md:px-12 lg:px-20 rounded-3xl lg:m-5 xl:m-9 ">
         
       {/* Newsletter Subscription */}
       <div className="flex flex-col md:flex-row justify-between gap-8 mb-12  mx-auto">

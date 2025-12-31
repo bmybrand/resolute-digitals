@@ -51,7 +51,7 @@ export default function AlternatingBelt() {
         }
       `}</style>
 
-      <div className="relative h-[480px] xl:px-49 mx-auto overflow-hidden rounded-2xl p-4 flex gap-3 lg:gap-6 justify-center my-30">
+      <div className="relative h-[480px] 2xl:px-49 mx-auto overflow-hidden rounded-2xl p-4 flex gap-3 lg:gap-6 justify-center my-30">
         {/* Top & bottom fade overlay */}
 <div className="pointer-events-none absolute inset-0 z-10">
   <div className="absolute top-4 left-0 w-full h-44 bg-gradient-to-b from-[#000A21] to-transparent" />

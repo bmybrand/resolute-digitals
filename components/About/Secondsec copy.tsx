@@ -5,7 +5,7 @@ export const Secondseccopy = () => {
     <div
       className="
         flex flex-col lg:flex-row 
-        mx-4 sm:mx-6 md:mx-12 lg:mx-28 xl:mx-49 
+        mx-5   2xl:mx-49 
         mt-12 sm:mt-16 md:mt-24 lg:mt-40 
         pb-8 sm:pb-10 md:pb-14 lg:pb-20 
         gap-8 sm:gap-12 md:gap-20 lg:gap-30 
