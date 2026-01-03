@@ -4,7 +4,7 @@ const teamMembers = [
   {
     name: "Abdul Rafay",
     role: "WordPress Developer",
-    img: "/assets/Vector 186 (1).svg",
+    img: "/assets/Vector 186 (7).svg",
     linkedin: "https://www.linkedin.com/in/alice-johnson",
   },
   {
