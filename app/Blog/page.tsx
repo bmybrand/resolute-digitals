@@ -1,5 +1,5 @@
 import {Underdev} from "@/components/errorOrUnderdevelopment/Underdev";
 
-export default function ContactPage() {
+export default function BlogPage() {
   return <Underdev />;
 }
