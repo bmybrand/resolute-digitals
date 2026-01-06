@@ -6,8 +6,8 @@ import Forthsec from "./forthsec";
 import FaqSection from "./FaqSection";
 import WorkTogether from "../workTogether";
 import Rewiewcards from "../rewiewcards";
-import ContactSection from "../ContactSection";
-import Footersec from "../footersec";
+import ContactSection from "../../About/ContactSection";
+import Footersec from "../../Home/footersec";
 
 export default function Softwaredev() {
   return (
