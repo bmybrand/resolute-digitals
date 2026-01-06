@@ -46,7 +46,7 @@ const Fifthsec = () => {
   return (
     <div
       ref={sectionRef}
-      className="relative flex flex-col items-center py-10 bg-[url('/assets/Group1597883157.png')] bg-no-repeat bg-cover bg-center h-fit min-h-[130vh] overflow-hidden"
+      className="relative flex flex-col items-center pb-40 sm:pb-80 md:pb-100 lg:pb-100 xl:pb-10 py-10 bg-[url('/assets/Group1597883157.png')] bg-no-repeat bg-cover bg-center lg:h-fit min-h-[130vh] overflow-hidden"
     >
       <img
         ref={rocketRef}

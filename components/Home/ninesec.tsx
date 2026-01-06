@@ -69,7 +69,7 @@ const ninesec = () => {
       {/* Main Image Section */}
       <div className="mt-20">
         <div
-          className="flex justify-center items-center w-full h-[75vh] rounded-2xl p-5 2xl:p-15 relative transition-colors duration-500"
+          className="flex justify-center items-center w-full xl:h-[75vh] rounded-2xl p-5 2xl:p-15 relative transition-colors duration-500"
           style={{ backgroundColor: section.bgColor }}
         >
           {/* Floating Icon */}

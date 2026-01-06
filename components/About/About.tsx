@@ -10,8 +10,7 @@ import WorkTogether from "./workTogether";
 import InfiniteMultiColumnScroll from "./InfiniteMultiColumnScroll"
 import Rewiewcards from "./rewiewcards";
 import ContactSection from "./ContactSection";
-import Footersec from "./footersec";
-
+import Footersec from "../Home/footersec";
 export default function AboutPage() {
   return (
     <div className="bg-[#000A21] min-h-[600vh]">

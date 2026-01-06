@@ -4,7 +4,7 @@ import Theteam from "./theteam";
 import WorkTogether from "../About/workTogether";
 import Rewiewcards from "../Home/rewiewcards";
 import ContactSection from "../About/ContactSection";
-import Footersec from "../services/footersec";
+import Footersec from "../Home/footersec";
 
 
 export default function OurTeamPage() {

@@ -2,8 +2,9 @@ import { FloatingNavDemo } from "../Home/Navbar";
 import Herosec from "./herosec"
 import Servies from "./servies";
 import Rewiewcards from "./rewiewcards";
-import ContactSection from "./ContactSection";
-import Footersec from "./footersec";
+import ContactSection from "../About/ContactSection";
+
+import Footersec from "../Home/footersec";
 
 import WorkTogether from "./workTogether";
 

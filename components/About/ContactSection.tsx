@@ -2,6 +2,13 @@
 
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa";
 
 interface ContactFormData {
   name: string;
@@ -163,8 +170,8 @@ const ContactSection: React.FC = () => {
   <div className="mb-6 text-white">
     <h2 className="text-[28px] sm:text-[32px] lg:text-[40px] font-bold mb-6 text-[#2378DA]">
 Head Office</h2>
-    <p className="text-[19px]">📧 info@resolutedigitals.com</p>
-    <p className="mt-2 text-[19px]">📞 +1 (800) 465-7890</p>
+    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/svgviewer-output (1).svg" alt="" className="w-6"/> info@resolutedigitals.com</p>
+    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/svgviewer-output.svg" alt="" className="w-6"/> +1 (800) 465-7890</p>
     <p className="mt-2 text-[19px] opacity-80">
       Plot No. E-88, Block B Gulshan e Jamal, Karachi, 75260
     </p>
@@ -174,8 +181,8 @@ Head Office</h2>
   <div className="mb-6 text-white ">
     <h2 className="text-[28px] sm:text-[32px] lg:text-[40px] font-bold mb-6 text-[#2378DA]">
 US Office</h2>
-    <p className="text-[19px]">📧 info@resolutedigitals.com</p>
-    <p className="mt-2 text-[19px]">📞 +1 (800) 465-7890</p>
+    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/svgviewer-output (1).svg" alt="" className="w-6"/> info@resolutedigitals.com</p>
+    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/svgviewer-output.svg" alt="" className="w-6"/> +1 (800) 465-7890</p>
     <p className="mt-2 text-[19px] opacity-80">
       738, Fawn Valley Dr., Allen, TX 75002, United States
     </p>
@@ -184,54 +191,58 @@ US Office</h2>
 
     <h2 className="text-[28px] sm:text-[32px] lg:text-[40px] font-bold mb-6 text-[#2378DA]">
 Stay Connected</h2>
-  {/* Social Media Bubbles */}
-  <div className="flex flex-wrap gap-4 mt-6">
+  
 
-    {/* Facebook */}
-    <a
-      href="#"
-      className="flex items-center gap-2 px-4 py-2 border border-[#2378DA] bg-transparent rounded-full hover:bg-[#2378DA] transition"
-    >
-      <img src="/assets/facebook.svg" alt="Facebook" className="w-5 h-5" />
-      <span className="text-white font-semibold">Facebook</span>
-    </a>
+{/* Social Media Bubbles */}
+<div className="flex flex-wrap gap-4 mt-6">
 
-    {/* Twitter */}
-    <a
-      href="#"
-      className="flex items-center gap-2 px-4 py-2 border border-[#1DA1F2] bg-transparent rounded-full hover:bg-[#1DA1F2] transition"
-    >
-      <img src="/assets/twitter.svg" alt="Twitter" className="w-5 h-5" />
-      <span className="text-white font-semibold">Twitter</span>
-    </a>
+  {/* Facebook */}
+  <a
+    href="#"
+    className="flex items-center gap-2 px-4 py-2 border border-[#2378DA] rounded-full hover:bg-[#2378DA] transition"
+  >
+    <FaFacebookF className="w-4 h-4 text-white" />
+    <span className="text-white font-semibold">Facebook</span>
+  </a>
 
-    {/* Instagram */}
-    <a
-      href="#"
-      className="flex items-center gap-2 px-4 py-2 border border-pink-500 bg-transparent rounded-full hover:bg-gradient-to-r hover:from-pink-500 hover:to-yellow-500 transition"
-    >
-      <img src="/assets/instagram.svg" alt="Instagram" className="w-5 h-5" />
-      <span className="text-white font-semibold">Instagram</span>
-    </a>
+  {/* Twitter */}
+  <a
+    href="#"
+    className="flex items-center gap-2 px-4 py-2 border border-[#1DA1F2] rounded-full hover:bg-[#1DA1F2] transition"
+  >
+    <FaTwitter className="w-4 h-4 text-white" />
+    <span className="text-white font-semibold">Twitter</span>
+  </a>
 
-    {/* LinkedIn */}
-    <a
-      href="#"
-      className="flex items-center gap-2 px-4 py-2 border border-[#0A66C2] bg-transparent rounded-full hover:bg-[#0A66C2] transition"
-    >
-      <img src="/assets/linkedin.svg" alt="LinkedIn" className="w-5 h-5" />
-      <span className="text-white font-semibold">LinkedIn</span>
-    </a>
+  {/* Instagram */}
+  <a
+    href="#"
+    className="flex items-center gap-2 px-4 py-2 border border-pink-500 rounded-full hover:bg-gradient-to-r hover:from-pink-500 hover:to-yellow-500 transition"
+  >
+    <FaInstagram className="w-4 h-4 text-white" />
+    <span className="text-white font-semibold">Instagram</span>
+  </a>
 
-    {/* YouTube */}
-    <a
-      href="#"
-      className="flex items-center gap-2 px-4 py-2 border border-red-600 bg-transparent rounded-full hover:bg-red-600 transition"
-    >
-      <img src="/assets/youtube.svg" alt="YouTube" className="w-5 h-5" />
-      <span className="text-white font-semibold">YouTube</span>
-    </a>
-  </div>
+  {/* LinkedIn */}
+  <a
+    href="#"
+    className="flex items-center gap-2 px-4 py-2 border border-[#0A66C2] rounded-full hover:bg-[#0A66C2] transition"
+  >
+    <FaLinkedinIn className="w-4 h-4 text-white" />
+    <span className="text-white font-semibold">LinkedIn</span>
+  </a>
+
+  {/* YouTube */}
+  <a
+    href="#"
+    className="flex items-center gap-2 px-4 py-2 border border-red-600 rounded-full hover:bg-red-600 transition"
+  >
+    <FaYoutube className="w-4 h-4 text-white" />
+    <span className="text-white font-semibold">YouTube</span>
+  </a>
+
+</div>
+
 </div>
 
 
