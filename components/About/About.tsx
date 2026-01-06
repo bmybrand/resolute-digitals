@@ -3,7 +3,7 @@ import Herosec from "./herosec";
 import { Secondseccopy } from "./Secondsec copy";
 import { Secondsec } from "./Secondsec";
 import HorizontalTimeline from "./Horizontaltimeline";
-import Servies from "./servies";
+import Servies from "../services/servies";
 import HowWorkSec from "./howworksec";
 import { div } from "motion/react-client";
 import WorkTogether from "./workTogether";

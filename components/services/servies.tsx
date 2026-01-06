@@ -3,6 +3,13 @@
 import React, { useState } from "react"
 
 const servicesData = [
+   {
+    title: "AI-Driven Solutions",
+    image: "/assets/Group 1597883443 (1).svg",
+    image1: "/assets/Group 1597883443.svg",
+    link: "/services/ai-driven",
+    bubbles: ["AI Automation", "AI Integration", "AI-Solutions", "Intelligent Workflows"],
+  },
   {
     title: "Software Development",
     image: "/assets/Group (6).svg",
@@ -37,6 +44,20 @@ const servicesData = [
     image1: "/assets/Group (10).svg",
     link: "/services/data-operations",
     bubbles: ["Data Analytics", "Automation", "Data Modeling", "CRM Systems"],
+  },
+  {
+    title: "REIT Data Research",
+    image: "/assets/Group 1597883952 (1).svg",
+    image1: "/assets/Group 1597883952.svg",
+    link: "/services/data-research",
+    bubbles: ["Sustainability", "Green Certifications", "Asset Details", "ESG Data QC"],
+  },
+  {
+    title: "US Property Taxation",
+    image: "/assets/Group 1597883953 (1).svg",
+    image1: "/assets/Group 1597883953.svg",
+    link: "/services/property-taxation",
+    bubbles: ["Reassessments", "Tax Jurisdictions", "Asset Classification", "Tax Rates"],
   },
 ]
 
