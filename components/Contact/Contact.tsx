@@ -3,7 +3,7 @@ import Herosec from './herosec'
 import { FloatingNavDemo } from '../Home/Navbar'
 import Offices from './Offices'
 import ContactForm from './ContactForm'
-import Footersec from '../services/footersec'
+import Footersec from '../Home/footersec'
 
 const Contact = () => {
   return (
