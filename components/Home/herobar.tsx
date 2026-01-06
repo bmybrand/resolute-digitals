@@ -184,7 +184,7 @@ const Herobar: React.FC = () => {
             <img
   src={sectionData.mainimg}
   alt="Hero Illustration"
-  className="w-auto h-auto  relative z-10 pointer-events-none select-none rounded-4xl"
+  className="w-auto h-auto  relative z-10 pointer-events-none select-none "
 />
 
           </div>
