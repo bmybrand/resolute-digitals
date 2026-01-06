@@ -39,12 +39,17 @@ const servicesData = [
     bubbles: ["SEO Services", "Social Ads", "Paid Campaigns", "Email Marketing"],
   },
   {
-    title: "Data & Operations",
+    title: "Ops & IT Support",
     image: "/assets/Group (11).svg",
     image1: "/assets/Group (10).svg",
     link: "/services/data-operations",
-    bubbles: ["Data Analytics", "Automation", "Data Modeling", "CRM Systems"],
-  },
+    bubbles: [
+  "Network Management",
+  "Server Monitoring",
+  "Cloud Operations",
+  "Patch Management",
+]
+,},
   {
     title: "REIT Data Research",
     image: "/assets/Group 1597883952 (1).svg",

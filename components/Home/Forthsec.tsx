@@ -47,8 +47,7 @@ export const Forthsec = () => {
         {/* Paragraphs */}
         <p className='text-base sm:text-lg text-[#A9ABBE] leading-7 sm:leading-8 regular pb-10 
     border-b border-[#3f3f3f]'>
-          Get unmatched clarity across global real estate markets with precise, investor-ready data. We provide deep visibility into property performance, sustainability metrics, and regulatory requirements-helping asset managers, REITs, and financial institutions make confident, compliant, and forward-looking decisions. From ESG certifications to complex cross-border tax insights, our team delivers the accuracy and transparency modern real estate portfolios demand.
-        </p>
+         Get unmatched clarity across real estate portfolios with structured, institutional-grade data. We provide deep visibility into property fundamentals, sustainability metrics, and climate-related insights—helping REITs, asset managers, and institutional data consumers make confident, compliant, and forward-looking decisions.From property-level identifiers and asset characteristics to ESG disclosures, green asset analytics, and portfolio-level sustainability indicators, we transform complex and fragmented information into standardized, reliable datasets designed for benchmarking, analysis, and long-term portfolio strategy.  </p>
 
       
         <div className="flex flex-row gap-7 pt-10">
