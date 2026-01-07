@@ -65,7 +65,7 @@ const servicesData = [
     bubbles: ["Reassessments", "Tax Jurisdictions", "Asset Classification", "Tax Rates"],
   },
 ]
-
+export const dynamic = 'force-static'
 const Services = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 

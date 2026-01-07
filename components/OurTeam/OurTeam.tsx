@@ -5,7 +5,7 @@ import WorkTogether from "../About/workTogether";
 import Rewiewcards from "../Home/rewiewcards";
 import ContactSection from "../About/ContactSection";
 import Footersec from "../Home/footersec";
-
+export const dynamic = 'force-static'
 
 export default function OurTeamPage() {
   return (

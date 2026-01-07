@@ -8,7 +8,7 @@ import WorkTogether from "../workTogether";
 import Rewiewcards from "../rewiewcards";
 import ContactSection from "../../About/ContactSection";
 import Footersec from "../../Home/footersec";
-
+export const dynamic = 'force-static'
 export default function Softwaredev() {
   return (
     <div className="bg-[#000A21]  ">

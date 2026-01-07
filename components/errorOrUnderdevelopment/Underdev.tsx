@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-
+export const dynamic = 'force-static'
 export const Underdev = () => {
   return (
     <div className="bg-[#000A21] p-5 xl:py-9 xl:px-34 lg:pt-20 flex justify-center items-center h-screen relative overflow-hidden gap-15">

@@ -11,6 +11,7 @@ import InfiniteMultiColumnScroll from "./InfiniteMultiColumnScroll"
 import Rewiewcards from "./rewiewcards";
 import ContactSection from "./ContactSection";
 import Footersec from "../Home/footersec";
+export const dynamic = 'force-static'
 export default function AboutPage() {
   return (
     <div className="bg-[#000A21] min-h-[600vh]">

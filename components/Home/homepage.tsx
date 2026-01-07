@@ -10,6 +10,7 @@ import Eightsec from "@/components/Home/eightsec";
 import Ninesec from "@/components/Home/ninesec";
 import Rewiewcards from "@/components/Home/rewiewcards";
 import Footersec from "@/components/Home/footersec";
+export const dynamic = 'force-static'
 
 export default function HomePage() {
   return (

@@ -13,7 +13,7 @@ const cardsData = [
     updatedIcon: "/assets/Group (16).svg",
     contentWidth: "2xl:w-[55%]",
     imgClass:
-      "absolute -right-15 -bottom-10 object-contain opacity-80 w-2/3 xl:w-1/2",
+      "absolute -right-15 -bottom-10 object-contain opacity-80 w-3/5 xl:w-1/2",
   },
   {
     id: 2,
@@ -50,7 +50,7 @@ const cardsData = [
     cta: "Start with us",
     img: "/assets/Frame 1597883677.svg",
     imgClass:
-      "absolute -right-20 -bottom-10 object-contain opacity-80 w-1/2 lg:w-2/3 xl:w-1/2",
+      "absolute -right-20 -bottom-10 object-contain opacity-80 w-1/2 lg:w-2/3 xl:w-2/5",
     icon: "/assets/Frame.svg",
     updatedIcon: "/assets/Frame2.svg",
     contentWidth: "w-full 2xl:w-[60%]",
@@ -63,8 +63,8 @@ const cardsData = [
     title: "Design & Experience",
     description: "We design intuitive digital experiences that engage users, strengthen brands, and elevate every interaction.",
     cta: "Start with us",
-    icon: "/assets/Group (9).svg",
-    updatedIcon: "/assets/Group (13).svg",
+    icon: "/assets/Group (13).svg",
+    updatedIcon: "/assets/Group (9).svg",
     contentWidth: "w-full lg:w-[30%] xl:w-full",
     img: "/assets/Frame 1597883656.svg",
     imgClass:
@@ -79,7 +79,7 @@ export default function BentoGridDynamic() {
     <div className="flex flex-col xl:flex-row lg:flex-nowrap w-full lg:gap-4 xl:gap-4 gap-4 py-20 2xl:px-42 ">
 
       {/* LEFT CONTAINER */}
-      <div className="w-full lg:w-full xl:w-[76%] flex flex-col gap-4 lg:h-screen 2xl:h-[95vh]">
+      <div className="w-full lg:w-full xl:w-[76%] flex flex-col gap-4 lg:h-screen 2xl:h-[85vh]">
 
         {/* TOP HALF */}
         <div className="flex flex-col lg:flex-row gap-4  h-1/2">
@@ -168,7 +168,7 @@ export default function BentoGridDynamic() {
           key={card.id}
            onMouseEnter={() => setHovered(card.id)}
               onMouseLeave={() => setHovered(null)}
-          className="relative w-full lg:w-full xl:w-[24%] bg-white/20 p-4 rounded-3xl shadow h-[60vh] lg:h-[50vh] xl:h-screen 2xl:h-[95vh]
+          className="relative w-full lg:w-full xl:w-[24%] bg-white/20 p-4 rounded-3xl shadow h-[60vh] lg:h-[50vh] xl:h-screen 2xl:h-[85vh]
                      bg-gradient-to-br from-[#2378DA] to-[#134074] border border-white/30 backdrop-blur-lg
                      hover:from-[#040E24] hover:to-[#052041] transition-all duration-300 text-white flex flex-col overflow-hidden"
         >

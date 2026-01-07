@@ -4,7 +4,7 @@ import { FloatingNavDemo } from '../Home/Navbar'
 import Offices from './Offices'
 import ContactForm from './ContactForm'
 import Footersec from '../Home/footersec'
-
+export const dynamic = 'force-static'
 const Contact = () => {
   return (
     <div className="bg-[#000A21] ">
