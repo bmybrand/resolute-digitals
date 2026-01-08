@@ -1,15 +1,15 @@
-import { FloatingNavDemo } from "@/components/Home/Navbar";
-import Herobar from "@/components/Home/herobar";
-import SecSection from "@/components/Home/SecSection";
-import { Thirdsec } from "@/components/Home/Thirdsec";
-import { Forthsec } from "@/components/Home/Forthsec";
-import  Fifthsec  from "@/components/Home/Fifthsec";
-import Revolvingicons from "@/components/Home/revolvingicons";
-import Sevensection from "@/components/Home/sevensection";
-import Eightsec from "@/components/Home/eightsec";
-import Ninesec from "@/components/Home/ninesec";
-import Rewiewcards from "@/components/Home/rewiewcards";
-import Footersec from "@/components/Home/footersec";
+import { FloatingNavDemo } from "@/components/home/Navbar";
+import Herobar from "@/components/home/herobar";
+import SecSection from "@/components/home/SecSection";
+import { Thirdsec } from "@/components/home/Thirdsec";
+import { Forthsec } from "@/components/home/Forthsec";
+import  Fifthsec  from "@/components/home/Fifthsec";
+import Revolvingicons from "@/components/home/revolvingicons";
+import Sevensection from "@/components/home/sevensection";
+import Eightsec from "@/components/home/eightsec";
+import Ninesec from "@/components/home/ninesec";
+import Rewiewcards from "@/components/home/rewiewcards";
+import Footersec from "@/components/home/footersec";
 export const dynamic = 'force-static'
 
 export default function HomePage() {

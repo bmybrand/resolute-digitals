@@ -1,4 +1,4 @@
-import OurTeam from "@/components/OurTeam/OurTeam"
+import OurTeam from "@/components/ourteam/OurTeam"
 
 
 const OurTeamPage = () => {

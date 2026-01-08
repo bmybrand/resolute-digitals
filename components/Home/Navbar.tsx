@@ -21,27 +21,27 @@ export function FloatingNavDemo() {
   },
   {
     name: "Case study",
-    link: "/Casestudy",
+    link: "/casestudy",
     icon: <IconBriefcase className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
     name: "Our Team",
-    link: "/OurTeam",
+    link: "/ourteam",
     icon: <IconBriefcase className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
     name: "Careers",
-    link: "/Careers",
+    link: "/careers",
     icon: <IconIdBadge className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
     name: "Blog",
-    link: "/Blog",
+    link: "/blog",
     icon: <IconBook className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
   {
     name: "Contact",
-    link: "/Contact",
+    link: "/contact",
     icon: <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />,
   },
 ];

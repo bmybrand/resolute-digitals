@@ -1,10 +1,10 @@
-import { FloatingNavDemo } from "@/components/Home/Navbar";
+import { FloatingNavDemo } from "@/components/home/Navbar";
 import Herosec from "./herosec";
 import Theteam from "./theteam";
-import WorkTogether from "../About/workTogether";
-import Rewiewcards from "../Home/rewiewcards";
-import ContactSection from "../About/ContactSection";
-import Footersec from "../Home/footersec";
+import WorkTogether from "../about/workTogether";
+import Rewiewcards from "../home/rewiewcards";
+import ContactSection from "../about/ContactSection";
+import Footersec from "../home/footersec";
 export const dynamic = 'force-static'
 
 export default function OurTeamPage() {

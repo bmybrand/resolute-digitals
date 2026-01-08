@@ -1,5 +1,5 @@
 import React from 'react';
-import { FloatingNavDemo } from '../Home/Navbar';
+import { FloatingNavDemo } from '../home/Navbar';
 
 const Notfound = () => {
   return (

@@ -1,4 +1,4 @@
-import Casestudy from "@/components/Casestudy/Casestudy"
+import Casestudy from "@/components/casestudy/Casestudy"
 
 const Casestudypage = () => {
   return (

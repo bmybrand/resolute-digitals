@@ -1,10 +1,10 @@
-import { FloatingNavDemo } from "../Home/Navbar";
+import { FloatingNavDemo } from "../home/Navbar";
 import Herosec from "./herosec"
 import Servies from "./servies";
 import Rewiewcards from "./rewiewcards";
-import ContactSection from "../About/ContactSection";
+import ContactSection from "../about/ContactSection";
 
-import Footersec from "../Home/footersec";
+import Footersec from "../home/footersec";
 
 import WorkTogether from "./workTogether";
 
