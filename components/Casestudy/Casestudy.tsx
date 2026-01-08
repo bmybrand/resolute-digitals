@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { FloatingNavDemo } from "../home/Navbar";
+import { FloatingNavDemo } from "../Home/Navbar";
 export const dynamic = 'force-static'
 
 gsap.registerPlugin(ScrollTrigger);
@@ -236,3 +236,4 @@ const Casestudy: React.FC = () => {
 };
 
 export default Casestudy;
+

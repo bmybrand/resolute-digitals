@@ -1,4 +1,4 @@
-import { FloatingNavDemo } from "@/components/home/Navbar";
+import { FloatingNavDemo } from "@/components/Home/Navbar";
 import Herosec from "./herosec";
 import Secsec from "./Secsec";
 import Thirdsec from "./thirdsec";
@@ -6,8 +6,8 @@ import Forthsec from "./forthsec";
 import FaqSection from "./FaqSection";
 import WorkTogether from "../workTogether";
 import Rewiewcards from "../rewiewcards";
-import ContactSection from "../../about/ContactSection";
-import Footersec from "../../home/footersec";
+import ContactSection from "../../About/ContactSection";
+import Footersec from "../../Home/footersec";
 export const dynamic = 'force-static'
 export default function Softwaredev() {
   return (
@@ -34,3 +34,5 @@ export default function Softwaredev() {
     </div>
   );
 }
+
+

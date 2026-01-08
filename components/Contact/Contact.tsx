@@ -1,9 +1,9 @@
 import React from 'react'
 import Herosec from './herosec'
-import { FloatingNavDemo } from '../home/Navbar'
+import { FloatingNavDemo } from '../Home/Navbar'
 import Offices from './Offices'
 import ContactForm from './ContactForm'
-import Footersec from '../home/footersec'
+import Footersec from '../Home/footersec'
 export const dynamic = 'force-static'
 const Contact = () => {
   return (

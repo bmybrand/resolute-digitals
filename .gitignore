@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 *.pem
+.cpanel-worktree
 
 # debug
 npm-debug.log*

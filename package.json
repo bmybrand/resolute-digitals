@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "publish:cpanel": "powershell -ExecutionPolicy Bypass -File scripts/publish-cpanel.ps1",
     "start": "next start",
     "lint": "eslint"
   },

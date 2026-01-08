@@ -1,4 +1,4 @@
-import { FloatingNavDemo } from "@/components/home/Navbar";
+import { FloatingNavDemo } from "@/components/Home/Navbar";
 import Herosec from "./herosec";
 import { Secondseccopy } from "./Secondsec copy";
 import { Secondsec } from "./Secondsec";
@@ -10,7 +10,7 @@ import WorkTogether from "./workTogether";
 import InfiniteMultiColumnScroll from "./InfiniteMultiColumnScroll"
 import Rewiewcards from "./rewiewcards";
 import ContactSection from "./ContactSection";
-import Footersec from "../home/footersec";
+import Footersec from "../Home/footersec";
 export const dynamic = 'force-static'
 export default function AboutPage() {
   return (
@@ -35,3 +35,4 @@ export default function AboutPage() {
       </div>
   );
 }
+

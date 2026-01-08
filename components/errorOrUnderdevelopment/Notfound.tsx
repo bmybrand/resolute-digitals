@@ -1,5 +1,5 @@
 import React from 'react';
-import { FloatingNavDemo } from '../home/Navbar';
+import { FloatingNavDemo } from '../Home/Navbar';
 
 const Notfound = () => {
   return (
@@ -88,3 +88,4 @@ const Notfound = () => {
 };
 
 export default Notfound;
+
