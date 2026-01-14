@@ -10,7 +10,7 @@ import ContactSection from "../../About/ContactSection";
 import Footersec from "../../Home/footersec";
 import CoreCapabilities from "./CoreCapabilities"
 export const dynamic = 'force-static'
-export default function AppDevelopment() {
+export default function AIDrivenSolutions() {
   return (
     <div className="bg-[#000A21]  ">
     <div className=" p-5 lg:p-9">

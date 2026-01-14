@@ -16,7 +16,7 @@ const CoreCapabilitiesAccordion: React.FC = () => {
   return (
     <section className="w-full  2xl:px-49 mt-10 lg:mt-40 gap-10">
       <h2 className="text-3xl sm:text-4xl  font-bold text-white mb-10">
-        Core Software Development Capabilities
+        Core Development Capabilities
       </h2>
 
       <div className="flex flex-col gap-4">

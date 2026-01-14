@@ -142,6 +142,7 @@ export const AboutSection = {
     "Mobile applications are at the core of today’s digital-first businesses. We build intuitive, secure, and scalable mobile apps that help brands connect with users, streamline operations, and grow faster.",
     "From concept to launch, our app development approach focuses on performance, usability, and long-term scalability. Whether you’re building a startup product or an enterprise-grade solution, we ensure your app is crafted to meet real user needs.",
   ],
+  image: "/assets/Group 1597883640.svg", 
 };
 
 export const processSteps = [

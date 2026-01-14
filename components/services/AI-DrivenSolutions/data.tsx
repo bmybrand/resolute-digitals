@@ -11,36 +11,38 @@ export interface FaqItem {
 
 // About Design & Experience Service
 export const AboutSection = {
-  title: "About Design & Experience Service",
+  title: "About AI-Driven Solutions Service",
   description: [
-    "Design and experience are at the heart of every successful digital product and brand. We help businesses shape how they look, feel, and interact with users by crafting thoughtful design systems and user experiences that align with brand goals.",
-    "Our approach blends research, creativity, and strategy to deliver experiences that are intuitive, visually compelling, and built to scale—ensuring long-term consistency and strong brand recognition.",
-  ],
+    "AI-driven solutions are transforming how modern businesses operate, analyze data, and deliver value. We help organizations adopt artificial intelligence in practical, scalable ways—turning complex data and processes into intelligent, automated systems.",
+    "Our AI solutions are designed to integrate seamlessly with existing infrastructure while delivering measurable improvements in productivity, accuracy, and performance. From automation to advanced AI integrations, we focus on real business outcomes.",
+   ],
+  image: "/assets/ai-about-hero.svg", // Hero / front image
 };
 
 
 export const capabilities: Capability[] = [
   {
-    title: "Desktop Applications",
+    title: "AI Automation",
     description:
-      "We design and develop desktop applications engineered for performance, security, and stability across supported operating systems. Solutions are structured to ensure reliable system behavior, seamless hardware integration, and consistent user interaction, enabling dependable releases, scalable feature expansion, and long-term maintainability.",
+      "We design AI-powered automation systems that reduce manual effort, streamline operations, and improve efficiency. Solutions are structured to automate repetitive tasks, optimize workflows, and deliver consistent, reliable results at scale.",
   },
   {
-    title: "Web Applications",
+    title: "AI Integration",
     description:
-      "We build web applications using modern frameworks and best practices to deliver secure, responsive, and high-performance experiences. Architectures are designed to support scalable functionality, predictable UI behavior, and seamless backend connectivity, enabling efficient deployments, cross-browser compatibility, and future-ready growth.",
+      "We integrate AI capabilities into existing applications, platforms, and systems through secure and scalable architectures. Integrations are designed to enhance functionality, improve intelligence, and ensure seamless interoperability across tools and services.",
   },
   {
-    title: "Integrations",
+    title: "Intelligent Workflows",
     description:
-      "We develop system integrations that connect applications, platforms, and third-party services through structured data flows and secure communication layers. Integrations are engineered to ensure reliability, consistency, and scalability, enabling smooth interoperability, automated workflows, and reduced operational complexity.",
+      "We build intelligent workflows that adapt, learn, and optimize processes in real time. These workflows combine data, automation, and AI logic to support smarter decision-making and improved operational performance.",
   },
   {
-    title: "API Systems",
+    title: "AI Solutions",
     description:
-      "We design and implement robust API systems built for performance, security, and extensibility. APIs are structured to support stable data exchange, clear documentation, and scalable consumption across applications, enabling reliable integrations, efficient development cycles, and long-term system evolution.",
+      "We develop custom AI solutions tailored to specific business challenges, including predictive analytics, recommendation systems, and intelligent data processing. Each solution is engineered for accuracy, scalability, and long-term adaptability.",
   },
 ];
+
 export const faqs: FaqItem[] = [
   {
     question: "What software development services do you provide?",
@@ -142,34 +144,34 @@ export const features = [
 // Section Meta
 export const mainSection = {
   title:
-    "App Development",
+    "AI-Driven Solutions",
   subtitle:
-    "We design and develop high-performance mobile applications focused on usability, scalability, and reliability. From planning to launch, we deliver real business impact across iOS and Android platforms.",
+    "We design and implement intelligent AI solutions that automate processes, enhance decision-making, and drive operational efficiency. From AI automation to intelligent workflows, our solutions help businesses scale smarter, faster, and with confidence.",
 };
 
 export const processSteps = [
   {
     id: "01",
-    title: "Discovery & Planning",
+    title: "Discovery & Strategy",
     desc:
-      "We work closely with your team to understand goals, challenges, and functional needs, ensuring every decision supports a clear and measurable development strategy.",
+      "We assess business goals, data readiness, and workflows to identify AI opportunities and define a clear strategy with an implementation roadmap.",
   },
   {
     id: "02",
-    title: "Architecture & Prototyping",
+    title: "Architecture & Model Design",
     desc:
-      "We define the core structure of your application, mapping system logic, data flow, and prototypes that visualize how features will work before development begins.",
+      "We design the AI system’s architecture and models, selecting the right frameworks, algorithms, and data pipelines to ensure scalable, reliable, and efficient solutions.",
   },
   {
     id: "03",
     title: "Development & Integration",
     desc:
-      "Our engineers write clean, scalable code and integrate essential APIs, services, and tools to create a seamless and robust system built for real-world performance.",
+      "We develop AI systems and integrate them into existing applications and workflows using reliable frameworks for smooth, scalable operation.",
   },
   {
     id: "04",
-    title: "Testing & Deployment",
+    title: "Testing & Optimization",
     desc:
-      "We thoroughly test your application for security, speed, and stability before deploying it into production, ensuring a smooth launch and a future-ready foundation.",
+      "We validate accuracy, performance, and system reliability, then optimize the solution to ensure stable deployment, consistent results, and long-term success.",
   },
 ];
