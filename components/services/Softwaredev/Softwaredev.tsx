@@ -8,6 +8,7 @@ import WorkTogether from "../workTogether";
 import Rewiewcards from "../rewiewcards";
 import ContactSection from "../../About/ContactSection";
 import Footersec from "../../Home/footersec";
+import CoreCapabilities from "./CoreCapabilities"
 export const dynamic = 'force-static'
 export default function Softwaredev() {
   return (
@@ -16,6 +17,7 @@ export default function Softwaredev() {
 
       <FloatingNavDemo />
       <Herosec/>
+      <CoreCapabilities />
       <Secsec/>
       
     </div>

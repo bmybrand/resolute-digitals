@@ -53,34 +53,39 @@ export const Thirdsec = () => {
         </p>
 
         {/* Profile Bar */}
-        <div className="bg-[#04102B] w-full rounded-2xl my-6 px-4 sm:px-6 py-4 flex items-center justify-between">
+        <div className="bg-[#04102B] w-fit rounded-2xl my-6 px-4 sm:px-6 py-4 flex items-center justify-between gap-2 sm:gap-4">
 
-          {/* Left: Avatar Mapping */}
-          <div className="flex items-center lg:justify-center lg:w-[70%]">
-            {avatars.map((img, index) => (
-              <img
-                key={index}
-                src={`https://i.pravatar.cc/150?img=${img}`}
-                alt="user"
-                className={`
-                  rounded-full border-3 border-[#04102B] object-cover
-                  w-[clamp(2.9rem,4vw,4.8rem)] h-[clamp(2.9rem,4vw,4.8rem)]
-                  ${index !== 0 ? "-ml-4 sm:-ml-6" : ""}
-                `}
-              />
-            ))}
-          </div>
+  {/* Left: Avatars */}
+  <div className="flex items-center flex-shrink-0">
+    {avatars.map((img, index) => (
+      <img
+        key={index}
+        src={`https://i.pravatar.cc/150?img=${img}`}
+        alt="user"
+        className={`
+          rounded-full object-cover border-2 border-[#04102B]
+          w-[2.6rem] h-[2.6rem]
+          sm:w-[3.2rem] sm:h-[3.2rem]
+          md:w-[3.8rem] md:h-[3.8rem]
+          ${index !== 0 ? "-ml-3 sm:-ml-4 md:-ml-5" : ""}
+        `}
+      />
+    ))}
+  </div>
 
-          {/* Right: Count */}
-          <div className="text-white font-semibold flex flex-col text-right lg:pr-10">
-            <span className="text-2xl sm:text-3xl md:text-4xl bold">
-              125K <span className="text-[#2378DA]">+</span>
-            </span>
-            <span className="text-[#A8C0FF] text-sm sm:text-lg font-normal">
-              Worldwide Clients
-            </span>
-          </div>
-        </div>
+  {/* Right: Text */}
+  <div className="flex flex-col text-right text-white w-fit">
+    <span className="text-xl sm:text-2xl md:text-3xl font-semibold leading-tight whitespace-nowrap">
+      125K <span className="text-[#2378DA]">+</span>
+    </span>
+
+    <span className="text-[#A8C0FF] text-xs sm:text-sm md:text-base font-normal leading-tight">
+      Worldwide Clients
+    </span>
+  </div>
+
+</div>
+
         <div className="flex flex-row gap-7">
         <img src="/assets/Group 1597883140.svg" alt="" /><p className='text-base sm:text-lg text-[#A9ABBE] leading-7 sm:leading-8 mt-4 regular'> We’re your growth partners, blending creativity, data, and technology to turn bold ideas into impactful digital solutions.
       </p></div>

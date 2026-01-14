@@ -38,7 +38,7 @@ const Databar = {
   section3: {
     title: (
       <>
-        Growth, Data <br /> & Business Operations
+        Data & Market  <br /> Intelligence
       </>
     ),
     mainbubble: "Grow",
@@ -141,7 +141,7 @@ const Herobar: React.FC = () => {
               <span className="px-4 text-xs lg:text-base">{sectionData.subbubble}</span>
             </div>
 
-            <h1 className="ExtraLight leading-tight text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
+            <h1 className="ExtraLight leading-tight text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
               {sectionData.subtitle}
               <br />
               <span className="block bold text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-7xl">
@@ -149,17 +149,23 @@ const Herobar: React.FC = () => {
               </span>
             </h1>
 
-            <p className="opacity-90 max-w-[80%] text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl 2xl:text-[16px]">
+            <p className="opacity-90 max-w-[80%] text-sm sm:text-base md:text-base lg:text-lg xl:text-lg 2xl:text-xl">
               {sectionData.Description}
             </p>
 
             <div className="flex gap-4">
-              <button className="text-xs lg:text-base flex gap-2 items-center text-white bg-[#000A21] px-6 py-3  rounded-full border border-transparent hover:bg-transparent hover:border-white/80 transition duration-300">
-                Get Started Now
-              </button>
-              <button className="text-xs lg:text-base flex gap-2 items-center text-white px-6 py-3  rounded-full bg-transparent border border-white hover:border-[#000A21] hover:bg-[#000A21] transition duration-300">
-                Discover Our Services
-              </button>
+              <a href="/contact">
+  <button className=" cursor-pointer text-xs lg:text-base flex gap-2 items-center text-white bg-[#000A21] px-6 py-3 rounded-full border border-transparent hover:bg-transparent hover:border-white/80 transition duration-300">
+    Get Started Now
+  </button>
+</a>
+
+              <a href="/services">
+  <button className=" cursor-pointer text-xs lg:text-base flex gap-2 items-center text-white px-6 py-3 rounded-full bg-transparent border border-white hover:border-[#000A21] hover:bg-[#000A21] transition duration-300">
+    Discover Our Services
+  </button>
+</a>
+
             </div>
           </div>
 

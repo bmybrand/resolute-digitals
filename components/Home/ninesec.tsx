@@ -57,12 +57,15 @@ const ninesec = () => {
 
         {/* View All Button */}
         <div className="flex justify-start lg:justify-end">
-          <button className="bg-gradient-to-r from-[#2378DA] to-[#134074] flex gap-2 items-center rounded-full
-                             px-4 py-2 sm:px-5 sm:py-2 md:px-6 md:py-3 lg:px-7 lg:py-4
-                             text-xs sm:text-sm md:text-base text-white transition">
-            <span>View All Projects</span>
-            <img src="/assets/Vector (Stroke).svg" className="w-3 sm:w-4 md:w-5" alt="" />
-          </button>
+          <a href="/casestudy">
+  <button className="cursor-pointer bg-gradient-to-r from-[#2378DA] to-[#134074] flex gap-2 items-center rounded-full
+                     px-4 py-2 sm:px-5 sm:py-2 md:px-6 md:py-3 lg:px-7 lg:py-4
+                     text-xs sm:text-sm md:text-base text-white transition">
+    <span>View All Projects</span>
+    <img src="/assets/Vector (Stroke).svg" className="w-3 sm:w-4 md:w-5" alt="" />
+  </button>
+</a>
+
         </div>
       </div>
 

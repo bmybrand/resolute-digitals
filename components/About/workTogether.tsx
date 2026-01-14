@@ -47,15 +47,19 @@ const WorkTogether = () => {
         </h1>
 
         {/* Contact Button */}
-        <button className="z-10 bg-gradient-to-r from-[#2378DA] to-[#042F61] flex gap-1 font-medium relative text-white rounded-full hover:opacity-90 transition justify-center items-center whitespace-nowrap text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl px-3 sm:px-5 md:px-6 lg:px-7 xl:px-8 2xl:px-10 py-1 sm:py-2 md:py-3 lg:py-4 xl:py-5 pointer-events-auto">
-          <span className="absolute inset-x-0 w-1/2 mx-auto -top-px bg-gradient-to-r from-transparent via-white to-transparent h-px" />
-          <span>Contact Now</span>
-          <img
-            src="/assets/Vector (Stroke).svg"
-            className="pt-0.5 w-3 sm:w-3.5 md:w-4"
-            alt=""
-          />
-        </button>
+        <a
+  href="/contact"
+  className="bg-gradient-to-r from-[#2378DA] to-[#134074] flex gap-1 border font-medium relative border-neutral-200
+  dark:border-white/20 text-black dark:text-white rounded-full hover:bg-white/10 transition justify-center items-center
+  whitespace-nowrap text-sm px-5 py-2 lg:text-sm lg:px-7 lg:py-4 2xl:text-base 2xl:px-7 2xl:py-4 w-fit
+  z-20 pointer-events-auto"
+>
+  <span className="absolute inset-x-0 w-1/2 mx-auto -top-px bg-gradient-to-r from-transparent via-white to-transparent h-px" />
+  <span>Contact Now</span>
+  <img src="/assets/Vector (Stroke).svg" className="pt-0.5 w-3 xl:w-3 2xl:w-3" alt="" />
+</a>
+
+
 
         <div
           className="absolute inset-0"
