@@ -23,7 +23,7 @@ export const AboutSection = {
     "Modern businesses rely on always-on infrastructure. Our IT Operations services are designed to monitor, manage, and optimize critical systems while minimizing downtime and operational risk.",
     "We combine automation, real-time monitoring, and best-practice frameworks to maintain performance, security, and scalability across on-premise and cloud environments.",
   ],
-  image: "/assets/A male designer working on a desktop computer in a modern office, focused on the screen showing a user interface design. (4).svg",
+  image: "/assets/rd-image134.svg",
 };
 
 // Capabilities Section
@@ -133,25 +133,25 @@ export const features = [
     title: "Operational Reliability",
     text:
       "We bring experienced IT engineers who design and manage scalable, stable, and high-impact infrastructure for consistent business operations.",
-    image: "/assets/Group 1597884018 (2).svg",
+    image: "/assets/rd-image135.svg",
   },
   {
     title: "Security-First Approach",
     text:
       "We bring experienced IT engineers who implement security best practices to protect systems, data, and network operations across all environments.",
-    image: "/assets/Group 1597884020 (2).svg",
+    image: "/assets/rd-image136.svg",
   },
   {
     title: "Scalable Infrastructure",
     text:
       "We align IT operations with business goals, ensuring infrastructure can grow and adapt seamlessly while maintaining reliability and performance.",
-    image: "/assets/Group 1597884048.svg",
+    image: "/assets/rd-image137.svg",
   },
   {
     title: "Transparent Collaboration",
     text:
       "We work closely with clients throughout the process to maintain transparency, clear communication, and operational alignment from start to finish.",
-    image: "/assets/Vector (1).svg",
+    image: "/assets/rd-image138.svg",
   },
 ];
 
