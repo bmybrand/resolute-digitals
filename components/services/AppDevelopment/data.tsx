@@ -114,25 +114,25 @@ export const features = [
     title: "User-Focused Development",
     text:
       "Every feature is crafted for usability—putting user needs first to ensure workflows stay intuitive, efficient, and easy to navigate.",
-    image: "/assets/Group 1597883776.svg",
+    image: "/assets/rd-image124.svg",
   },
   {
     title: "Collaborative Workflow",
     text:
       "We collaborate with you throughout development, refining the product with your feedback to match your goals and vision.",
-    image: "/assets/Mental_Focus.svg",
+    image: "/assets/rd-image125.svg",
   },
   {
     title: "Expert Engineering Team",
     text:
       "We bring together skilled engineers who solve complex challenges and build reliable, scalable, future-ready solutions.",
-    image: "/assets/Vector (6).svg",
+    image: "/assets/rd-image126.svg",
   },
   {
     title: "Data-Driven Decisions",
     text:
       "Our process is driven by insights and performance data, creating systems optimized for stability, speed, and long-term growth.",
-    image: "/assets/Vector (6).svg",
+    image: "/assets/rd-image126.svg",
   },
 ];
 // Section Meta

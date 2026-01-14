@@ -96,7 +96,7 @@ export const softwareStatsSection = {
 
 // Software Stats (normalized)
 export const softwareStats = {
-  image: "/assets/ax-sd-st-thumb.webp (2).svg",
+  image: "/assets/rd-image123.svg",
   stats: [
     {
       value: "2.5K",

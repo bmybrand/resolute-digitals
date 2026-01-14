@@ -24,7 +24,7 @@ export const AboutSection = {
     "Our approach blends research, creativity, and strategy to deliver experiences that are intuitive, visually compelling, and built to scale—ensuring long-term consistency and strong brand recognition.",
   ],
   image:
-    "/assets/A male designer working on a desktop computer in a modern office, focused on the screen showing a user interface design. (1).svg",
+    "/assets/rd-image122.svg",
 };
 
 // Capabilities Section
@@ -96,7 +96,7 @@ export const softwareStatsSection = {
 
 // Software Stats (normalized)
 export const softwareStats = {
-  image: "/assets/ax-sd-st-thumb.webp (2).svg",
+  image: "/assets/rd-image123.svg",
   stats: [
     {
       value: "2.5K",

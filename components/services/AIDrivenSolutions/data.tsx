@@ -16,7 +16,7 @@ export const AboutSection = {
     "AI-driven solutions are transforming how modern businesses operate, analyze data, and deliver value. We help organizations adopt artificial intelligence in practical, scalable ways—turning complex data and processes into intelligent, automated systems.",
     "Our AI solutions are designed to integrate seamlessly with existing infrastructure while delivering measurable improvements in productivity, accuracy, and performance. From automation to advanced AI integrations, we focus on real business outcomes.",
    ],
-  image: "/assets/A male designer working on a desktop computer in a modern office, focused on the screen showing a user interface design. (1).svg", // Hero / front image
+  image: "/assets/rd-image122.svg", // Hero / front image
 };
 
 
@@ -96,7 +96,7 @@ export const softwareStatsSection = {
 // Software Stats with parent image
 
 export const softwareStats  = {
-  image: "/assets/ax-sd-st-thumb.webp (2).svg", // parent image
+  image: "/assets/rd-image123.svg", // parent image
   stats: [
     {
       value: "2.5K",
@@ -129,25 +129,25 @@ export const features = [
     title: "User-Focused Development",
     text:
       "Every feature is crafted for usability—putting user needs first to ensure workflows stay intuitive, efficient, and easy to navigate.",
-    image: "/assets/Group 1597883776.svg",
+    image: "/assets/rd-image124.svg",
   },
   {
     title: "Collaborative Workflow",
     text:
       "We collaborate with you throughout development, refining the product with your feedback to match your goals and vision.",
-    image: "/assets/Mental_Focus.svg",
+    image: "/assets/rd-image125.svg",
   },
   {
     title: "Expert Engineering Team",
     text:
       "We bring together skilled engineers who solve complex challenges and build reliable, scalable, future-ready solutions.",
-    image: "/assets/Vector (6).svg",
+    image: "/assets/rd-image126.svg",
   },
   {
     title: "Data-Driven Decisions",
     text:
       "Our process is driven by insights and performance data, creating systems optimized for stability, speed, and long-term growth.",
-    image: "/assets/Vector (6).svg",
+    image: "/assets/rd-image126.svg",
   },
 ];
 // Section Meta

@@ -135,7 +135,7 @@ export const softwareStatsSection = {
 
 // Software Stats
 export const softwareStats = {
-  image: "/assets/ax-sd-st-thumb.webp (2).svg", // parent image
+  image: "/assets/rd-image123.svg", // parent image
   stats: [
     {
       value: "360",

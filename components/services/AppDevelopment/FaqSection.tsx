@@ -38,7 +38,7 @@ const FaqSection: React.FC = () => {
                       isOpen ? "rotate-90 bg-[#2378DA]" : "bg-[#FFFFFF]/10" 
                     }`}
                   >
-                    <img src="/assets/Symbol.svg" alt="" />
+                    <img src="/assets/rd-image127.svg" alt="" />
                   </span>
                 </button>
 
