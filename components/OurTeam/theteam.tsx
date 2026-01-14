@@ -4,37 +4,37 @@ const teamMembers = [
   {
     name: "Abdul Rafay",
     role: "WordPress Developer",
-    img: "/assets/Vector 186 (7).svg",
+    img: "/assets/rd-image115.svg",
     linkedin: "https://www.linkedin.com/in/alice-johnson",
   },
   {
     name: "Zian Navaid",
     role: "Sr. Graphic Designer",
-    img: "/assets/Vector 186 (2).svg",
+    img: "/assets/rd-image116.svg",
     linkedin: "https://www.linkedin.com/in/bob-smith",
   },
   {
     name: "M Ali Hassan",
     role: "UI/UX Designer",
-    img: "/assets/Vector 186 (3).svg",
+    img: "/assets/rd-image117.svg",
     linkedin: "https://www.linkedin.com/in/carol-white",
   },
   {
     name: "Mazin Nizami",
     role: "CMS Team Lead",
-    img: "/assets/Vector 186 (4).svg",
+    img: "/assets/rd-image118.svg",
     linkedin: "https://www.linkedin.com/in/david-lee",
   },
   {
     name: "Muhammad Saad",
     role: "Production Head",
-    img: "/assets/Vector 186 (5).svg",
+    img: "/assets/rd-image119.svg",
     linkedin: "https://www.linkedin.com/in/carol-white",
   },
   {
     name: "Saad Naseer",
     role: "Sr. Backend Developer",
-    img: "/assets/Vector 186 (6).svg",
+    img: "/assets/rd-image120.svg",
     linkedin: "https://www.linkedin.com/in/david-lee",
   },
 ];
@@ -99,7 +99,7 @@ const TheTeam = () => {
   className="absolute bottom-0 sm:bottom-3 right-0 sm:right-4 bg-[#0F1930] p-3 md:p-4 lg:p-5 rounded-full hover:shadow-lg hover:bg-[#2378DA] transition"
 >
   <img
-    src="/assets/Group 1597883706.svg"
+    src="/assets/rd-image121.svg"
     alt=""
     className="block"
   />
