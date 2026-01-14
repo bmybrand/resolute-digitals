@@ -15,7 +15,7 @@ export const AboutSection = {
     "Software development is at the core of digital transformation. We build secure, scalable, and high-performance applications designed to meet the needs of modern businesses. Whether it’s a responsive web platform, a powerful desktop application, or an immersive game experience, our development team delivers solutions engineered for reliability, flexibility, and long-term growth.",
     "",
    ],
-  image: "/assets/A male designer working on a desktop computer in a modern office, focused on the screen showing a user interface design..svg", // Hero / front image
+  image: "/assets/rd-image133.svg", // Hero / front image
 };
 
 export const capabilitiesSection = {
