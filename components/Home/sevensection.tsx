@@ -9,28 +9,28 @@ const sevensection = () => {
       title: "Transparency & Communication",
       description:
         "Transparency ensures that information is shared openly, creating a sense of accountability and inclusiveness.",
-      image: "/assets/AlayaCare Market Icon _1 Trust 1.svg",
+      image: "/assets/rd-image066.svg",
     },
     {
       number: 2,
       title: " Expertise & Innovation",
       description:
         "Our experienced professionals use cutting-edge tools and modern technologies to build powerful, future-ready digital solutions.",
-      image: "/assets/technology_17197629 1.svg",
+      image: "/assets/rd-image067.svg",
     },
     {
       number: 3,
       title: "Dedicated Support & Partnership",
       description:
         "We work closely with our clients, offering ongoing support, insights, and strategy to ensure long-term success and trust.",
-      image: "/assets/relationship_10112407 1.svg",
+      image: "/assets/rd-image068.svg",
     },
     {
       number: 4,
       title: "Results-Driven Approach",
       description:
         "Our process is designed for measurable impact - delivering creative, scalable, and performance-focused outcomes every time.",
-      image: "/assets/statistic_9551807 1.svg",
+      image: "/assets/rd-image069.svg",
     },
   ];
 
@@ -98,7 +98,7 @@ const sevensection = () => {
                       whitespace-nowrap text-sm px-5 py-2 lg:text-sm lg:px-7 lg:py-4 2xl:text-base 2xl:px-7 2xl:py-4 w-fit">
                         <span className="absolute inset-x-0 w-1/2 mx-auto -top-px bg-gradient-to-r from-transparent via-white to-transparent h-px" />
                         <span>Contact Now</span>
-                        <img src="/assets/Vector (Stroke).svg" className="pt-0.5 w-3 xl:w-3 2xl:w-3" alt="" />
+                        <img src="/assets/rd-image003.svg" className="pt-0.5 w-3 xl:w-3 2xl:w-3" alt="" />
                       </a>
           </div>
         </div>

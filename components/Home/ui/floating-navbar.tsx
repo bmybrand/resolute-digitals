@@ -113,7 +113,7 @@ export const FloatingNav = ({
         >
           {/* LOGO */}
           <div className="flex items-center text-xl font-bold text-white">
-            <img src="/assets/Group (1).svg" alt="" className="lg:pl-4 lg:pr-1 pt-1 2xl:w-11/12 w-[80%]" />
+            <img src="/assets/rd-image001.svg" alt="" className="lg:pl-4 lg:pr-1 pt-1 2xl:w-11/12 w-[80%]" />
           </div>
 
           {/* NAV ITEMS */}
@@ -238,14 +238,14 @@ export const FloatingNav = ({
               className="rounded-full border-2  border-[#FFFFFF]/15 flex justify-center items-center w-8 h-8 2xl:w-11 2xl:h-11 xl:w-10 xl:h-10 lg:w-9 lg:h-9 hover:border-white/30 transition"
               onClick={() => setSidebarOpen((prev) => !prev)}
             >
-              <img src="/assets/Container.svg" alt="" className="w-4 h-4" />
+              <img src="/assets/rd-image002.svg" alt="" className="w-4 h-4" />
             </button>
 
             <a href="/contact">
   <button className=" cursor-pointer hidden bg-[#000A21] md:flex gap-2 border font-medium relative border-neutral-200 dark:border-white/20 text-black dark:text-white rounded-full hover:bg-white/10 transition justify-center items-center whitespace-nowrap text-sm px-5 py-2 lg:text-sm lg:px-7 lg:py-4 2xl:text-base 2xl:px-7 2xl:py-4">
     <span className="absolute inset-x-0 w-1/2 mx-auto -top-px bg-linear-to-r from-transparent via-white to-transparent h-px"></span>
     <span>Contact Now</span>
-    <img src="/assets/Vector (Stroke).svg" className="pt-0.5 w-1.4 xl:w-3 2xl:w-3" alt="" />
+    <img src="/assets/rd-image003.svg" className="pt-0.5 w-1.4 xl:w-3 2xl:w-3" alt="" />
   </button>
 </a>
 
@@ -289,7 +289,7 @@ export const FloatingNav = ({
                   className="space-y-6 lg:w-2/3 xl:w-full lg:pr-6 w-full lg:border-r lg:border-[#FFFFFF]/10 xl:border xl:border-transparent"
                 >
                   <div className="w-full border-b border-[#FFFFFF]/10">
-                    <img src="/assets/Group (5).svg" alt="" className="mb-4 w-2/3" />
+                    <img src="/assets/rd-image004.svg" alt="" className="mb-4 w-2/3" />
                   </div>
                   <h2 className="text-3xl font-bold text-[#2378DA] mb-3">About Us</h2>
                   <p className="text-sm leading-7">

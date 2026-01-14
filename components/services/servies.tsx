@@ -5,43 +5,43 @@ import React, { useState } from "react"
 const servicesData = [
    {
     title: "AI-Driven Solutions",
-    image: "/assets/Group 1597883443 (1).svg",
-    image1: "/assets/Group 1597883443.svg",
+    image: "/assets/rd-image082.svg",
+    image1: "/assets/rd-image083.svg",
     link: "/services/ai-driven",
     bubbles: ["AI Automation", "AI Integration", "AI-Solutions", "Intelligent Workflows"],
   },
   {
     title: "Software Development",
-    image: "/assets/Group (6).svg",
-    image1: "/assets/Group (7).svg",
+    image: "/assets/rd-image084.svg",
+    image1: "/assets/rd-image085.svg",
     link: "/services/software-development",
     bubbles: ["Desktop Apps", "Integrations", "Web Apps", "API Systems"],
   },
   {
     title: "App Development",
-    image: "/assets/Group 1597883436 (1).svg ",
-    image1: "/assets/Group 1597883436.svg",
+    image: "/assets/rd-image086.svg",
+    image1: "/assets/rd-image086.svg",
     link: "/services/app-development",
     bubbles: ["iOS Apps", "Android Apps", "Cross Platform", "App Testing"],
   },
   {
     title: "Design & Experience",
-    image: "/assets/Group (9).svg",
-    image1: "/assets/Group (8).svg",
+    image: "/assets/rd-image028.svg",
+    image1: "/assets/rd-image087.svg",
     link: "/services/design-experience",
     bubbles: ["UI/UX Design", "Brand Identity", "Visual Design", "Brand Strategy"],
   },
   {
     title: "Digital Marketing",
-    image: "/assets/Group 1597883438 (1).svg",
-    image1: "/assets/Group 1597883438.svg",
+    image: "/assets/rd-image023.svg",
+    image1: "/assets/rd-image088.svg",
     link: "/services/digital-marketing",
     bubbles: ["SEO Services", "Social Ads", "Paid Campaigns", "Email Marketing"],
   },
   {
     title: "Ops & IT Support",
-    image: "/assets/Group (11).svg",
-    image1: "/assets/Group (10).svg",
+    image: "/assets/rd-image089.svg",
+    image1: "/assets/rd-image090.svg",
     link: "/services/data-operations",
     bubbles: [
   "Network Management",
@@ -52,15 +52,15 @@ const servicesData = [
 ,},
   {
     title: "REIT Data Research",
-    image: "/assets/Group 1597883952 (1).svg",
-    image1: "/assets/Group 1597883952.svg",
+    image: "/assets/rd-image091.svg",
+    image1: "/assets/rd-image092.svg",
     link: "/services/data-research",
     bubbles: ["Sustainability", "Green Certifications", "Asset Details", "ESG Data QC"],
   },
   {
     title: "US Property Taxation",
-    image: "/assets/Group 1597883953 (1).svg",
-    image1: "/assets/Group 1597883953.svg",
+    image: "/assets/rd-image093.svg",
+    image1: "/assets/rd-image094.svg",
     link: "/services/property-taxation",
     bubbles: ["Reassessments", "Tax Jurisdictions", "Asset Classification", "Tax Rates"],
   },
@@ -166,8 +166,8 @@ const Services = () => {
               <img
                 src={
                   hoveredIndex === index
-                    ? "/assets/Vector (Stroke).svg"
-                    : "/assets/Vector (Stroke) (1).svg"
+                    ? "/assets/rd-image003.svg"
+                    : "/assets/rd-image095.svg"
                 }
                 className="w-4 h-4 sm:w-5 sm:h-5 rotate-45"
               />

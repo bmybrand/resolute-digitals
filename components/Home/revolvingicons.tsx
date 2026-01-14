@@ -52,33 +52,33 @@ const OrbitingCircles: React.FC<{
 
 const RevolvingIcons: React.FC = () => {
   const outerIconsUrls = [
-  "/assets/Group 1597883981.svg",
-  "/assets/Group 1597883982.svg",
-  "/assets/Group 1597883983.svg",
-  "/assets/Group 1597883984.svg",
-  "/assets/Group 1597883985.svg",
-  "/assets/Group 1597883987.svg",
-  "/assets/Group 1597883980.svg",
-  "/assets/Group 1597884008.svg",
-  "/assets/Group 1597883991.svg",
-  "/assets/Group 1597883993.svg",
-  "/assets/Group 1597883995.svg",
-  "/assets/Group 1597883996.svg",
-  "/assets/Group 1597883997.svg",
-  "/assets/Group 1597883972.svg",
+  "/assets/rd-image041.svg",
+  "/assets/rd-image042.svg",
+  "/assets/rd-image043.svg",
+  "/assets/rd-image044.svg",
+  "/assets/rd-image045.svg",
+  "/assets/rd-image046.svg",
+  "/assets/rd-image047.svg",
+  "/assets/rd-image048.svg",
+  "/assets/rd-image049.svg",
+  "/assets/rd-image050.svg",
+  "/assets/rd-image051.svg",
+  "/assets/rd-image052.svg",
+  "/assets/rd-image053.svg",
+  "/assets/rd-image054.svg",
   
 ];
 const innerIconsUrls = [
  
-  "/assets/Group 1597883973.svg",
-  "/assets/Group 1597883974.png",
-  "/assets/Group 1597883975.png",
-  "/assets/Group 1597883976.png",
-  "/assets/Group 1597883977.png",
-  "/assets/Group 1597883978.png",
-  "/assets/Group 1597883979.png",
-  "/assets/Group 1597884006.png",
-  "/assets/Group 1597884007.svg",
+  "/assets/rd-image055.svg",
+  "/assets/rd-image056.png",
+  "/assets/rd-image057.png",
+  "/assets/rd-image058.png",
+  "/assets/rd-image059.png",
+  "/assets/rd-image060.png",
+  "/assets/rd-image061.png",
+  "/assets/rd-image062.png",
+  "/assets/rd-image063.svg",
 ];
 
 
@@ -102,7 +102,7 @@ const innerIconsUrls = [
   }, []);
 
   return (
-    <div className="flex flex-col py-40 px-6 2xl:px-53 bg-[url('/assets/Image.svg')] bg-no-repeat bg-cover bg-center h-230 relative overflow-hidden">
+    <div className="flex flex-col py-40 px-6 2xl:px-53 bg-[url('/assets/rd-image064.svg')] bg-no-repeat bg-cover bg-center h-230 relative overflow-hidden">
 
       {/* Content Section */}
       <div className="flex flex-col xl:flex-row xl:gap-50 gap-4 lg:gap-12 z-10 relative ">
@@ -133,7 +133,7 @@ const innerIconsUrls = [
           whitespace-nowrap text-sm px-5 py-2 lg:text-sm lg:px-7 lg:py-4 2xl:text-base 2xl:px-7 2xl:py-4 w-fit">
             <span className="absolute inset-x-0 w-1/2 mx-auto -top-px bg-gradient-to-r from-transparent via-white to-transparent h-px" />
             <span>Contact Now</span>
-            <img src="/assets/Vector (Stroke).svg" className="pt-0.5 w-3 xl:w-3 2xl:w-3" alt="" />
+            <img src="/assets/rd-image003.svg" className="pt-0.5 w-3 xl:w-3 2xl:w-3" alt="" />
           </a>
         </div>
       </div>
@@ -142,7 +142,7 @@ const innerIconsUrls = [
       <div className="absolute -bottom-60  lg:-bottom-40  left-1/2 -translate-x-1/2 w-full h-96 pointer-events-none">
         {/* Ring Image */}
         <img
-          src="/assets/Frame 1597883713.svg"
+          src="/assets/rd-image065.svg"
           className="absolute lg:w-195 xl:w-220 sm-bottom-73 lg:-bottom-73 left-1/2 -translate-x-1/2"
           alt="Pattern"
         />

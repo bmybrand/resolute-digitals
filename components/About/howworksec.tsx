@@ -7,25 +7,25 @@ const steps = [
     step: "Step 01",
     title: "Share Your Vision",
     desc: "Share your goals and challenges so we understand the purpose and direction of your project.",
-    icon: <img src="/assets/research.png" alt="Share Your Vision" className="h-20 w-20" />,
+    icon: <img src="/assets/rd-image036.png" alt="Share Your Vision" className="h-20 w-20" />,
   },
   {
     step: "Step 02",
     title: "Meet Our Product Team",
     desc: "Meet the team who will shape your idea and align with you on the best project approach.",
-    icon: <img src="/assets/research_18147250 1.svg" alt="Meet Our Product Team" className="h-20 w-20" />,
+    icon: <img src="/assets/rd-image096.svg" alt="Meet Our Product Team" className="h-20 w-20" />,
   },
   {
     step: "Step 03",
     title: "Expert Guidance",
     desc: "We review your needs and suggest tailored solutions with the right strategy and technology.",
-    icon: <img src="/assets/Group (12).svg" alt="Expert Guidance" className="h-20 w-20" />,
+    icon: <img src="/assets/rd-image097.svg" alt="Expert Guidance" className="h-20 w-20" />,
   },
   {
     step: "Step 04",
     title: "Begin the Build Process",
     desc: "Once aligned, we design, develop, and refine your product with clear, collaborative progress.",
-    icon: <img src="/assets/research_18147250 1 (1).svg" alt="Begin the Build Process" className="h-20 w-20" />,
+    icon: <img src="/assets/rd-image098.svg" alt="Begin the Build Process" className="h-20 w-20" />,
   },
 ];
 
@@ -35,7 +35,7 @@ const HowWorkSec = () => {
   return (
     <div
       className="min-h-screen bg-cover bg-center  "
-      style={{ backgroundImage: "url('/assets/Group 1597883483.svg')" }}
+      style={{ backgroundImage: "url('/assets/rd-image099.svg')" }}
     >
       {/* Header */}
       <div className="flex flex-col justify-center items-center mb-10 md:mb-16 pt-14 md:pt-16">
@@ -98,7 +98,7 @@ const HowWorkSec = () => {
                 <div className="relative rounded-2xl bg-[#080F1F] shadow-[0_20px_60px_rgba(0,0,0,0.35)] w-full overflow-hidden border border-white/10 h-full">
                   <div className="relative w-full flex items-center justify-center">
                     <img
-                      src="/assets/Mask Group.svg"
+                      src="/assets/rd-image100.svg"
                       alt="Card Background"
                       className="w-full object-cover"
                     />

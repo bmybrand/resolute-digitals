@@ -4,16 +4,16 @@ import React from "react";
 
 // Image paths (inside same file)
 const IMAGES = [
-  "/assets/Rectangle 54.svg",
-  "/assets/Rectangle 59.svg",
-  "/assets/Rectangle 60.svg",
-  "/assets/Rectangle 62.svg",
-  "/assets/Rectangle 63.svg",
-  "/assets/Rectangle 64.svg",
-  "/assets/Rectangle 65.svg",
-  "/assets/Rectangle 66.svg",
-  "/assets/Rectangle 67.svg",
-  "/assets/Rectangle 68.svg",
+  "/assets/rd-image103.svg",
+  "/assets/rd-image104.svg",
+  "/assets/rd-image105.svg",
+  "/assets/rd-image106.svg",
+  "/assets/rd-image107.svg",
+  "/assets/rd-image108.svg",
+  "/assets/rd-image109.svg",
+  "/assets/rd-image110.svg",
+  "/assets/rd-image111.svg",
+  "/assets/rd-image112.svg",
 ];
 
 export default function AlternatingBelt() {

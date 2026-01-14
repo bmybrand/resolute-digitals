@@ -80,7 +80,7 @@ const Notfound = () => {
         >
           <span className="absolute inset-x-0 w-1/2 mx-auto -top-px bg-gradient-to-r from-transparent via-white to-transparent h-px" />
           <span>Go to Homepage</span>
-          <img src="/assets/Vector (Stroke).svg" className="pt-0.5 w-3 xl:w-3 2xl:w-3" alt="" />
+          <img src="/assets/rd-image003.svg" className="pt-0.5 w-3 xl:w-3 2xl:w-3" alt="" />
         </button>
       </div>
     </div>

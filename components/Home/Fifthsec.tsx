@@ -46,11 +46,11 @@ const Fifthsec = () => {
   return (
     <div
       ref={sectionRef}
-      className="relative flex flex-col items-center pb-40 sm:pb-80 md:pb-100 lg:pb-100 xl:pb-10 py-10 bg-[url('/assets/Group1597883157.png')] bg-no-repeat bg-cover bg-center lg:h-fit min-h-[130vh] overflow-hidden"
+      className="relative flex flex-col items-center pb-40 sm:pb-80 md:pb-100 lg:pb-100 xl:pb-10 py-10 bg-[url('/assets/rd-image034.png')] bg-no-repeat bg-cover bg-center lg:h-fit min-h-[130vh] overflow-hidden"
     >
       <img
         ref={rocketRef}
-        src="/assets/rocket2.png"
+        src="/assets/rd-image035.png"
         alt="Rocket"
         className={`absolute bottom-0 w-20 sm:w-40 md:w-60 transition-all ease-out
           ${launch ? "-translate-y-[100vh] opacity-0" : "translate-y-0"}

@@ -11,13 +11,13 @@ const Databar = {
     ),
     mainbubble: "Design",
     subbubble: "Craft Experiences That Connect",
-    mainimg: "/assets/Frame 1597883691.png",
+    mainimg: "/assets/rd-image005.png",
     subtitle: "Crafted Interfaces. Memorable Brands..",
     maintitle: "Human-First Design.",
     Description:
       "We turn concepts into captivating visuals, intuitive journeys, and branded experiences that feel effortless. From UI/UX to complete brand systems, we design with purpose—where every interaction builds trust and elevates your product.",
-    icon: "/assets/Group 1597883307.svg",
-    newicone: "/assets/Group 1597883307 (1).svg",
+    icon: "/assets/rd-image006.svg",
+    newicone: "/assets/rd-image007.svg",
   },
   section2: {
     title: (
@@ -27,13 +27,13 @@ const Databar = {
     ),
     mainbubble: "Build",
     subbubble: "Develop Technology That Scales",
-    mainimg: "/assets/Frame 1597883703.png",
+    mainimg: "/assets/rd-image008.png",
     subtitle: "High-Performance Engineering For",
     maintitle: "Modern Businesses.",
     Description:
       "From robust software platforms to high-quality mobile apps, our engineering teams turn vision into reality. We build fast, scalable, and secure digital products—backed by technical expertise and real-world problem-solving.",
     icon: "/assets/Group (3).svg",
-    newicone: "/assets/Group (2).svg",
+    newicone: "/assets/rd-image009.svg",
   },
   section3: {
     title: (
@@ -43,13 +43,13 @@ const Databar = {
     ),
     mainbubble: "Grow",
     subbubble: "Turn Insights Into Impact",
-    mainimg: "/assets/Frame 1597883707.png",
+    mainimg: "/assets/rd-image010.png",
     subtitle: "Smarter Insights. Precise REIT Data.",
     maintitle: "Better Operations.",
     Description:
       "We help businesses harness the power of data to make informed decisions, streamline operations, and accelerate growth. Our approach combines analytics, strategy, and execution to deliver measurable results.",
-    icon: "/assets/Frame.svg",
-    newicone: "/assets/Group (4).svg",
+    icon: "/assets/rd-image011.svg",
+    newicone: "/assets/rd-image012.svg",
   },
 } as const;
 
@@ -174,15 +174,15 @@ const Herobar: React.FC = () => {
           
             {activeKey === "section1" && (<div className="absolute inset-0 pointer-events-auto">
               <div className="absolute top-[27%] left-5 w-fit flex justify-center items-center border border-transparent rounded-xl bg-[#FFFFFF]/20 px-2 py-2 ExtraLight hover:scale-105 hover:rotate-3 transition-transform">
-                <img src="/assets/prototype 1.png" alt="" className="p-3 rounded-xl bg-gradient-to-br from-[#0D55A2] to-[#000A21] text-black bold" />
+                <img src="/assets/rd-image013.png" alt="" className="p-3 rounded-xl bg-gradient-to-br from-[#0D55A2] to-[#000A21] text-black bold" />
                 <span className="px-2 ExtraLight">Prototyping</span>
               </div>
               <div className="absolute top-[27%] right-10 w-fit flex justify-center items-center border border-transparent rounded-xl bg-[#FFFFFF]/20 px-2 py-2 ExtraLight hover:-rotate-3 hover:scale-105 transition-transform">
-                <img src="/assets/random 1.png" alt="" className="p-3 rounded-xl bg-gradient-to-br from-[#0D55A2] to-[#000A21] text-black bold" />
+                <img src="/assets/rd-image014.png" alt="" className="p-3 rounded-xl bg-gradient-to-br from-[#0D55A2] to-[#000A21] text-black bold" />
                 <span className="px-2 ExtraLight">Seamless <br /> Experience</span>
               </div>
               <div className="absolute top-[22%] left-1/3 flex justify-center items-center w-fit border border-transparent rounded-xl bg-[#FFFFFF]/20 px-2 py-2 ExtraLight hover:scale-105 hover:rotate-3 transition-transform">
-                <img src="/assets/user 1.png" alt="" className="p-3 rounded-xl bg-gradient-to-br from-[#0D55A2] to-[#000A21] text-black bold" />
+                <img src="/assets/rd-image015.png" alt="" className="p-3 rounded-xl bg-gradient-to-br from-[#0D55A2] to-[#000A21] text-black bold" />
                 <span className="px-2 ExtraLight">User-Centric <br /> Design</span>
               </div>
             </div>

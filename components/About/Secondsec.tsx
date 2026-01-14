@@ -12,7 +12,7 @@ export const Secondsec = () => {
     flex flex-col lg:flex-row 
      2xl:px-45 
     mt-20 pb-10 lg:mt-40 lg:pb-20 gap-30 relative
-    bg-[url('/assets/Vector2.png')] 
+    bg-[url('/assets/rd-image030.png')] 
     bg-no-repeat bg-cover bg-center
   "
 >
@@ -80,13 +80,13 @@ export const Secondsec = () => {
           </div>
         </div>
         <div className="flex flex-row gap-7">
-        <img src="/assets/Group 1597883140.svg" alt="" /><p className='text-base sm:text-lg text-[#A9ABBE] leading-7 sm:leading-8 mt-4 regular'> We’re your growth partners, blending creativity, data, and technology to turn bold ideas into impactful digital solutions.
+        <img src="/assets/rd-image031.svg" alt="" /><p className='text-base sm:text-lg text-[#A9ABBE] leading-7 sm:leading-8 mt-4 regular'> We’re your growth partners, blending creativity, data, and technology to turn bold ideas into impactful digital solutions.
       </p></div>
       </div>
 
       {/* Right Content */}
       <div className='w-full lg:w-1/2 flex justify-center items-center relative group transition-all duration-300 hover:z-10 '>
-       <img src="/assets/About-1 1.svg" alt="" />
+       <img src="/assets/rd-image032.svg" alt="" />
       </div>
 
     </div>

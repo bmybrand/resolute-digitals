@@ -1,11 +1,11 @@
 import React from 'react'
 
 const curvedItems = [
-  { id: "01", icon: "/assets/research.png", title: "Discovery & Strategy", description: "We start by understanding your goals, audience, and challenges to shape a focused strategy and digital roadmap for success.", offsetClass: "xl:translate-y-[90px]" },
-  { id: "02", icon: "/assets/layers.png", title: "Design & Prototyping", description: "Our creative team turns ideas into intuitive, engaging designs that enhance user experience.", offsetClass: "xl:translate-y-0" },
-  { id: "03", icon: "/assets/webdev.png", title: "Development & Build", description: "We build fast, secure, and scalable digital solutions using clean code across web and mobile platforms.", offsetClass: "xl:-translate-y-[90px]" },
-  { id: "04", icon: "/assets/Expand.png", title: "Testing & Optimization", description: "Every project is tested, refined, and optimized for speed, performance, & flawless usability.", offsetClass: "xl:translate-y-0" },
-  { id: "05", icon: "/assets/productlaunch.png", title: "Launch & Support", description: "After launch, we ensure smooth operation with ongoing updates and dedicated support.", offsetClass: "xl:translate-y-[90px]" },
+  { id: "01", icon: "/assets/rd-image036.png", title: "Discovery & Strategy", description: "We start by understanding your goals, audience, and challenges to shape a focused strategy and digital roadmap for success.", offsetClass: "xl:translate-y-[90px]" },
+  { id: "02", icon: "/assets/rd-image037.png", title: "Design & Prototyping", description: "Our creative team turns ideas into intuitive, engaging designs that enhance user experience.", offsetClass: "xl:translate-y-0" },
+  { id: "03", icon: "/assets/rd-image038.png", title: "Development & Build", description: "We build fast, secure, and scalable digital solutions using clean code across web and mobile platforms.", offsetClass: "xl:-translate-y-[90px]" },
+  { id: "04", icon: "/assets/rd-image039.png", title: "Testing & Optimization", description: "Every project is tested, refined, and optimized for speed, performance, & flawless usability.", offsetClass: "xl:translate-y-0" },
+  { id: "05", icon: "/assets/rd-image040.png", title: "Launch & Support", description: "After launch, we ensure smooth operation with ongoing updates and dedicated support.", offsetClass: "xl:translate-y-[90px]" },
 ];
 
 const CurvatureCards = () => {

@@ -155,7 +155,7 @@ const ContactSection: React.FC = () => {
       >
         <span className="absolute inset-x-0 w-1/2 mx-auto -top-px bg-gradient-to-r from-transparent via-white to-transparent h-px" />
         <span>Send Message</span>
-        <img src="/assets/Vector (Stroke).svg" className="pt-0.5 w-3 sm:w-3.5" alt="" />
+        <img src="/assets/rd-image003.svg" className="pt-0.5 w-3 sm:w-3.5" alt="" />
       </button>
     </div>
 
@@ -170,8 +170,8 @@ const ContactSection: React.FC = () => {
   <div className="mb-6 text-white">
     <h2 className="text-[28px] sm:text-[32px] lg:text-[40px] font-bold mb-6 text-[#2378DA]">
 Head Office</h2>
-    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/svgviewer-output (1).svg" alt="" className="w-6"/> info@resolutedigitals.com</p>
-    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/svgviewer-output.svg" alt="" className="w-6"/> +1 (800) 465-7890</p>
+    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/rd-image113.svg" alt="" className="w-6"/> info@resolutedigitals.com</p>
+    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/rd-image114.svg" alt="" className="w-6"/> +1 (800) 465-7890</p>
     <p className="mt-2 text-[19px] opacity-80">
       Plot No. E-88, Block B Gulshan e Jamal, Karachi, 75260
     </p>
@@ -181,8 +181,8 @@ Head Office</h2>
   <div className="mb-6 text-white ">
     <h2 className="text-[28px] sm:text-[32px] lg:text-[40px] font-bold mb-6 text-[#2378DA]">
 US Office</h2>
-    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/svgviewer-output (1).svg" alt="" className="w-6"/> info@resolutedigitals.com</p>
-    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/svgviewer-output.svg" alt="" className="w-6"/> +1 (800) 465-7890</p>
+    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/rd-image113.svg" alt="" className="w-6"/> info@resolutedigitals.com</p>
+    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/rd-image114.svg" alt="" className="w-6"/> +1 (800) 465-7890</p>
     <p className="mt-2 text-[19px] opacity-80">
       738, Fawn Valley Dr., Allen, TX 75002, United States
     </p>

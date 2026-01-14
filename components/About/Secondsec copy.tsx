@@ -59,7 +59,7 @@ export const Secondseccopy = () => {
 
       {/* Right Content */}
       <div className='w-full lg:w-1/2 flex justify-center items-center relative group transition-all duration-300 hover:z-10 '>
-        <img className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-full" src="/assets/Group 1597883486.svg" alt="" />
+        <img className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-full" src="/assets/rd-image102.svg" alt="" />
       </div>
 
     </div>

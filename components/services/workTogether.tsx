@@ -30,7 +30,7 @@ const bubbleItems = [
   "Product Design",
 ]
 
-const separatorImage = "/assets/Group 1597883449.svg"
+const separatorImage = "/assets/rd-image101.svg"
 const colors = ["#2378DA", "#0F1930"]
 
 const WorkTogether = () => {
@@ -51,7 +51,7 @@ const WorkTogether = () => {
           <span className="absolute inset-x-0 w-1/2 mx-auto -top-px bg-gradient-to-r from-transparent via-white to-transparent h-px" />
           <span>Contact Now</span>
           <img
-            src="/assets/Vector (Stroke).svg"
+            src="/assets/rd-image003.svg"
             className="pt-0.5 w-3 sm:w-3.5 md:w-4"
             alt=""
           />

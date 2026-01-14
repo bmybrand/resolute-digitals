@@ -8,9 +8,9 @@ const cardsData = [
     description:
       "We build scalable and secure software solutions tailored to your business goals - modern, efficient, and built to perform.",
     cta: "Start with us",
-    img: "/assets/RD-bentogridimage1.svg",
-    icon: "/assets/RD-bentoicon1.svg",
-    updatedIcon: "/assets/RD-bentoupdatedIcon1.svg",
+    img: "/assets/rd-image016.svg",
+    icon: "/assets/rd-image017.svg",
+    updatedIcon: "/assets/rd-image018.svg",
     contentWidth: "2xl:w-[55%]",
     imgClass:
       "absolute -right-15 -bottom-10 object-contain opacity-80 w-3/5 xl:w-1/2",
@@ -21,9 +21,9 @@ const cardsData = [
     title: "App Development",
     description: "",
     cta: "Start with us",
-    img: "/assets/RD-bentogridimage2.svg",
-    icon: "/assets/RD-bentoicon2.svg",
-    updatedIcon: "/assets/RD-bentoupdatedIcon2.svg",
+    img: "/assets/rd-image019.svg",
+    icon: "/assets/rd-image020.svg",
+    updatedIcon: "/assets/rd-image021.svg",
     contentWidth: "lg:w-full",
     imgClass:
       "absolute right-0 -bottom-5 object-contain opacity-80 w-1/2 lg:w-2/3 xl:w-1/2",
@@ -34,9 +34,9 @@ const cardsData = [
     title: "Digital Marketing",
     description:"",
     cta: "Start with us",
-    img: "/assets/Group 1597883019.svg",
-    icon: "/assets/Group 1597883438 (1).svg",
-    updatedIcon: "/assets/Group (14).svg",
+    img: "/assets/rd-image022.svg",
+    icon: "/assets/rd-image023.svg",
+    updatedIcon: "/assets/rd-image024.svg",
     contentWidth: "lg:w-full",
     imgClass:
       "absolute -right-5 -bottom-5 object-contain opacity-80 w-2/3",
@@ -48,11 +48,11 @@ const cardsData = [
     description:
       "We transform data into insight and streamline operations with analytics and intelligent business solutions.",
     cta: "Start with us",
-    img: "/assets/Frame 1597883677.svg",
+    img: "/assets/rd-image025.svg",
     imgClass:
       "absolute -right-20 -bottom-10 object-contain opacity-80 w-1/2 lg:w-2/3 xl:w-2/5",
-    icon: "/assets/Frame.svg",
-    updatedIcon: "/assets/Frame2.svg",
+    icon: "/assets/rd-image011.svg",
+    updatedIcon: "/assets/rd-image026.svg",
     contentWidth: "w-full 2xl:w-[60%]",
     
   },
@@ -63,10 +63,10 @@ const cardsData = [
     title: "Design & Experience",
     description: "We design intuitive digital experiences that engage users, strengthen brands, and elevate every interaction.",
     cta: "Start with us",
-    icon: "/assets/Group (13).svg",
-    updatedIcon: "/assets/Group (9).svg",
+    icon: "/assets/rd-image027.svg",
+    updatedIcon: "/assets/rd-image028.svg",
     contentWidth: "w-full lg:w-[30%] xl:w-full",
-    img: "/assets/Frame 1597883656.svg",
+    img: "/assets/rd-image029.svg",
     imgClass:
       "absolute -right-4 bottom-0 object-contain opacity-80 w-1/2 lg:w-2/3 xl:w-full",
   },

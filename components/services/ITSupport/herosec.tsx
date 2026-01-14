@@ -7,7 +7,7 @@ const HeroSec = () => {
       <div
         className="relative w-full h-[50vh] lg:h-[60vh] flex items-center justify-center rounded-3xl overflow-hidden"
         style={{
-          backgroundImage: `url('/assets/Group1597883634.svg')`,
+          backgroundImage: `url('/assets/rd-image081.svg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

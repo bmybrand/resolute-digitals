@@ -73,7 +73,7 @@ const ReviewCards = () => {
     setActiveIndex((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
 
   return (
-    <div className="w-full py-20 bg-[#081733] flex flex-col items-center bg-[url('/assets/Group20.svg')] bg-no-repeat bg-cover bg-center">
+    <div className="w-full py-20 bg-[#081733] flex flex-col items-center bg-[url('/assets/rd-image078.svg')] bg-no-repeat bg-cover bg-center">
       {/* Heading */}
       <div className="flex flex-col lg:w-xl text-center mb-12">
         <div className="flex justify-center items-center w-fit rounded-full bg-white/10 px-3 py-2 mb-6 mx-auto">
@@ -129,7 +129,7 @@ const ReviewCards = () => {
                   <p className="text-sm text-blue-400">{review.title}</p>
                 </div>
                <img
-                src="/assets/”.svg" 
+                src="/assets/rd-image079.svg" 
                 alt="Avatar"
                 className="absolute bottom-6 right-10 w-16 h-16 object-cover overflow-visible "
               />

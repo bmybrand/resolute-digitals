@@ -14,7 +14,7 @@ const FooterSec = () => {
   return (
     <div className="flex flex-col items-center">
       <img
-        src="/assets/Heading 1.svg"
+        src="/assets/rd-image080.svg"
         alt=""
         className="w-[70%] mt-10 lg:mt-30"
       />
@@ -42,7 +42,7 @@ const FooterSec = () => {
                   <span className="absolute inset-x-0 w-1/2 mx-auto -top-px bg-gradient-to-r from-transparent via-white to-transparent h-px" />
                   <span className="text-white regular">Subscribe Now</span>
                   <img
-                    src="/assets/Vector (Stroke).svg"
+                    src="/assets/rd-image003.svg"
                     className="pt-0.5 w-3"
                     alt=""
                   />
@@ -59,7 +59,7 @@ const FooterSec = () => {
         <div className="flex flex-col lg:flex-row flex-wrap gap-8 border-t border-white/20 pt-12 mx-auto w-full ">
   {/* About / Logo Section */}
   <div className="w-full lg:flex-1 lg:min-w-[400px] min-w-[200px] pr-0 lg:pr-[3%]">
-    <img src="/assets/Group (5).svg" alt="" className="mb-4" />
+    <img src="/assets/rd-image004.svg" alt="" className="mb-4" />
     <p className="text-white/70">
       We’re your trusted digital partner — helping businesses grow with creativity, technology, and strategy. Our expert team delivers scalable web, app, and marketing solutions designed for measurable success.
     </p>

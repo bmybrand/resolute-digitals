@@ -5,14 +5,14 @@ const ninesec = () => {
   const sections = [
     {
       bgColor: "#081733",
-      mainImage: "/assets/Group 1597883329 (2).svg",
+      mainImage: "/assets/rd-image076.svg",
       floatingIconColor: "#2378DA",
       title: "Resolute Digitals Website",
       description: "A Modern, High-Performance Agency Website",
     },
     {
       bgColor: "#191403",
-      mainImage: "/assets/Group 1597883775.svg",
+      mainImage: "/assets/rd-image077.svg",
       floatingIconColor: "#FDCA19",
       title: "Muslim Connect Website",
       description: "A Modern Digital Platform for Community Connection",
@@ -62,7 +62,7 @@ const ninesec = () => {
                      px-4 py-2 sm:px-5 sm:py-2 md:px-6 md:py-3 lg:px-7 lg:py-4
                      text-xs sm:text-sm md:text-base text-white transition">
     <span>View All Projects</span>
-    <img src="/assets/Vector (Stroke).svg" className="w-3 sm:w-4 md:w-5" alt="" />
+    <img src="/assets/rd-image003.svg" className="w-3 sm:w-4 md:w-5" alt="" />
   </button>
 </a>
 
@@ -83,7 +83,7 @@ const ninesec = () => {
                        transition active:scale-95"
             style={{ backgroundColor: section.floatingIconColor }}
           >
-            <img src="/assets/Vector (Stroke).svg" className="w-3 sm:w-4 md:w-5" alt="" />
+            <img src="/assets/rd-image003.svg" className="w-3 sm:w-4 md:w-5" alt="" />
           </button>
 
           {/* Main Image */}
@@ -114,7 +114,7 @@ const ninesec = () => {
                          flex items-center justify-center transition hover:bg-white/30"
             >
               <img
-                src="/assets/Vector (Stroke).svg"
+                src="/assets/rd-image003.svg"
                 className="w-3 sm:w-4 md:w-5 -rotate-135"
                 alt=""
               />
@@ -127,7 +127,7 @@ const ninesec = () => {
                          flex items-center justify-center transition hover:bg-white/30"
             >
               <img
-                src="/assets/Vector (Stroke).svg"
+                src="/assets/rd-image003.svg"
                 className="w-3 sm:w-4 md:w-5 rotate-45"
                 alt=""
               />
