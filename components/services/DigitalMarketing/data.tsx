@@ -24,7 +24,7 @@ export const AboutSection = {
     "We design and execute performance-focused marketing strategies that combine creativity, analytics, and automation to drive traffic, generate leads, and increase revenue. From organic search to paid campaigns, our solutions are built to scale and adapt as your business grows.",
   ],
   image:
-    "/assets/A male designer working on a desktop computer in a modern office, focused on the screen showing a user interface design. (2).svg",
+    "/assets/rd-image128.svg",
 };
 
 // Capabilities Section
@@ -128,25 +128,25 @@ export const features = [
     title: "Performance Strategy",
     text:
       "We bring experienced designers who craft thoughtful, scalable, and high-impact digital experiences that feel modern, consistent, and easy to use.",
-    image: "/assets/Group 1597884018 (1).svg",
+    image: "/assets/rd-image129.svg",
   },
   {
     title: "Audience Targeting",
     text:
       "We bring experienced designers who craft thoughtful, scalable, and high-impact digital experiences that feel modern, consistent, and easy to use.",
-    image: "/assets/Group 1597884020 (1).svg",
+    image: "/assets/rd-image130.svg",
   },
   {
     title: "Creative & Insights",
     text:
       "We align design with brand goals and business outcomes, ensuring every visual and experience choice supports growth and measurable impact.",
-    image: "/assets/Group 1597884025 (1).svg",
+    image: "/assets/rd-image131.svg",
   },
   {
     title: "Collaborative Workflow",
     text:
       "We work closely with clients throughout the process to maintain transparency, clear communication, & creative alignment from start to finish.",
-    image: "/assets/Group 1597884030.svg",
+    image: "/assets/rd-image132.svg",
   },
 ];
 
