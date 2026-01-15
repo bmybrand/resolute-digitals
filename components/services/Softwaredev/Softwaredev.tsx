@@ -17,8 +17,9 @@ export default function Softwaredev() {
 
       <FloatingNavDemo />
       <Herosec/>
-      <CoreCapabilities />
       <Secsec/>
+      
+      <CoreCapabilities />
       
     </div>
     <Thirdsec/>

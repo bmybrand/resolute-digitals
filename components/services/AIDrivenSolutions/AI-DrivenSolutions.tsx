@@ -17,8 +17,9 @@ export default function AIDrivenSolutions() {
 
       <FloatingNavDemo />
       <Herosec/>
-      <CoreCapabilities />
       <Secsec/>
+      
+      <CoreCapabilities />
       
     </div>
     <Thirdsec/>

@@ -161,7 +161,7 @@ export const FloatingNav = ({
     left: navItem.name === "Services" ? (navbarRef.current ? navbarRef.current.offsetLeft : 0) : undefined,
     position: "fixed",
     top:70,
-    width: navItem.name === "Services" ? (scrolled ? "100vw" : "70%") : undefined,
+    width: navItem.name === "Services" ? (scrolled ? "100vw" : "80%") : undefined,
     zIndex: 6000,
   }}
   onMouseEnter={() => setHoveredDropdown(navItem.name)}

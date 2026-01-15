@@ -19,13 +19,15 @@ const Casestudy: React.FC = () => {
   const sections = [
     { img: "/assets/1.webp.svg" },
     { img: "/assets/Group15.svg" },
-    { img: "/assets/1.webp3.svg" },
+    { img: "/assets/1.webp5.svg" },
+    { img: "/assets/1.webp7.svg" },
   ];
 
   const sections1 = [
     { img: "/assets/1.webpsub.svg" },
     { img: "/assets/1.webp2.svg" },
     { img: "/assets/1.webp4.svg" },
+    { img: "/assets/1.webp6.svg" },
   ];
 
   const textContent = [
@@ -33,22 +35,29 @@ const Casestudy: React.FC = () => {
       title: "Muslim Connect",
       description:
         "A modern, purpose-driven platform designed to bring Muslim communities together through seamless communication, trusted connections, and enhanced accessibility.",
-      tags: ["UI/UX Design", "Web Development", "Responsive Design","UI/UX Design", "Web Development", "Responsive Design"],
+      tags: ["UI/UX Design", "Web Development", "Responsive Design"],
       number: "01",
     },
     {
-      title: "Community Hub",
+      title: "Recomune",
       description:
-        "Connect, share, and engage with your local and global Muslim communities with intuitive tools and secure interfaces.",
-      tags: ["Community Building", "Security", "Accessibility"],
+        "Recomune helps creators and professionals connect and collaborate. We designed and developed a smooth web and mobile experience that makes networking easy and engagement effortless.",
+      tags: ["UI/UX Design", "Web Development", "Responsive Design"],
       number: "02",
     },
     {
-      title: "Event Management",
+      title: "Madrid Café & Bar",
+      description:
+        "Madrid Café & Bar is a modern café and cocktail bar. The website was designed to reflect its ambiance while providing a seamless, responsive user experience.",
+      tags: ["UI/UX Design", "Web Development", "Responsive Design"],
+      number: "03",
+    },
+    {
+      title: "Swera Restuarant",
       description:
         "Organize, discover, and participate in events seamlessly, making community interaction more engaging and meaningful.",
-      tags: ["Events", "Scheduling", "Interactive Design"],
-      number: "03",
+      tags: ["UI/UX Design", "Web Development", "Responsive Design"],
+      number: "04",
     },
   ];
 
@@ -166,7 +175,7 @@ const Casestudy: React.FC = () => {
       <FloatingNavDemo />
 
       {/* Mini preview + text */}
-      <div className="fixed bottom-4 px-4 sm:px-6 md:px-12 lg:bottom-12 xl:px-48 z-50 flex flex-col md:flex-row gap-4 items-start w-full">
+      <div className="fixed bottom-4 px-4 sm:px-6 md:px-12 lg:bottom-12 2xl:px-48 z-50 flex flex-col md:flex-row gap-4 items-start w-full">
         {/* Mini preview */}
         <div className="w-44 sm:w-56 md:w-70 md:h-64 aspect-[4/3] border-2 border-white overflow-hidden rounded-[64px] relative">
           {sections1.map((item, i) => (
