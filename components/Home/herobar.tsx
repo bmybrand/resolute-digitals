@@ -32,7 +32,7 @@ const Databar = {
     maintitle: "Modern Businesses.",
     Description:
       "From robust software platforms to high-quality mobile apps, our engineering teams turn vision into reality. We build fast, scalable, and secure digital products—backed by technical expertise and real-world problem-solving.",
-    icon: "/assets/Group (3).svg",
+    icon: "/assets/rd-image017.svg",
     newicone: "/assets/rd-image009.svg",
   },
   section3: {
