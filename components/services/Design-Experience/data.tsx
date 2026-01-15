@@ -128,25 +128,25 @@ export const features = [
     title: "Expert Design Team",
     text:
       "We bring experienced designers who craft thoughtful, scalable, and high-impact digital experiences that feel modern, consistent, and easy to use.",
-    image: "/assets/Group 1597884018.svg",
+    image: "/assets/rd-image146.svg",
   },
   {
     title: "User-Centered Design",
     text:
       "We bring experienced designers who craft thoughtful, scalable, and high-impact digital experiences that feel modern, consistent, and easy to use.",
-    image: "/assets/Group 1597884020.svg",
+    image: "/assets/rd-image143.svg",
   },
   {
     title: "Strategic Thinking",
     text:
       "We align design with brand goals and business outcomes, ensuring every visual and experience choice supports growth and measurable impact.",
-    image: "/assets/Group 1597884025.svg",
+    image: "/assets/rd-image147.svg",
   },
   {
     title: "Collaborative Workflow",
     text:
       "We work closely with clients throughout the process to maintain transparency, clear communication, & creative alignment from start to finish.",
-    image: "/assets/Group 1597884026.svg",
+    image: "/assets/rd-image148.svg",
   },
 ];
 

@@ -31,7 +31,7 @@ export const AboutSection = {
     "Our approach delivers consistency, comparability, and actionable insights aligned with ESG frameworks and sustainability goals.",
   ],
   image:
-    "/assets/A male designer working on a desktop computer in a modern office, focused on the screen showing a user interface design. (5).svg",
+    "/assets/rd-image141.svg",
 };
 
 // Capabilities Section
@@ -105,25 +105,25 @@ export const features = [
     title: "ESG Data Accuracy",
     text:
       "Our validation workflows reduce errors and inconsistencies by cross-checking disclosures and applying standardized definitions across every metric.",
-    image: "/assets/Group 1597884018 (3).svg",
+    image: "/assets/rd-image142.svg",
   },
   {
     title: "Framework Alignment",
     text:
       "We align REIT sustainability data with major ESG frameworks and reporting standards, improving comparability across sectors, portfolios, and reporting years.",
-    image: "/assets/Group 1597884020.svg",
+    image: "/assets/rd-image143.svg",
   },
   {
     title: "Audit-Ready Traceability",
     text:
       "Each metric stays traceable to its original disclosure source, supporting defensible outputs, reviewability, and institutional confidence.",
-    image: "/assets/Group 1597884039.svg",
+    image: "/assets/rd-image144.svg",
   },
   {
     title: "Quality Control Process",
     text:
       "We apply structured QC checks for coverage, boundaries, and year-over-year changes to ensure datasets remain consistent, complete, and reliable.",
-    image: "/assets/Vector (2).svg",
+    image: "/assets/rd-image145.svg",
   },
 ];
 

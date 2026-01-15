@@ -17,17 +17,17 @@ const Casestudy: React.FC = () => {
   const currentIndexRef = useRef(0);
 
   const sections = [
-    { img: "/assets/1.webp.svg" },
-    { img: "/assets/Group15.svg" },
-    { img: "/assets/1.webp5.svg" },
-    { img: "/assets/1.webp7.svg" },
+    { img: "/assets/rd-image152.svg" },
+    { img: "/assets/rd-image153.svg" },
+    { img: "/assets/rd-image154.svg" },
+    { img: "/assets/rd-image155.svg" },
   ];
 
   const sections1 = [
-    { img: "/assets/1.webpsub.svg" },
-    { img: "/assets/1.webp2.svg" },
-    { img: "/assets/1.webp4.svg" },
-    { img: "/assets/1.webp6.svg" },
+    { img: "/assets/rd-image156.svg" },
+    { img: "/assets/rd-image157.svg" },
+    { img: "/assets/rd-image158.svg" },
+    { img: "/assets/rd-image159.svg" },
   ];
 
   const textContent = [

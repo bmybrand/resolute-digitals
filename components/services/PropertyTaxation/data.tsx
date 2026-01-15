@@ -24,7 +24,7 @@ export const AboutSection = {
     "Our service provides standardized research and analysis of local property tax assessment practices, enabling consistent and defensible tax calculations for multifamily assets.",
     "We focus on identifying how properties are classified, assessed, reassessed, and taxed, transforming fragmented jurisdictional rules into structured datasets that can be reliably used for underwriting, portfolio analysis, and institutional research.",
   ],
-  image: "/assets/A male designer working on a desktop computer in a modern office, focused on the screen showing a user interface design. (3).svg",
+  image: "/assets/rd-image149.svg",
 };
 
 // Capabilities Section
@@ -133,25 +133,25 @@ export const features = [
     title: "Jurisdiction-Level Accuracy",
     text:
       "We reflect local assessor practices and jurisdiction-specific rules to ensure property tax estimates mirror real-world U.S. taxation.",
-    image: "/assets/Group 1597884018.svg",
+    image: "/assets/rd-image146.svg",
   },
   {
     title: "Assessment Insights",
     text:
       "We document how properties are classified, assessed, and reassessed—capturing triggers, cycles, and valuation methodologies.",
-    image: "/assets/Group 1597884018.svg",
+    image: "/assets/rd-image146.svg",
   },
   {
     title: "Tax Calculation Models",
     text:
       "All tax rates, millage structures, and formulas are standardized into clean datasets ready for financial and portfolio modeling.",
-    image: "/assets/Group 1597884043.svg",
+    image: "/assets/rd-image150.svg",
   },
   {
     title: "Institutional Research",
     text:
       "Our research emphasizes traceability, consistency, and clarity—supporting institutional analysis and long-term investment decisions.",
-    image: "/assets/Vector.svg",
+    image: "/assets/rd-image151.svg",
   },
 ];
 
