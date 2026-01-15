@@ -9,28 +9,52 @@ export interface FaqItem {
   answer: string;
 }
 
-export const capabilities: Capability[] = [
-  {
-    title: "SEO Services",
-    description:
-      "We optimize websites for search visibility through technical SEO, content strategy, and keyword optimization. Our approach improves rankings, increases organic traffic, and builds long-term authority while aligning with search engine best practices.",
-  },
-  {
-    title: "Social Ads",
-    description:
-      "We optimize websites for search visibility through technical SEO, content strategy, and keyword optimization. Our approach improves rankings, increases organic traffic, and builds long-term authority while aligning with search engine best practices.",
-  },
-  {
-    title: "Paid Campaigns",
-    description:
-      "We create targeted social media advertising campaigns designed to reach the right audience across platforms. From creative development to audience targeting and performance tracking, we focus on maximizing engagement and return on ad spend.",
-  },
-  {
-    title: "Email Marketing",
-    description:
-      "We manage data-driven paid campaigns across search and display networks to generate high-intent traffic. Campaigns are structured for efficiency, continuous optimization, and measurable conversion growth.",
-  },
-];
+export interface SoftwareStat {
+  value: string;
+  highlight?: string;
+  label: string;
+  description: string;
+}
+
+// About Section
+export const AboutSection = {
+  title: "About Digital Marketing Service",
+  description: [
+    "Digital marketing is essential for reaching the right audience at the right time.",
+    "We design and execute performance-focused marketing strategies that combine creativity, analytics, and automation to drive traffic, generate leads, and increase revenue. From organic search to paid campaigns, our solutions are built to scale and adapt as your business grows.",
+  ],
+  image:
+    "/assets/A male designer working on a desktop computer in a modern office, focused on the screen showing a user interface design. (2).svg",
+};
+
+// Capabilities Section
+export const capabilitiesSection = {
+  title: "Our Digital Marketing Capabilities",
+  items: [
+    {
+      title: "SEO Services",
+      description:
+        "We optimize websites for search visibility through technical SEO, content strategy, and keyword optimization. Our approach improves rankings, increases organic traffic, and builds long-term authority while aligning with search engine best practices.",
+    },
+    {
+      title: "Social Ads",
+      description:
+        "We optimize websites for search visibility through technical SEO, content strategy, and keyword optimization. Our approach improves rankings, increases organic traffic, and builds long-term authority while aligning with search engine best practices.",
+    },
+    {
+      title: "Paid Campaigns",
+      description:
+        "We create targeted social media advertising campaigns designed to reach the right audience across platforms. From creative development to audience targeting and performance tracking, we focus on maximizing engagement and return on ad spend.",
+    },
+    {
+      title: "Email Marketing",
+      description:
+        "We manage data-driven paid campaigns across search and display networks to generate high-intent traffic. Campaigns are structured for efficiency, continuous optimization, and measurable conversion growth.",
+    },
+  ],
+};
+
+// FAQs
 export const faqs: FaqItem[] = [
   {
     question: "What industries do you support with digital marketing?",
@@ -64,45 +88,41 @@ export const faqs: FaqItem[] = [
   },
 ];
 
-export interface SoftwareStat {
-  value: string;
-  highlight?: string; // for coloring part of the number
-  label: string;
-  description: string;
-}
-
-// Section Meta for Software Stats
+// Software Stats Section Meta
 export const softwareStatsSection = {
   title:
     "We Drive Digital Marketing Strategies That Increase Visibility, Engagement, And Conversions.",
 };
 
-// Software Stats
-export const softwareStats: SoftwareStat[] = [
-  {
-    value: "2.5K",
-    highlight: "+",
-    label: "Marketing Campaigns Delivered",
-    description:
-      "We’ve executed hundreds of SEO, paid advertising, and email marketing campaigns across industries—each designed to increase reach, attract high-intent audiences, and generate measurable growth.",
-  },
-  {
-    value: "92",
-    highlight: "%",
-    label: "Client Satisfaction Rate",
-    description:
-      "We’ve executed hundreds of SEO, paid advertising, and email marketing campaigns across industries—each designed to increase reach, attract high-intent audiences, and generate measurable growth.",
-  },
-  {
-    value: "85",
-    highlight: "%",
-    label: "Increase in Engagement & Conversions",
-    description:
-      "Most businesses experience higher engagement, improved conversion rates, and better ROI after implementing our optimized campaigns, precise audience targeting, and performance tracking systems.",
-  },
-];
+// Software Stats (normalized)
+export const softwareStats = {
+  image: "/assets/ax-sd-st-thumb.webp (2).svg",
+  stats: [
+    {
+      value: "2.5K",
+      highlight: "+",
+      label: "Marketing Campaigns Delivered",
+      description:
+        "We’ve executed hundreds of SEO, paid advertising, and email marketing campaigns across industries—each designed to increase reach, attract high-intent audiences, and generate measurable growth.",
+    },
+    {
+      value: "92",
+      highlight: "%",
+      label: "Client Satisfaction Rate",
+      description:
+        "We’ve executed hundreds of SEO, paid advertising, and email marketing campaigns across industries—each designed to increase reach, attract high-intent audiences, and generate measurable growth.",
+    },
+    {
+      value: "85",
+      highlight: "%",
+      label: "Increase in Engagement & Conversions",
+      description:
+        "Most businesses experience higher engagement, improved conversion rates, and better ROI after implementing our optimized campaigns, precise audience targeting, and performance tracking systems.",
+    },
+  ],
+};
 
-
+// Features
 export const features = [
   {
     title: "Performance Strategy",
@@ -129,47 +149,43 @@ export const features = [
     image: "/assets/Group 1597884030.svg",
   },
 ];
-// Section Meta
+
+// Main Section
 export const mainSection = {
-  title:
-    "DIGITAL MARKETING",
+  title: "DIGITAL MARKETING",
   subtitle:
     "We help brands grow visibility, engagement, and conversions through data-driven digital marketing strategies built for measurable business growth. By using audience insights and performance optimization, we create campaigns that attract the right customers and scale results over time.",
 };
 
-// About Section
-export const AboutSection = {
-  title: "About Digital Marketing Service",
-  description: [
-    "Digital marketing is essential for reaching the right audience at the right time.",
-    "We design and execute performance-focused marketing strategies that combine creativity, analytics, and automation to drive traffic, generate leads, and increase revenue. From organic search to paid campaigns, our solutions are built to scale and adapt as your business grows.",
+// Process Steps (normalized)
+export const processSteps = {
+  title: "Our Comprehensive Digital Marketing Process",
+  description:
+    "Digital marketing requires strategy, execution, and continuous optimization. Our structured process ensures campaigns remain targeted, measurable, and aligned with business growth objectives.",
+  steps: [
+    {
+      id: "01",
+      title: "Strategy & Research",
+      desc:
+        "We analyze your business goals, target audience, competitors, and existing performance to define a clear marketing strategy and channel roadmap.",
+    },
+    {
+      id: "02",
+      title: "Campaign Planning & Setup",
+      desc:
+        "We structure campaigns, messaging, creatives, and tracking systems to ensure accurate targeting, clean setup, and measurable performance from day one.",
+    },
+    {
+      id: "03",
+      title: "Execution & Optimization",
+      desc:
+        "We organize audiences, ad assets, landing flow, and analytics tracking to launch campaigns with clear goals, reliable reporting, and optimized delivery.",
+    },
+    {
+      id: "04",
+      title: "Reporting & Growth",
+      desc:
+        "We provide clear performance reports and actionable insights, then refine strategy and campaigns to support sustainable growth and long-term marketing success.",
+    },
   ],
-  image: "/assets/A male designer working on a desktop computer in a modern office, focused on the screen showing a user interface design. (2).svg", 
 };
-
-export const processSteps = [
-  {
-    id: "01",
-    title: "Strategy & Research",
-    desc:
-      "We analyze your business goals, target audience, competitors, and existing performance to define a clear marketing strategy and channel roadmap.",
-  },
-  {
-    id: "02",
-    title: "Campaign Planning & Setup",
-    desc:
-      "We structure campaigns, messaging, creatives, and tracking systems to ensure accurate targeting, clean setup, and measurable performance from day one.",
-  },
-  {
-    id: "03",
-    title: "Execution & Optimization",
-    desc:
-      "We organize audiences, ad assets, landing flow, and analytics tracking to launch campaigns with clear goals, reliable reporting, and optimized delivery.",
-  },
-  {
-    id: "04",
-    title: "Reporting & Growth",
-    desc:
-      "We provide clear performance reports and actionable insights, then refine strategy and campaigns to support sustainable growth and long-term marketing success.",
-  },
-];

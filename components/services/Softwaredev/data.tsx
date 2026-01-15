@@ -15,10 +15,12 @@ export const AboutSection = {
     "Software development is at the core of digital transformation. We build secure, scalable, and high-performance applications designed to meet the needs of modern businesses. Whether it’s a responsive web platform, a powerful desktop application, or an immersive game experience, our development team delivers solutions engineered for reliability, flexibility, and long-term growth.",
     "",
    ],
-  image: "/assets/ai-about-hero.svg", // Hero / front image
+  image: "/assets/A male designer working on a desktop computer in a modern office, focused on the screen showing a user interface design..svg", // Hero / front image
 };
 
-export const capabilities: Capability[] = [
+export const capabilitiesSection = {
+  title: "Core Software Development Capabilities",
+  items: [
   {
     title: "Desktop Applications",
     description:
@@ -39,7 +41,8 @@ export const capabilities: Capability[] = [
     description:
       "We design and implement robust API systems built for performance, security, and extensibility. APIs are structured to support stable data exchange, clear documentation, and scalable consumption across applications, enabling reliable integrations, efficient development cycles, and long-term system evolution.",
   },
-];
+]
+};
 export const faqs: FaqItem[] = [
   {
     question: "What software development services do you provide?",
@@ -87,7 +90,9 @@ export const softwareStatsSection = {
 };
 
 // Software Stats
-export const softwareStats: SoftwareStat[] = [
+export const softwareStats  = {
+  image: "/assets/ax-sd-st-thumb.webp (2).svg", // parent image
+  stats: [
   {
     value: "2.5K",
     highlight: "+",
@@ -109,7 +114,8 @@ export const softwareStats: SoftwareStat[] = [
     description:
       "Most businesses experience reduced operational overhead after adopting automation-driven features and integrated tools built into our custom software solutions.",
   },
-];
+]
+};
 
 
 export const features = [
@@ -146,7 +152,11 @@ export const mainSection = {
     "We offer a full suite of digital services designed to help businesses build, scale, and grow with confidence. From strategy to execution, our team delivers tailored solutions that combine creativity, technology, and innovation—ensuring every project achieves meaningful results.",
 };
 
-export const processSteps = [
+export const processSteps = {
+  title: "Our Comprehensive Development Process",
+  description:
+    "Our development process is built to transform complex ideas into reliable, scalable software solutions. We follow a structured and transparent approach that combines strategic planning, thoughtful architecture, and precise execution. Each stage is carefully aligned with your business goals to ensure high performance, security, and long-term success from development through deployment.",
+  steps: [
   {
     id: "01",
     title: "Discovery & Planning",
@@ -171,4 +181,4 @@ export const processSteps = [
     desc:
       "We thoroughly test your application for security, speed, and stability before deploying it into production, ensuring a smooth launch and a future-ready foundation.",
   },
-];
+]};

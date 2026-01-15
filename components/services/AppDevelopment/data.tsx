@@ -9,7 +9,9 @@ export interface FaqItem {
   answer: string;
 }
 
-export const capabilities: Capability[] = [
+export const capabilitiesSection = {
+  title: "Core App Development Capabilities",
+  items: [
   {
     title: "Desktop Applications",
     description:
@@ -29,8 +31,10 @@ export const capabilities: Capability[] = [
     title: "API Systems",
     description:
       "We design and implement robust API systems built for performance, security, and extensibility. APIs are structured to support stable data exchange, clear documentation, and scalable consumption across applications, enabling reliable integrations, efficient development cycles, and long-term system evolution.",
-  },
-];
+   },
+  ],
+};
+
 export const faqs: FaqItem[] = [
   {
     question: "What app development services do you offer?",
@@ -78,7 +82,9 @@ export const softwareStatsSection = {
 };
 
 // Software Stats
-export const softwareStats: SoftwareStat[] = [
+export const softwareStats  = {
+  image: "/assets/ax-sd-st-thumb.webp (1).svg", // parent image
+  stats: [
   {
     value: "2.5K",
     highlight: "+",
@@ -100,7 +106,7 @@ export const softwareStats: SoftwareStat[] = [
     description:
       "Most businesses experience reduced operational overhead after adopting automation-driven features and integrated tools built into our custom software solutions.",
   },
-];
+]};
 
 
 export const features = [
@@ -145,8 +151,11 @@ export const AboutSection = {
   image: "/assets/Group 1597883640.svg", 
 };
 
-export const processSteps = [
-  {
+export const processSteps = {
+  title: "Our Comprehensive Development Process",
+  description:
+    "Our development process is built to transform complex ideas into reliable, scalable software solutions. We follow a structured and transparent approach that combines strategic planning, thoughtful architecture, and precise execution. Each stage is carefully aligned with your business goals to ensure high performance, security, and long-term success from development through deployment.",
+  steps: [{
     id: "01",
     title: "Discovery & Planning",
     desc:
@@ -169,5 +178,6 @@ export const processSteps = [
     title: "Testing & Deployment",
     desc:
       "We thoroughly test your application for security, speed, and stability before deploying it into production, ensuring a smooth launch and a future-ready foundation.",
-  },
-];
+   },
+  ],
+};

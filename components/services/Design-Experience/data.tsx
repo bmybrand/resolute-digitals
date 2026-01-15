@@ -9,28 +9,52 @@ export interface FaqItem {
   answer: string;
 }
 
-export const capabilities: Capability[] = [
-  {
-    title: "UI/UX Design",
-    description:
-      "We design intuitive user interfaces and experiences that prioritize usability, clarity, and engagement. Our UI/UX solutions are structured to support smooth user journeys, consistent interactions, and meaningful digital experiences across platforms.",
-  },
-  {
-    title: "Brand Identity",
-    description:
-      "We create cohesive brand identities that reflect your values and resonate with your audience. Identity systems are designed for consistency and scalability, ensuring your brand remains recognizable and aligned across all digital and visual touchpoints.",
-  },
-  {
-    title: "Visual Design",
-    description:
-      "We develop visual design systems that balance aesthetics with purpose. From layouts and typography to color and imagery, our designs enhance brand presence while supporting clarity, consistency, and impact.",
-  },
-  {
-    title: "Brand Strategy",
-    description:
-      "We define clear brand strategies that guide positioning, messaging, and experience. Our strategic approach ensures design decisions are aligned with business goals, audience expectations, and long-term brand growth.",
-  },
-];
+export interface SoftwareStat {
+  value: string;
+  highlight?: string;
+  label: string;
+  description: string;
+}
+
+// About Section
+export const AboutSection = {
+  title: "About Design & Experience Service",
+  description: [
+    "Design and experience are at the heart of every successful digital product and brand. We help businesses shape how they look, feel, and interact with users by crafting thoughtful design systems and user experiences that align with brand goals.",
+    "Our approach blends research, creativity, and strategy to deliver experiences that are intuitive, visually compelling, and built to scale—ensuring long-term consistency and strong brand recognition.",
+  ],
+  image:
+    "/assets/A male designer working on a desktop computer in a modern office, focused on the screen showing a user interface design. (1).svg",
+};
+
+// Capabilities Section
+export const capabilitiesSection = {
+  title: "Our Design & Experience Capabilities",
+  items: [
+    {
+      title: "UI/UX Design",
+      description:
+        "We design intuitive user interfaces and experiences that prioritize usability, clarity, and engagement. Our UI/UX solutions are structured to support smooth user journeys, consistent interactions, and meaningful digital experiences across platforms.",
+    },
+    {
+      title: "Brand Identity",
+      description:
+        "We create cohesive brand identities that reflect your values and resonate with your audience. Identity systems are designed for consistency and scalability, ensuring your brand remains recognizable and aligned across all digital and visual touchpoints.",
+    },
+    {
+      title: "Visual Design",
+      description:
+        "We develop visual design systems that balance aesthetics with purpose. From layouts and typography to color and imagery, our designs enhance brand presence while supporting clarity, consistency, and impact.",
+    },
+    {
+      title: "Brand Strategy",
+      description:
+        "We define clear brand strategies that guide positioning, messaging, and experience. Our strategic approach ensures design decisions are aligned with business goals, audience expectations, and long-term brand growth.",
+    },
+  ],
+};
+
+// FAQs
 export const faqs: FaqItem[] = [
   {
     question: "What does Design & Experience include?",
@@ -63,45 +87,42 @@ export const faqs: FaqItem[] = [
       "Yes, we offer ongoing maintenance, performance optimization, feature updates, and long-term support to ensure your app remains secure, reliable, and up to date after launch.",
   },
 ];
-export interface SoftwareStat {
-  value: string;
-  highlight?: string; // for coloring part of the number
-  label: string;
-  description: string;
-}
 
-// Section Meta for Software Stats
+// Software Stats Section Meta
 export const softwareStatsSection = {
   title:
     "We Build Design Experiences That Strengthen Brands, Improve Usability, And Drive Engagement.",
 };
 
-// Software Stats
-export const softwareStats: SoftwareStat[] = [
-  {
-    value: "2.5K",
-    highlight: "+",
-    label: "Design & Digital Experiences Delivered",
-    description:
-      "We’ve delivered UI/UX, branding, and visual design solutions across industries—helping teams launch polished experiences that feel consistent, modern, and user-focused.",
-  },
-  {
-    value: "92",
-    highlight: "%",
-    label: "Client Satisfaction Rate",
-    description:
-      "We’ve delivered UI/UX, branding, and visual design solutions across industries—helping teams launch polished experiences that feel consistent, modern, and user-focused.",
-  },
-  {
-    value: "85",
-    highlight: "%",
-    label: "Increase in Brand Consistency",
-    description:
-      "Most brands see better consistency across screens and marketing touchpoints through structured design systems, unified visual identity, and scalable brand guidelines.",
-  },
-];
+// Software Stats (normalized)
+export const softwareStats = {
+  image: "/assets/ax-sd-st-thumb.webp (2).svg",
+  stats: [
+    {
+      value: "2.5K",
+      highlight: "+",
+      label: "Design & Digital Experiences Delivered",
+      description:
+        "We’ve delivered UI/UX, branding, and visual design solutions across industries—helping teams launch polished experiences that feel consistent, modern, and user-focused.",
+    },
+    {
+      value: "92",
+      highlight: "%",
+      label: "Client Satisfaction Rate",
+      description:
+        "We’ve delivered UI/UX, branding, and visual design solutions across industries—helping teams launch polished experiences that feel consistent, modern, and user-focused.",
+    },
+    {
+      value: "85",
+      highlight: "%",
+      label: "Increase in Brand Consistency",
+      description:
+        "Most brands see better consistency across screens and marketing touchpoints through structured design systems, unified visual identity, and scalable brand guidelines.",
+    },
+  ],
+};
 
-
+// Features
 export const features = [
   {
     title: "Expert Design Team",
@@ -128,48 +149,43 @@ export const features = [
     image: "/assets/Group 1597884026.svg",
   },
 ];
-// Section Meta
+
+// Main Section
 export const mainSection = {
-  title:
-    "DESIGN & EXPERIENCE",
+  title: "DESIGN & EXPERIENCE",
   subtitle:
     "We design meaningful digital experiences that connect brands with users. Our design and experience services combine strategy, creativity, and usability to create consistent, engaging, and scalable brand experiences across all digital touchpoints.",
 };
 
-// About Section
-export const AboutSection = {
-  title: "About Design & Experience Service",
-  description: [
-    "Design and experience are at the heart of every successful digital product and brand. We help businesses shape how they look, feel, and interact with users by crafting thoughtful design systems and user experiences that align with brand goals.",
-    "Our approach blends research, creativity, and strategy to deliver experiences that are intuitive, visually compelling, and built to scale—ensuring long-term consistency and strong brand recognition.",
+// Process Steps (normalized)
+export const processSteps = {
+  title: "Our Comprehensive Design Process",
+  description:
+    "Design and experience shape how users perceive and interact with a brand. Our structured process ensures clarity, consistency, and strong alignment between business goals and user needs.",
+  steps: [
+    {
+      id: "01",
+      title: "Discovery & Research",
+      desc:
+        "We explore your brand, audience, and objectives to define a clear creative direction, experience goals, and the right design approach for your product.",
+    },
+    {
+      id: "02",
+      title: "Concept Development",
+      desc:
+        "We translate insights into a focused concept, establishing style foundations, messaging tone, and experience guidelines to keep everything consistent.",
+    },
+    {
+      id: "03",
+      title: "Design & Execution",
+      desc:
+        "We design interfaces, visuals, and brand assets with precision, ensuring usability, strong hierarchy, and consistent visual alignment across all touchpoints.",
+    },
+    {
+      id: "04",
+      title: "Refinement & Delivery",
+      desc:
+        "We refine designs based on feedback, finalize assets, and ensure everything is ready for smooth handoff or deployment across platforms.",
+    },
   ],
-  image: "/assets/A male designer working on a desktop computer in a modern office, focused on the screen showing a user interface design. (1).svg", 
 };
-
-
-export const processSteps = [
-  {
-    id: "01",
-    title: "Discovery & Research",
-    desc:
-      "We explore your brand, audience, and objectives to define a clear creative direction, experience goals, and the right design approach for your product.",
-  },
-  {
-    id: "02",
-    title: "Concept Development",
-    desc:
-      "We translate insights into a focused concept, establishing style foundations, messaging tone, and experience guidelines to keep everything consistent.",
-  },
-  {
-    id: "03",
-    title: "Design & Execution",
-    desc:
-      "We design interfaces, visuals, and brand assets with precision, ensuring usability, strong hierarchy, and consistent visual alignment across all touchpoints.",
-  },
-  {
-    id: "04",
-    title: "Design & Execution",
-    desc:
-      "We design interfaces, visuals, and brand assets with precision, ensuring usability, strong hierarchy, and consistent visual alignment across all touchpoints.",
-  },
-];

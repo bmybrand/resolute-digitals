@@ -90,7 +90,7 @@ export interface SoftwareStat {
 // Section Meta for Software Stats
 export const softwareStatsSection = {
   title:
-    "Our Mobile Apps Are Designed To Deliver Exceptional Performance, Usability, And Business Value.",
+    "We Build AI-Driven Solutions That Automate Work, Improve Decisions, And Scale Business Performance.",
 };
 
 // Software Stats with parent image
