@@ -133,30 +133,30 @@ export const softwareStatsSection = {
     "We Deliver Institutional-Grade REIT ESG Data That Enables Benchmarking, Comparability, and Defensible Insights.",
 };
 
-// Software Stats (normalized)
+// Software Stats
 export const softwareStats = {
-  image: "/assets/ax-sd-st-thumb.webp (2).svg",
+  image: "/assets/ax-sd-st-thumb.webp (2).svg", // parent image
   stats: [
     {
-      value: "2.5K",
+      value: "360",
       highlight: "+",
-      label: "REIT Disclosure Tables Processed",
+      label: "REIT Disclosures Processed Annually",
       description:
-        "We process sustainability reports, 10-K disclosures, and ESG tables at scale—converting complex REIT reporting into structured datasets ready for institutional use.",
+        "We process sustainability reports, 10-K ESG disclosures, and quantitative ESG tables at scale—converting complex REIT reporting into structured datasets ready for institutional use.",
     },
     {
-      value: "92",
+      value: "5,000",
+      highlight: "+",
+      label: "ESG and Climate Metrics Standardized",
+      description:
+        "Our workflows normalize thousands of environmental, social, governance, and climate metrics by aligning definitions, units, and portfolio coverage across reporting periods.",
+    },
+    {
+      value: "95",
       highlight: "%",
       label: "QC Pass Consistency Rate",
       description:
         "Our standardized workflows improve comparability across REITs by aligning metrics, units, and coverage boundaries across reporting periods and ESG frameworks.",
-    },
-    {
-      value: "85",
-      highlight: "%",
-      label: "Year-over-Year Data Stability",
-      description:
-        "Our quality control processes ensure sustainability datasets remain stable, defensible, and consistent across reporting cycles and portfolio changes.",
     },
   ],
 };

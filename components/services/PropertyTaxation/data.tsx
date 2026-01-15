@@ -104,25 +104,25 @@ export const softwareStats = {
   image: "/assets/ax-sd-st-thumb.webp (2).svg",
   stats: [
     {
-      value: "2.5K",
+      value: "800",
       highlight: "+",
-      label: "Jurisdictions & Tax Rules Structured",
+      label: "U.S. Taxing Jurisdictions Analyzed",
       description:
-        "We standardize property tax assessments, rates, and reassessment rules across U.S. jurisdictions—turning complex local regulations into consistent, calculation-ready datasets.",
+        "We research state, county, and local assessor practices covering multifamily properties with five or more units, ensuring jurisdiction-level accuracy and relevance.",
     },
     {
-      value: "92",
+      value: "95",
       highlight: "%",
-      label: "Modeling Confidence Improvement",
+      label: "Assessment Rule Coverage Accuracy",
       description:
-        "Clients gain clear insight into taxable value, reassessment triggers, and applicable rates—enabling more accurate tax assumptions and fewer errors.",
+        "Our research captures reassessment triggers, reassessment frequency, ratios, and applicable rates—validated against authoritative local sources and update timelines.",
     },
     {
       value: "85",
       highlight: "%",
-      label: "Reduced Tax Estimate Variance",
+      label: "Reduction in Tax Modeling Variability",
       description:
-        "Analysts see fewer pricing surprises and more stable forecasts using structured inputs for caps, discounts, cycles, and jurisdiction-specific factors.",
+        "By standardizing classifications, rate types (millage vs tax rate), and calculation factors, our datasets significantly reduce inconsistencies in property tax modeling across portfolios.",
     },
   ],
 };

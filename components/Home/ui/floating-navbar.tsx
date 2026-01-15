@@ -88,7 +88,6 @@ export const FloatingNav = ({
 
   return (
     <>
-      {/* NAVBAR */}
        {/* NAVBAR */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -148,87 +147,86 @@ export const FloatingNav = ({
                   </a>
 
                   {/* DROPDOWN */}
-                  {navItem.dropdown && (
-                    <AnimatePresence>
-  {hoveredDropdown === navItem.name && (
-    <motion.div
-  initial={{ opacity: 0, y: -10 }}
-  animate={{ opacity: 1, y: 0 }}
-  exit={{ opacity: 0, y: -10 }}
-  transition={{ duration: 0.18 }}
-  className="py-4 bg-white dark:bg-[#000A21] shadow-lg z-50 rounded-lg"
-  style={{
-    left: navItem.name === "Services" ? (navbarRef.current ? navbarRef.current.offsetLeft : 0) : undefined,
-    position: "fixed",
-    top:70,
-    width: navItem.name === "Services" ? (scrolled ? "100vw" : "80%") : undefined,
-    zIndex: 6000,
-  }}
-  onMouseEnter={() => setHoveredDropdown(navItem.name)}
-  onMouseLeave={() => setHoveredDropdown(null)}
->
-  {navItem.name === "Services" ? (
-    <div className="max-w-screen-xl mx-auto px-6 flex gap-6">
-      {/* Left image */}
-      <div className="flex-shrink-0 w-48">
-        <img
-          src="https://picsum.photos/200"
-          alt="Dropdown Image"
-          className="w-full h-full object-cover rounded-lg"
-        />
-      </div>
+{navItem.dropdown && (
+  <AnimatePresence>
+    {hoveredDropdown === navItem.name && (
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -10 }}
+        transition={{ duration: 0.18 }}
+        className="py-6 bg-white dark:bg-[#000A21] shadow-xl rounded-xl z-50"
+        style={{
+          left: navItem.name === "Services" ? (navbarRef.current ? navbarRef.current.offsetLeft : 0) : undefined,
+          position: "fixed",
+          top: 70,
+          width: navItem.name === "Services" ? (scrolled ? "100vw" : "80%") : undefined,
+          zIndex: 6000,
+        }}
+        onMouseEnter={() => setHoveredDropdown(navItem.name)}
+        onMouseLeave={() => setHoveredDropdown(null)}
+      >
+        {navItem.name === "Services" ? (
+          <div className="max-w-screen-xl mx-auto px-6 flex flex-col lg:flex-row gap-6">
+            {/* Left image */}
+            <div className="flex-shrink-0 w-full lg:w-48 h-40 lg:h-auto">
+              <img
+                src="https://picsum.photos/200"
+                alt="Dropdown Image"
+                className="w-full h-full object-cover rounded-lg shadow-md"
+              />
+            </div>
 
-      {/* Right options */}
-      <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-  {navItem.dropdown.map((group: any, i: number) => (
-    <div key={i}>
-      {group.title && (
-        <a
-          href={group.link}
-          onClick={() => setSelectedTab(navItem.name)}
-          className="font-semibold mb-2 text-sm text-gray-700 dark:text-gray-300 hover:text-blue-600 inline-block"
-        >
-          {group.title}
-        </a>
-      )}
-      {(group.items || []).map((item: any, j: number) => (
-        <a
-          key={j}
-          href={item.link}
-          onClick={() => setSelectedTab(navItem.name)}
-          className="block text-sm text-gray-800 dark:text-gray-200 py-1 hover:bg-[#000A21]/20 dark:hover:bg-white/10 rounded transition"
-        >
-          {item.name}
-        </a>
-      ))}
-    </div>
-  ))}
-</div>
-
-    </div>
-  ) : (
-    <div className="max-w-screen-xl mx-auto px-6">
-      {/* Only options, no image */}
-      <div className="flex flex-col gap-1">
-        {navItem.dropdown.map((item: any, j: number) => (
-          <a
-            key={j}
-            href={item.link}
-            onClick={() => setSelectedTab(navItem.name)}
-            className="block text-sm text-gray-800 dark:text-gray-200 py-1 px-2 rounded hover:bg-[#000A21]/20 dark:hover:bg-white/10 transition"
-          >
-            {item.name}
-          </a>
-        ))}
-      </div>
-    </div>
-  )}
-</motion.div>
-
-  )}
-</AnimatePresence>
-
+            {/* Right options */}
+            <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {navItem.dropdown.map((group: any, i: number) => (
+                <div key={i} className="flex flex-col gap-2">
+                  {group.title && (
+                    <a
+                      href={group.link}
+                      onClick={() => setSelectedTab(navItem.name)}
+                      className="font-semibold text-gray-700 dark:text-gray-300 hover:text-[#2378DA] transition text-sm"
+                    >
+                      {group.title}
+                    </a>
                   )}
+                  {(group.items || []).map((item: any, j: number) => (
+                    <a
+                      key={j}
+                      href={item.link}
+                      onClick={() => setSelectedTab(navItem.name)}
+                      className="flex items-center gap-2 text-gray-800 dark:text-gray-200 text-sm py-1 px-2 rounded hover:bg-gradient-to-r hover:from-[#2378DA]/10 hover:to-[#134074]/10 transition"
+                    >
+                      <span className="w-2 h-2 bg-[#2378DA] rounded-full inline-block"></span>
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <div className="max-w-screen-xl mx-auto px-6">
+            <div className="flex flex-col gap-2">
+              {navItem.dropdown.map((item: any, j: number) => (
+                <a
+                  key={j}
+                  href={item.link}
+                  onClick={() => setSelectedTab(navItem.name)}
+                  className="flex items-center gap-2 py-2 px-3 rounded hover:bg-gradient-to-r hover:from-[#2378DA]/10 hover:to-[#134074]/10 transition text-gray-800 dark:text-gray-200"
+                >
+                  <span className="w-2 h-2 bg-[#2378DA] rounded-full inline-block"></span>
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </motion.div>
+    )}
+  </AnimatePresence>
+)}
+
                 </div>
               );
             })}

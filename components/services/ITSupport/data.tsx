@@ -52,7 +52,13 @@ export const capabilitiesSection = {
     },
   ],
 };
-
+// Section Meta
+export const mainSection = {
+  title:
+    "Ops & IT Support",
+  subtitle:
+    "We design and implement intelligent AI solutions that automate processes, enhance decision-making, and drive operational efficiency. From AI automation to intelligent workflows, our solutions help businesses scale smarter, faster, and with confidence.",
+};
 // FAQs
 export const faqs: FaqItem[] = [
   {

@@ -8,9 +8,9 @@ const cardsData = [
     description:
       "We build scalable and secure software solutions tailored to your business goals - modern, efficient, and built to perform.",
     cta: "Start with us",
-    img: "/assets/Group 1597883106.svg",
-    icon: "/assets/Group (3).svg",
-    updatedIcon: "/assets/Group (16).svg",
+    img: "/assets/RD-bentogridimage1.svg",
+    icon: "/assets/RD-bentoicon1.svg",
+    updatedIcon: "/assets/RD-bentoupdatedIcon1.svg",
     contentWidth: "2xl:w-[55%]",
     imgClass:
       "absolute -right-15 -bottom-10 object-contain opacity-80 w-3/5 xl:w-1/2",
@@ -21,9 +21,9 @@ const cardsData = [
     title: "App Development",
     description: "",
     cta: "Start with us",
-    img: "/assets/Frame 1597883671.svg",
-    icon: "/assets/Group 1597883436 (1).svg",
-    updatedIcon: "/assets/Group (15).svg",
+    img: "/assets/RD-bentogridimage2.svg",
+    icon: "/assets/RD-bentoicon2.svg",
+    updatedIcon: "/assets/RD-bentoupdatedIcon2.svg",
     contentWidth: "lg:w-full",
     imgClass:
       "absolute right-0 -bottom-5 object-contain opacity-80 w-1/2 lg:w-2/3 xl:w-1/2",
