@@ -8,8 +8,21 @@ import {
   IconIdBadge,
   IconUser,
 } from "@tabler/icons-react";
+import { useGeoCountry } from "@/utils/useGeoCountry";
 
 export function FloatingNavDemo() {
+  const { countryCode, loading } = useGeoCountry();
+  const isUS = countryCode === "US";
+
+  const aboutDropdown = loading || !isUS
+    ? [
+        {
+          name: "Know Our Team",
+          link: "/ourteam",
+        },
+      ]
+    : null;
+
   const navItems: any[] = [
     {
       name: "Home",
@@ -20,16 +33,7 @@ export function FloatingNavDemo() {
       name: "About",
       link: "/about", // parent link required for TS
       icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
-      dropdown: [
-        // {
-        //   name: "Careers",
-        //   link: "/careers",
-        // },
-        {
-          name: "Know Our Team",
-          link: "/ourteam",
-        },
-      ],
+      ...(aboutDropdown ? { dropdown: aboutDropdown } : {}),
     },
     {
       name: "Services",

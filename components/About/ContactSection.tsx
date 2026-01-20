@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import {
   FaFacebookF,
@@ -9,6 +9,7 @@ import {
   FaLinkedinIn,
   FaYoutube,
 } from "react-icons/fa";
+import { useGeoCountry } from "@/utils/useGeoCountry";
 
 interface ContactFormData {
   name: string;
@@ -21,11 +22,30 @@ interface ContactFormData {
 }
 
 const ContactSection: React.FC = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm<ContactFormData>();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactFormData>();
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">(
+    "idle"
+  );
+  const { countryCode } = useGeoCountry();
+  const isPakistan = countryCode === "PK" || countryCode === null;
 
-  const onSubmit: SubmitHandler<ContactFormData> = (data) => {
-    console.log("Form Submitted:", data);
-    // API call logic here
+  const onSubmit: SubmitHandler<ContactFormData> = async (data) => {
+    setStatus("sending");
+    try {
+      const response = await fetch("/api/contact.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const result = await response.json().catch(() => null);
+      if (!response.ok || !result?.ok) {
+        throw new Error(result?.error || "Failed to send");
+      }
+      setStatus("success");
+      reset();
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -151,12 +171,23 @@ const ContactSection: React.FC = () => {
     <div className="md:col-span-2">
       <button
         type="submit"
+        disabled={status === "sending"}
         className="z-10 bg-gradient-to-r from-[#2378DA] to-[#042F61] flex gap-1 font-medium relative text-white rounded-full hover:opacity-90 transition justify-center items-center whitespace-nowrap text-xs sm:text-lg md:text-base lg:text-lg  px-3 sm:px-5 md:px-6 lg:px-7  py-1 sm:py-2 md:py-3 lg:py-4  pointer-events-auto"
       >
         <span className="absolute inset-x-0 w-1/2 mx-auto -top-px bg-gradient-to-r from-transparent via-white to-transparent h-px" />
-        <span>Send Message</span>
+        <span>{status === "sending" ? "Sending..." : "Send Message"}</span>
         <img src="/assets/rd-image003.svg" className="pt-0.5 w-3 sm:w-3.5" alt="" />
       </button>
+      {status === "success" && (
+        <p className="text-green-400 text-sm mt-3">
+          Message sent. We will get back to you soon.
+        </p>
+      )}
+      {status === "error" && (
+        <p className="text-red-400 text-sm mt-3">
+          Something went wrong. Please try again.
+        </p>
+      )}
     </div>
 
   </form>
@@ -166,25 +197,17 @@ const ContactSection: React.FC = () => {
         {/* Right: Contact Info */}
         <div className="flex flex-col justify-center w-full lg:w-1/2">
 
-  {/* Head Office */}
+  {/* Local Office */}
   <div className="mb-6 text-white">
     <h2 className="text-[28px] sm:text-[32px] lg:text-[40px] font-bold mb-6 text-[#2378DA]">
-Head Office</h2>
+      {isPakistan ? "Head Office" : "US Office"}
+    </h2>
     <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/rd-image113.svg" alt="" className="w-6"/> info@resolutedigitals.com</p>
-    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/rd-image114.svg" alt="" className="w-6"/> +1 (800) 465-7890</p>
+    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/rd-image114.svg" alt="" className="w-6"/> +1 (254) 342-0005</p>
     <p className="mt-2 text-[19px] opacity-80">
-      Plot No. E-88, Block B Gulshan e Jamal, Karachi, 75260
-    </p>
-  </div>
-
-  {/* US Office */}
-  <div className="mb-6 text-white ">
-    <h2 className="text-[28px] sm:text-[32px] lg:text-[40px] font-bold mb-6 text-[#2378DA]">
-US Office</h2>
-    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/rd-image113.svg" alt="" className="w-6"/> info@resolutedigitals.com</p>
-    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/rd-image114.svg" alt="" className="w-6"/> +1 (800) 465-7890</p>
-    <p className="mt-2 text-[19px] opacity-80">
-      738, Fawn Valley Dr., Allen, TX 75002, United States
+      {isPakistan
+        ? "Plot No. E-88, Block B Gulshan e Jamal, Karachi, 75260"
+        : "738, Fawn Valley Dr., Allen, TX 75002, United States"}
     </p>
   </div>
 

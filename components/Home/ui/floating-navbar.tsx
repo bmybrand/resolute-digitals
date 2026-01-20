@@ -299,13 +299,13 @@ export const FloatingNav = ({
                     <div>
                       <h3 className="text-2xl font-bold text-[#2378DA] mb-3">Head Office</h3>
                       <p className="text-sm mb-3">info@resolutedigitals.com</p>
-                      <p className="text-sm mb-3">+1 (800) 465-7890</p>
+                      <p className="text-sm mb-3">+1 (254) 342-0005</p>
                       <p className="text-sm mb-3">Plot No. E-88, Block B Gulshan e Jamal, Karachi, 75260</p>
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-[#2378DA] mb-3">US Office</h3>
                       <p className="text-sm mb-3">info@resolutedigitals.com</p>
-                      <p className="text-sm mb-3">+1 (800) 465-7890</p>
+                      <p className="text-sm mb-3">+1 (254) 342-0005</p>
                       <p className="text-sm mb-3">738, Fawn Valley DR., ALLEN, TX 75002</p>
                     </div>
                   </div>
