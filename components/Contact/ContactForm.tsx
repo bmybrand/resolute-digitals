@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 type FormValues = {
@@ -13,6 +13,9 @@ type FormValues = {
 };
 
 const ContactForm = () => {
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">(
+    "idle"
+  );
   const {
     register,
     handleSubmit,
@@ -20,9 +23,23 @@ const ContactForm = () => {
     reset,
   } = useForm<FormValues>();
 
-  const onSubmit = (data: FormValues) => {
-    console.log(data);
-    reset();
+  const onSubmit = async (data: FormValues) => {
+    setStatus("sending");
+    try {
+      const response = await fetch("/api/contact.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const result = await response.json().catch(() => null);
+      if (!response.ok || !result?.ok) {
+        throw new Error(result?.error || "Failed to send");
+      }
+      setStatus("success");
+      reset();
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -191,10 +208,21 @@ const ContactForm = () => {
         <div className="md:col-span-2">
           <button
             type="submit"
+            disabled={status === "sending"}
             className="bg-gradient-to-r from-[#2378DA] to-[#134074] rounded-xl text-xl px-10 py-4  hover:opacity-90 transition bold font-bold"
           >
-            Send a Message
+            {status === "sending" ? "Sending..." : "Send a Message"}
           </button>
+          {status === "success" && (
+            <p className="text-green-400 text-sm mt-3">
+              Message sent. We will get back to you soon.
+            </p>
+          )}
+          {status === "error" && (
+            <p className="text-red-400 text-sm mt-3">
+              Something went wrong. Please try again.
+            </p>
+          )}
         </div>
       </form>
     </div>

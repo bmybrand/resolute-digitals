@@ -1,10 +1,28 @@
-import OurTeam from "@/components/OurTeam/OurTeam"
+"use client";
 
+import OurTeam from "@/components/OurTeam/OurTeam";
+import { useGeoCountry } from "@/utils/useGeoCountry";
 
 const OurTeamPage = () => {
-  return (
-    <div><OurTeam/></div>
-  )
-}
+  const { countryCode, loading } = useGeoCountry();
 
-export default OurTeamPage
+  if (loading) {
+    return null;
+  }
+
+  if (countryCode === "US") {
+    return (
+      <div className="bg-[#000A21] text-white min-h-screen flex items-center justify-center p-8">
+        This page is not available in your region.
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <OurTeam />
+    </div>
+  );
+};
+
+export default OurTeamPage;
