@@ -15,7 +15,7 @@ export const dynamic = 'force-static'
 export default function HomePage() {
   return (
     <div className="bg-[#000A21] h-fit pb-0">
-      <div className="p-5 xl:p-9">
+      <div className="p-2.5 xl:p-9">
         <FloatingNavDemo />
         <Herobar />
         <SecSection />

@@ -5,39 +5,39 @@ import React, { useState, useEffect, useRef } from "react";
 const ReviewCards = () => {
   const reviews = [
     {
-      quote: "Lorem ipsum dolor sit amet consectetur.",
+      quote: "They turned our vague idea into a real product.",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Tortor accumsan non eget orci. Pulvinar integer feugiat erat maecenas.",
-      name: "John Doe",
-      title: "Title, Company Name",
+        "Clear roadmap, fast execution, and weekly updates that actually mattered. We launched on time with a site that converts.",
+      name: "Jordan Blake",
+      title: "Founder, Venture Studio",
     },
     {
-      quote: "Another review goes here. Amazing service.",
+      quote: "Finally, a team that gets both design and performance.",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Tortor accumsan non eget orci. Pulvinar integer feugiat erat maecenas.",
-      name: "Jane Smith",
-      title: "CEO, Company",
+        "Our bounce rate dropped and leads doubled within the first month. The handoff was smooth and documented.",
+      name: "Priya Shah",
+      title: "Marketing Lead, SaaS Company",
     },
     {
-      quote: "Outstanding experience with this team.",
+      quote: "They felt like an extension of our in-house team.",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Tortor accumsan non eget orci. Pulvinar integer feugiat erat maecenas.",
-      name: "Alice Johnson",
-      title: "Marketing Head",
+        "Strategic thinking, fast iterations, and no fluff. Every deliverable tied back to the business goals.",
+      name: "Ethan Cole",
+      title: "COO, Logistics Firm",
     },
     {
-      quote: "Fantastic collaboration and results.",
+      quote: "Our brand finally looks as strong as our product.",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Tortor accumsan non eget orci. Pulvinar integer feugiat erat maecenas.",
-      name: "Bob Lee",
-      title: "Founder, Company",
+        "They nailed the visual system and messaging, then built a website that feels premium and fast.",
+      name: "Sofia Mendes",
+      title: "Head of Growth, Fintech",
     },
     {
-      quote: "Excellent teamwork and outcomes.",
+      quote: "Quality work, zero drama, real results.",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Tortor accumsan non eget orci. Pulvinar integer feugiat erat maecenas.",
-      name: "Charlie Kim",
-      title: "CTO, Company",
+        "From discovery to launch, they stayed proactive and honest. We keep coming back for new initiatives.",
+      name: "Marcus Reed",
+      title: "Director, Retail Group",
     },
   ];
 

@@ -5,7 +5,7 @@ import Thirdsec from "./thirdsec";
 import Forthsec from "./forthsec";
 import FaqSection from "./FaqSection";
 import WorkTogether from "../workTogether";
-import Rewiewcards from "../rewiewcards";
+import Rewiewcards from "@/components/Home/rewiewcards";
 import ContactSection from "../../About/ContactSection";
 import Footersec from "../../Home/footersec";
 import CoreCapabilities from "./CoreCapabilities"

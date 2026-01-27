@@ -4,18 +4,32 @@ import React, { useState } from "react";
 const ninesec = () => {
   const sections = [
     {
-      bgColor: "#081733",
-      mainImage: "/assets/rd-image076.svg",
+      bgColor: "#0C1C2D",
+      mainImage: "/assets/rd-image178.svg",
       floatingIconColor: "#2378DA",
-      title: "Resolute Digitals Website",
-      description: "A Modern, High-Performance Agency Website",
+      title: "ReComune - Website & Mobile App",
+      description: "A compassionate digital platform designed and developed with clean UI and seamless experience to connect users through meaningful conversations across both the website and mobile application.",
     },
     {
       bgColor: "#191403",
       mainImage: "/assets/rd-image077.svg",
       floatingIconColor: "#FDCA19",
       title: "Muslim Connect Website",
-      description: "A Modern Digital Platform for Community Connection",
+      description: "A modern digital platform with a fully designed UI, responsive website, and mobile application built to connect users through a smooth and consistent experience.",
+    },
+    {
+      bgColor: "#08110F",
+      mainImage: "/assets/rd-image179.svg",
+      floatingIconColor: "#1D3C34",
+      title: "Madrido Café & Bar - Website Design & Development",
+      description: "A modern, visually rich restaurant website designed and developed with an elegant layout, smooth navigation, and a fully responsive experience to showcase the café, bar, menu, and brand identity.",
+    },
+    {
+      bgColor: "#1D1D1D",
+      mainImage: "/assets/rd-image180.svg",
+      floatingIconColor: "#DCB979",
+      title: "Swera Restaurant - Website Design & Development",
+      description: "A modern Indian restaurant website designed and developed with rich visuals, elegant layout, and a fully responsive experience to showcase the menu, ambiance, and online reservations.",
     },
     
   ];
@@ -100,7 +114,7 @@ const ninesec = () => {
             <h2 className="text-xl sm:text-2xl text-white bold transition-all">
               {section.title}
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-white ExtraLight transition-all">
+            <p className="text-sm sm:text-base md:text-lg text-white ExtraLight transition-all max-w-3xl">
               {section.description}
             </p>
           </div>

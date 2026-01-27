@@ -1,7 +1,7 @@
 import { FloatingNavDemo } from "../Home/Navbar";
 import Herosec from "./herosec"
 import Servies from "./servies";
-import Rewiewcards from "./rewiewcards";
+import Rewiewcards from "@/components/Home/rewiewcards";
 import ContactSection from "../About/ContactSection";
 
 import Footersec from "../Home/footersec";

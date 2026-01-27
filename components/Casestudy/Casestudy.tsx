@@ -17,49 +17,78 @@ const Casestudy: React.FC = () => {
   const currentIndexRef = useRef(0);
 
   const sections = [
-    { img: "/assets/rd-image152.svg" },
-    { img: "/assets/rd-image153.svg" },
-    { img: "/assets/rd-image154.svg" },
-    { img: "/assets/rd-image155.svg" },
+    { img: "/assets/rd-image152.png" },
+    { img: "/assets/rd-image153.png" },
+    { img: "/assets/rd-image154.png" },
+    { img: "/assets/rd-image155.png" },
   ];
 
   const sections1 = [
-    { img: "/assets/rd-image156.svg" },
-    { img: "/assets/rd-image157.svg" },
-    { img: "/assets/rd-image158.svg" },
-    { img: "/assets/rd-image159.svg" },
+    { img: "/assets/rd-image156.png" },
+    { img: "/assets/rd-image157.png" },
+    { img: "/assets/rd-image158.png" },
+    { img: "/assets/rd-image159.png" },
   ];
 
   const textContent = [
-    {
-      title: "Muslim Connect",
-      description:
-        "A modern, purpose-driven platform designed to bring Muslim communities together through seamless communication, trusted connections, and enhanced accessibility.",
-      tags: ["UI/UX Design", "Web Development", "Responsive Design"],
-      number: "01",
-    },
-    {
-      title: "Recomune",
-      description:
-        "Recomune helps creators and professionals connect and collaborate. We designed and developed a smooth web and mobile experience that makes networking easy and engagement effortless.",
-      tags: ["UI/UX Design", "Web Development", "Responsive Design"],
-      number: "02",
-    },
-    {
-      title: "Madrid Café & Bar",
-      description:
-        "Madrid Café & Bar is a modern café and cocktail bar. The website was designed to reflect its ambiance while providing a seamless, responsive user experience.",
-      tags: ["UI/UX Design", "Web Development", "Responsive Design"],
-      number: "03",
-    },
-    {
-      title: "Swera Restuarant",
-      description:
-        "Organize, discover, and participate in events seamlessly, making community interaction more engaging and meaningful.",
-      tags: ["UI/UX Design", "Web Development", "Responsive Design"],
-      number: "04",
-    },
-  ];
+  {
+    title: "Muslim Connect",
+    description:
+      "A modern, purpose-driven platform designed to bring Muslim communities together through seamless communication, trusted connections, and enhanced accessibility.",
+    tags: [
+      "UI/UX Design",
+      "Web Development",
+      "Responsive Design",
+      "App Design",
+      "Prototyping",
+      "Front-End Development",
+    ],
+    number: "01",
+  },
+  {
+    title: "Recomune",
+    description:
+      "Recomune helps creators and professionals connect and collaborate. We designed and developed a smooth web and mobile experience that makes networking easy and engagement effortless.",
+    tags: [
+      "UI/UX Design",
+      "Web Development",
+      "Responsive Design",
+      "App Design",
+      "Prototyping",
+      "Front-End Development",
+    ],
+    number: "02",
+  },
+  {
+    title: "Madrid Café & Bar",
+    description:
+      "Madrid Café & Bar is a modern café and cocktail bar. The website was designed to reflect its ambiance while providing a seamless, responsive user experience.",
+    tags: [
+      "UI/UX Design",
+      "Web Development",
+      "Responsive Design",
+      "Prototyping",
+      "Front-End Development",
+      "Website Design",
+    ],
+    number: "03",
+  },
+  {
+    title: "Swera Restuarant",
+    description:
+      "Organize, discover, and participate in events seamlessly, making community interaction more engaging and meaningful.",
+    tags: [
+      "UI/UX Design",
+      "Web Development",
+      "Responsive Design",
+      "Prototyping",
+      "Front-End Development",
+      "Website Design",
+    ],
+    number: "04",
+  },
+];
+
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -203,7 +232,7 @@ const Casestudy: React.FC = () => {
             <p className="text-sm sm:text-base md:text-lg opacity-80 mb-5">
               {textContent[0].description}
             </p>
-            <div className="tags-container flex gap-2 flex-wrap">
+            <div className="tags-container flex gap-2 flex-wrap  max-w-120">
               {textContent[0].tags.map((tag, idx) => (
                 <div
                   key={idx}

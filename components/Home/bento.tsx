@@ -11,9 +11,9 @@ const cardsData = [
     img: "/assets/rd-image016.svg",
     icon: "/assets/rd-image017.svg",
     updatedIcon: "/assets/rd-image018.svg",
-    contentWidth: "2xl:w-[55%]",
+    contentWidth: "sm:w-[60%]",
     imgClass:
-      "absolute -right-15 -bottom-10 object-contain opacity-80 w-3/5 xl:w-1/2",
+      "absolute -right-15 -bottom-10 object-contain opacity-80 w-[45%] xl:w-[55%]",
   },
   {
     id: 2,
@@ -50,10 +50,10 @@ const cardsData = [
     cta: "Start with us",
     img: "/assets/rd-image025.svg",
     imgClass:
-      "absolute -right-20 -bottom-10 object-contain opacity-80 w-1/2 lg:w-2/3 xl:w-2/5",
+      "absolute -right-20 -bottom-10 object-contain opacity-80 w-1/2 lg:w-2/3 lg:w-2/5",
     icon: "/assets/rd-image011.svg",
     updatedIcon: "/assets/rd-image026.svg",
-    contentWidth: "w-full 2xl:w-[60%]",
+    contentWidth: "w-full sm:w-[60%]",
     
   },
   

@@ -8,7 +8,7 @@ import HowWorkSec from "./howworksec";
 import { div } from "motion/react-client";
 import WorkTogether from "./workTogether";
 import InfiniteMultiColumnScroll from "./InfiniteMultiColumnScroll"
-import Rewiewcards from "./rewiewcards";
+import Rewiewcards from "@/components/Home/rewiewcards";
 import ContactSection from "./ContactSection";
 import Footersec from "../Home/footersec";
 export const dynamic = 'force-static'
