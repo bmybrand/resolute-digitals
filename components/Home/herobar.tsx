@@ -136,9 +136,9 @@ const Herobar: React.FC = () => {
 
           {/* LEFT (text) */}
           <div className="lg:w-1/2 w-full space-y-6 pl-0 2xl:pl-10 pt-5 sm:pt-10 lg:pt-18 xl:pt-24 pb-10 flex flex-col items-start justify-center">
-            <div className="w-fit border border-transparent rounded-full bg-[#FFFFFF]/10 px-2 py-4 ExtraLight">
-              <span className="px-6 py-3 rounded-full bg-[#FFFFFF] text-black bold text-xs lg:text-base">{sectionData.mainbubble}</span>
-              <span className="px-4 text-xs lg:text-base">{sectionData.subbubble}</span>
+            <div className="w-fit border border-transparent rounded-full bg-[#FFFFFF]/10 px-2 py-2 sm:py-3 lg:py-4 ExtraLight">
+              <span className="px-3 sm:px-4 lg:px-6 py-2 lg:py-3 rounded-full bg-[#FFFFFF] text-black bold text-[10px] sm:text-xs lg:text-base">{sectionData.mainbubble}</span>
+              <span className="px-2 sm:px-3 lg:px-4 text-[10px] sm:text-xs lg:text-base">{sectionData.subbubble}</span>
             </div>
 
             <h1 className="ExtraLight leading-tight text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
@@ -153,16 +153,16 @@ const Herobar: React.FC = () => {
               {sectionData.Description}
             </p>
 
-            <div className="flex gap-4">
+            <div className="flex gap-2 lg:gap-4">
               <a href="/contact">
   <button className=" cursor-pointer text-xs lg:text-base flex gap-2 items-center text-white bg-[#000A21] px-6 py-3 rounded-full border border-transparent hover:bg-transparent hover:border-white/80 transition duration-300">
-    Get Started Now
+    Get Started
   </button>
 </a>
 
               <a href="/services">
   <button className=" cursor-pointer text-xs lg:text-base flex gap-2 items-center text-white px-6 py-3 rounded-full bg-transparent border border-white hover:border-[#000A21] hover:bg-[#000A21] transition duration-300">
-    Discover Our Services
+    Our Services
   </button>
 </a>
 
