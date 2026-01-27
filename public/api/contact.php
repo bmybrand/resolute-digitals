@@ -36,15 +36,15 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 $safeEmail = preg_replace("/[\r\n]+/", "", $email);
 $safeName = preg_replace("/[\r\n]+/", "", $name);
 
-$to = "developer@resolutedigitalspk.com";
+$to = "support@resolutedigitals.com";
 $subject = "New contact form submission";
 $host = $_SERVER["HTTP_HOST"] ?? "localhost";
 $host = preg_replace("/^www\./", "", $host);
 
-$smtpHost = getenv("SMTP_HOST") ?: "cpl16.main-hosting.eu";
+$smtpHost = getenv("SMTP_HOST") ?: "mail.resolutedigitals.com";
 $smtpPort = (int)(getenv("SMTP_PORT") ?: 465);
-$smtpUser = getenv("SMTP_USER") ?: "developer@resolutedigitalspk.com";
-$smtpPass = getenv("SMTP_PASS") ?: "~Zj_xEC4@6Z-(T%w";
+$smtpUser = getenv("SMTP_USER") ?: "developer@resolutedigitals.com";
+$smtpPass = getenv("SMTP_PASS") ?: "gTbnjtcT9,=(;,7i";
 $fromEmail = getenv("SMTP_FROM_EMAIL") ?: $smtpUser;
 $fromName = getenv("SMTP_FROM_NAME") ?: "Resolute Digitals";
 
