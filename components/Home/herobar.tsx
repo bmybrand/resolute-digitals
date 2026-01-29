@@ -132,7 +132,7 @@ const Herobar: React.FC = () => {
         <div className="absolute inset-0 bg-[#295EBF] mix-blend-saturation z-5 rounded-4xl" />
 
         {/* Main content */}
-        <div className="relative z-20 flex flex-col lg:flex-row justify-center flex-1 text-white gap-10 px-4   sm:px-8 lg:px-16 xl:px-30 ">
+        <div className="relative z-20 flex flex-col lg:flex-row justify-center flex-1 text-white lg:gap-10 px-4   sm:px-8 lg:px-16 xl:px-30 ">
 
           {/* LEFT (text) */}
           <div className="lg:w-1/2 w-full space-y-6 pl-0 2xl:pl-10 pt-5 sm:pt-10 lg:pt-18 xl:pt-24 pb-10 flex flex-col items-start justify-center">
@@ -170,9 +170,9 @@ const Herobar: React.FC = () => {
           </div>
 
           {/* RIGHT (image + floating labels) */}
-          <div className="relative lg:w-1/2 w-full flex justify-end lg:mt-0 flex-col items-end lg:flex-row">
+          <div className="relative lg:w-1/2 w-full flex justify-end lg:mt-0 flex-col items-center lg:items-end lg:flex-row">
           
-            {activeKey === "section1" && (<div className="absolute inset-0 pointer-events-auto">
+            {activeKey === "section1" && (<div className="absolute inset-0 pointer-events-auto hidden lg:block">
               <div className="absolute top-[27%] left-5 w-fit flex justify-center items-center border border-transparent rounded-xl bg-[#FFFFFF]/20 px-2 py-2 ExtraLight hover:scale-105 hover:rotate-3 transition-transform">
                 <img src="/assets/rd-image013.png" alt="" className="p-3 rounded-xl bg-gradient-to-br from-[#0D55A2] to-[#000A21] text-black bold" />
                 <span className="px-2 ExtraLight">Prototyping</span>
@@ -190,14 +190,14 @@ const Herobar: React.FC = () => {
             <img
   src={sectionData.mainimg}
   alt="Hero Illustration"
-  className="w-auto h-auto  relative z-10 pointer-events-none select-none "
+  className="w-auto h-auto relative z-10 pointer-events-none select-none mt-auto"
 />
 
           </div>
         </div>
 
         {/* bottom progress bar / section chooser */}
-        <div className="relative z-20 w-[90%] 2xl:w-[88%] h-25 bg-[#FFFFFF]/15 rounded-t-4xl flex mx-auto text-xl text-[#FFFFFF] regular overflow-hidden">
+        <div className="relative z-20 w-[90%] 2xl:w-[88%] h-18 lg:h-25 bg-[#FFFFFF]/15 rounded-t-4xl flex mx-auto text-xl text-[#FFFFFF] regular overflow-hidden">
   {SECTION_KEYS.map((key, idx) => {
     const isActive = idx === activeIndex;
     return (
@@ -207,7 +207,7 @@ const Herobar: React.FC = () => {
         className={`
           flex-1 relative group border-r last:border-r-0 border-white/20 
           flex flex-col items-center justify-center
-          px-4 py-6
+          px-4 py-4 lg:py-6
           ${isActive ? "bg-white/50 text-black bold" : "bg-transparent"}
           hover:bg-white/10 transition-colors
           lg:flex-row lg:items-start lg:justify-start
@@ -220,7 +220,7 @@ const Herobar: React.FC = () => {
         <img
           src={isActive ? Databar[key].newicone : Databar[key].icon}
           alt=""
-          className="lg:w-auto lg:h-auto w-10 h-10 lg:pl-6"
+          className="lg:w-auto lg:h-auto w-8 h-8 lg:pl-6"
         />
 
         {/* TEXT – hidden below lg */}

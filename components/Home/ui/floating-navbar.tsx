@@ -2,7 +2,7 @@
 import React, { JSX, useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/react";
 import { cn } from "@/lib/utils";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaInstagram } from "react-icons/fa";
 
 export const FloatingNav = ({
@@ -13,6 +13,7 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
+  const router = useRouter();
   const [visible, setVisible] = useState(true);
   const [scrolled, setScrolled] = useState(false);
   const [selectedTab, setSelectedTab] = useState<string | null>(null);
@@ -113,7 +114,20 @@ export const FloatingNav = ({
         >
           {/* LOGO */}
           <div className="flex items-center text-xl font-bold text-white">
-            <img src="/assets/rd-image001.svg" alt="" className="lg:pl-4 lg:pr-1 pt-1 2xl:w-11/12 w-[80%]" />
+            <img
+              src="/assets/rd-image001.svg"
+              alt=""
+              className="lg:pl-4 lg:pr-1 pt-1 2xl:w-11/12 w-[80%] cursor-pointer"
+              role="link"
+              tabIndex={0}
+              onClick={() => router.push("/")}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  router.push("/");
+                }
+              }}
+            />
           </div>
 
           {/* NAV ITEMS */}

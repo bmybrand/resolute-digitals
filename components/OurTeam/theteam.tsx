@@ -27,6 +27,12 @@ const teamSections = [
         img: "/assets/rd-image182.webp",
         linkedin: "",
       },
+      {
+        name: "Shafqat Ali",
+        role: "International Sales Executive",
+        img: "/assets/rd-image183.webp",
+        linkedin: "https://www.linkedin.com/in/shafqat-ali-shah/",
+      },
     ],
   },
   {
