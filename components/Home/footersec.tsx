@@ -14,11 +14,14 @@ import {
 import { useGeoCountry } from "@/utils/useGeoCountry";
 
 const FooterSec = () => {
-  const { countryCode } = useGeoCountry();
+  const { countryCode, loading: geoLoading } = useGeoCountry();
 
-  // ✅ US ONLY when exact "US" (case-insensitive). Everyone else => Pakistan
+  // ✅ US ONLY when exact "US" (case-insensitive). UAE => Dubai logo. Everyone else => Pakistan
   const isUS = (countryCode ?? "").toUpperCase() === "US";
-  const isPakistan = !isUS;
+  const isUAE = (countryCode ?? "").toUpperCase() === "AE";
+  const isPakistan = !isUS && !isUAE;
+
+  const footerLogoSrc = isUAE ? "/assets/logo_dubai_footer.png" : "/assets/rd-image004.svg";
 
   return (
     <div className="flex flex-col items-center">
@@ -70,7 +73,11 @@ const FooterSec = () => {
         <div className="flex flex-col lg:flex-row flex-wrap gap-8 border-t border-white/20 pt-12 mx-auto w-full ">
           {/* About / Logo Section */}
           <div className="w-full lg:flex-1 lg:min-w-[400px] min-w-[200px] pr-0 lg:pr-[3%]">
-            <img src="/assets/rd-image004.svg" alt="" className="mb-4" />
+            {geoLoading ? (
+              <div className="mb-4 h-10 w-32 bg-white/10 rounded animate-pulse" aria-hidden />
+            ) : (
+              <img src={footerLogoSrc} alt="" className="mb-4" />
+            )}
             <p className="text-white/70">
               We’re your trusted digital partner — helping businesses grow with
               creativity, technology, and strategy. Our expert team delivers
@@ -134,19 +141,27 @@ const FooterSec = () => {
             {
               title: "Contact",
               items: [
-                {
-                  icon: <FaPhoneAlt className="text-[#2378DA]" />,
-                  text: isPakistan ? "+92 304 0208313" : "+1 (254) 342-0005",
-                },
+                ...(!isUAE
+                  ? [
+                      {
+                        icon: <FaPhoneAlt className="text-[#2378DA]" />,
+                        text: isPakistan ? "+92 304 0208313" : "+1 (254) 342-0005",
+                      },
+                    ]
+                  : []),
                 {
                   icon: <FaEnvelope className="text-[#2378DA]" />,
-                  text: "support@resolutedigitals.com",
+                  text: isUAE
+                    ? "informationtechnology@resolutedigitals.com"
+                    : "support@resolutedigitals.com",
                 },
                 {
                   icon: <FaMapMarkerAlt className="text-[#2378DA]" />,
-                  text: isPakistan
-                    ? "Plot No. E-88, Block B Gulshan e Jamal, Karachi, 75260"
-                    : "1234 Innovation Drive, Suite 200 Austin, TX 73301, USA",
+                  text: isUAE
+                    ? "G-17, Hamood Building, Area: Port Saeed, Dubai, UAE"
+                    : isPakistan
+                      ? "Plot No. E-88, Block B Gulshan e Jamal, Karachi, 75260"
+                      : "1234 Innovation Drive, Suite 200 Austin, TX 73301, USA",
                 },
               ],
             },
@@ -165,7 +180,11 @@ const FooterSec = () => {
                   ) : (
                     <li key={index} className="flex gap-3 items-center rounded-full">
                       {item.icon}
-                      <span>{item.text}</span>
+                      {typeof item.text === "string" && item.text.includes("@") ? (
+                        <a href={`mailto:${item.text}`} className="hover:underline">{item.text}</a>
+                      ) : (
+                        <span>{item.text}</span>
+                      )}
                     </li>
                   )
                 )}

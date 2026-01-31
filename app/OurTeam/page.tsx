@@ -10,7 +10,7 @@ const OurTeamPage = () => {
     return null;
   }
 
-  if (countryCode === "US") {
+  if (countryCode === "US" || (countryCode ?? "").toUpperCase() === "AE") {
     return (
       <div className="bg-[#000A21] text-white min-h-screen flex items-center justify-center p-8">
         This page is not available in your region.

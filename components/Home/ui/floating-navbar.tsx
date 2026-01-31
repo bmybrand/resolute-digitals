@@ -4,6 +4,7 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/
 import { cn } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaInstagram } from "react-icons/fa";
+import { useGeoCountry } from "@/utils/useGeoCountry";
 
 export const FloatingNav = ({
   navItems,
@@ -26,6 +27,9 @@ export const FloatingNav = ({
 
   const pathname = usePathname();
   const isCaseStudy = pathname.toLowerCase().includes("casestudy");
+  const { countryCode, loading: geoLoading } = useGeoCountry();
+  const isUAE = (countryCode ?? "").toUpperCase() === "AE";
+  const logoSrc = isUAE ? "/assets/logo_dubai.png" : "/assets/rd-image001.svg";
 
   const toggleDropdown = (name: string) => {
     setOpenDropdowns((prev) => ({ ...prev, [name]: !prev[name] }));
@@ -113,21 +117,25 @@ export const FloatingNav = ({
           )}
         >
           {/* LOGO */}
-          <div className="flex items-center text-xl font-bold text-white">
-            <img
-              src="/assets/rd-image001.svg"
-              alt=""
-              className="lg:pl-4 lg:pr-1 pt-1 2xl:w-11/12 w-[80%] cursor-pointer"
-              role="link"
-              tabIndex={0}
-              onClick={() => router.push("/")}
-              onKeyDown={(event) => {
-                if (event.key === "Enter" || event.key === " ") {
-                  event.preventDefault();
-                  router.push("/");
-                }
-              }}
-            />
+          <div className="flex items-center text-xl font-bold text-white min-h-[2.5rem] lg:min-h-[3rem]">
+            {geoLoading ? (
+              <div className="lg:pl-4 lg:pr-1 pt-1 2xl:w-11/12 w-[80%] h-8 lg:h-10 bg-white/10 rounded animate-pulse" aria-hidden />
+            ) : (
+              <img
+                src={logoSrc}
+                alt=""
+                className="lg:pl-4 lg:pr-1 pt-1 2xl:w-11/12 w-[80%] cursor-pointer"
+                role="link"
+                tabIndex={0}
+                onClick={() => router.push("/")}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    router.push("/");
+                  }
+                }}
+              />
+            )}
           </div>
 
           {/* NAV ITEMS */}
@@ -303,25 +311,39 @@ export const FloatingNav = ({
                   className="space-y-6 lg:w-2/3 xl:w-full lg:pr-6 w-full lg:border-r lg:border-[#FFFFFF]/10 xl:border xl:border-transparent"
                 >
                   <div className="w-full border-b border-[#FFFFFF]/10">
-                    <img src="/assets/rd-image004.svg" alt="" className="mb-4 w-2/3" />
+                    {geoLoading ? (
+                      <div className="mb-4 w-2/3 h-12 bg-white/10 rounded animate-pulse" aria-hidden />
+                    ) : (
+                      <img src={logoSrc} alt="" className="mb-4 w-2/3" />
+                    )}
                   </div>
                   <h2 className="text-3xl font-bold text-[#2378DA] mb-3">About Us</h2>
                   <p className="text-sm leading-7">
                     We’re your trusted digital partner — helping businesses grow with creativity, technology, and strategy.
                   </p>
                   <div className="space-y-4">
-                    <div>
-                      <h3 className="text-2xl font-bold text-[#2378DA] mb-3">Head Office</h3>
-                      <p className="text-sm mb-3">info@resolutedigitals.com</p>
-                      <p className="text-sm mb-3">+1 (254) 342-0005</p>
-                      <p className="text-sm mb-3">Plot No. E-88, Block B Gulshan e Jamal, Karachi, 75260</p>
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-[#2378DA] mb-3">US Office</h3>
-                      <p className="text-sm mb-3">info@resolutedigitals.com</p>
-                      <p className="text-sm mb-3">+1 (254) 342-0005</p>
-                      <p className="text-sm mb-3">738, Fawn Valley DR., ALLEN, TX 75002</p>
-                    </div>
+                    {isUAE ? (
+                      <div>
+                        <h3 className="text-2xl font-bold text-[#2378DA] mb-3">UAE Office</h3>
+                        <p className="text-sm mb-3"><a href="mailto:informationtechnology@resolutedigitals.com" className="hover:underline">informationtechnology@resolutedigitals.com</a></p>
+                        <p className="text-sm mb-3">G-17, Hamood Building, Area: Port Saeed, Dubai, UAE</p>
+                      </div>
+                    ) : (
+                      <>
+                        <div>
+                          <h3 className="text-2xl font-bold text-[#2378DA] mb-3">Head Office</h3>
+                          <p className="text-sm mb-3">info@resolutedigitals.com</p>
+                          <p className="text-sm mb-3">+1 (254) 342-0005</p>
+                          <p className="text-sm mb-3">Plot No. E-88, Block B Gulshan e Jamal, Karachi, 75260</p>
+                        </div>
+                        <div>
+                          <h3 className="text-2xl font-bold text-[#2378DA] mb-3">US Office</h3>
+                          <p className="text-sm mb-3">info@resolutedigitals.com</p>
+                          <p className="text-sm mb-3">+1 (254) 342-0005</p>
+                          <p className="text-sm mb-3">738, Fawn Valley DR., ALLEN, TX 75002</p>
+                        </div>
+                      </>
+                    )}
                   </div>
                   <h3 className="text-2xl font-bold text-[#2378DA] mb-3">Stay Connected</h3>
                   <div className="flex flex-wrap gap-1">

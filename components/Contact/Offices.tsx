@@ -1,56 +1,70 @@
+"use client";
+
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaInstagram } from "react-icons/fa";
+import { useGeoCountry } from "@/utils/useGeoCountry";
 
 const Offices = () => {
+  const { countryCode } = useGeoCountry();
+  const isUAE = (countryCode ?? "").toUpperCase() === "AE";
+
   return (
     <div className="bg-[#000A21]  pt-20 pb-10 lg:pb-20 lg:pt-30 2xl:px-49 text-white ">
       <div className=" mx-auto flex gap-6 border border-white/20 p-6 lg:p-12 rounded-3xl flex-col lg:flex-row">
 
-        {/* Head Office Card */}
-        <div className="bg-[#0F1930] rounded-2xl p-6 space-y-4 lg:w-1/3">
-        <img src="/assets/Group 1597883775 (1).svg" alt="" />
-
-          <h3 className="text-xl font-semibold">Head Office</h3>
-          
-          <hr className="text-white/20"/>
-
-          <div className="flex items-start gap-3">
-            <FaPhoneAlt className="text-[#2378DA]"/>
-            <span>+1 (800) 465-7890</span>
+        {isUAE ? (
+          /* UAE Office Card - shown when location is AE (phone hidden) */
+          <div className="bg-[#0F1930] rounded-2xl p-6 space-y-4 lg:w-1/3">
+            <img src="/assets/Group 1597883775 (1).svg" alt="" />
+            <h3 className="text-xl font-semibold">UAE Office</h3>
+            <hr className="text-white/20"/>
+            <div className="flex items-start gap-3">
+              <FaEnvelope className="text-[#2378DA]"/>
+              <span><a href="mailto:informationtechnology@resolutedigitals.com" className="hover:underline">informationtechnology@resolutedigitals.com</a></span>
+            </div>
+            <div className="flex items-start gap-3">
+              <FaMapMarkerAlt className="text-[#2378DA]"/>
+              <span>G-17, Hamood Building, Area: Port Saeed, Dubai, UAE</span>
+            </div>
           </div>
-
-          <div className="flex items-start gap-3">
-            <FaEnvelope className="text-[#2378DA]"/>
-            <span>support@resolvedigitals.com</span>
+        ) : (
+          /* Head Office Card */
+          <div className="bg-[#0F1930] rounded-2xl p-6 space-y-4 lg:w-1/3">
+            <img src="/assets/Group 1597883775 (1).svg" alt="" />
+            <h3 className="text-xl font-semibold">Head Office</h3>
+            <hr className="text-white/20"/>
+            <div className="flex items-start gap-3">
+              <FaPhoneAlt className="text-[#2378DA]"/>
+              <span>+1 (800) 465-7890</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <FaEnvelope className="text-[#2378DA]"/>
+              <span>support@resolvedigitals.com</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <FaMapMarkerAlt className="text-[#2378DA]"/>
+              <span>
+                Plot No. E-88, Block B <br />
+                Gulshan e Jamal, Karachi, 75260
+              </span>
+            </div>
           </div>
-
-          <div className="flex items-start gap-3">
-            <FaMapMarkerAlt className="text-[#2378DA]"/>
-            <span>
-              Plot No. E-88, Block B <br />
-              Gulshan e Jamal, Karachi, 75260
-            </span>
-          </div>
-        </div>
+        )}
 
         {/* US Office Card */}
         <div className="bg-[#0F1930] rounded-2xl p-6 space-y-4 lg:w-1/3">
-        
-        <img src="/assets/Group 1597883787.svg" alt="" />
+          <img src="/assets/Group 1597883787.svg" alt="" />
           <h3 className="text-xl font-semibold">US Office</h3>
           <hr className="text-white/20"/>
-
           <div className="flex items-start gap-3">
             <FaPhoneAlt className="text-[#2378DA]"/>
             <span>+1 (800) 465-7890</span>
           </div>
-
           <div className="flex items-start gap-3">
             <FaEnvelope className="text-[#2378DA]"/>
             <span>support@resolvedigitals.com</span>
           </div>
-
           <div className="flex items-start gap-3">
             <FaMapMarkerAlt className="text-[#2378DA]"/>
             <span>

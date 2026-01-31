@@ -28,6 +28,7 @@ const ContactSection: React.FC = () => {
   );
   const { countryCode } = useGeoCountry();
   const isPakistan = countryCode === "PK" || countryCode === null;
+  const isUAE = (countryCode ?? "").toUpperCase() === "AE";
 
   const onSubmit: SubmitHandler<ContactFormData> = async (data) => {
     setStatus("sending");
@@ -200,14 +201,18 @@ const ContactSection: React.FC = () => {
   {/* Local Office */}
   <div className="mb-6 text-white">
     <h2 className="text-[28px] sm:text-[32px] lg:text-[40px] font-bold mb-6 text-[#2378DA]">
-      {isPakistan ? "Head Office" : "US Office"}
+      {isUAE ? "UAE Office" : isPakistan ? "Head Office" : "US Office"}
     </h2>
-    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/rd-image113.svg" alt="" className="w-6"/> info@resolutedigitals.com</p>
+    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/rd-image113.svg" alt="" className="w-6"/> {isUAE ? <a href="mailto:informationtechnology@resolutedigitals.com" className="hover:underline">informationtechnology@resolutedigitals.com</a> : <a href="mailto:info@resolutedigitals.com" className="hover:underline">info@resolutedigitals.com</a>}</p>
+    {!isUAE && (
     <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/rd-image114.svg" alt="" className="w-6"/> +1 (254) 342-0005</p>
+    )}
     <p className="mt-2 text-[19px] opacity-80">
-      {isPakistan
-        ? "Plot No. E-88, Block B Gulshan e Jamal, Karachi, 75260"
-        : "738, Fawn Valley Dr., Allen, TX 75002, United States"}
+      {isUAE
+        ? "G-17, Hamood Building, Area: Port Saeed, Dubai, UAE"
+        : isPakistan
+          ? "Plot No. E-88, Block B Gulshan e Jamal, Karachi, 75260"
+          : "738, Fawn Valley Dr., Allen, TX 75002, United States"}
     </p>
   </div>
 
