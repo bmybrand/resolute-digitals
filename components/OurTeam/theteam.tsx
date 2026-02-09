@@ -21,7 +21,8 @@ const teamSections = [
         role: "Sr. Sales Support Executive",
         img: "/assets/rd-image168.webp",
         linkedin: "https://www.linkedin.com/in/ghulam-akbar-3887b5228/",
-      },{
+      },
+      {
         name: "Shafiq Rehman",
         role: "Sr. Sales Support Executive",
         img: "/assets/rd-image182.webp",
@@ -80,7 +81,6 @@ const teamSections = [
         img: "/assets/rd-image173.webp",
         linkedin: "#",
       },
-      
     ],
   },
   {
@@ -96,7 +96,8 @@ const teamSections = [
         name: "Haider Abbas",
         role: "Sr. Research Analyst",
         img: "/assets/rd-image164.webp",
-        linkedin: "https://www.linkedin.com/in/haider-ali-226244240/",
+        linkedin:
+          "https://www.linkedin.com/in/syed-muhammad-haider-abbas-52601a223/",
       },
       {
         name: "Faiq Ali Khan",
@@ -111,7 +112,6 @@ const teamSections = [
 const TheTeam = () => {
   return (
     <div className="relative flex flex-col justify-center items-center mt-20 lg:mt-40">
-
       {/* Header Section */}
       <div className="flex flex-row justify-center items-center w-fit rounded-full bg-[#FFFFFF]/10 px-2 py-2">
         <div className="flex gap-1 font-medium relative text-white rounded-full justify-center items-center text-lg px-4 py-2 bg-gradient-to-r from-[#2378DA] to-[#134074]">
@@ -134,10 +134,8 @@ const TheTeam = () => {
 
       {/* Team Sections */}
       <div className="w-full px-4  pt-14 space-y-24">
-
         {teamSections.map((section, sectionIndex) => (
           <div key={sectionIndex} className="flex flex-col items-center">
-
             {/* Section Title */}
             <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl bold mb-12 text-center">
               <span className="bg-gradient-to-r from-[#2378DA] to-[#134074] bg-clip-text text-transparent">
@@ -182,6 +180,8 @@ const TheTeam = () => {
                     {/* LinkedIn */}
                     <a
                       href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="absolute bottom-0 sm:bottom-3 right-0 sm:right-4 bg-[#0F1930] p-3 md:p-4 lg:p-5 rounded-full hover:bg-[#2378DA] hover:shadow-lg transition"
                     >
                       <img src="/assets/rd-image121.svg" alt="LinkedIn" />
@@ -190,10 +190,8 @@ const TheTeam = () => {
                 </div>
               ))}
             </div>
-
           </div>
         ))}
-
       </div>
     </div>
   );

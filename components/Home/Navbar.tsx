@@ -12,10 +12,9 @@ import { useGeoCountry } from "@/utils/useGeoCountry";
 
 export function FloatingNavDemo() {
   const { countryCode, loading } = useGeoCountry();
-  const isUS = countryCode === "US";
-  const isUAE = (countryCode ?? "").toUpperCase() === "AE";
+  const isPakistan = (countryCode ?? "").toUpperCase() === "PK";
 
-  const aboutDropdown = loading || (!isUS && !isUAE)
+  const aboutDropdown = !loading && isPakistan
     ? [
         {
           name: "Know Our Team",
