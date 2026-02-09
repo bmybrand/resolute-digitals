@@ -1,3 +1,6 @@
+# Use Next.js custom 404 page for any non-existent URL (e.g. /asdasd123123qsdasasd)
+ErrorDocument 404 /404.html
+
 RewriteEngine On
 
 # Redirect /path (no trailing slash) to /path/ when a directory exists.
