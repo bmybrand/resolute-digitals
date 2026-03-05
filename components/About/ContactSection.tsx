@@ -203,9 +203,9 @@ const ContactSection: React.FC = () => {
     <h2 className="text-[28px] sm:text-[32px] lg:text-[40px] font-bold mb-6 text-[#2378DA]">
       {isUAE ? "UAE Office" : isPakistan ? "Head Office" : "US Office"}
     </h2>
-    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/rd-image113.svg" alt="" className="w-6"/> {isUAE ? <a href="mailto:informationtechnology@resolutedigitals.com" className="hover:underline">informationtechnology@resolutedigitals.com</a> : <a href="mailto:info@resolutedigitals.com" className="hover:underline">info@resolutedigitals.com</a>}</p>
+    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/rd-image113.svg" alt="" className="w-6"/> {isUAE ? <a href="mailto:informationtechnology@resolutedigitals.com" className="hover:underline">informationtechnology@resolutedigitals.com</a> : isPakistan ? <a href="mailto:contact@resolutedigitals.com" className="hover:underline">contact@resolutedigitals.com</a> : <a href="mailto:support@resolutedigitals.com" className="hover:underline">support@resolutedigitals.com</a>}</p>
     {!isUAE && (
-    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/rd-image114.svg" alt="" className="w-6"/> +1 (254) 342-0005</p>
+    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/rd-image114.svg" alt="" className="w-6"/> {isPakistan ? "+92 334 3448974" : "+1 (254) 342-0005"}</p>
     )}
     <p className="mt-2 text-[19px] opacity-80">
       {isUAE
@@ -226,25 +226,29 @@ Stay Connected</h2>
 
   {/* Facebook */}
   <a
-    href="#"
+    href="https://www.facebook.com/ResoluteDigitals"
+    target="_blank"
+    rel="noopener noreferrer"
     className="flex items-center gap-2 px-4 py-2 border border-[#2378DA] rounded-full hover:bg-[#2378DA] transition"
   >
     <FaFacebookF className="w-4 h-4 text-white" />
     <span className="text-white font-semibold">Facebook</span>
   </a>
 
-  {/* Twitter */}
-  <a
+  {/* Twitter - add link when ready */}
+  {/* <a
     href="#"
     className="flex items-center gap-2 px-4 py-2 border border-[#1DA1F2] rounded-full hover:bg-[#1DA1F2] transition"
   >
     <FaTwitter className="w-4 h-4 text-white" />
     <span className="text-white font-semibold">Twitter</span>
-  </a>
+  </a> */}
 
   {/* Instagram */}
   <a
-    href="#"
+    href="https://www.instagram.com/resolutedigitals"
+    target="_blank"
+    rel="noopener noreferrer"
     className="flex items-center gap-2 px-4 py-2 border border-pink-500 rounded-full hover:bg-gradient-to-r hover:from-pink-500 hover:to-yellow-500 transition"
   >
     <FaInstagram className="w-4 h-4 text-white" />
@@ -253,21 +257,23 @@ Stay Connected</h2>
 
   {/* LinkedIn */}
   <a
-    href="#"
+    href="https://www.linkedin.com/company/resolutedigitals"
+    target="_blank"
+    rel="noopener noreferrer"
     className="flex items-center gap-2 px-4 py-2 border border-[#0A66C2] rounded-full hover:bg-[#0A66C2] transition"
   >
     <FaLinkedinIn className="w-4 h-4 text-white" />
     <span className="text-white font-semibold">LinkedIn</span>
   </a>
 
-  {/* YouTube */}
-  <a
+  {/* YouTube - add link when ready */}
+  {/* <a
     href="#"
     className="flex items-center gap-2 px-4 py-2 border border-red-600 rounded-full hover:bg-red-600 transition"
   >
     <FaYoutube className="w-4 h-4 text-white" />
     <span className="text-white font-semibold">YouTube</span>
-  </a>
+  </a> */}
 
 </div>
 

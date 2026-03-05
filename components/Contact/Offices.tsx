@@ -36,11 +36,11 @@ const Offices = () => {
             <hr className="text-white/20"/>
             <div className="flex items-start gap-3">
               <FaPhoneAlt className="text-[#2378DA]"/>
-              <span>+1 (800) 465-7890</span>
+              <span>+92 334 3448974</span>
             </div>
             <div className="flex items-start gap-3">
               <FaEnvelope className="text-[#2378DA]"/>
-              <span>support@resolvedigitals.com</span>
+              <span><a href="mailto:contact@resolutedigitals.com" className="hover:underline">contact@resolutedigitals.com</a></span>
             </div>
             <div className="flex items-start gap-3">
               <FaMapMarkerAlt className="text-[#2378DA]"/>
@@ -83,30 +83,30 @@ const Offices = () => {
           <hr className="text-white/20"/>
 
          <div className="flex flex-wrap gap-3 text-sm sm:text-base text-[#A9ABBE]">
-  <div className="flex items-center gap-2 cursor-pointer hover:text-blue-400 transition border border-white/20 px-3 py-1 rounded-full">
+  <a href="https://www.facebook.com/ResoluteDigitals" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-blue-400 transition border border-white/20 px-3 py-1 rounded-full">
     <FaFacebookF />
     <p>Facebook</p>
-  </div>
+  </a>
 
-  <div className="flex items-center gap-2 cursor-pointer hover:text-sky-400 transition border border-white/20 px-3 py-1 rounded-full">
+  {/* <div className="flex items-center gap-2 cursor-pointer hover:text-sky-400 transition border border-white/20 px-3 py-1 rounded-full">
     <FaTwitter />
     <p>Twitter</p>
-  </div>
+  </div> */}
 
-  <div className="flex items-center gap-2 cursor-pointer hover:text-blue-500 transition border border-white/20 px-3 py-1 rounded-full">
+  <a href="https://www.linkedin.com/company/resolutedigitals" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-blue-500 transition border border-white/20 px-3 py-1 rounded-full">
     <FaLinkedinIn />
     <p>LinkedIn</p>
-  </div>
+  </a>
 
-  <div className="flex items-center gap-2 cursor-pointer hover:text-red-500 transition border border-white/20 px-3 py-1 rounded-full">
+  {/* <div className="flex items-center gap-2 cursor-pointer hover:text-red-500 transition border border-white/20 px-3 py-1 rounded-full">
     <FaYoutube />
     <p>YouTube</p>
-  </div>
+  </div> */}
 
-  <div className="flex items-center gap-2 cursor-pointer hover:text-pink-400 transition border border-white/20 px-3 py-1 rounded-full">
+  <a href="https://www.instagram.com/resolutedigitals" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-pink-400 transition border border-white/20 px-3 py-1 rounded-full">
     <FaInstagram />
     <p>Instagram</p>
-  </div>
+  </a>
 </div>
 
         </div>

@@ -87,26 +87,26 @@ const FooterSec = () => {
 
             {/* Social Media */}
             <div className="flex flex-wrap gap-2 mt-6">
-              <div className="flex items-center gap-2 cursor-pointer hover:text-blue-400 transition border border-white/20 px-3 py-2 rounded-full">
+              <a href="https://www.facebook.com/ResoluteDigitals" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-blue-400 transition border border-white/20 px-3 py-2 rounded-full">
                 <FaFacebookF className="text-[#2378DA]" />
                 <span>Facebook</span>
-              </div>
-              <div className="flex items-center gap-2 cursor-pointer hover:text-sky-400 transition border border-white/20 px-3 py-2 rounded-full">
+              </a>
+              {/* <div className="flex items-center gap-2 cursor-pointer hover:text-sky-400 transition border border-white/20 px-3 py-2 rounded-full">
                 <FaTwitter className="text-[#2378DA]" />
                 <span>Twitter</span>
-              </div>
-              <div className="flex items-center gap-2 cursor-pointer hover:text-blue-500 transition border border-white/20 px-3 py-2 rounded-full">
+              </div> */}
+              <a href="https://www.linkedin.com/company/resolutedigitals" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-blue-500 transition border border-white/20 px-3 py-2 rounded-full">
                 <FaLinkedinIn className="text-[#2378DA]" />
                 <span>LinkedIn</span>
-              </div>
-              <div className="flex items-center gap-2 cursor-pointer hover:text-red-500 transition border border-white/20 px-3 py-2 rounded-full">
+              </a>
+              {/* <div className="flex items-center gap-2 cursor-pointer hover:text-red-500 transition border border-white/20 px-3 py-2 rounded-full">
                 <FaYoutube className="text-[#2378DA]" />
                 <span>YouTube</span>
-              </div>
-              <div className="flex items-center gap-2 cursor-pointer hover:text-pink-400 transition border border-white/20 px-3 py-2 rounded-full">
+              </div> */}
+              <a href="https://www.instagram.com/resolutedigitals" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-pink-400 transition border border-white/20 px-3 py-2 rounded-full">
                 <FaInstagram className="text-[#2378DA]" />
                 <span>Instagram</span>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -145,7 +145,7 @@ const FooterSec = () => {
                   ? [
                       {
                         icon: <FaPhoneAlt className="text-[#2378DA]" />,
-                        text: isPakistan ? "+92 304 0208313" : "+1 (254) 342-0005",
+                        text: isPakistan ? "+92 334 3448974" : "+1 (254) 342-0005",
                       },
                     ]
                   : []),
@@ -153,7 +153,9 @@ const FooterSec = () => {
                   icon: <FaEnvelope className="text-[#2378DA]" />,
                   text: isUAE
                     ? "informationtechnology@resolutedigitals.com"
-                    : "support@resolutedigitals.com",
+                    : isPakistan
+                      ? "contact@resolutedigitals.com"
+                      : "support@resolutedigitals.com",
                 },
                 {
                   icon: <FaMapMarkerAlt className="text-[#2378DA]" />,
