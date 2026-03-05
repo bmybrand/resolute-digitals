@@ -332,13 +332,13 @@ export const FloatingNav = ({
                       <>
                         <div>
                           <h3 className="text-2xl font-bold text-[#2378DA] mb-3">Head Office</h3>
-                          <p className="text-sm mb-3">info@resolutedigitals.com</p>
-                          <p className="text-sm mb-3">+1 (254) 342-0005</p>
+                          <p className="text-sm mb-3"><a href="mailto:contact@resolutedigitals.com" className="hover:underline">contact@resolutedigitals.com</a></p>
+                          <p className="text-sm mb-3">+92 334 3448974</p>
                           <p className="text-sm mb-3">Plot No. E-88, Block B Gulshan e Jamal, Karachi, 75260</p>
                         </div>
                         <div>
                           <h3 className="text-2xl font-bold text-[#2378DA] mb-3">US Office</h3>
-                          <p className="text-sm mb-3">info@resolutedigitals.com</p>
+                          <p className="text-sm mb-3"><a href="mailto:support@resolutedigitals.com" className="hover:underline">support@resolutedigitals.com</a></p>
                           <p className="text-sm mb-3">+1 (254) 342-0005</p>
                           <p className="text-sm mb-3">738, Fawn Valley DR., ALLEN, TX 75002</p>
                         </div>
@@ -347,15 +347,17 @@ export const FloatingNav = ({
                   </div>
                   <h3 className="text-2xl font-bold text-[#2378DA] mb-3">Stay Connected</h3>
                   <div className="flex flex-wrap gap-1">
-                    {[FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaInstagram].map((Icon, idx) => (
-                      <motion.div
-                        key={idx}
-                        whileHover={{ scale: 1.1 }}
-                        className="flex items-center gap-2 cursor-pointer hover:bg-[#2378DA] border border-white/20 p-3 rounded-full"
-                      >
-                        <Icon />
-                      </motion.div>
-                    ))}
+                    <a href="https://www.facebook.com/ResoluteDigitals" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:bg-[#2378DA] border border-white/20 p-3 rounded-full">
+                      <FaFacebookF />
+                    </a>
+                    {/* <motion.div whileHover={{ scale: 1.1 }} className="flex items-center gap-2 cursor-pointer hover:bg-[#2378DA] border border-white/20 p-3 rounded-full"><FaTwitter /></motion.div> */}
+                    <a href="https://www.linkedin.com/company/resolutedigitals" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:bg-[#2378DA] border border-white/20 p-3 rounded-full">
+                      <FaLinkedinIn />
+                    </a>
+                    {/* <motion.div whileHover={{ scale: 1.1 }} className="flex items-center gap-2 cursor-pointer hover:bg-[#2378DA] border border-white/20 p-3 rounded-full"><FaYoutube /></motion.div> */}
+                    <a href="https://www.instagram.com/resolutedigitals" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:bg-[#2378DA] border border-white/20 p-3 rounded-full">
+                      <FaInstagram />
+                    </a>
                   </div>
                 </motion.div>
 
