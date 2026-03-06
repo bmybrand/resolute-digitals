@@ -205,7 +205,7 @@ const ContactSection: React.FC = () => {
     </h2>
     <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/rd-image113.svg" alt="" className="w-6"/> {isUAE ? <a href="mailto:informationtechnology@resolutedigitals.com" className="hover:underline">informationtechnology@resolutedigitals.com</a> : isPakistan ? <a href="mailto:contact@resolutedigitals.com" className="hover:underline">contact@resolutedigitals.com</a> : <a href="mailto:support@resolutedigitals.com" className="hover:underline">support@resolutedigitals.com</a>}</p>
     {!isUAE && (
-    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/rd-image114.svg" alt="" className="w-6"/> {isPakistan ? "+92 334 3448974" : "+1 (254) 342-0005"}</p>
+    <p className="mt-2 text-[19px] flex  items-center gap-3"><img src="/assets/rd-image114.svg" alt="" className="w-6"/> {isPakistan ? "+92 334 3448974" : "+1 (830) 267-9917"}</p>
     )}
     <p className="mt-2 text-[19px] opacity-80">
       {isUAE

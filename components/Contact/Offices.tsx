@@ -59,7 +59,7 @@ const Offices = () => {
           <hr className="text-white/20"/>
           <div className="flex items-start gap-3">
             <FaPhoneAlt className="text-[#2378DA]"/>
-            <span>+1 (800) 465-7890</span>
+            <span>+1 (830) 267-9917</span>
           </div>
           <div className="flex items-start gap-3">
             <FaEnvelope className="text-[#2378DA]"/>

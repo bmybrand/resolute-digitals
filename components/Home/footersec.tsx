@@ -145,7 +145,7 @@ const FooterSec = () => {
                   ? [
                       {
                         icon: <FaPhoneAlt className="text-[#2378DA]" />,
-                        text: isPakistan ? "+92 334 3448974" : "+1 (254) 342-0005",
+                        text: isPakistan ? "+92 334 3448974" : "+1 (830) 267-9917",
                       },
                     ]
                   : []),
