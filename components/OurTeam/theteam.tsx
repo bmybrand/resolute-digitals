@@ -11,14 +11,14 @@ const teamSections = [
         linkedin: "https://www.linkedin.com/in/zu33air/",
       },
       {
-        name: "Malik Ehtram Ali",
-        role: "Business Unit Head",
+        name: "Hussain Shaja",
+        role: "Upwork Team Lead.",
         img: "/assets/rd-image162.webp",
         linkedin: "https://www.linkedin.com/in/malik-ehtram-240918216/",
       },
       {
-        name: "Ghulam Akber",
-        role: "Sr. Sales Support Executive",
+        name: "Ibrahim Zafar",
+        role: "Upwork Bidding Expert",
         img: "/assets/rd-image168.webp",
         linkedin: "https://www.linkedin.com/in/ghulam-akbar-3887b5228/",
       },
