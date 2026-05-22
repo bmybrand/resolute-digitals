@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "AI Solutions Development Company in USA | Resolute Digitals",
   description:
     "Explore AI and automation services by Resolute Digitals, offering scalable AI integration and automation solutions for smarter business operations.",
+  alternates: {
+    canonical: "/services/ai-driven/",
+  },
 };
 
 export default function ServicesPage() {

@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Business Operations & IT Support Company | Resolute Digitals",
   description:
     "Business operations and IT support company Resolute Digitals delivers managed IT services, automation, and cloud infrastructure support for businesses.",
+  alternates: {
+    canonical: "/services/data-operations/",
+  },
 };
 
 export default function ServicesPage() {

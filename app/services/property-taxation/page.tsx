@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "US Property Tax Research Services | Resolute Digitals",
   description:
     "Resolute Digitals provides US property tax research services, delivering accurate data analysis and insights for real estate and investment decisions.",
+  alternates: {
+    canonical: "/services/property-taxation/",
+  },
 };
 
 export default function ServicesPage() {

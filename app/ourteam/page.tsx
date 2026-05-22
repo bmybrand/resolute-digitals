@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Meet Our Expert Team | Resolute Digitals",
   description:
     "Meet the skilled professionals at Resolute Digitals delivering innovative software, marketing, design, and technology solutions worldwide.",
+  alternates: {
+    canonical: "/ourteam/",
+  },
 };
 
 export default function OurTeamPage() {
