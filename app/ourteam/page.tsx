@@ -1,28 +1,12 @@
-"use client";
+import type { Metadata } from "next";
+import OurTeamPageClient from "./our-team-page-client";
 
-import OurTeam from "@/components/OurTeam/OurTeam";
-import { useGeoCountry } from "@/utils/useGeoCountry";
-
-const OurTeamPage = () => {
-  const { countryCode, loading } = useGeoCountry();
-
-  if (loading) {
-    return null;
-  }
-
-  if ((countryCode ?? "").toUpperCase() !== "PK") {
-    return (
-      <div className="bg-[#000A21] text-white min-h-screen flex items-center justify-center p-8">
-        This page is not available in your region.
-      </div>
-    );
-  }
-
-  return (
-    <div>
-      <OurTeam />
-    </div>
-  );
+export const metadata: Metadata = {
+  title: "Meet Our Expert Team | Resolute Digitals",
+  description:
+    "Meet the skilled professionals at Resolute Digitals delivering innovative software, marketing, design, and technology solutions worldwide.",
 };
 
-export default OurTeamPage;
+export default function OurTeamPage() {
+  return <OurTeamPageClient />;
+}
