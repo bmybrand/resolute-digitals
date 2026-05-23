@@ -24,6 +24,9 @@ if ($LASTEXITCODE -eq 0) {
   git worktree add -b $branch $worktreeDir
 }
 
+Write-Host "Installing dependencies..."
+npm ci
+
 Write-Host "Building static export..."
 npm run build
 
@@ -40,6 +43,7 @@ git clean -fdx
 
 Get-ChildItem -Force | Where-Object { $_.Name -ne ".git" } | Remove-Item -Recurse -Force
 Copy-Item (Join-Path $outDir "*") $worktreeDir -Recurse -Force
+Copy-Item (Join-Path $repoRoot ".cpanel.yml") $worktreeDir -Force
 
 git add -A
 git commit -m "Deploy static site"
