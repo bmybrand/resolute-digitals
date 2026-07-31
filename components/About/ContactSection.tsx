@@ -212,7 +212,7 @@ const ContactSection: React.FC = () => {
         ? "G-17, Hamood Building, Area: Port Saeed, Dubai, UAE"
         : isPakistan
           ? "Plot No. E-88, Block B Gulshan e Jamal, Karachi, 75260"
-          : "738, Fawn Valley Dr., Allen, TX 75002, United States"}
+          : "1234 Innovation Drive, Suite 200, Austin, TX 73301, USA"}
     </p>
   </div>
 

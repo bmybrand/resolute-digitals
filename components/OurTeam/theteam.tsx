@@ -27,13 +27,13 @@ const teamSections = [
         name: "Hussain Shaja",
         role: "Upwork Team Lead.",
         img: "/assets/rd-image162.webp",
-        linkedin: "https://www.linkedin.com/in/malik-ehtram-240918216/",
+        linkedin: "#",
       },
       {
         name: "Ibrahim Zafar",
         role: "Upwork Bidding Expert",
         img: "/assets/rd-image168.webp",
-        linkedin: "https://www.linkedin.com/in/ghulam-akbar-3887b5228/",
+        linkedin: "#",
       }
     ],
   },
