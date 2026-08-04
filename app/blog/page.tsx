@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import {Underdev} from "@/components/errorOrUnderdevelopment/Underdev";
+import BlogPage from "@/components/BlogPage";
+import { getPublishedBlogs } from "@/lib/blog";
 
 export const metadata: Metadata = {
   title: "Resolute Digitals Blog | Tech, AI & Marketing Insights",
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function BlogPage() {
-  return <Underdev />;
+export default async function Page() {
+  const blogs = await getPublishedBlogs();
+  return <BlogPage initialBlogs={blogs} />;
 }

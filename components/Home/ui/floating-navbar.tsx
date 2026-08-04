@@ -96,7 +96,7 @@ export const FloatingNav = ({
        {/* NAVBAR */}
       <AnimatePresence mode="wait">
         <motion.div
-          initial={{ opacity: 0, y: -100 }}
+          initial={false}
           animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
           ref={navbarRef}

@@ -96,11 +96,11 @@ const values = ["Stay curious", "Own the outcome", "Work with clarity", "Grow to
 
 export default function CareersPage() {
   const [openRoles, setOpenRoles] = useState<Opportunity[]>([]);
-  const [rolesLoading, setRolesLoading] = useState(true);
   const [rolesError, setRolesError] = useState(false);
 
   useEffect(() => {
     const controller = new AbortController();
+    const requestTimeout = window.setTimeout(() => controller.abort(), 12000);
 
     const loadOpportunities = async () => {
       try {
@@ -120,13 +120,16 @@ export default function CareersPage() {
         if (error instanceof DOMException && error.name === "AbortError") return;
         setRolesError(true);
       } finally {
-        if (!controller.signal.aborted) setRolesLoading(false);
+        window.clearTimeout(requestTimeout);
       }
     };
 
     loadOpportunities();
 
-    return () => controller.abort();
+    return () => {
+      window.clearTimeout(requestTimeout);
+      controller.abort();
+    };
   }, []);
 
   return (
@@ -399,13 +402,7 @@ export default function CareersPage() {
           </div>
 
           <div className="mt-14 space-y-5">
-            {rolesLoading ? (
-              <div className="space-y-5" aria-label="Loading opportunities">
-                {[1, 2].map((item) => (
-                  <div key={item} className="h-52 animate-pulse rounded-2xl border border-white/10 bg-[#080F1F]" />
-                ))}
-              </div>
-            ) : rolesError ? (
+            {rolesError ? (
               <div className="rounded-2xl border border-amber-400/20 bg-[#080F1F] px-6 py-14 text-center">
                 <IconBriefcase className="mx-auto h-10 w-10 text-amber-300" stroke={1.5} />
                 <h3 className="bold mt-5 text-2xl">Opportunities could not be loaded</h3>
@@ -415,7 +412,7 @@ export default function CareersPage() {
               </div>
             ) : openRoles.length > 0 ? (
               openRoles.map((role) => (
-                <Link
+                <a
                   key={role.id}
                   href={role.detail_url}
                   className="group relative grid overflow-hidden rounded-2xl border border-white/10 bg-[#080F1F] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.3)] transition duration-300 hover:-translate-y-1 hover:border-[#2378DA]/70 sm:p-8 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-10"
@@ -440,7 +437,7 @@ export default function CareersPage() {
                     View Role
                     <IconArrowUpRight className="h-4 w-4" />
                   </span>
-                </Link>
+                </a>
               ))
             ) : (
               <div className="rounded-2xl border border-white/10 bg-[#080F1F] px-6 py-14 text-center">

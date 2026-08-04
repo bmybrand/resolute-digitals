@@ -224,13 +224,13 @@ export default function OpportunitiesPage() {
                       <div className="flex gap-2"><dt className="font-semibold text-white/85">Type:</dt><dd>{role.employment_type}</dd></div>
                     </dl>
                     <div className="mt-auto pt-8">
-                      <Link
+                      <a
                         href={role.detail_url}
                         className="inline-flex w-fit items-center gap-3 rounded-full bg-gradient-to-r from-[#2378DA] to-[#134074] px-6 py-3 text-xs text-white transition hover:brightness-110"
                       >
                         View role
                         <IconArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
-                      </Link>
+                      </a>
                     </div>
                   </article>
                 ))}
