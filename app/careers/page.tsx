@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {Underdev} from "@/components/errorOrUnderdevelopment/Underdev";
+import CareersPage from "@/components/CareersPage";
 
 export const metadata: Metadata = {
   title: "Careers at Resolute Digitals | Join Our Team",
@@ -10,6 +10,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ContactPage() {
-  return <Underdev />;
+export default function Careers() {
+  return <CareersPage />;
 }

@@ -1,4 +1,7 @@
 @import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
 @font-face {
   font-family: 'Urbanist-Bold';
   src: url('/fonts/Urbanist-Bold.ttf') format('truetype');
