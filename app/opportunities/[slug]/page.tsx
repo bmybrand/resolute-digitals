@@ -9,8 +9,11 @@ type OpportunityPageProps = {
 
 export async function generateStaticParams() {
   const roles = await getPublishedOpportunities();
-  return roles.map((role) => ({ slug: role.slug }));
+  const params = roles.map((role) => ({ slug: role.slug }));
+  return params.length > 0 ? params : [{ slug: "__build-placeholder__" }];
 }
+
+export const dynamicParams = false;
 
 export async function generateMetadata({ params }: OpportunityPageProps): Promise<Metadata> {
   const { slug } = await params;
