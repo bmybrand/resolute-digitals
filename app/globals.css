@@ -56,3 +56,19 @@ body {
   animation: spin-clockwise var(--spin-duration) linear infinite;
 }
 
+/* Internal heroes reserve space for the floating navigation and grow with content. */
+.internal-page-hero {
+  height: auto;
+  min-height: max(400px, 50vh);
+  padding-top: 6.5rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .internal-page-hero {
+    min-height: max(490px, 60vh);
+    padding-top: 7.5rem;
+    padding-bottom: 3.5rem;
+  }
+}
+

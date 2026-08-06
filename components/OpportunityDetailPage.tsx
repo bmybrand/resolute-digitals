@@ -185,7 +185,7 @@ export default function OpportunityDetailPage({ initialRole }: OpportunityDetail
       <div className="p-5 lg:p-9">
         <FloatingNavDemo />
         <section
-          className="relative flex h-[50vh] w-full items-center justify-center overflow-hidden rounded-3xl border border-white/10 bg-cover bg-center px-6 pt-16 sm:px-10 lg:h-[60vh] lg:px-16 lg:pt-24"
+          className="internal-page-hero relative flex w-full items-center justify-center overflow-hidden rounded-3xl border border-white/10 bg-cover bg-center px-6 sm:px-10 lg:px-16"
           style={{ backgroundImage: "linear-gradient(180deg, rgba(0,10,33,.28), rgba(0,10,33,.76)), url('/assets/rd-image081.svg')" }}
         >
           <div className="absolute -bottom-36 right-10 h-96 w-96 rounded-full bg-[#2378DA]/25 blur-[120px]" />

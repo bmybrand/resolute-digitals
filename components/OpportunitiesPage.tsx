@@ -104,7 +104,7 @@ export default function OpportunitiesPage() {
       <div className="p-5 lg:p-9">
         <FloatingNavDemo />
         <section
-          className="relative flex h-[50vh] w-full items-center justify-center overflow-hidden rounded-3xl lg:h-[60vh]"
+          className="internal-page-hero relative flex w-full items-center justify-center overflow-hidden rounded-3xl"
           style={{
             backgroundImage: "url('/assets/rd-image081.svg')",
             backgroundPosition: "center",
@@ -114,7 +114,7 @@ export default function OpportunitiesPage() {
         >
           <div className="flex max-w-5xl flex-col items-center gap-8 p-5 text-center">
             <p className="text-sm uppercase tracking-[0.22em] text-[#55A6FF]">Careers at Resolute Digitals</p>
-            <h1 className="bold text-4xl leading-tight text-white drop-shadow-lg sm:text-5xl lg:mt-20 lg:text-7xl">
+            <h1 className="bold text-4xl leading-tight text-white drop-shadow-lg sm:text-5xl lg:text-7xl">
               OPEN OPPORTUNITIES
             </h1>
             <p className="ExtraLight mx-auto max-w-3xl text-sm leading-7 text-white/80 lg:text-base">

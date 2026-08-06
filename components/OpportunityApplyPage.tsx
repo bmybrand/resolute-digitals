@@ -132,7 +132,6 @@ export default function OpportunityApplyPage({ initialRole }: OpportunityApplyPa
     }
     setFormError("");
     setStep((current) => Math.min(current + 1, steps.length - 1));
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const submitApplication = async (event: FormEvent) => {
@@ -204,7 +203,7 @@ export default function OpportunityApplyPage({ initialRole }: OpportunityApplyPa
       <div className="p-5 lg:p-9">
         <FloatingNavDemo />
         <section
-          className="relative flex h-[42vh] min-h-[390px] w-full items-center justify-center overflow-hidden rounded-3xl border border-white/10 bg-cover bg-center px-6 pt-16 text-center sm:px-10 lg:h-[50vh] lg:pt-24"
+          className="internal-page-hero relative flex w-full items-center justify-center overflow-hidden rounded-3xl border border-white/10 bg-cover bg-center px-6 text-center sm:px-10"
           style={{ backgroundImage: "linear-gradient(180deg, rgba(0,10,33,.25), rgba(0,10,33,.78)), url('/assets/rd-image081.svg')" }}
         >
           <div className="absolute -bottom-32 right-12 h-80 w-80 rounded-full bg-[#2378DA]/25 blur-[100px]" />

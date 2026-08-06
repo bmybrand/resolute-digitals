@@ -138,7 +138,7 @@ export default function CareersPage() {
         <FloatingNavDemo />
 
         <section
-          className="relative flex h-[50vh] w-full items-center justify-center overflow-hidden rounded-3xl lg:h-[60vh]"
+          className="internal-page-hero relative flex w-full items-center justify-center overflow-hidden rounded-3xl"
           style={{
             backgroundImage: "url('/assets/rd-image081.svg')",
             backgroundPosition: "center",
@@ -147,7 +147,7 @@ export default function CareersPage() {
           }}
         >
           <div className="flex flex-col gap-9 p-5">
-            <h1 className="bold text-center text-4xl text-white drop-shadow-lg lg:mt-30 lg:text-8xl">
+            <h1 className="bold text-center text-4xl text-white drop-shadow-lg lg:text-8xl">
               CAREERS
             </h1>
             <p className="ExtraLight mx-auto max-w-4xl text-center text-sm text-white lg:text-base">
