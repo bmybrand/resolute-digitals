@@ -22,13 +22,51 @@ export const muslimAppPartner: Partner = {
   processTitle: "Designed around clarity, usefulness, and trust",
   processDescription: "Every stage centers the people using the product and the moments where it should feel most helpful.",
   process: ["Understand daily user needs", "Map the essential experience", "Design and prototype", "Validate, refine, and grow"],
-  appPage: {
+  assets: {
+    logo: "/assets/muslim-app-logo.png",
+    cardIcon: "/assets/muslim-app-logo.png",
+    cardPreviewImages: [
+      "/assets/ChatGPT_Image_Aug_12__2026__04_22_39_PM_2-removebg-preview 1.svg",
+      "/assets/ChatGPT_Image_Aug_12__2026__04_22_39_PM_1-removebg-preview 1.svg",
+    ],
+    cardArtwork: "mobile-logo",
+    logoTreatment: "black",
+    mediaTreatment: "grayscale",
+    heroImages: [
+      "/assets/ChatGPT_Image_Aug_12__2026__04_22_39_PM_2-removebg-preview 1.svg",
+      "/assets/ChatGPT_Image_Aug_12__2026__04_22_39_PM_1-removebg-preview 1.svg",
+    ],
+    featureAnimation: "/assets/Graph animation for Dark mode.gif.gif",
+    ctaImage: "/assets/muslim-app-ai/quran-reflection.webp",
+  },
+  page: {
+    displayName: "The Muslim App",
     heroTitle: "Faith, guidance, and community in one thoughtful app",
     heroDescription:
       "Our Muslim App brings essential Islamic tools and meaningful content into a clear, accessible mobile experience designed for everyday life.",
+    storeLinks: [
+      { platform: "apple", href: "https://apps.apple.com/us/app/the-muslim-app/id6757379862" },
+      { platform: "google", href: "https://play.google.com/store/apps/details?id=com.recomune.muslimapp" },
+    ],
+    websiteUrl: "https://ourmuslimapp.com/",
+    aboutLabel: "About The Muslim App",
+    aboutTitle: "A meaningful companion for everyday faith",
+    aboutParagraphs: [
+      "The Muslim App is an all-in-one digital companion designed to make essential Islamic tools easier to access throughout the day. It brings prayer guidance, Quran content, useful reminders, and community-focused experiences together in one clear mobile app.",
+      "Its calm black-and-white interface keeps attention on what matters, creating a simple and approachable experience for Muslims in Pakistan and around the world.",
+      "Proudly made in Pakistan, The Muslim App brings local understanding and thoughtful product design to a growing global Muslim community.",
+    ],
+    values: [
+      { title: "Faith-focused", description: "Every feature is shaped around meaningful Islamic practice and everyday spiritual needs.", icon: "faith", image: "/assets/muslim-app-ai/dawn-prayer.webp", imagePosition: "right" },
+      { title: "Easy to use", description: "Clear navigation and a calm interface make essential tools simple to find and use.", icon: "ease", image: "/assets/muslim-app-ai/app-in-hand.webp" },
+      { title: "Built for community", description: "Designed to support connection, shared learning, and a stronger sense of belonging.", icon: "community", image: "/assets/muslim-app-ai/community-connection.webp" },
+    ],
     featuresTitle: "Everything you need, thoughtfully brought together",
     featuresDescription:
       "Simple tools and trusted content help users stay connected to worship, learning, and community wherever they are.",
+    featuresLabel: "App Features",
+    featureVisualEyebrow: "Progress at a glance",
+    featureVisualTitle: "Build consistency, one day at a time",
     features: [
       { title: "Prayer Times", description: "Accurate daily prayer schedules presented clearly for quick access.", icon: "prayer", image: "/assets/1Home.png" },
       { title: "Quran Experience", description: "Read and explore Quran content through a calm, accessible interface.", icon: "quran", image: "/assets/Quran UI with Translation and translitration.png" },
@@ -37,14 +75,30 @@ export const muslimAppPartner: Partner = {
       { title: "Islamic Calendar", description: "Keep important Islamic dates and occasions visible and organized.", icon: "calendar", image: "/assets/8Moment history.png" },
       { title: "Daily Guidance", description: "Meaningful reminders and reflections designed to support daily practice.", icon: "daily", image: "/assets/14Achievements.png" },
     ],
-    affiliationTitle: "A trusted partnership built for Pakistan",
+    affiliationTitle: "A trusted brand partnership",
     affiliationDescription:
-      "Resolute Digitals and Our Muslim App are official business partners, working together to support the app's digital product, operations, and growth.",
+      "Resolute Digitals is a brand partner of Our Muslim App, supporting its digital product and operations. Together, both teams contribute to the brand's continued development and growth.",
     paymentStatement:
-      "Resolute Digitals is the registered company responsible for handling and collecting all payments in Pakistan on behalf of the Our Muslim App brand.",
+      "Resolute Digitals is responsible for collecting and handling payments made in Pakistan for the Our Muslim App brand. It provides the local business support required to receive and verify these payments securely.",
+    partnershipStatement:
+      "Resolute Digitals is a partner in the Our Muslim App brand, supporting its product and operations. Resolute Digitals is also responsible for collecting and handling the brand's payments in Pakistan.",
+    companyName: "Resolute Digitals",
+    paymentCountry: "Pakistan",
+    paymentMethods: ["Easypaisa", "JazzCash"],
+    partnershipLabel: "Brand Partnership & Payments",
+    companyEyebrow: "Brand partner",
+    processEyebrow: "Payment handling",
+    processTitle: "A clear, verified process",
+    responsibilityLine: "Responsible for payment collection in Pakistan",
+    partnershipSteps: [
+      { title: "Make payment", description: "Choose an available local payment channel." },
+      { title: "Submit details", description: "Provide the required payment confirmation." },
+      { title: "Get verified", description: "Your payment is checked and access is updated." },
+    ],
     galleryTitle: "A closer look at the app experience",
     galleryDescription:
       "Explore the prayer, Quran, community, achievement, and profile experiences inside Our Muslim App.",
+    galleryLabel: "App Showcase",
     screens: [
       { title: "Daily Home", subtitle: "Prayer times and guidance at a glance", variant: "home", image: "/assets/muslim-app-showcase/daily-home.webp" },
       { title: "Extended Home", subtitle: "More daily tools in one clear view", variant: "home", image: "/assets/muslim-app-showcase/extended-home.webp" },
@@ -64,6 +118,9 @@ export const muslimAppPartner: Partner = {
       { title: "User Profile", subtitle: "A personal home for activity and progress", variant: "home", image: "/assets/muslim-app-showcase/user-profile.webp" },
       { title: "Prayer Tracker", subtitle: "Build consistency day by day", variant: "prayer", image: "/assets/muslim-app-showcase/prayer-tracker.webp" },
     ],
+    ctaTitle: "Let's build what's next",
+    ctaDescription: "Explore The Muslim App today, or start a conversation with Resolute Digitals about bringing your next meaningful product to life.",
+    ctaLinkLabel: "Visit Our Muslim App",
   },
   theme: {
     pageBackground: "#FFFFFF",
@@ -77,7 +134,14 @@ export const muslimAppPartner: Partner = {
     accentDark: "#BFC2C7",
     accentSoft: "rgba(255,255,255,.12)",
     heroBackground: "radial-gradient(circle at 78% 20%, #3B3B3B 0%, #171717 42%, #050505 100%)",
+    cardBackground: "radial-gradient(circle at 78% 20%, #3B3B3B 0%, #171717 42%, #050505 100%)",
+    heroText: "#FFFFFF",
+    heroMuted: "#A9A9A9",
     sectionBackground: "linear-gradient(135deg, #202020 0%, #080808 100%)",
+    sectionIsLight: false,
+    ctaOverlay: "linear-gradient(90deg, rgba(0,0,0,.96) 0%, rgba(0,0,0,.84) 58%, rgba(0,0,0,.25) 100%)",
+    navVariant: "light",
+    footerVariant: "monochrome",
     logoBackground: "rgba(0,0,0,.78)",
     buttonText: "#050505",
   },

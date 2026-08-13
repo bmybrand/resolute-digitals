@@ -6,9 +6,9 @@ import { motion } from "motion/react";
 import { FaArrowLeft, FaArrowRight, FaBookOpen, FaClock, FaCompass, FaUsers } from "react-icons/fa6";
 import type { AppScreen } from "@/lib/partners/types";
 
-function ScreenArtwork({ screen }: { screen: AppScreen }) {
+function ScreenArtwork({ screen, contain = false }: { screen: AppScreen; contain?: boolean }) {
   if (screen.image) {
-    return <Image src={screen.image} alt={`${screen.title} app screenshot`} fill sizes="(max-width: 640px) 292px, 330px" className="object-cover object-top" />;
+    return <Image src={screen.image} alt={`${screen.title} app screenshot`} fill sizes="(max-width: 640px) 292px, 330px" className={contain ? "object-contain object-center" : "object-cover object-top"} />;
   }
 
   const Icon = screen.variant === "quran" ? FaBookOpen : screen.variant === "community" ? FaUsers : screen.variant === "prayer" ? FaClock : FaCompass;
@@ -35,7 +35,7 @@ function ScreenArtwork({ screen }: { screen: AppScreen }) {
   );
 }
 
-export default function AppScreenshotSlider({ screens, compact = false }: { screens: AppScreen[]; compact?: boolean }) {
+export default function AppScreenshotSlider({ screens, compact = false, themed = false }: { screens: AppScreen[]; compact?: boolean; themed?: boolean }) {
   const [active, setActive] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -54,7 +54,8 @@ export default function AppScreenshotSlider({ screens, compact = false }: { scre
   }, [compact, isPaused, screens.length]);
 
   return (
-    <div className="w-full">
+    <div className="relative w-full">
+      {themed && !compact && <div className="pointer-events-none absolute inset-x-[12%] top-[18%] h-[58%] rounded-full bg-[linear-gradient(90deg,rgba(211,103,201,.16),rgba(115,120,229,.13),rgba(31,147,239,.16))] blur-3xl" />}
       <div
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
@@ -62,7 +63,7 @@ export default function AppScreenshotSlider({ screens, compact = false }: { scre
           WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%)",
           maskImage: "linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%)",
         }}
-        className={compact ? "relative mx-auto h-[390px] max-w-[560px]" : "relative h-[570px] w-full overflow-hidden sm:h-[650px]"}
+        className={compact ? "relative mx-auto h-[390px] max-w-[560px]" : `relative w-full overflow-hidden ${themed ? "h-[640px] sm:h-[720px]" : "h-[570px] sm:h-[650px]"}`}
       >
         {screens.map((screen, index) => {
           const relative = (index - active + screens.length) % screens.length;
@@ -101,11 +102,11 @@ export default function AppScreenshotSlider({ screens, compact = false }: { scre
               initial={{ opacity: 0, scale: 0.82 }}
               animate={animation}
               transition={{ type: "spring", stiffness: 145, damping: 22, mass: 0.82 }}
-              className={`absolute left-1/2 top-1/2 overflow-hidden will-change-transform ${screen.image ? "bg-transparent shadow-[0_28px_55px_rgba(0,0,0,.22)]" : "rounded-[34px] bg-white shadow-[0_35px_90px_rgba(0,0,0,.38)] ring-1 ring-black/10"} ${
-                compact ? "h-[360px] w-[205px]" : "h-[520px] w-[292px] sm:h-[590px] sm:w-[330px]"
+              className={`absolute left-1/2 top-1/2 overflow-hidden will-change-transform ${screen.image ? `bg-transparent ${themed ? "shadow-[0_28px_65px_rgba(80,138,238,.28)]" : "shadow-[0_28px_55px_rgba(0,0,0,.22)]"}` : "rounded-[34px] bg-white shadow-[0_35px_90px_rgba(0,0,0,.38)] ring-1 ring-black/10"} ${
+                compact ? "h-[360px] w-[205px]" : themed ? "h-[578px] w-[292px] sm:h-[653px] sm:w-[330px]" : "h-[520px] w-[292px] sm:h-[590px] sm:w-[330px]"
               } ${visibility}`}
             >
-              <ScreenArtwork screen={screen} />
+              <ScreenArtwork screen={screen} contain={themed} />
             </motion.button>
           );
         })}
@@ -113,11 +114,11 @@ export default function AppScreenshotSlider({ screens, compact = false }: { scre
 
       {!compact && (
         <div className="mt-8 flex items-center justify-center gap-5">
-          <button onClick={() => move(-1)} aria-label="Previous screenshot" className="flex h-12 w-12 items-center justify-center rounded-full border border-black/15 text-black transition hover:bg-black hover:text-white"><FaArrowLeft /></button>
+          <button onClick={() => move(-1)} aria-label="Previous screenshot" className={`flex h-12 w-12 items-center justify-center rounded-full border transition ${themed ? "border-[#7378E5]/25 text-[#5B69D5] shadow-[0_8px_22px_rgba(80,138,238,.12)] hover:border-transparent hover:bg-[linear-gradient(135deg,#D367C9,#1F93EF)] hover:text-white" : "border-black/15 text-black hover:bg-black hover:text-white"}`}><FaArrowLeft /></button>
           <div className="flex max-w-[180px] flex-wrap justify-center gap-2 sm:max-w-md">
-            {screens.map((screen, index) => <button key={screen.title} onClick={() => setActive(index)} aria-label={`Show ${screen.title}`} className={`h-2.5 rounded-full transition-all ${index === active ? "w-8 bg-black" : "w-2.5 bg-black/20"}`} />)}
+            {screens.map((screen, index) => <button key={screen.title} onClick={() => setActive(index)} aria-label={`Show ${screen.title}`} className={`h-2.5 rounded-full transition-all ${index === active ? `w-8 ${themed ? "bg-[linear-gradient(90deg,#D367C9,#1F93EF)] shadow-[0_3px_10px_rgba(80,138,238,.3)]" : "bg-black"}` : `w-2.5 ${themed ? "bg-[#7378E5]/25 hover:bg-[#7378E5]/45" : "bg-black/20"}`}`} />)}
           </div>
-          <button onClick={() => move(1)} aria-label="Next screenshot" className="flex h-12 w-12 items-center justify-center rounded-full border border-black/15 text-black transition hover:bg-black hover:text-white"><FaArrowRight /></button>
+          <button onClick={() => move(1)} aria-label="Next screenshot" className={`flex h-12 w-12 items-center justify-center rounded-full border transition ${themed ? "border-[#7378E5]/25 text-[#5B69D5] shadow-[0_8px_22px_rgba(80,138,238,.12)] hover:border-transparent hover:bg-[linear-gradient(135deg,#D367C9,#1F93EF)] hover:text-white" : "border-black/15 text-black hover:bg-black hover:text-white"}`}><FaArrowRight /></button>
         </div>
       )}
     </div>

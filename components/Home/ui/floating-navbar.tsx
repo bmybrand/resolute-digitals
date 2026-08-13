@@ -13,7 +13,7 @@ export const FloatingNav = ({
 }: {
   navItems: { name: string; link: string; icon?: JSX.Element; dropdown?: any[] }[];
   className?: string;
-  variant?: "default" | "light";
+  variant?: "default" | "light" | "recomune";
 }) => {
   const { scrollYProgress } = useScroll();
   const router = useRouter();
@@ -31,8 +31,13 @@ export const FloatingNav = ({
   const isCaseStudy = pathname.toLowerCase().includes("casestudy");
   const { countryCode, loading: geoLoading } = useGeoCountry();
   const isUAE = (countryCode ?? "").toUpperCase() === "AE";
-  const isLight = variant === "light";
-  const logoSrc = isUAE ? "/assets/logo_dubai.png" : "/assets/rd-image001.svg";
+  const isRecomune = variant === "recomune";
+  const isLight = variant === "light" || isRecomune;
+  const logoSrc = isRecomune
+    ? "/assets/resolute-navbar-recomune.png"
+    : isUAE
+      ? "/assets/logo_dubai.png"
+      : "/assets/rd-image001.svg";
 
   const toggleDropdown = (name: string) => {
     setOpenDropdowns((prev) => ({ ...prev, [name]: !prev[name] }));
@@ -107,8 +112,8 @@ export const FloatingNav = ({
             "flex fixed inset-x-0 mx-auto transition-all duration-300 backdrop-blur-xs border-2 border-[#FFFFFF]/8 z-5000 px-6 py-3 items-center",
             isLight
               ? scrolled
-                ? "top-0 w-full rounded-none bg-white/95 border-black/10 shadow-[0_12px_35px_rgba(0,0,0,.10)]"
-                : "top-10 lg:top-10 xl:top-20 w-[85%] h-13 lg:h-20 rounded-full bg-white/90 border-black/10 shadow-[0_14px_40px_rgba(0,0,0,.12)]"
+                ? `top-0 w-full rounded-none border-black/10 shadow-[0_12px_35px_rgba(0,0,0,.10)] ${isRecomune ? "bg-[#FEFFFF]" : "bg-white/95"}`
+                : `top-10 lg:top-10 xl:top-20 w-[85%] h-13 lg:h-20 rounded-full border-black/10 shadow-[0_14px_40px_rgba(0,0,0,.12)] ${isRecomune ? "bg-[#FEFFFF]" : "bg-white/90"}`
               : isCaseStudy
               ? "top-10 w-[90%] 2xl:w-[85%] rounded-full bg-[#ffffff]/30 shadow-lg"
               : scrolled
@@ -131,7 +136,13 @@ export const FloatingNav = ({
               <img
                 src={logoSrc}
                 alt=""
-                className={cn("lg:pl-4 lg:pr-1 pt-1 2xl:w-11/12 w-[80%] cursor-pointer", isLight && "brightness-0")}
+                className={cn(
+                  "cursor-pointer object-contain",
+                  isRecomune
+                    ? "h-auto w-[155px] pt-1 lg:w-[194px] lg:pl-4 lg:pr-1"
+                    : "w-[80%] pt-1 lg:pl-4 lg:pr-1 2xl:w-11/12",
+                  isLight && !isRecomune && "brightness-0"
+                )}
                 role="link"
                 tabIndex={0}
                 onClick={() => router.push("/")}
@@ -325,7 +336,7 @@ export const FloatingNav = ({
                     {geoLoading ? (
                       <div className="mb-4 w-2/3 h-12 bg-white/10 rounded animate-pulse" aria-hidden />
                     ) : (
-                      <img src={logoSrc} alt="" className={cn("mb-4 w-2/3", isLight && "brightness-0")} />
+                      <img src={logoSrc} alt="" className={cn("mb-4 w-2/3", isLight && !isRecomune && "brightness-0")} />
                     )}
                   </div>
                   <h2 className={cn("text-3xl font-bold mb-3", isLight ? "text-black" : "text-[#2378DA]")}>About Us</h2>

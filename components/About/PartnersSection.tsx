@@ -1,94 +1,62 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaArrowRight, FaAws, FaShopify } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 import { partners } from "@/lib/partners";
 
-const partnerThemes = {
-  aws: {
-    card: "bg-[radial-gradient(circle_at_top_right,#292929_0%,#111111_44%,#050505_100%)] hover:shadow-[0_28px_80px_rgba(255,153,0,.16)]",
-    logo: "bg-black/90",
-    badge: "bg-white/10 text-white",
-    frost: "bg-[linear-gradient(180deg,rgba(255,255,255,.01)_0%,rgba(255,255,255,.055)_35%,rgba(0,0,0,.30)_100%)]",
-    button: "from-[#FF9900] to-[#C96F00]",
-    buttonText: "text-white",
-  },
-  shopify: {
-    card: "bg-[radial-gradient(circle_at_top_right,#6F983B_0%,#315B2D_38%,#102718_100%)] hover:shadow-[0_28px_80px_rgba(149,191,71,.18)]",
-    logo: "bg-white/95",
-    badge: "bg-white/15 text-white",
-    frost: "bg-[linear-gradient(180deg,rgba(255,255,255,.01)_0%,rgba(255,255,255,.07)_35%,rgba(12,41,20,.30)_100%)]",
-    button: "from-[#95BF47] to-[#5E8E3E]",
-    buttonText: "text-white",
-  },
-  "muslim-app": {
-    card: "bg-[radial-gradient(circle_at_top_right,#3A3A3A_0%,#161616_42%,#050505_100%)] hover:shadow-[0_28px_80px_rgba(255,255,255,.10)]",
-    logo: "bg-black/90",
-    badge: "bg-white/12 text-white",
-    frost: "bg-[linear-gradient(180deg,rgba(255,255,255,.01)_0%,rgba(255,255,255,.06)_35%,rgba(0,0,0,.30)_100%)]",
-    button: "from-white to-[#D8D8D8]",
-    buttonText: "text-black",
-  },
-} as const;
-
-function PartnerLogo({ slug }: { slug: string }) {
-  if (slug === "aws") return <FaAws className="text-4xl text-[#FF9900]" />;
-  if (slug === "shopify") return <FaShopify className="text-4xl text-[#95BF47]" />;
-
-  return (
-    <Image
-      src="/assets/muslim-app-logo.png"
-      alt="Muslim App logo"
-      width={48}
-      height={48}
-      className="h-11 w-11 object-contain"
-    />
-  );
-}
-
-function PartnerPreview({ slug }: { slug: string }) {
-  if (slug === "aws") {
-    return (
-      <div className="absolute inset-0 flex items-center justify-center pb-28">
-        <div className="absolute h-72 w-72 rounded-full bg-[#FF9900]/15 blur-3xl" />
-        <div className="relative grid scale-110 grid-cols-3 gap-4 sm:scale-125">
-          {[0, 1, 2, 3, 4, 5].map((item) => (
-            <span key={item} className="h-14 w-20 rounded-xl bg-white/[0.09] shadow-[0_16px_35px_rgba(0,0,0,.3)]" />
-          ))}
-        </div>
+function PartnerPreview({ images, name, artwork }: { images: string[]; name: string; artwork?: "infrastructure-grid" | "disc" | "mobile-logo" }) {
+  if (artwork === "infrastructure-grid") {
+    return <div className="absolute inset-x-0 top-24 flex h-[255px] items-center justify-center px-8">
+      <div className="absolute h-64 w-72 rounded-full bg-[#FF9900]/15 blur-3xl" />
+      <div className="relative grid w-full max-w-[340px] grid-cols-3 gap-4">
+        {[0, 1, 2, 3, 4, 5].map((item) => <div key={item} className={`h-[72px] rounded-[17px] border border-white/10 shadow-[0_15px_35px_rgba(0,0,0,.22)] backdrop-blur-md transition duration-500 group-hover:-translate-y-1 ${item === 1 || item === 3 ? "bg-[#FF9900]/20" : "bg-white/[.13]"}`}>
+          <span className={`mx-auto mt-5 block h-2 w-9 rounded-full ${item === 1 || item === 3 ? "bg-[#FFB84D]/70" : "bg-white/25"}`} />
+          <span className="mx-auto mt-2 block h-1.5 w-14 rounded-full bg-white/10" />
+        </div>)}
       </div>
-    );
+    </div>;
   }
 
-  if (slug === "shopify") {
-    return (
-      <div className="absolute inset-0 flex items-center justify-center pb-24">
-        <div className="absolute h-72 w-72 rounded-full bg-[#95BF47]/15 blur-3xl" />
-        <div className="relative flex scale-105 gap-4 -rotate-3 sm:scale-115">
-          {["$48", "$72", "$96"].map((price, index) => (
-            <div key={price} className={`w-28 rounded-2xl bg-white/[0.1] p-3 shadow-2xl ${index === 1 ? "-translate-y-6" : ""}`}>
-              <div className="mb-3 h-24 rounded-xl bg-[#95BF47]/25" />
-              <span className="text-xs text-white/60">Product</span>
-              <p className="mt-1 text-sm font-semibold text-white">{price}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="absolute inset-0 flex items-center justify-center pb-20">
+  if (artwork === "disc") {
+    return <div className="absolute inset-0 flex items-center justify-center pb-24">
       <div className="absolute h-80 w-80 rounded-full bg-white/10 blur-3xl" />
-      <div className="relative h-64 w-36 rotate-6 rounded-[32px] bg-black p-2.5 shadow-[0_30px_70px_rgba(0,0,0,.55)] ring-1 ring-white/20">
+      <div className="relative h-[330px] w-[330px] transition-transform duration-500 group-hover:-translate-y-2 group-hover:rotate-3">
+        <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/25 bg-[linear-gradient(145deg,rgba(255,255,255,.34),rgba(255,255,255,.07))] shadow-[0_30px_70px_rgba(21,45,96,.38)] backdrop-blur-xl" />
+        <div className="absolute left-1/2 top-1/2 h-36 w-36 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/80 bg-[radial-gradient(circle_at_35%_28%,#FFFFFF_0%,#EDF5FF_46%,#CBDDF8_100%)] shadow-[inset_0_0_0_8px_rgba(255,255,255,.28),0_12px_30px_rgba(31,147,239,.24)]" />
+        <div className="absolute left-1/2 top-1/2 flex h-56 w-56 -translate-x-1/2 -translate-y-1/2 items-center justify-center gap-[6px] rounded-full border border-white/30 bg-[#FEFFFF]/35 shadow-[inset_0_-22px_48px_rgba(80,138,238,.20),0_16px_35px_rgba(0,0,0,.18)]">
+          {[30, 52, 76, 104, 70, 118, 88, 58, 36].map((height, index) => <span key={`${height}-${index}`} className="w-[6px] rounded-full bg-gradient-to-b from-[#D367C9] via-[#508AEE] to-[#1F93EF] shadow-[0_0_12px_rgba(80,138,238,.35)]" style={{ height }} />)}
+        </div>
+        <div className="absolute left-1/2 top-[calc(50%-1px)] h-[92px] w-[220px] -translate-x-1/2 -translate-y-1/2 drop-shadow-[0_5px_8px_rgba(255,255,255,.5)]">
+          <Image src="/assets/recomune-logo.png" alt={`${name} logo`} fill sizes="220px" className="object-contain" />
+        </div>
+        <div className="absolute left-1/2 top-1/2 z-20 h-6 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white/90 bg-[#DCE9FA] shadow-[inset_0_2px_5px_rgba(52,97,197,.28),0_3px_10px_rgba(21,45,96,.25)]" />
+        <span className="absolute left-3 top-14 h-5 w-5 rounded-full bg-[#D367C9] shadow-[0_0_24px_rgba(211,103,201,.8)]" />
+        <span className="absolute bottom-12 right-3 h-8 w-8 rounded-full border border-white/40 bg-[#1F93EF]/80 shadow-[0_0_28px_rgba(31,147,239,.7)]" />
+      </div>
+    </div>;
+  }
+
+  if (artwork === "mobile-logo") {
+    return <div className="absolute inset-0 flex items-center justify-center pb-20">
+      <div className="absolute h-80 w-80 rounded-full bg-white/10 blur-3xl" />
+      <div className="relative h-64 w-36 rotate-6 rounded-[32px] bg-black p-2.5 shadow-[0_30px_70px_rgba(0,0,0,.55)] ring-1 ring-white/20 transition duration-500 group-hover:-translate-y-2 group-hover:rotate-3">
         <div className="flex h-full flex-col items-center rounded-[18px] bg-gradient-to-b from-[#343434] to-[#080808] px-2 pt-5">
-          <Image src="/assets/muslim-app-logo.png" alt="" width={56} height={56} className="h-14 w-14 object-contain" />
+          <Image src="/assets/muslim-app-logo.png" alt={`${name} mobile logo mockup`} width={56} height={56} className="h-14 w-14 object-contain" />
           <span className="mt-5 h-2 w-20 rounded-full bg-white/20" />
           <span className="mt-2 h-2 w-14 rounded-full bg-white/10" />
-          <span className="mt-auto mb-3 h-5 w-full rounded-full bg-white/75" />
+          <span className="mb-3 mt-auto h-5 w-full rounded-full bg-white/75" />
         </div>
       </div>
+    </div>;
+  }
+
+  return <div className="absolute inset-0 flex items-center justify-center pb-24">
+    <div className="absolute h-80 w-80 rounded-full bg-white/10 blur-3xl" />
+    <div className="relative h-72 w-72">
+      {images.slice(0, 2).map((src, index) => <div key={src} className={`absolute top-3 h-64 w-36 overflow-hidden rounded-[24px] shadow-2xl ring-1 ring-white/15 transition duration-500 group-hover:-translate-y-1 ${index ? "right-4 rotate-6 group-hover:rotate-3" : "left-4 z-10 -rotate-6 group-hover:-rotate-3"}`}>
+        <Image src={src} alt={`${name} preview`} fill sizes="144px" className="object-cover object-top" />
+      </div>)}
     </div>
-  );
+  </div>;
 }
 
 export default function PartnersSection() {
@@ -121,20 +89,20 @@ export default function PartnersSection() {
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {partners.map((partner) => {
-            const theme = partnerThemes[partner.slug as keyof typeof partnerThemes];
+            const { theme, assets } = partner;
 
             return (
-            <article key={partner.slug} className={`group relative min-h-[560px] overflow-hidden rounded-[26px] shadow-[0_24px_70px_rgba(0,0,0,.24)] transition duration-300 hover:-translate-y-1 ${theme.card}`}>
-              <PartnerPreview slug={partner.slug} />
+            <article key={partner.slug} className="group relative min-h-[560px] overflow-hidden rounded-[26px] shadow-[0_24px_70px_rgba(0,0,0,.24)] transition duration-300 hover:-translate-y-1" style={{ background: theme.cardBackground }}>
+              <PartnerPreview images={assets.cardPreviewImages ?? []} name={partner.name} artwork={assets.cardArtwork} />
 
-              <div className={`absolute left-5 top-5 z-20 flex h-16 w-16 items-center justify-center rounded-2xl shadow-xl backdrop-blur-md sm:left-6 sm:top-6 ${theme.logo}`}>
-                <PartnerLogo slug={partner.slug} />
+              <div className="absolute left-5 top-5 z-20 flex h-16 w-16 items-center justify-center rounded-2xl p-2 shadow-xl backdrop-blur-md sm:left-6 sm:top-6" style={{ backgroundColor: theme.logoBackground }}>
+                <Image src={assets.cardIcon!} alt={`${partner.name} icon`} width={52} height={52} className="max-h-12 w-auto max-w-12 object-contain" />
               </div>
-              <span className={`absolute right-5 top-7 z-20 rounded-full px-4 py-2 text-xs tracking-[0.12em] backdrop-blur-md uppercase sm:right-6 sm:top-8 ${theme.badge}`}>
+              <span className="absolute right-5 top-7 z-20 rounded-full bg-white/15 px-4 py-2 text-xs uppercase tracking-[0.12em] text-white backdrop-blur-md sm:right-6 sm:top-8">
                 {partner.category}
               </span>
 
-              <div className={`pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[48%] backdrop-blur-[7px] backdrop-saturate-105 [mask-image:linear-gradient(180deg,transparent_0%,black_28%,black_100%)] ${theme.frost}`} />
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[48%] bg-gradient-to-b from-transparent via-black/25 to-black/75 backdrop-blur-[7px] backdrop-saturate-105 [mask-image:linear-gradient(180deg,transparent_0%,black_28%,black_100%)]" />
 
               <div className="relative z-20 flex min-h-[560px] flex-col justify-end p-6 sm:p-8">
                 <div className="relative flex flex-col gap-6">
@@ -143,7 +111,7 @@ export default function PartnersSection() {
                     <p className="mt-3 max-w-xl text-base leading-7 text-white/80 [text-shadow:0_2px_16px_rgba(0,0,0,.45)] sm:text-lg">{partner.description}</p>
                   </div>
 
-                  <Link href={`/partners/${partner.slug}/`} className={`relative z-10 flex w-fit items-center gap-3 rounded-full bg-gradient-to-r px-5 py-3 text-sm font-semibold transition duration-300 hover:gap-4 hover:brightness-110 sm:text-base ${theme.button} ${theme.buttonText}`}>
+                  <Link href={`/partners/${partner.slug}/`} className="relative z-10 flex w-fit items-center gap-3 rounded-full px-5 py-3 text-sm font-semibold transition duration-300 hover:gap-4 hover:brightness-110 sm:text-base" style={{ background: `linear-gradient(90deg, ${theme.accent}, ${theme.accentDark})`, color: theme.buttonText }}>
                     View partner
                     <FaArrowRight className="text-sm" />
                   </Link>
