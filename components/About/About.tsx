@@ -5,12 +5,12 @@ import { Secondsec } from "./Secondsec";
 import HorizontalTimeline from "./Horizontaltimeline";
 import Servies from "../services/servies";
 import HowWorkSec from "./howworksec";
-import { div } from "motion/react-client";
 import WorkTogether from "./workTogether";
-import InfiniteMultiColumnScroll from "./InfiniteMultiColumnScroll"
+import InfiniteMultiColumnScroll from "./InfiniteMultiColumnScroll";
 import Rewiewcards from "@/components/Home/rewiewcards";
 import ContactSection from "./ContactSection";
 import Footersec from "../Home/footersec";
+import PartnersSection from "./PartnersSection";
 export const dynamic = 'force-static'
 export default function AboutPage() {
   return (
@@ -29,6 +29,7 @@ export default function AboutPage() {
       <WorkTogether />
       <Secondseccopy />
       <InfiniteMultiColumnScroll />
+      <PartnersSection />
       <Rewiewcards />
       <ContactSection/>
       <Footersec/>

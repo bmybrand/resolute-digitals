@@ -10,7 +10,7 @@ import {
 } from "@tabler/icons-react";
 import { useGeoCountry } from "@/utils/useGeoCountry";
 
-export function FloatingNavDemo() {
+export function FloatingNavDemo({ variant = "default" }: { variant?: "default" | "light" }) {
   const { countryCode, loading } = useGeoCountry();
   const isPakistan = (countryCode ?? "").toUpperCase() === "PK";
 
@@ -152,7 +152,7 @@ export function FloatingNavDemo() {
 
   return (
     <div className="relative w-full">
-      <FloatingNav navItems={navItems} />
+      <FloatingNav navItems={navItems} variant={variant} />
     </div>
   );
 }

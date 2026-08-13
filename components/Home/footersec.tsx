@@ -12,9 +12,11 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 import { useGeoCountry } from "@/utils/useGeoCountry";
+import { cn } from "@/lib/utils";
 
-const FooterSec = () => {
+const FooterSec = ({ variant = "default" }: { variant?: "default" | "monochrome" }) => {
   const { countryCode, loading: geoLoading } = useGeoCountry();
+  const isMonochrome = variant === "monochrome";
 
   // ✅ US ONLY when exact "US" (case-insensitive). UAE => Dubai logo. Everyone else => Pakistan
   const isUS = (countryCode ?? "").toUpperCase() === "US";
@@ -28,10 +30,10 @@ const FooterSec = () => {
       <img
         src="/assets/rd-image080.svg"
         alt=""
-        className="w-[70%] mt-10 lg:mt-30"
+        className={cn("w-[70%] mt-10 lg:mt-30", isMonochrome && "grayscale brightness-0 opacity-15")}
       />
 
-      <footer className="bg-[#081733] text-white pt-16 pb-8 px-6 md:px-12 lg:px-20 rounded-3xl lg:m-5 xl:m-9">
+      <footer className={cn("text-white pt-16 pb-8 px-6 md:px-12 lg:px-20 rounded-3xl lg:m-5 xl:m-9", isMonochrome ? "bg-black" : "bg-[#081733]")}>
         {/* Newsletter Subscription */}
         <div className="flex flex-col md:flex-row justify-between gap-8 mb-12 mx-auto w-full">
           <div className="flex-1 min-w-[250px]">
@@ -51,12 +53,12 @@ const FooterSec = () => {
                   placeholder="Enter email address"
                   className="px-4 py-2 rounded-lg w-full text-black placeholder-white/50 focus:outline-none"
                 />
-                <button className="bg-gradient-to-r from-[#2378DA] to-[#134074] flex gap-1 font-medium relative text-black rounded-full hover:bg-white/10 transition justify-center items-center whitespace-nowrap text-xs px-5 py-2 lg:text-sm lg:px-7 lg:py-4">
+                <button className={cn("flex gap-1 font-medium relative rounded-full transition justify-center items-center whitespace-nowrap text-xs px-5 py-2 lg:text-sm lg:px-7 lg:py-4", isMonochrome ? "bg-white text-black hover:bg-[#D8D8D8]" : "bg-gradient-to-r from-[#2378DA] to-[#134074] text-black hover:bg-white/10")}>
                   <span className="absolute inset-x-0 w-1/2 mx-auto -top-px bg-gradient-to-r from-transparent via-white to-transparent h-px" />
-                  <span className="text-white regular">Subscribe Now</span>
+                  <span className={cn("regular", isMonochrome ? "text-black" : "text-white")}>Subscribe Now</span>
                   <img
                     src="/assets/rd-image003.svg"
-                    className="pt-0.5 w-3"
+                    className={cn("pt-0.5 w-3", isMonochrome && "brightness-0")}
                     alt=""
                   />
                 </button>
@@ -76,7 +78,7 @@ const FooterSec = () => {
             {geoLoading ? (
               <div className="mb-4 h-10 w-32 bg-white/10 rounded animate-pulse" aria-hidden />
             ) : (
-              <img src={footerLogoSrc} alt="" className="mb-4" />
+              <img src={footerLogoSrc} alt="" className={cn("mb-4", isMonochrome && "brightness-0 invert")} />
             )}
             <p className="text-white/70">
               We’re your trusted digital partner — helping businesses grow with
@@ -87,24 +89,24 @@ const FooterSec = () => {
 
             {/* Social Media */}
             <div className="flex flex-wrap gap-2 mt-6">
-              <a href="https://www.facebook.com/ResoluteDigitals" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-blue-400 transition border border-white/20 px-3 py-2 rounded-full">
-                <FaFacebookF className="text-[#2378DA]" />
+              <a href="https://www.facebook.com/ResoluteDigitals" target="_blank" rel="noopener noreferrer" className={cn("flex items-center gap-2 cursor-pointer transition border border-white/20 px-3 py-2 rounded-full", isMonochrome ? "hover:bg-white hover:text-black" : "hover:text-blue-400")}>
+                <FaFacebookF className={isMonochrome ? "text-white" : "text-[#2378DA]"} />
                 <span>Facebook</span>
               </a>
               {/* <div className="flex items-center gap-2 cursor-pointer hover:text-sky-400 transition border border-white/20 px-3 py-2 rounded-full">
                 <FaTwitter className="text-[#2378DA]" />
                 <span>Twitter</span>
               </div> */}
-              <a href="https://www.linkedin.com/company/resolutedigitals" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-blue-500 transition border border-white/20 px-3 py-2 rounded-full">
-                <FaLinkedinIn className="text-[#2378DA]" />
+              <a href="https://www.linkedin.com/company/resolutedigitals" target="_blank" rel="noopener noreferrer" className={cn("flex items-center gap-2 cursor-pointer transition border border-white/20 px-3 py-2 rounded-full", isMonochrome ? "hover:bg-white hover:text-black" : "hover:text-blue-500")}>
+                <FaLinkedinIn className={isMonochrome ? "text-white" : "text-[#2378DA]"} />
                 <span>LinkedIn</span>
               </a>
               {/* <div className="flex items-center gap-2 cursor-pointer hover:text-red-500 transition border border-white/20 px-3 py-2 rounded-full">
                 <FaYoutube className="text-[#2378DA]" />
                 <span>YouTube</span>
               </div> */}
-              <a href="https://www.instagram.com/resolutedigitals" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:text-pink-400 transition border border-white/20 px-3 py-2 rounded-full">
-                <FaInstagram className="text-[#2378DA]" />
+              <a href="https://www.instagram.com/resolutedigitals" target="_blank" rel="noopener noreferrer" className={cn("flex items-center gap-2 cursor-pointer transition border border-white/20 px-3 py-2 rounded-full", isMonochrome ? "hover:bg-white hover:text-black" : "hover:text-pink-400")}>
+                <FaInstagram className={isMonochrome ? "text-white" : "text-[#2378DA]"} />
                 <span>Instagram</span>
               </a>
             </div>
@@ -144,13 +146,13 @@ const FooterSec = () => {
                 ...(!isUAE
                   ? [
                       {
-                        icon: <FaPhoneAlt className="text-[#2378DA]" />,
+                        icon: <FaPhoneAlt className={isMonochrome ? "text-white" : "text-[#2378DA]"} />,
                         text: isPakistan ? "+92 334 3448974" : "+1 (830) 267-9917",
                       },
                     ]
                   : []),
                 {
-                  icon: <FaEnvelope className="text-[#2378DA]" />,
+                  icon: <FaEnvelope className={isMonochrome ? "text-white" : "text-[#2378DA]"} />,
                   text: isUAE
                     ? "informationtechnology@resolutedigitals.com"
                     : isPakistan
@@ -158,7 +160,7 @@ const FooterSec = () => {
                       : "support@resolutedigitals.com",
                 },
                 {
-                  icon: <FaMapMarkerAlt className="text-[#2378DA]" />,
+                  icon: <FaMapMarkerAlt className={isMonochrome ? "text-white" : "text-[#2378DA]"} />,
                   text: isUAE
                     ? "G-17, Hamood Building, Area: Port Saeed, Dubai, UAE"
                     : isPakistan
@@ -175,7 +177,7 @@ const FooterSec = () => {
                   typeof item === "string" ? (
                     <li
                       key={index}
-                      className="flex items-center gap-2 before:content-[''] before:inline-block before:w-2 before:h-2 before:bg-[#2378DA] before:rounded-full"
+                      className={cn("flex items-center gap-2 before:content-[''] before:inline-block before:w-2 before:h-2 before:rounded-full", isMonochrome ? "before:bg-white" : "before:bg-[#2378DA]")}
                     >
                       {item}
                     </li>

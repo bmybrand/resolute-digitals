@@ -9,9 +9,11 @@ import { useGeoCountry } from "@/utils/useGeoCountry";
 export const FloatingNav = ({
   navItems,
   className,
+  variant = "default",
 }: {
   navItems: { name: string; link: string; icon?: JSX.Element; dropdown?: any[] }[];
   className?: string;
+  variant?: "default" | "light";
 }) => {
   const { scrollYProgress } = useScroll();
   const router = useRouter();
@@ -29,6 +31,7 @@ export const FloatingNav = ({
   const isCaseStudy = pathname.toLowerCase().includes("casestudy");
   const { countryCode, loading: geoLoading } = useGeoCountry();
   const isUAE = (countryCode ?? "").toUpperCase() === "AE";
+  const isLight = variant === "light";
   const logoSrc = isUAE ? "/assets/logo_dubai.png" : "/assets/rd-image001.svg";
 
   const toggleDropdown = (name: string) => {
@@ -102,7 +105,11 @@ export const FloatingNav = ({
           ref={navbarRef}
           className={cn(
             "flex fixed inset-x-0 mx-auto transition-all duration-300 backdrop-blur-xs border-2 border-[#FFFFFF]/8 z-5000 px-6 py-3 items-center",
-            isCaseStudy
+            isLight
+              ? scrolled
+                ? "top-0 w-full rounded-none bg-white/95 border-black/10 shadow-[0_12px_35px_rgba(0,0,0,.10)]"
+                : "top-10 lg:top-10 xl:top-20 w-[85%] h-13 lg:h-20 rounded-full bg-white/90 border-black/10 shadow-[0_14px_40px_rgba(0,0,0,.12)]"
+              : isCaseStudy
               ? "top-10 w-[90%] 2xl:w-[85%] rounded-full bg-[#ffffff]/30 shadow-lg"
               : scrolled
               ? `top-0 w-full rounded-none ${
@@ -117,14 +124,14 @@ export const FloatingNav = ({
           )}
         >
           {/* LOGO */}
-          <div className="flex items-center text-xl font-bold text-white min-h-[2.5rem] lg:min-h-[3rem]">
+          <div className={cn("flex items-center text-xl font-bold min-h-[2.5rem] lg:min-h-[3rem]", isLight ? "text-black" : "text-white")}>
             {geoLoading ? (
               <div className="lg:pl-4 lg:pr-1 pt-1 2xl:w-11/12 w-[80%] h-8 lg:h-10 bg-white/10 rounded animate-pulse" aria-hidden />
             ) : (
               <img
                 src={logoSrc}
                 alt=""
-                className="lg:pl-4 lg:pr-1 pt-1 2xl:w-11/12 w-[80%] cursor-pointer"
+                className={cn("lg:pl-4 lg:pr-1 pt-1 2xl:w-11/12 w-[80%] cursor-pointer", isLight && "brightness-0")}
                 role="link"
                 tabIndex={0}
                 onClick={() => router.push("/")}
@@ -155,8 +162,12 @@ export const FloatingNav = ({
                     className={cn(
                       "group relative text-sm px-6 py-2 rounded-full transition duration-200 inline-flex items-center justify-center border border-transparent",
                       isActive
-                        ? "bg-[#000A21] text-white border-white/20"
-                        : "text-neutral-300 hover:text-white hover:bg-[#000A21]/70 hover:border-white/10"
+                        ? isLight
+                          ? "bg-black text-white border-black"
+                          : "bg-[#000A21] text-white border-white/20"
+                        : isLight
+                          ? "text-[#20242B] hover:text-black hover:bg-black/[0.06] hover:border-black/10"
+                          : "text-neutral-300 hover:text-white hover:bg-[#000A21]/70 hover:border-white/10"
                     )}
                   >
                     <span
@@ -177,7 +188,7 @@ export const FloatingNav = ({
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.18 }}
-        className="py-6 bg-white dark:bg-[#000A21] shadow-xl rounded-xl z-50"
+        className={cn("py-6 shadow-xl rounded-xl z-50", isLight ? "bg-white text-black" : "bg-white dark:bg-[#000A21]")}
         style={{
           left: navItem.name === "Services" ? (navbarRef.current ? navbarRef.current.offsetLeft : 0) : undefined,
           position: "fixed",
@@ -207,7 +218,7 @@ export const FloatingNav = ({
                     <a
                       href={group.link}
                       onClick={() => setSelectedTab(navItem.name)}
-                      className="font-semibold text-gray-700 dark:text-gray-300 hover:text-[#2378DA] transition text-sm"
+                      className={cn("font-semibold transition text-sm", isLight ? "text-[#202020] hover:text-black hover:underline" : "text-gray-700 dark:text-gray-300 hover:text-[#2378DA]")}
                     >
                       {group.title}
                     </a>
@@ -217,9 +228,9 @@ export const FloatingNav = ({
                       key={j}
                       href={item.link}
                       onClick={() => setSelectedTab(navItem.name)}
-                      className="flex items-center gap-2 text-gray-800 dark:text-gray-200 text-sm py-1 px-2 rounded hover:bg-gradient-to-r hover:from-[#2378DA]/10 hover:to-[#134074]/10 transition"
+                      className={cn("flex items-center gap-2 text-sm py-1 px-2 rounded transition", isLight ? "text-[#303030] hover:bg-black hover:text-white" : "text-gray-800 dark:text-gray-200 hover:bg-gradient-to-r hover:from-[#2378DA]/10 hover:to-[#134074]/10")}
                     >
-                      <span className="w-2 h-2 bg-[#2378DA] rounded-full inline-block"></span>
+                      <span className={cn("w-2 h-2 rounded-full inline-block", isLight ? "bg-black" : "bg-[#2378DA]")}></span>
                       {item.name}
                     </a>
                   ))}
@@ -235,9 +246,9 @@ export const FloatingNav = ({
                   key={j}
                   href={item.link}
                   onClick={() => setSelectedTab(navItem.name)}
-                  className="flex items-center gap-2 py-2 px-3 rounded hover:bg-gradient-to-r hover:from-[#2378DA]/10 hover:to-[#134074]/10 transition text-gray-800 dark:text-gray-200"
+                  className={cn("flex items-center gap-2 py-2 px-3 rounded transition", isLight ? "text-[#303030] hover:bg-black hover:text-white" : "text-gray-800 dark:text-gray-200 hover:bg-gradient-to-r hover:from-[#2378DA]/10 hover:to-[#134074]/10")}
                 >
-                  <span className="w-2 h-2 bg-[#2378DA] rounded-full inline-block"></span>
+                  <span className={cn("w-2 h-2 rounded-full inline-block", isLight ? "bg-black" : "bg-[#2378DA]")}></span>
                   {item.name}
                 </a>
               ))}
@@ -257,17 +268,17 @@ export const FloatingNav = ({
           {/* RIGHT SIDE BUTTONS */}
           <div className="ml-auto flex items-center gap-4 relative">
             <button
-              className="rounded-full border-2  border-[#FFFFFF]/15 flex justify-center items-center w-8 h-8 2xl:w-11 2xl:h-11 xl:w-10 xl:h-10 lg:w-9 lg:h-9 hover:border-white/30 transition"
+              className={cn("group rounded-full border-2 flex justify-center items-center w-8 h-8 2xl:w-11 2xl:h-11 xl:w-10 xl:h-10 lg:w-9 lg:h-9 transition", isLight ? "border-black bg-black hover:bg-white" : "border-[#FFFFFF]/15 hover:border-white/30")}
               onClick={() => setSidebarOpen((prev) => !prev)}
             >
-              <img src="/assets/rd-image002.svg" alt="" className="w-4 h-4" />
+              <img src="/assets/rd-image002.svg" alt="" className={cn("w-4 h-4", isLight && "group-hover:brightness-0")} />
             </button>
 
             <a href="/contact">
-  <button className=" cursor-pointer hidden bg-[#000A21] md:flex gap-2 border font-medium relative border-neutral-200 dark:border-white/20 text-black dark:text-white rounded-full hover:bg-white/10 transition justify-center items-center whitespace-nowrap text-sm px-5 py-2 lg:text-sm lg:px-7 lg:py-4 2xl:text-base 2xl:px-7 2xl:py-4">
+  <button className={cn("group cursor-pointer hidden md:flex gap-2 border font-medium relative rounded-full transition justify-center items-center whitespace-nowrap text-sm px-5 py-2 lg:text-sm lg:px-7 lg:py-4 2xl:text-base 2xl:px-7 2xl:py-4", isLight ? "border-black bg-black text-white hover:bg-white hover:text-black" : "bg-[#000A21] border-neutral-200 dark:border-white/20 text-black dark:text-white hover:bg-white/10")}>
     <span className="absolute inset-x-0 w-1/2 mx-auto -top-px bg-linear-to-r from-transparent via-white to-transparent h-px"></span>
     <span>Contact Now</span>
-    <img src="/assets/rd-image003.svg" className="pt-0.5 w-1.4 xl:w-3 2xl:w-3" alt="" />
+    <img src="/assets/rd-image003.svg" className={cn("pt-0.5 w-1.4 xl:w-3 2xl:w-3", isLight && "group-hover:brightness-0")} alt="" />
   </button>
 </a>
 
@@ -292,10 +303,10 @@ export const FloatingNav = ({
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: "100%", opacity: 0 }}
               transition={{ type: "tween", duration: 0.25, ease: "easeOut" }}
-              className="fixed top-0 right-0 h-full z-5000 shadow-xl bg-[#000612] p-8 text-white overflow-y-auto flex flex-col w-full sm:w-full md:w-96 lg:w-150 xl:w-100"
+              className={cn("fixed top-0 right-0 h-full z-5000 shadow-xl p-8 overflow-y-auto flex flex-col w-full sm:w-full md:w-96 lg:w-150 xl:w-100", isLight ? "bg-white text-black" : "bg-[#000612] text-white")}
             >
               <button
-                className="self-end mb-4 text-white font-bold text-2xl"
+                className={cn("self-end mb-4 font-bold text-2xl", isLight ? "text-black hover:text-black/55" : "text-white")}
                 onClick={() => setSidebarOpen(false)}
               >
                 &times;
@@ -308,36 +319,36 @@ export const FloatingNav = ({
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.3 }}
-                  className="space-y-6 lg:w-2/3 xl:w-full lg:pr-6 w-full lg:border-r lg:border-[#FFFFFF]/10 xl:border xl:border-transparent"
+                  className={cn("space-y-6 lg:w-2/3 xl:w-full lg:pr-6 w-full lg:border-r xl:border xl:border-transparent", isLight ? "lg:border-black/10" : "lg:border-[#FFFFFF]/10")}
                 >
-                  <div className="w-full border-b border-[#FFFFFF]/10">
+                  <div className={cn("w-full border-b", isLight ? "border-black/10" : "border-[#FFFFFF]/10")}>
                     {geoLoading ? (
                       <div className="mb-4 w-2/3 h-12 bg-white/10 rounded animate-pulse" aria-hidden />
                     ) : (
-                      <img src={logoSrc} alt="" className="mb-4 w-2/3" />
+                      <img src={logoSrc} alt="" className={cn("mb-4 w-2/3", isLight && "brightness-0")} />
                     )}
                   </div>
-                  <h2 className="text-3xl font-bold text-[#2378DA] mb-3">About Us</h2>
+                  <h2 className={cn("text-3xl font-bold mb-3", isLight ? "text-black" : "text-[#2378DA]")}>About Us</h2>
                   <p className="text-sm leading-7">
                     We’re your trusted digital partner — helping businesses grow with creativity, technology, and strategy.
                   </p>
                   <div className="space-y-4">
                     {isUAE ? (
                       <div>
-                        <h3 className="text-2xl font-bold text-[#2378DA] mb-3">UAE Office</h3>
+                        <h3 className={cn("text-2xl font-bold mb-3", isLight ? "text-black" : "text-[#2378DA]")}>UAE Office</h3>
                         <p className="text-sm mb-3"><a href="mailto:informationtechnology@resolutedigitals.com" className="hover:underline">informationtechnology@resolutedigitals.com</a></p>
                         <p className="text-sm mb-3">G-17, Hamood Building, Area: Port Saeed, Dubai, UAE</p>
                       </div>
                     ) : (
                       <>
                         <div>
-                          <h3 className="text-2xl font-bold text-[#2378DA] mb-3">Head Office</h3>
+                          <h3 className={cn("text-2xl font-bold mb-3", isLight ? "text-black" : "text-[#2378DA]")}>Head Office</h3>
                           <p className="text-sm mb-3"><a href="mailto:contact@resolutedigitals.com" className="hover:underline">contact@resolutedigitals.com</a></p>
                           <p className="text-sm mb-3">+92 334 3448974</p>
                           <p className="text-sm mb-3">Plot No. E-88, Block B Gulshan e Jamal, Karachi, 75260</p>
                         </div>
                         <div>
-                          <h3 className="text-2xl font-bold text-[#2378DA] mb-3">US Office</h3>
+                          <h3 className={cn("text-2xl font-bold mb-3", isLight ? "text-black" : "text-[#2378DA]")}>US Office</h3>
                           <p className="text-sm mb-3"><a href="mailto:support@resolutedigitals.com" className="hover:underline">support@resolutedigitals.com</a></p>
                           <p className="text-sm mb-3">+1 (830) 267-9917</p>
                           <p className="text-sm mb-3">
@@ -349,17 +360,17 @@ export const FloatingNav = ({
                       </>
                     )}
                   </div>
-                  <h3 className="text-2xl font-bold text-[#2378DA] mb-3">Stay Connected</h3>
+                  <h3 className={cn("text-2xl font-bold mb-3", isLight ? "text-black" : "text-[#2378DA]")}>Stay Connected</h3>
                   <div className="flex flex-wrap gap-1">
-                    <a href="https://www.facebook.com/ResoluteDigitals" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:bg-[#2378DA] border border-white/20 p-3 rounded-full">
+                    <a href="https://www.facebook.com/ResoluteDigitals" target="_blank" rel="noopener noreferrer" className={cn("flex items-center gap-2 cursor-pointer border p-3 rounded-full transition", isLight ? "border-black/20 hover:bg-black hover:text-white" : "hover:bg-[#2378DA] border-white/20")}>
                       <FaFacebookF />
                     </a>
                     {/* <motion.div whileHover={{ scale: 1.1 }} className="flex items-center gap-2 cursor-pointer hover:bg-[#2378DA] border border-white/20 p-3 rounded-full"><FaTwitter /></motion.div> */}
-                    <a href="https://www.linkedin.com/company/resolutedigitals" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:bg-[#2378DA] border border-white/20 p-3 rounded-full">
+                    <a href="https://www.linkedin.com/company/resolutedigitals" target="_blank" rel="noopener noreferrer" className={cn("flex items-center gap-2 cursor-pointer border p-3 rounded-full transition", isLight ? "border-black/20 hover:bg-black hover:text-white" : "hover:bg-[#2378DA] border-white/20")}>
                       <FaLinkedinIn />
                     </a>
                     {/* <motion.div whileHover={{ scale: 1.1 }} className="flex items-center gap-2 cursor-pointer hover:bg-[#2378DA] border border-white/20 p-3 rounded-full"><FaYoutube /></motion.div> */}
-                    <a href="https://www.instagram.com/resolutedigitals" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 cursor-pointer hover:bg-[#2378DA] border border-white/20 p-3 rounded-full">
+                    <a href="https://www.instagram.com/resolutedigitals" target="_blank" rel="noopener noreferrer" className={cn("flex items-center gap-2 cursor-pointer border p-3 rounded-full transition", isLight ? "border-black/20 hover:bg-black hover:text-white" : "hover:bg-[#2378DA] border-white/20")}>
                       <FaInstagram />
                     </a>
                   </div>
@@ -391,8 +402,10 @@ export const FloatingNav = ({
               setSidebarOpen(false);
             }}
             className={cn(
-              "px-4 py-2 text-left rounded transition text-white flex-1",
-              isActive ? "bg-[#000A21]" : "hover:bg-white/10"
+              "px-4 py-2 text-left rounded transition flex-1",
+              isLight
+                ? isActive ? "bg-black text-white" : "text-black hover:bg-black/10"
+                : isActive ? "bg-[#000A21] text-white" : "text-white hover:bg-white/10"
             )}
           >
             {item.name}
@@ -428,7 +441,7 @@ export const FloatingNav = ({
                     setSelectedTab(item.name);
                     setSidebarOpen(false);
                   }}
-                  className="block text-[#2378DA] font-semibold text-sm mb-1 hover:underline"
+                  className={cn("block font-semibold text-sm mb-1 hover:underline", isLight ? "text-black" : "text-[#2378DA]")}
                 >
                   {group.title}
                 </a>
@@ -454,7 +467,7 @@ export const FloatingNav = ({
                   setSelectedTab(item.name);
                   setSidebarOpen(false);
                 }}
-                className="px-4 py-1 rounded text-white hover:bg-white/10"
+                className={cn("px-4 py-1 rounded transition", isLight ? "text-black hover:bg-black hover:text-white" : "text-white hover:bg-white/10")}
               >
                 {sub.name}
               </a>

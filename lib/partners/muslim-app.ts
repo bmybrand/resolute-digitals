@@ -1,0 +1,84 @@
+import type { Partner } from "./types";
+
+export const muslimAppPartner: Partner = {
+  slug: "muslim-app",
+  name: "Muslim App",
+  category: "Digital Product",
+  description: "A considered mobile experience built around clarity, accessibility, and community.",
+  overviewTitle: "A focused product for meaningful everyday use",
+  overview:
+    "Muslim App is shaped around simple navigation, approachable content, and useful daily interactions. Its monochrome product system keeps the experience calm, recognizable, and accessible across the interface.",
+  highlights: ["Product experience", "Mobile-first interface", "Accessible design"],
+  capabilities: [
+    { title: "Product Strategy", description: "A focused roadmap that connects user needs with meaningful product decisions." },
+    { title: "Mobile Experience", description: "Clear, responsive journeys designed for comfortable everyday interaction." },
+    { title: "Design System", description: "A consistent black-and-white visual language built for clarity and recognition." },
+  ],
+  metrics: [
+    { value: "Simple", label: "Everyday navigation" },
+    { value: "Focused", label: "Product experience" },
+    { value: "Inclusive", label: "Accessible design" },
+  ],
+  processTitle: "Designed around clarity, usefulness, and trust",
+  processDescription: "Every stage centers the people using the product and the moments where it should feel most helpful.",
+  process: ["Understand daily user needs", "Map the essential experience", "Design and prototype", "Validate, refine, and grow"],
+  appPage: {
+    heroTitle: "Faith, guidance, and community in one thoughtful app",
+    heroDescription:
+      "Our Muslim App brings essential Islamic tools and meaningful content into a clear, accessible mobile experience designed for everyday life.",
+    featuresTitle: "Everything you need, thoughtfully brought together",
+    featuresDescription:
+      "Simple tools and trusted content help users stay connected to worship, learning, and community wherever they are.",
+    features: [
+      { title: "Prayer Times", description: "Accurate daily prayer schedules presented clearly for quick access.", icon: "prayer", image: "/assets/1Home.png" },
+      { title: "Quran Experience", description: "Read and explore Quran content through a calm, accessible interface.", icon: "quran", image: "/assets/Quran UI with Translation and translitration.png" },
+      { title: "Qibla Direction", description: "A straightforward compass experience designed for confident everyday use.", icon: "qibla", image: "/assets/4Qibla Finder.png" },
+      { title: "Community", description: "Stay connected to useful updates, shared moments, and relevant content.", icon: "community", image: "/assets/6Group list.png" },
+      { title: "Islamic Calendar", description: "Keep important Islamic dates and occasions visible and organized.", icon: "calendar", image: "/assets/8Moment history.png" },
+      { title: "Daily Guidance", description: "Meaningful reminders and reflections designed to support daily practice.", icon: "daily", image: "/assets/14Achievements.png" },
+    ],
+    affiliationTitle: "A trusted partnership built for Pakistan",
+    affiliationDescription:
+      "Resolute Digitals and Our Muslim App are official business partners, working together to support the app's digital product, operations, and growth.",
+    paymentStatement:
+      "Resolute Digitals is the registered company responsible for handling and collecting all payments in Pakistan on behalf of the Our Muslim App brand.",
+    galleryTitle: "A closer look at the app experience",
+    galleryDescription:
+      "Explore the prayer, Quran, community, achievement, and profile experiences inside Our Muslim App.",
+    screens: [
+      { title: "Daily Home", subtitle: "Prayer times and guidance at a glance", variant: "home", image: "/assets/muslim-app-showcase/daily-home.webp" },
+      { title: "Extended Home", subtitle: "More daily tools in one clear view", variant: "home", image: "/assets/muslim-app-showcase/extended-home.webp" },
+      { title: "Prayer Rakat", subtitle: "Record prayer details with ease", variant: "prayer", image: "/assets/muslim-app-showcase/prayer-rakat.webp" },
+      { title: "Qibla Finder", subtitle: "Find the Qibla with confidence", variant: "prayer", image: "/assets/muslim-app-showcase/qibla-finder.webp" },
+      { title: "Qadha Tracker", subtitle: "Keep track of prayers to complete", variant: "prayer", image: "/assets/muslim-app-showcase/qadha-tracker.webp" },
+      { title: "Groups", subtitle: "Discover and manage communities", variant: "community", image: "/assets/muslim-app-showcase/groups.webp" },
+      { title: "Group Detail", subtitle: "Connect with a shared community", variant: "community", image: "/assets/muslim-app-showcase/group-detail.webp" },
+      { title: "Moment History", subtitle: "Return to meaningful moments", variant: "community", image: "/assets/muslim-app-showcase/moment-history.webp" },
+      { title: "Moment Details", subtitle: "See every moment more clearly", variant: "community", image: "/assets/muslim-app-showcase/moment-details.webp" },
+      { title: "Quran Menu", subtitle: "Move easily through Quran content", variant: "quran", image: "/assets/muslim-app-showcase/quran-menu.webp" },
+      { title: "Quran Player", subtitle: "Listen while reading and reflecting", variant: "quran", image: "/assets/muslim-app-showcase/quran-player.webp" },
+      { title: "Quran Translation", subtitle: "Read with translation and transliteration", variant: "quran", image: "/assets/muslim-app-showcase/quran-translation.webp" },
+      { title: "Achievements", subtitle: "See progress and milestones", variant: "prayer", image: "/assets/muslim-app-showcase/achievements.webp" },
+      { title: "Achievement Tier", subtitle: "Understand each level of progress", variant: "prayer", image: "/assets/muslim-app-showcase/achievement-tier.webp" },
+      { title: "Achievement Detail", subtitle: "Celebrate every completed milestone", variant: "prayer", image: "/assets/muslim-app-showcase/achievement-detail.webp" },
+      { title: "User Profile", subtitle: "A personal home for activity and progress", variant: "home", image: "/assets/muslim-app-showcase/user-profile.webp" },
+      { title: "Prayer Tracker", subtitle: "Build consistency day by day", variant: "prayer", image: "/assets/muslim-app-showcase/prayer-tracker.webp" },
+    ],
+  },
+  theme: {
+    pageBackground: "#FFFFFF",
+    pageText: "#080808",
+    mutedText: "#555555",
+    surfaceBackground: "#0A0A0A",
+    surfaceText: "#FFFFFF",
+    surfaceMuted: "#BDBDBD",
+    contentAccent: "#080808",
+    accent: "#FFFFFF",
+    accentDark: "#BFC2C7",
+    accentSoft: "rgba(255,255,255,.12)",
+    heroBackground: "radial-gradient(circle at 78% 20%, #3B3B3B 0%, #171717 42%, #050505 100%)",
+    sectionBackground: "linear-gradient(135deg, #202020 0%, #080808 100%)",
+    logoBackground: "rgba(0,0,0,.78)",
+    buttonText: "#050505",
+  },
+};
