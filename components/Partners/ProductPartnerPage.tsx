@@ -365,8 +365,91 @@ export default function ProductPartnerPage({ partner }: { partner: Partner }) {
               <a href={content.websiteUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-full bg-white px-7 py-4 font-semibold text-black transition hover:gap-4 hover:bg-white/85">{content.ctaLinkLabel} <FaArrowRight className="-rotate-45" /></a>
               <Link href="/contact/" className="flex items-center gap-3 rounded-full border border-white/35 bg-black/20 px-7 py-4 font-semibold text-white backdrop-blur-md transition hover:gap-4 hover:bg-white hover:text-black">Start a conversation <FaArrowRight /></Link>
             </div>
+           
           </div>
         </section>
+        {/* Muslim App External Links */}
+{/* Muslim App External Links */}
+<div className="2xl:mx-49 mb-16 lg:mb-28">
+  <div className="flex flex-col gap-5 border-t border-black/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+
+    {/* Muslim App Logo + Name */}
+    <a
+      href="https://ourmuslimapp.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex w-fit items-center gap-3"
+      aria-label="Visit Muslim App"
+    >
+      <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl bg-black p-2 shadow-sm">
+        <Image
+          src={assets.logo!}
+          alt="Muslim App logo"
+          width={48}
+          height={48}
+          className="h-full w-full object-contain"
+        />
+      </div>
+
+      <span className="bold text-lg text-black">
+        Muslim App
+      </span>
+
+      <FaArrowRight className="-rotate-45 text-sm text-black/40 transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-black" />
+    </a>
+
+    {/* Legal Links */}
+    <div className="flex flex-wrap items-center gap-x-4 gap-y-3 text-sm">
+      <a
+        href="https://ourmuslimapp.com/legal/terms"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-black/55 transition hover:text-black"
+      >
+        Terms of Service
+      </a>
+
+      <span className="hidden h-1 w-1 rounded-full bg-black/25 sm:block" />
+
+      <a
+        href="https://ourmuslimapp.com/legal/privacy"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-black/55 transition hover:text-black"
+      >
+        Privacy Policy
+      </a>
+
+      <span className="hidden h-1 w-1 rounded-full bg-black/25 sm:block" />
+
+      <Link
+  href="/legal/refund-cancellation"
+  className="text-black/55 transition hover:text-black"
+>
+  Refund Policy
+</Link>
+<span className="hidden h-1 w-1 rounded-full bg-black/25 sm:block" />
+<Link
+  href="/legal/business-affiliation"
+  className="text-black/55 transition hover:text-black"
+>
+  Business Affiliation
+</Link>
+      <span className="hidden h-1 w-1 rounded-full bg-black/25 sm:block" />
+
+      <a
+        href="https://ourmuslimapp.com/support"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-black/55 transition hover:text-black"
+      >
+        Help &amp; Support
+      </a>
+      
+    </div>
+  </div>
+</div>
+        
       </div>
 
       <Footersec variant={theme.footerVariant} />
