@@ -121,28 +121,20 @@ export default function MuslimAppSection() {
           </div>
         </div>
 
-        {/* Premium Metrics Section */}
+        {/* Metrics Section */}
         <div className="mt-32 flex justify-center">
-          <div className="w-full max-w-2xl">
-            <div className="relative overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-xl px-8 py-10 shadow-2xl shadow-[#2378DA]/20">
-              {/* Gradient accent line */}
-              <div className="absolute top-0 left-1/2 h-px w-1/2 -translate-x-1/2 bg-gradient-to-r from-transparent via-[#2378DA]/50 to-transparent" />
-
-              <div className="grid grid-cols-3 gap-8">
-                {muslimAppPartner.metrics.map((metric, idx) => (
-                  <div
-                    key={metric.label}
-                    className="flex flex-col items-center gap-4 pb-4 border-b border-white/10 last:border-b-0"
-                  >
-                    <div className="text-4xl md:text-5xl font-black bg-gradient-to-r from-[#2378DA] via-[#1F93EF] to-[#55A6FF] bg-clip-text text-transparent">
-                      {metric.value}
-                    </div>
-                    <div className="text-xs md:text-sm font-bold text-[#A9ABBE] uppercase tracking-widest">
-                      {metric.label}
-                    </div>
+          <div className="w-full max-w-[980px] rounded-[1.75rem] border border-white/20 bg-[#0d1d34]/80 px-6 py-7 shadow-[0_0_0_1px_rgba(255,255,255,0.06)] backdrop-blur-sm md:px-10 md:py-8">
+            <div className="grid grid-cols-3 gap-4 md:gap-10">
+              {muslimAppPartner.metrics.map((metric) => (
+                <div key={metric.label} className="flex flex-col items-center justify-center text-center">
+                  <div className="text-3xl font-black leading-none text-[#55A6FF] md:text-[3.25rem] md:tracking-[-0.06em]">
+                    {metric.value}
                   </div>
-                ))}
-              </div>
+                  <div className="mt-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[#A9ABBE] md:text-[11px]">
+                    {metric.label}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
