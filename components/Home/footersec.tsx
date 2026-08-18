@@ -30,15 +30,6 @@ const FooterSec = ({ variant = "default" }: FooterSecProps) => {
   const isSimpleDark = isMonochrome || isRecomune;
 
   /*
-   * Muslim App quick link
-   * Only shows on:
-   * /partners/muslim-app
-   */
-  const isMuslimAppPage =
-    pathname === "/partners/muslim-app" ||
-    pathname === "/partners/muslim-app/";
-
-  /*
    * Country detection
    */
   const normalizedCountryCode = (countryCode ?? "").toUpperCase();
@@ -79,16 +70,11 @@ const FooterSec = ({ variant = "default" }: FooterSecProps) => {
           href: "/contact/",
           external: false,
         },
-
-        ...(isMuslimAppPage
-          ? [
-              {
-                label: "Visit Muslim App",
-                href: "https://ourmuslimapp.com/",
-                external: true,
-              },
-            ]
-          : []),
+        {
+          label: "Visit Muslim App",
+          href: "https://ourmuslimapp.com/",
+          external: true,
+        },
       ],
     },
 
