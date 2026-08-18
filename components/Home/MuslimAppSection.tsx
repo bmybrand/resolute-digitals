@@ -29,7 +29,7 @@ export default function MuslimAppSection() {
           <div className="flex items-center gap-3 rounded-full bg-gradient-to-r from-white/12 to-white/4 px-1.5 py-1.5 ring-1 ring-white/20 backdrop-blur-xl">
             <span className="relative flex items-center gap-2 rounded-full bg-gradient-to-r from-[#2378DA] to-[#55A6FF] px-6 py-3 text-xs font-bold text-white uppercase tracking-widest shadow-xl shadow-[#2378DA]/40">
               <IconStar className="h-4 w-4" fill="currentColor" />
-              Featured Partner
+              Brand Partner
             </span>
           </div>
         </div>
