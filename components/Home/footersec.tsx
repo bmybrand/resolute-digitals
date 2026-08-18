@@ -223,7 +223,9 @@ const FooterSec = ({ variant = "default" }: FooterSecProps) => {
           isMonochrome &&
             "grayscale brightness-0 opacity-15",
           isRecomune &&
-            "grayscale brightness-0 opacity-15"
+            "grayscale brightness-0 opacity-15",
+          pathname.includes("muslim-app") &&
+            "hidden"
         )}
       />
 
