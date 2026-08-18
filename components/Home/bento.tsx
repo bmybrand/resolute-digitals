@@ -8,7 +8,7 @@ const cardsData = [
     description:
       "We build scalable and secure software solutions tailored to your business goals - modern, efficient, and built to perform.",
     cta: "Start with us",
-    img: "/assets/rd-image016.svg",
+    img: "/assets/rd-image022.svg",
     icon: "/assets/rd-image017.svg",
     updatedIcon: "/assets/rd-image018.svg",
     contentWidth: "sm:w-[60%]",
@@ -34,7 +34,7 @@ const cardsData = [
     title: "Digital Marketing",
     description:"",
     cta: "Start with us",
-    img: "/assets/rd-image022.svg",
+    img: "/assets/rd-image025.svg",
     icon: "/assets/rd-image023.svg",
     updatedIcon: "/assets/rd-image024.svg",
     contentWidth: "lg:w-full",
@@ -48,12 +48,12 @@ const cardsData = [
     description:
       "We transform data into insight and streamline operations with analytics and intelligent business solutions.",
     cta: "Start with us",
-    img: "/assets/rd-image025.svg",
+    img: "/assets/rd-image016.svg",
     imgClass:
-      "absolute -right-20 -bottom-10 object-contain opacity-80 w-1/2 lg:w-2/3 lg:w-2/5",
+      "absolute -right-10 bottom-0 object-contain opacity-80 w-1/2 lg:w-2/3 lg:w-3/6",
     icon: "/assets/rd-image011.svg",
     updatedIcon: "/assets/rd-image026.svg",
-    contentWidth: "w-full sm:w-[60%]",
+    contentWidth: "w-full sm:w-[55%]",
     
   },
   
