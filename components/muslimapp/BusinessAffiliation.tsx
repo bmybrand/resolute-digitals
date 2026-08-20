@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Footersec from "@/components/Home/footersec";
 import {
   FaArrowRight,
   FaBuilding,
@@ -211,6 +212,9 @@ export default function BusinessAffiliation() {
           </div>
         </div>
       </section>
+
+      <Footersec variant="monochrome" />
+
     </main>
   );
 }

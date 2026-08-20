@@ -38,6 +38,20 @@ const FooterSec = ({ variant = "default" }: FooterSecProps) => {
     pathname === "/partners/muslim-app" ||
     pathname === "/partners/muslim-app/";
 
+  const isPartnerPage =
+    pathname === "/partners" ||
+    pathname === "/partners/" ||
+    pathname.startsWith("/partners/");
+
+  const isMuslimAppDetailPage =
+    pathname === "/legal/refund-cancellation" ||
+    pathname === "/legal/refund-cancellation/" ||
+    pathname === "/legal/business-affiliation" ||
+    pathname === "/legal/business-affiliation/";
+
+  const isMuslimAppRelatedPage = isMuslimAppPage || isMuslimAppDetailPage;
+  const usesMuslimAppLegalLinks = isMuslimAppPage || isMuslimAppDetailPage;
+
   /*
    * Country detection
    */
@@ -62,25 +76,47 @@ const FooterSec = ({ variant = "default" }: FooterSecProps) => {
 
   const footerColumns = [
     {
-      title: "Quick Links",
-      items: [
-        {
-          label: "Core Services",
-          href: "/services/",
-          external: false,
-        },
-        {
-          label: "Company",
-          href: "/about/",
-          external: false,
-        },
-        {
-          label: "Contact Info",
-          href: "/contact/",
-          external: false,
-        },
-
-        ...(isMuslimAppPage
+      title: isMuslimAppPage ? "Quick Access" : "Quick Links",
+      items: usesMuslimAppLegalLinks
+        ? [
+            {
+              label: "Terms of Service",
+              href: "https://ourmuslimapp.com/legal/terms",
+              external: true,
+            },
+            {
+              label: "Privacy Policy",
+              href: "https://ourmuslimapp.com/legal/privacy",
+              external: true,
+            },
+            {
+              label: "Refund Policy",
+              href: "/legal/refund-cancellation/",
+              external: false,
+            },
+            {
+              label: "Business Affiliation",
+              href: "/legal/business-affiliation/",
+              external: false,
+            },
+          ]
+        : [
+            {
+              label: "Core Services",
+              href: "/services/",
+              external: false,
+            },
+            {
+              label: "Company",
+              href: "/about/",
+              external: false,
+            },
+            {
+              label: "Contact Info",
+              href: "/contact/",
+              external: false,
+            },
+            ...(!isPartnerPage
           ? [
               {
                 label: "Visit Muslim App",
@@ -89,7 +125,7 @@ const FooterSec = ({ variant = "default" }: FooterSecProps) => {
               },
             ]
           : []),
-      ],
+          ],
     },
 
     {
@@ -224,7 +260,7 @@ const FooterSec = ({ variant = "default" }: FooterSecProps) => {
             "grayscale brightness-0 opacity-15",
           isRecomune &&
             "grayscale brightness-0 opacity-15",
-          pathname.includes("muslim-app") &&
+          isMuslimAppRelatedPage &&
             "hidden"
         )}
       />
