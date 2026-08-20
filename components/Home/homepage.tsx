@@ -9,6 +9,7 @@ import Sevensection from "@/components/Home/sevensection";
 import Eightsec from "@/components/Home/eightsec";
 import Ninesec from "@/components/Home/ninesec";
 import Rewiewcards from "@/components/Home/rewiewcards";
+import MuslimAppSection from "@/components/Home/MuslimAppSection";
 import Footersec from "@/components/Home/footersec";
 export const dynamic = 'force-static'
 
@@ -27,6 +28,7 @@ export default function HomePage() {
       <Revolvingicons />
       <Sevensection />
       <Eightsec />
+      <MuslimAppSection />
       <Ninesec />
       <Rewiewcards />
       <Footersec />
