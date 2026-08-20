@@ -39,6 +39,10 @@ const FooterSec = ({ variant = "default" }: FooterSecProps) => {
     pathname === "/partners/muslim-app/";
 
   const isMuslimAppDetailPage =
+    pathname === "/legal/terms" ||
+    pathname === "/legal/terms/" ||
+    pathname === "/legal/privacy" ||
+    pathname === "/legal/privacy/" ||
     pathname === "/legal/refund-cancellation" ||
     pathname === "/legal/refund-cancellation/" ||
     pathname === "/legal/business-affiliation" ||
@@ -62,6 +66,10 @@ const FooterSec = ({ variant = "default" }: FooterSecProps) => {
     ? "/assets/logo_dubai_footer.png"
     : "/assets/rd-image004.svg";
 
+  const normalizePath = (path: string) => path.replace(/\/+$/, "") || "/";
+  const isActiveFooterLink = (href: string) =>
+    !href.startsWith("http") && normalizePath(pathname) === normalizePath(href);
+
   /*
    * ============================================================
    * FOOTER LINKS
@@ -74,13 +82,13 @@ const FooterSec = ({ variant = "default" }: FooterSecProps) => {
       items: [
         {
           label: "Terms & Condition",
-          href: "https://ourmuslimapp.com/legal/terms",
-          external: true,
+          href: "/legal/terms/",
+          external: false,
         },
         {
           label: "Privacy Policy",
-          href: "https://ourmuslimapp.com/legal/privacy",
-          external: true,
+          href: "/legal/privacy/",
+          external: false,
         },
         {
           label: "Refund & Cancellation",
@@ -477,6 +485,7 @@ const FooterSec = ({ variant = "default" }: FooterSecProps) => {
                   >
                     <a
                       href={item.href}
+                      aria-current={isActiveFooterLink(item.href) ? "page" : undefined}
                       target={
                         item.external
                           ? "_blank"
@@ -487,14 +496,10 @@ const FooterSec = ({ variant = "default" }: FooterSecProps) => {
                           ? "noopener noreferrer"
                           : undefined
                       }
-                      className="
-                        flex
-                        items-center
-                        gap-2
-                        transition-colors
-                        duration-200
-                        hover:text-white
-                      "
+                      className={cn(
+                        "flex items-center gap-2 transition-colors duration-200 hover:text-white",
+                        isActiveFooterLink(item.href) && "font-semibold text-white underline decoration-white/40 underline-offset-4"
+                      )}
                     >
                       {item.label}
 

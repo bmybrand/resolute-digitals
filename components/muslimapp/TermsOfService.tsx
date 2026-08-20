@@ -1,0 +1,243 @@
+import LegalPolicyPage, { type LegalPolicySection } from "./LegalPolicyPage";
+
+const sections: LegalPolicySection[] = [
+  {
+    id: "acceptance",
+    title: "Acceptance of These Terms",
+    blocks: [
+      { type: "paragraph", text: "By accessing or using the ReComune mobile application currently branded as the Muslim App, including any related features, content, and services made available in connection with that application (collectively, the “Service”), you agree to these Terms of Service (“Terms”)." },
+      { type: "paragraph", text: "If you do not agree to these Terms, please do not use the Service." },
+      { type: "paragraph", text: "These Terms constitute a legally binding agreement between you and ReComune, Inc. (“ReComune,” “we,” “us,” or “our”)." },
+      { type: "paragraph", text: "These Terms apply only to the Service defined above and do not automatically apply to other products or services offered by ReComune, Inc., which may be governed by separate terms or policies." },
+    ],
+  },
+  {
+    id: "eligibility",
+    title: "Eligibility",
+    blocks: [
+      { type: "paragraph", text: "You must be at least 13 years old to use the Service." },
+      { type: "paragraph", text: "If you are under 18 (or the age of majority in your jurisdiction), your parent or legal guardian must review and agree to these Terms on your behalf and is responsible for your use of the Service." },
+    ],
+  },
+  {
+    id: "accounts",
+    title: "Accounts",
+    blocks: [
+      { type: "paragraph", text: "Some features of the Service require creating an account." },
+      { type: "paragraph", text: "You agree to:" },
+      { type: "bullets", items: [
+        "Provide accurate and complete information",
+        "Maintain the security of your account credentials",
+        "Be responsible for all activity that occurs under your account",
+      ] },
+      { type: "paragraph", text: "You may delete your account at any time through the Service or by contacting support." },
+    ],
+  },
+  {
+    id: "purpose",
+    title: "Purpose of the Service, Religious Disclaimer & Informational Outputs",
+    blocks: [
+      { type: "paragraph", text: "The Service is intended to help users organize, track, and reflect on religious practices." },
+      { type: "paragraph", text: "ReComune:" },
+      { type: "bullets", items: [
+        "Is not a religious authority",
+        "Does not provide religious rulings, verdicts, or fatwas",
+        "Does not replace guidance from qualified scholars",
+        "Makes no guarantees regarding spiritual outcomes, religious validity, or personal results",
+      ] },
+      { type: "paragraph", text: "The Service is provided as a personal aid only, and use of the Service is at your own discretion." },
+      { type: "heading", text: "Informational Outputs" },
+      { type: "paragraph", text: "The Service may generate scores, achievements, rankings, recommendations, analytics, insights, reminders, progress metrics, streaks, or other outputs based on information provided by users." },
+      { type: "paragraph", text: "These outputs are provided solely for informational, educational, and motivational purposes. They do not constitute religious rulings, professional advice, or authoritative determinations regarding religious compliance, spiritual standing, sincerity, personal merit, or acceptance of worship." },
+      { type: "paragraph", text: "Users remain solely responsible for their own religious decisions, practices, and obligations." },
+    ],
+  },
+  {
+    id: "user-content",
+    title: "User Content & Data",
+    blocks: [
+      { type: "heading", text: "5.1 Your Content" },
+      { type: "paragraph", text: "You may submit or generate content through the Service, including prayer tracking data, reflections, notes, preferences, usage information, and participation in community features (\"User Content\")." },
+      { type: "paragraph", text: "You retain ownership of your User Content." },
+      { type: "heading", text: "5.2 License to ReComune & Lawful Bases" },
+      { type: "paragraph", text: "To operate, maintain, and improve the Service, you grant ReComune a worldwide, non-exclusive, royalty-free, perpetual license to use, host, store, process, analyze, modify, aggregate, and anonymize User Content." },
+      { type: "paragraph", text: "Where applicable, we process personal data under the following lawful bases:" },
+      { type: "bullets", items: [
+        "Performance of a contract",
+        "Legitimate interests",
+        "Legal obligations",
+        "Consent, where explicitly obtained",
+      ] },
+      { type: "paragraph", text: "Processing purposes may include:" },
+      { type: "bullets", items: [
+        "Operating and maintaining the Service",
+        "Personalization and feature improvement",
+        "Analytics and performance measurement",
+        "Research and development, including training and improving models and systems",
+        "Creation of aggregated or anonymized insights",
+        "Educational and informational use",
+      ] },
+      { type: "paragraph", text: "Once data is aggregated or anonymized so that it cannot reasonably be used to identify you, it is no longer considered personal data and may be used for the purposes described in these Terms." },
+      { type: "heading", text: "5.3 Data Minimization" },
+      { type: "paragraph", text: "We aim to collect and process only the data reasonably necessary to operate, maintain, and improve the Service." },
+      { type: "heading", text: "5.4 Responsibility for User Content" },
+      { type: "paragraph", text: "You are solely responsible for any User Content that you submit, create, publish, transmit, or share through the Service." },
+      { type: "paragraph", text: "ReComune does not endorse, verify, or guarantee the accuracy of User Content and is not responsible for User Content created by users." },
+      { type: "paragraph", text: "ReComune reserves the right, but not the obligation, to review, remove, restrict access to, or disable User Content that it reasonably believes violates these Terms, applicable law, the rights of others, or the intended purpose of the Service." },
+    ],
+  },
+  {
+    id: "privacy",
+    title: "Privacy",
+    blocks: [
+      { type: "paragraph", text: "Our collection and use of personal data in connection with the Service are described in our Privacy Policy, which forms part of these Terms." },
+      { type: "paragraph", text: "Where required by law, users may request access to or deletion of their personal data. We may retain certain information as necessary to comply with legal obligations, protect the security of the Service, prevent fraud or abuse, resolve disputes, enforce our agreements, or for other legitimate business purposes." },
+    ],
+  },
+  {
+    id: "international-transfers",
+    title: "International Data Transfers",
+    blocks: [
+      { type: "paragraph", text: "ReComune is based in the United States." },
+      { type: "paragraph", text: "If you access the Service from outside the U.S., your information may be transferred to, processed, and stored in the United States or other jurisdictions." },
+      { type: "paragraph", text: "Where required by law, we rely on appropriate safeguards such as standard contractual clauses." },
+    ],
+  },
+  {
+    id: "subscriptions",
+    title: "Subscriptions & Payments",
+    blocks: [
+      { type: "paragraph", text: "The Service may offer paid subscriptions, premium features, or other paid offerings." },
+      { type: "paragraph", text: "Subscriptions and purchases may be processed through third-party application marketplaces or payment providers, including but not limited to the Apple App Store and Google Play Store." },
+      { type: "paragraph", text: "By purchasing a subscription or other paid offering, you agree to the pricing, billing, and payment terms presented at the time of purchase." },
+      { type: "paragraph", text: "Pricing, features, availability, and subscription offerings may change from time to time." },
+      { type: "paragraph", text: "Payments, renewals, cancellations, refunds, and billing disputes are generally governed by the policies and procedures of the platform through which the purchase was made. Users are responsible for managing their subscriptions through the applicable platform account." },
+      { type: "paragraph", text: "ReComune may offer promotional access, trial periods, discounts, gifts, or complimentary access at its sole discretion and may modify or discontinue such offerings at any time, subject to applicable law." },
+      { type: "heading", text: "8.1 Founding Member Plans & Promotional Offers" },
+      { type: "paragraph", text: "ReComune may offer special pricing plans, promotional subscriptions, founding member programs, early adopter offers, lifetime pricing offers, or similar programs from time to time (collectively, \"Promotional Plans\")." },
+      { type: "paragraph", text: "Unless expressly stated otherwise in writing by ReComune, Promotional Plans provide access only to the features, functionality, and benefits included in the applicable subscription tier at the time the feature is made available to subscribers." },
+      { type: "paragraph", text: "Promotional Plans do not guarantee access to:" },
+      { type: "bullets", items: [
+        "New subscription tiers introduced in the future",
+        "Premium add-on features",
+        "Usage-based services",
+        "Third-party services or integrations",
+        "Features that incur significant ongoing costs to ReComune",
+        "Products or services offered separately from the Service",
+        "Future products, applications, offerings, or businesses operated by ReComune",
+      ] },
+      { type: "paragraph", text: "ReComune reserves the right to designate certain features, functionality, content, services, integrations, or benefits as separate paid offerings, add-ons, upgrades, or subscription tiers, even if the user participates in a Promotional Plan." },
+      { type: "paragraph", text: "Where a Promotional Plan includes grandfathered pricing, such pricing applies only while the user's subscription remains active and in good standing. If a subscription lapses, is canceled, expires, is refunded, or otherwise terminates, eligibility for grandfathered pricing may be lost and may not be reinstated." },
+      { type: "paragraph", text: "Nothing in a Promotional Plan shall be interpreted as granting unlimited access to all future products, features, services, or offerings unless explicitly stated by ReComune in writing." },
+      { type: "paragraph", text: "Certain Promotional Plans may be subject to additional terms, conditions, benefit descriptions, eligibility requirements, or limitations (\"Program Terms\"). Where applicable, such Program Terms are incorporated into these Terms by reference. In the event of a conflict between these Terms and any Program Terms, the Program Terms shall control solely with respect to the applicable Promotional Plan." },
+    ],
+  },
+  {
+    id: "community",
+    title: "Community Features, Conduct & Acceptable Use",
+    blocks: [
+      { type: "paragraph", text: "The Service may include community features such as groups, shared activities, messaging, or other user interactions." },
+      { type: "paragraph", text: "You agree to use the Service respectfully, lawfully, and in a manner consistent with its intended purpose." },
+      { type: "heading", text: "Acceptable Use" },
+      { type: "paragraph", text: "You agree not to use the Service, User Content, community features, or any information generated by the Service to:" },
+      { type: "bullets", items: [
+        "Violate any applicable law, regulation, or court order",
+        "Harass, threaten, intimidate, abuse, exploit, or harm another person",
+        "Promote violence, terrorism, extremism, hatred, discrimination, or illegal activity",
+        "Publish defamatory, fraudulent, misleading, deceptive, or knowingly false content",
+        "Impersonate another person, organization, or entity",
+        "Infringe the intellectual property, privacy, publicity, or other rights of any person or entity",
+        "Interfere with, disrupt, damage, or compromise the operation, security, integrity, or availability of the Service",
+        "Attempt to gain unauthorized access to any portion of the Service or its systems",
+        "Use automated means to scrape, harvest, collect, extract, or index data from the Service except as expressly authorized by ReComune",
+        "Generate, publish, distribute, or use content in a manner that falsely suggests endorsement, sponsorship, approval, affiliation, or religious authority from ReComune, the Muslim App, or any third party",
+        "Use the Service in a manner reasonably likely to damage the reputation, security, integrity, operation, or intended purpose of the Service",
+      ] },
+      { type: "paragraph", text: "ReComune may investigate suspected violations of these Terms and may remove content, restrict features, suspend accounts, terminate access, or take other actions reasonably necessary to protect users, the Service, or the public." },
+    ],
+  },
+  {
+    id: "intellectual-property",
+    title: "Intellectual Property",
+    blocks: [
+      { type: "paragraph", text: "The Service, including its software, design, branding, visual elements, content, scoring systems, achievements, analytics, methodologies, data structures, user interfaces, and other proprietary features (excluding User Content), is owned by ReComune and protected by applicable intellectual property laws." },
+      { type: "paragraph", text: "Except as expressly permitted by ReComune, you may not:" },
+      { type: "bullets", items: [
+        "Copy, reproduce, distribute, publish, display, transmit, or commercialize any part of the Service",
+        "Reverse engineer, decompile, disassemble, or attempt to derive source code from the Service",
+        "Scrape, systematically extract, or harvest data from the Service",
+        "Create derivative works based upon the Service or its proprietary features",
+        "Use the Service, its outputs, scoring systems, achievement frameworks, analytics, methodologies, or other proprietary elements to develop or support competing products or services",
+      ] },
+      { type: "paragraph", text: "Nothing in these Terms transfers ownership of any intellectual property rights from ReComune to you." },
+    ],
+  },
+  {
+    id: "termination",
+    title: "Termination",
+    blocks: [
+      { type: "paragraph", text: "You may stop using the Service or delete your account at any time." },
+      { type: "paragraph", text: "ReComune may suspend or discontinue the Service or your access where reasonably necessary." },
+      { type: "paragraph", text: "If you delete your account, we will stop processing your personal data for new purposes except as needed to comply with law, prevent abuse, resolve disputes, enforce agreements, or support legitimate business operations." },
+      { type: "paragraph", text: "Rights relating to aggregated or anonymized data survive termination." },
+    ],
+  },
+  {
+    id: "disclaimers",
+    title: "Disclaimers",
+    blocks: [
+      { type: "paragraph", text: "The Service is provided “as is” and “as available.”" },
+      { type: "paragraph", text: "To the fullest extent permitted by law, all warranties are disclaimed." },
+    ],
+  },
+  {
+    id: "liability",
+    title: "Limitation of Liability",
+    blocks: [
+      { type: "paragraph", text: "To the maximum extent permitted by law, ReComune shall not be liable for indirect or consequential damages." },
+      { type: "paragraph", text: "Total liability shall not exceed the amount paid by you in the prior 12 months, if any." },
+    ],
+  },
+  {
+    id: "disputes",
+    title: "Dispute Resolution",
+    blocks: [
+      { type: "paragraph", text: "We encourage informal resolution first." },
+      { type: "paragraph", text: "Where permitted by law, disputes shall be resolved through binding arbitration on an individual basis." },
+      { type: "paragraph", text: "This does not limit rights that cannot be waived under consumer protection laws." },
+    ],
+  },
+  {
+    id: "governing-law",
+    title: "Governing Law",
+    blocks: [
+      { type: "paragraph", text: "These Terms are governed by the laws of the State of Delaware." },
+    ],
+  },
+  {
+    id: "changes",
+    title: "Changes to These Terms",
+    blocks: [
+      { type: "paragraph", text: "We may update these Terms from time to time. Continued use of the Service constitutes acceptance of the updated Terms." },
+    ],
+  },
+  {
+    id: "contact",
+    title: "Contact Information",
+    blocks: [
+      { type: "paragraph", text: "ReComune, Inc." },
+      { type: "paragraph", text: "legal@recomune.com" },
+    ],
+  },
+];
+
+export default function TermsOfService() {
+  return (
+    <LegalPolicyPage
+      title="Terms of Service"
+      label="Legal Terms"
+      lastUpdated="Jun 4, 2026"
+      sections={sections}
+    />
+  );
+}

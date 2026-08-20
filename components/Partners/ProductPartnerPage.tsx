@@ -400,25 +400,21 @@ export default function ProductPartnerPage({ partner }: { partner: Partner }) {
 
     {/* Legal Links */}
     <div className="flex flex-wrap items-center gap-x-4 gap-y-3 text-sm">
-      <a
-        href="https://ourmuslimapp.com/legal/terms"
-        target="_blank"
-        rel="noopener noreferrer"
+      <Link
+        href="/legal/terms/"
         className="text-black/55 transition hover:text-black"
       >
         Terms of Service
-      </a>
+      </Link>
 
       <span className="hidden h-1 w-1 rounded-full bg-black/25 sm:block" />
 
-      <a
-        href="https://ourmuslimapp.com/legal/privacy"
-        target="_blank"
-        rel="noopener noreferrer"
+      <Link
+        href="/legal/privacy/"
         className="text-black/55 transition hover:text-black"
       >
         Privacy Policy
-      </a>
+      </Link>
 
       <span className="hidden h-1 w-1 rounded-full bg-black/25 sm:block" />
 

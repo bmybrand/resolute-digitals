@@ -2,6 +2,7 @@
 
 import React from "react";
 import Footersec from "@/components/Home/footersec";
+import { useActiveSection } from "@/utils/useActiveSection";
 import {
   FaArrowRight,
   FaChevronRight,
@@ -198,6 +199,8 @@ const navigationSections = [
 ];
 
 export default function RefundCancellationPolicy() {
+  const activeSection = useActiveSection(navigationSections.map((section) => section.id));
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
@@ -253,8 +256,19 @@ export default function RefundCancellationPolicy() {
               <p className="mb-6 text-xs font-semibold uppercase tracking-[0.18em] text-black/35">On This Page</p>
               <nav className="border-l border-black/10">
                 {navigationSections.map((section) => (
-                  <button key={section.id} onClick={() => scrollToSection(section.id)} className="group -ml-px flex w-full items-center gap-4 border-l-2 border-transparent py-3 pl-5 pr-2 text-left text-black/40 transition hover:border-black hover:text-black">
-                    <span className="min-w-[24px] text-[10px] font-semibold text-black/30">{section.number}</span>
+                  <button
+                    key={section.id}
+                    onClick={() => scrollToSection(section.id)}
+                    aria-current={activeSection === section.id ? "location" : undefined}
+                    className={`group -ml-px flex w-full items-center gap-4 border-l-2 py-3 pl-5 pr-2 text-left transition ${
+                      activeSection === section.id
+                        ? "border-black bg-black/[0.04] text-black"
+                        : "border-transparent text-black/40 hover:border-black hover:text-black"
+                    }`}
+                  >
+                    <span className={`min-w-[24px] text-[10px] font-semibold transition ${activeSection === section.id ? "text-black" : "text-black/30"}`}>
+                      {section.number}
+                    </span>
                     <span className="text-sm">{section.title}</span>
                   </button>
                 ))}
