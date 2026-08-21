@@ -11,10 +11,12 @@ import Rewiewcards from "@/components/Home/rewiewcards";
 import ContactSection from "./ContactSection";
 import Footersec from "../Home/footersec";
 import PartnersSection from "./PartnersSection";
+import ScrollToHash from "./ScrollToHash";
 export const dynamic = 'force-static'
 export default function AboutPage() {
   return (
     <div className="bg-[#000A21] min-h-[600vh]">
+    <ScrollToHash />
     <div className=" p-5 lg:p-9">
       <FloatingNavDemo />
       <Herosec/>

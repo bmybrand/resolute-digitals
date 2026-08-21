@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import Footersec from "@/components/Home/footersec";
 import { useActiveSection } from "@/utils/useActiveSection";
 import { FaChevronRight, FaFileContract, FaShieldHalved } from "react-icons/fa6";
@@ -44,6 +45,15 @@ export default function LegalPolicyPage({
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,.08),transparent_35%)]" />
 
           <div className="relative z-10 mx-auto max-w-4xl text-center">
+            <div className="mb-5 flex justify-center">
+              <Link
+                href="/"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-medium text-white/90 transition hover:bg-white/15 sm:text-sm"
+              >
+                <span aria-hidden="true">←</span>
+                Back to Home
+              </Link>
+            </div>
             <div className="mx-auto mb-6 flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/[0.06] px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em]">
               <FaFileContract />
               Muslim App Legal

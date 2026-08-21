@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   FaFacebookF,
@@ -99,6 +100,11 @@ const FooterSec = ({ variant = "default" }: FooterSecProps) => {
           label: "Business Affiliation",
           href: "/legal/business-affiliation/",
           external: false,
+        },
+        {
+          label: "Visit Product Site",
+          href: "https://ourmuslimapp.com/",
+          external: true,
         },
       ],
     },
@@ -463,7 +469,16 @@ const FooterSec = ({ variant = "default" }: FooterSecProps) => {
               className="w-full lg:flex-1 min-w-[200px]"
             >
               <h3 className="font-bold mb-4">
-                {col.title}
+                {col.title === "Muslim App" ? (
+                  <Link
+                    href="/partners/muslim-app/"
+                    className="transition-colors hover:text-white/70"
+                  >
+                    {col.title}
+                  </Link>
+                ) : (
+                  col.title
+                )}
               </h3>
 
               <ul className="space-y-5 text-white/70 mb-2">
