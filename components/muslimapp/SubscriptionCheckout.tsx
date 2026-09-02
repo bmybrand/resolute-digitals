@@ -76,6 +76,8 @@ function getPaymentStatusTone(status: string) {
     return {
       container: "border-[#B7E4C7] bg-[#F1FBF4] text-[#1B5E20]",
       icon: FaCheck,
+      iconWrap: "bg-[#1B5E20]",
+      badge: "bg-[#DDF5E6] text-[#1B5E20]",
     };
   }
 
@@ -83,6 +85,8 @@ function getPaymentStatusTone(status: string) {
     return {
       container: "border-[#F5D998] bg-[#FFF8E8] text-[#7A5A00]",
       icon: FaClock,
+      iconWrap: "bg-[#7A5A00]",
+      badge: "bg-[#FFF0CC] text-[#7A5A00]",
     };
   }
 
@@ -90,13 +94,111 @@ function getPaymentStatusTone(status: string) {
     return {
       container: "border-[#F0C8A8] bg-[#FFF4EA] text-[#8A3B12]",
       icon: FaCircleExclamation,
+      iconWrap: "bg-[#8A3B12]",
+      badge: "bg-[#FFE8D6] text-[#8A3B12]",
     };
   }
 
   return {
     container: "border-[#F0C8A8] bg-[#FFF4EA] text-[#8A3B12]",
     icon: FaCircleExclamation,
+    iconWrap: "bg-[#8A3B12]",
+    badge: "bg-[#FFE8D6] text-[#8A3B12]",
   };
+}
+
+function getPaymentStatusMeta(status: string) {
+  const normalized = status.toLowerCase();
+
+  if (normalized === "success") {
+    return {
+      label: "Success",
+      helper: "Muslim App Pro will activate as soon as payment is confirmed.",
+    };
+  }
+
+  if (normalized === "pending") {
+    return {
+      label: "Pending",
+      helper: "Approve the payment request on your phone to continue.",
+    };
+  }
+
+  if (normalized === "failed" || normalized.includes("reject")) {
+    return {
+      label: "Failed",
+      helper: "Check your wallet details and try again, or pay manually.",
+    };
+  }
+
+  return {
+    label: status,
+    helper: "Review the details below and try again if needed.",
+  };
+}
+
+function PaymentStatusBanner({ result }: { result: EwalletPaymentResponse }) {
+  const tone = getPaymentStatusTone(result.payment_status);
+  const meta = getPaymentStatusMeta(result.payment_status);
+  const Icon = tone.icon;
+
+  return (
+    <div
+      className={`mt-3 overflow-hidden rounded-xl border lg:mt-4 lg:rounded-2xl ${tone.container}`}
+      role="status"
+      aria-live="polite"
+    >
+      <div className="flex gap-3 p-3.5 lg:gap-4 lg:p-4">
+        <div
+          className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-white lg:h-10 lg:w-10 ${tone.iconWrap}`}
+        >
+          <Icon className="text-sm lg:text-base" aria-hidden />
+        </div>
+
+        <div className="min-w-0 flex-1">
+          <div className="flex flex-wrap items-start justify-between gap-x-3 gap-y-1.5">
+            <p className="bold pr-2 text-sm leading-snug lg:text-base">
+              {result.message}
+            </p>
+            <span
+              className={`shrink-0 rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.08em] lg:text-[11px] ${tone.badge}`}
+            >
+              {meta.label}
+            </span>
+          </div>
+
+          <p className="mt-1.5 text-xs leading-5 opacity-85 lg:text-sm">
+            {meta.helper}
+          </p>
+
+          {(result.transaction_id || result.order_id) && (
+            <dl className="mt-3 divide-y divide-black/[0.06] rounded-lg border border-black/[0.06] bg-white/70 lg:mt-3.5">
+              {result.transaction_id && (
+                <div className="grid gap-1 px-3 py-2.5 sm:grid-cols-[112px_1fr] sm:items-start sm:gap-3 lg:px-3.5">
+                  <dt className="text-[11px] font-medium text-[#666666] lg:text-xs">
+                    Transaction ID
+                  </dt>
+                  <dd className="break-all font-mono text-[11px] leading-5 text-[#222222] lg:text-xs">
+                    {result.transaction_id}
+                  </dd>
+                </div>
+              )}
+              {result.order_id && (
+                <div className="grid gap-1 px-3 py-2.5 sm:grid-cols-[112px_1fr] sm:items-start sm:gap-3 lg:px-3.5">
+                  <dt className="text-[11px] font-medium text-[#666666] lg:text-xs">
+                    Order ID
+                  </dt>
+                  <dd className="break-all font-mono text-[11px] leading-5 text-[#222222] lg:text-xs">
+                    {result.order_id}
+                  </dd>
+                </div>
+              )}
+            </dl>
+          )}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 function selectionCardClass(selected: boolean) {
@@ -162,10 +264,6 @@ export default function SubscriptionCheckout() {
 
   const paymentProvider =
     paymentMethod === "easypaisa" ? "Easypaisa" : "JazzCash";
-
-  const statusTone = paymentResult
-    ? getPaymentStatusTone(paymentResult.payment_status)
-    : null;
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -350,39 +448,24 @@ export default function SubscriptionCheckout() {
             </div>
 
             {catalogError && (
-              <div className="mt-3 rounded-xl border border-[#F0B4B4] bg-[#FFF3F3] px-3 py-2 text-xs text-[#9B1C1C] lg:mt-4 lg:rounded-2xl lg:px-3.5 lg:py-2.5 lg:text-sm">
-                {catalogError}
-              </div>
-            )}
-
-            {paymentResult && statusTone && (
               <div
-                className={`mt-3 rounded-xl border px-3 py-2.5 text-xs lg:mt-4 lg:rounded-2xl lg:px-3.5 lg:py-3 lg:text-sm ${statusTone.container}`}
+                className="mt-3 flex gap-3 rounded-xl border border-[#F0B4B4] bg-[#FFF3F3] p-3.5 text-[#9B1C1C] lg:mt-4 lg:rounded-2xl lg:p-4"
+                role="alert"
               >
-                <div className="flex items-start gap-2 lg:gap-2.5">
-                  <statusTone.icon className="mt-0.5 shrink-0 text-sm lg:text-base" />
-                  <div className="min-w-0 flex-1">
-                    <p className="bold text-xs lg:text-sm">{paymentResult.message}</p>
-                    <p className="mt-1 lg:mt-1.5">
-                      Status:{" "}
-                      <span className="font-medium capitalize">
-                        {paymentResult.payment_status}
-                      </span>
-                    </p>
-                    {paymentResult.transaction_id && (
-                      <p className="mt-0.5 break-all text-[10px] opacity-90">
-                        Transaction ID: {paymentResult.transaction_id}
-                      </p>
-                    )}
-                    {paymentResult.order_id && (
-                      <p className="mt-0.5 break-all text-[10px] opacity-90">
-                        Order ID: {paymentResult.order_id}
-                      </p>
-                    )}
-                  </div>
+                <FaCircleExclamation
+                  className="mt-0.5 shrink-0 text-sm lg:text-base"
+                  aria-hidden
+                />
+                <div>
+                  <p className="bold text-xs lg:text-sm">Unable to load plans</p>
+                  <p className="mt-1 text-xs leading-5 opacity-90 lg:text-sm">
+                    {catalogError}
+                  </p>
                 </div>
               </div>
             )}
+
+            {paymentResult && <PaymentStatusBanner result={paymentResult} />}
           </div>
 
           <form
@@ -498,8 +581,15 @@ export default function SubscriptionCheckout() {
 
             <div className="shrink-0 pb-1">
               {submitError && (
-                <div className="mb-2 rounded-xl border border-[#F0B4B4] bg-[#FFF3F3] px-3 py-2 text-xs text-[#9B1C1C] lg:mb-3 lg:rounded-2xl lg:px-3.5 lg:py-2.5 lg:text-sm">
-                  {submitError}
+                <div
+                  className="mb-2 flex gap-3 rounded-xl border border-[#F0B4B4] bg-[#FFF3F3] p-3 text-[#9B1C1C] lg:mb-3 lg:rounded-2xl lg:p-3.5"
+                  role="alert"
+                >
+                  <FaCircleExclamation
+                    className="mt-0.5 shrink-0 text-sm"
+                    aria-hidden
+                  />
+                  <p className="text-xs leading-5 lg:text-sm">{submitError}</p>
                 </div>
               )}
 
