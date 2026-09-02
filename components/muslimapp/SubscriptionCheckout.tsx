@@ -58,11 +58,11 @@ function PaymentLogo({ provider }: { provider: PaymentProvider }) {
 
 function PlanSkeleton() {
   return (
-    <div className="grid gap-2 sm:grid-cols-2">
+    <div className="grid grid-cols-2 gap-2 sm:gap-2.5">
       {[0, 1].map((item) => (
         <div
           key={item}
-          className="h-[72px] animate-pulse rounded-xl border border-[#E8E8E8] bg-[#F7F7F7]"
+          className="h-16 animate-pulse rounded-xl border border-[#E8E8E8] bg-[#F7F7F7] sm:h-[72px] lg:h-16 xl:h-[72px]"
         />
       ))}
     </div>
@@ -207,9 +207,9 @@ export default function SubscriptionCheckout() {
   };
 
   return (
-    <div className="flex h-full flex-col overflow-hidden bg-white text-[#141414]">
-      <header className="shrink-0 border-b border-[#ECECEC] px-5 py-2.5 sm:px-8 lg:px-10">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
+    <div className="flex min-h-dvh flex-col bg-white text-[#141414] lg:h-full lg:min-h-0 lg:overflow-hidden">
+      <header className="shrink-0 border-b border-[#ECECEC] px-4 py-2 sm:px-6 sm:py-2.5 lg:px-8 xl:px-10">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 sm:gap-4">
           <Link
             href="/"
             className="flex shrink-0 items-center transition hover:opacity-80"
@@ -220,16 +220,16 @@ export default function SubscriptionCheckout() {
               alt="Resolute Digitals"
               width={148}
               height={36}
-              className="h-7 w-auto object-contain sm:h-8"
+              className="h-6 w-auto object-contain sm:h-7 md:h-8"
               priority
             />
           </Link>
 
           <Link
             href="/partners/muslim-app/"
-            className="flex shrink-0 items-center gap-2 rounded-lg border border-[#E8E8E8] bg-[#FAFAFA] px-2.5 py-1.5 transition hover:border-[#D0D0D0]"
+            className="flex shrink-0 items-center gap-1.5 rounded-lg border border-[#E8E8E8] bg-[#FAFAFA] px-2 py-1 transition hover:border-[#D0D0D0] sm:gap-2 sm:px-2.5 sm:py-1.5"
           >
-            <div className="flex h-6 w-6 items-center justify-center overflow-hidden rounded-md bg-black p-0.5">
+            <div className="flex h-5 w-5 items-center justify-center overflow-hidden rounded-md bg-black p-0.5 sm:h-6 sm:w-6">
               <Image
                 src="/assets/muslim-app-logo.png"
                 alt=""
@@ -239,15 +239,36 @@ export default function SubscriptionCheckout() {
                 aria-hidden
               />
             </div>
-            <span className="hidden text-xs text-[#555555] sm:inline">
+            <span className="text-[11px] text-[#555555] sm:text-xs">
               The Muslim App
             </span>
           </Link>
         </div>
       </header>
 
-      <main className="mx-auto grid min-h-0 w-full max-w-6xl flex-1 lg:grid-cols-[0.9fr_1.1fr] lg:overflow-hidden">
-        <section className="hidden min-h-0 flex-col overflow-y-auto border-b border-[#ECECEC] bg-[#F7F7F7] px-5 py-4 sm:px-8 lg:flex lg:border-b-0 lg:border-r lg:px-7 lg:py-5">
+      {selectedPlan && (
+        <div className="shrink-0 border-b border-[#ECECEC] bg-[#F7F7F7] px-4 py-3 sm:px-6 lg:hidden">
+          <div className="mx-auto flex max-w-6xl items-center justify-between gap-3">
+            <div className="min-w-0">
+              <p className="truncate text-[11px] text-[#666666] sm:text-xs">
+                {selectedPlan.label} · Muslim App Pro
+              </p>
+              <p className="bold mt-0.5 text-xl leading-none tracking-[-0.03em] sm:text-2xl">
+                {formatPlanPrice(selectedPlan)}
+              </p>
+            </div>
+            <p className="shrink-0 text-right text-[11px] text-[#666666] sm:text-xs">
+              Due today
+              <span className="bold mt-0.5 block text-sm text-[#222222] sm:text-base">
+                {formatPlanPrice(selectedPlan)}
+              </span>
+            </p>
+          </div>
+        </div>
+      )}
+
+      <main className="mx-auto grid min-h-0 w-full max-w-6xl flex-1 lg:grid-cols-[minmax(260px,0.88fr)_minmax(0,1.12fr)] lg:overflow-hidden">
+        <section className="hidden min-h-0 flex-col overflow-y-auto border-b border-[#ECECEC] bg-[#F7F7F7] px-5 py-4 sm:px-6 lg:flex lg:border-b-0 lg:border-r lg:px-6 lg:py-4 xl:px-7 xl:py-5">
           <Link
             href="/partners/muslim-app/"
             className="inline-flex items-center gap-1.5 text-xs text-[#666666] transition hover:text-black"
@@ -256,11 +277,11 @@ export default function SubscriptionCheckout() {
             Back to Muslim App
           </Link>
 
-          <div className="mt-3">
+          <div className="mt-2 xl:mt-3">
             <p className="text-xs text-[#555555]">Subscribe to Muslim App Pro</p>
             {selectedPlan ? (
               <div className="mt-1 flex flex-wrap items-end gap-x-2 gap-y-0.5">
-                <h1 className="bold text-[30px] leading-none tracking-[-0.03em]">
+                <h1 className="bold text-[26px] leading-none tracking-[-0.03em] xl:text-[30px]">
                   {formatPlanPrice(selectedPlan)}
                 </h1>
                 <p className="pb-0.5 text-xs text-[#666666]">
@@ -273,15 +294,17 @@ export default function SubscriptionCheckout() {
           </div>
 
           {selectedPlan && (
-            <div className="mt-3 rounded-xl border border-[#E4E4E4] bg-white p-3">
+            <div className="mt-2 rounded-xl border border-[#E4E4E4] bg-white p-2.5 xl:mt-3 xl:p-3">
               <div className="flex items-start justify-between gap-3">
-                <div>
-                  <p className="bold text-xs">{selectedPlan.label}</p>
+                <div className="min-w-0">
+                  <p className="bold truncate text-xs">{selectedPlan.label}</p>
                   <p className="mt-0.5 text-[11px] text-[#666666]">
                     Muslim App Pro access
                   </p>
                 </div>
-                <p className="bold text-xs">{formatPlanPrice(selectedPlan)}</p>
+                <p className="bold shrink-0 text-xs">
+                  {formatPlanPrice(selectedPlan)}
+                </p>
               </div>
 
               <div className="my-2 h-px bg-[#ECECEC]" />
@@ -303,7 +326,7 @@ export default function SubscriptionCheckout() {
             </div>
           )}
 
-          <ul className="mt-3 space-y-1.5 text-xs text-[#555555]">
+          <ul className="mt-2 space-y-1.5 text-xs text-[#555555] xl:mt-3">
             <li className="flex items-start gap-2">
               <FaCheck className="mt-0.5 shrink-0 text-[10px] text-[#777777]" />
               <span>Pro activates as soon as your payment is confirmed.</span>
@@ -314,23 +337,23 @@ export default function SubscriptionCheckout() {
             </li>
           </ul>
 
-          <p className="mt-3 flex items-center gap-1.5 text-[10px] text-[#888888] lg:mt-auto">
+          <p className="mt-2 flex items-center gap-1.5 text-[10px] text-[#888888] lg:mt-auto xl:mt-3">
             <FaLock className="text-[9px]" />
             Resolute Digitals · Secure checkout powered by Swich
           </p>
         </section>
 
-        <section className="flex min-h-0 flex-col overflow-hidden px-5 py-4 sm:px-8 lg:px-7 lg:py-5">
+        <section className="flex min-h-0 flex-col overflow-hidden px-4 py-3 sm:px-6 sm:py-4 lg:px-6 lg:py-4 xl:px-7 xl:py-5">
           <div className="shrink-0">
-            <h2 className="bold text-2xl leading-tight tracking-[-0.03em]">
+            <h2 className="bold text-xl leading-tight tracking-[-0.03em] sm:text-2xl">
               Complete your subscription
             </h2>
-            <p className="mt-1 max-w-xl text-xs leading-5 text-[#666666]">
+            <p className="mt-1 max-w-xl text-[11px] leading-5 text-[#666666] sm:text-xs">
               Choose your wallet and approve the payment request from your phone.
             </p>
 
-            <div className="mt-2 inline-flex items-center gap-2 rounded-full border border-[#E8E8E8] bg-[#F8F8F8] px-2.5 py-1">
-              <div className="flex h-5 w-5 items-center justify-center overflow-hidden rounded bg-black p-0.5">
+            <div className="mt-2 inline-flex max-w-full items-center gap-2 rounded-full border border-[#E8E8E8] bg-[#F8F8F8] px-2.5 py-1">
+              <div className="flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded bg-black p-0.5">
                 <Image
                   src="/assets/muslim-app-logo.png"
                   alt=""
@@ -340,7 +363,7 @@ export default function SubscriptionCheckout() {
                   aria-hidden
                 />
               </div>
-              <span className="text-[11px] text-[#666666]">
+              <span className="truncate text-[11px] text-[#666666]">
                 <span className="text-[#999999]">Product</span>
                 <span aria-hidden="true" className="mx-1">
                   ·
@@ -350,14 +373,14 @@ export default function SubscriptionCheckout() {
             </div>
 
             {catalogError && (
-              <div className="mt-3 rounded-xl border border-[#F0B4B4] bg-[#FFF3F3] px-3 py-2 text-xs text-[#9B1C1C]">
+              <div className="mt-2 rounded-xl border border-[#F0B4B4] bg-[#FFF3F3] px-3 py-2 text-xs text-[#9B1C1C] sm:mt-3">
                 {catalogError}
               </div>
             )}
 
             {paymentResult && statusTone && (
               <div
-                className={`mt-3 rounded-xl border px-3 py-2.5 text-xs ${statusTone.container}`}
+                className={`mt-2 rounded-xl border px-3 py-2.5 text-xs sm:mt-3 ${statusTone.container}`}
               >
                 <div className="flex items-start gap-2">
                   <statusTone.icon className="mt-0.5 shrink-0 text-sm" />
@@ -386,16 +409,16 @@ export default function SubscriptionCheckout() {
           </div>
 
           <form
-            className="mt-4 flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto overscroll-contain pr-0.5"
+            className="mt-3 flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto overscroll-contain sm:mt-4 sm:gap-4 lg:mt-3 lg:gap-3 xl:mt-4 xl:gap-4 [@media(max-height:820px)]:gap-2.5"
             onSubmit={handleSubmit}
           >
             <div>
               <h3 className="bold text-xs text-[#222222]">Choose your plan</h3>
-              <div className="mt-2">
+              <div className="mt-1.5 sm:mt-2">
                 {isLoadingPlans ? (
                   <PlanSkeleton />
                 ) : (
-                  <div className="grid gap-2 sm:grid-cols-2">
+                  <div className="grid grid-cols-2 gap-2 sm:gap-2.5">
                     {plans.map((plan) => {
                       const selected = selectedPlanId === plan.id;
                       return (
@@ -403,13 +426,15 @@ export default function SubscriptionCheckout() {
                           key={plan.id}
                           type="button"
                           onClick={() => setSelectedPlanId(plan.id)}
-                          className={`rounded-xl border px-3 py-2.5 text-left transition ${selectionCardClass(selected)}`}
+                          className={`rounded-xl border px-2.5 py-2 text-left transition sm:px-3 sm:py-2.5 lg:px-2.5 lg:py-2 xl:px-3 xl:py-2.5 ${selectionCardClass(selected)}`}
                         >
-                          <p className="text-[11px] text-[#666666]">{plan.label}</p>
-                          <p className="bold mt-0.5 text-base leading-none tracking-[-0.02em]">
+                          <p className="truncate text-[10px] text-[#666666] sm:text-[11px]">
+                            {plan.label}
+                          </p>
+                          <p className="bold mt-0.5 text-sm leading-none tracking-[-0.02em] sm:text-base">
                             {formatPlanPrice(plan)}
                           </p>
-                          <p className="mt-1 text-[11px] text-[#666666]">
+                          <p className="mt-0.5 truncate text-[10px] text-[#666666] sm:mt-1 sm:text-[11px]">
                             {formatPlanDuration(plan)}
                           </p>
                         </button>
@@ -418,7 +443,7 @@ export default function SubscriptionCheckout() {
                   </div>
                 )}
               </div>
-              <p className="mt-1.5 text-[11px] leading-4 text-[#666666]">
+              <p className="mt-1 hidden text-[11px] leading-4 text-[#666666] sm:block lg:[@media(max-height:780px)]:hidden">
                 If you already subscribe, this time is added to your current
                 expiry date.
               </p>
@@ -426,7 +451,7 @@ export default function SubscriptionCheckout() {
 
             <div>
               <h3 className="bold text-xs text-[#222222]">Pay with</h3>
-              <div className="mt-2 grid gap-2 sm:grid-cols-2">
+              <div className="mt-1.5 grid grid-cols-2 gap-2 sm:mt-2 sm:gap-2.5">
                 {(["easypaisa", "jazzcash"] as PaymentProvider[]).map((provider) => {
                   const selected = paymentMethod === provider;
                   return (
@@ -435,14 +460,14 @@ export default function SubscriptionCheckout() {
                       type="button"
                       onClick={() => setPaymentMethod(provider)}
                       aria-pressed={selected}
-                      className={`flex min-h-[48px] items-center justify-center rounded-xl border px-3 py-2 transition ${selectionCardClass(selected)}`}
+                      className={`flex min-h-[44px] items-center justify-center rounded-xl border px-2 py-1.5 transition sm:min-h-[48px] sm:px-3 sm:py-2 lg:min-h-[44px] xl:min-h-[48px] ${selectionCardClass(selected)}`}
                     >
                       <PaymentLogo provider={provider} />
                     </button>
                   );
                 })}
               </div>
-              <p className="mt-1.5 text-[11px] leading-4 text-[#666666]">
+              <p className="mt-1 hidden text-[11px] leading-4 text-[#666666] sm:block lg:[@media(max-height:780px)]:hidden">
                 Use its registered mobile number and keep your phone nearby to
                 approve the payment.
               </p>
@@ -450,7 +475,7 @@ export default function SubscriptionCheckout() {
 
             <div>
               <h3 className="bold text-xs text-[#222222]">Contact information</h3>
-              <div className="mt-2 grid gap-2 sm:grid-cols-2">
+              <div className="mt-1.5 grid grid-cols-1 gap-2 min-[480px]:grid-cols-2 sm:mt-2">
                 <label className="block">
                   <span className="mb-1 block text-[11px] text-[#555555]">Name</span>
                   <input
@@ -458,7 +483,7 @@ export default function SubscriptionCheckout() {
                     value={name}
                     onChange={(event) => setName(event.target.value)}
                     placeholder="As it appears on your account"
-                    className="w-full rounded-lg border border-[#E4E4E4] bg-white px-3 py-2 text-sm outline-none transition placeholder:text-[#A8A8A8] focus:border-[#999999]"
+                    className="w-full rounded-lg border border-[#E4E4E4] bg-white px-3 py-2 text-sm outline-none transition placeholder:text-[#A8A8A8] focus:border-[#999999] lg:py-1.5 xl:py-2"
                     autoComplete="name"
                     required
                     disabled={isSubmitting}
@@ -471,7 +496,7 @@ export default function SubscriptionCheckout() {
                     value={email}
                     onChange={(event) => setEmail(event.target.value)}
                     placeholder="you@example.com"
-                    className="w-full rounded-lg border border-[#E4E4E4] bg-white px-3 py-2 text-sm outline-none transition placeholder:text-[#A8A8A8] focus:border-[#999999]"
+                    className="w-full rounded-lg border border-[#E4E4E4] bg-white px-3 py-2 text-sm outline-none transition placeholder:text-[#A8A8A8] focus:border-[#999999] lg:py-1.5 xl:py-2"
                     autoComplete="email"
                     required
                     disabled={isSubmitting}
@@ -487,7 +512,7 @@ export default function SubscriptionCheckout() {
                   value={mobile}
                   onChange={(event) => setMobile(event.target.value)}
                   placeholder="03001234567"
-                  className="w-full rounded-lg border border-[#E4E4E4] bg-white px-3 py-2 text-sm outline-none transition placeholder:text-[#A8A8A8] focus:border-[#999999]"
+                  className="w-full rounded-lg border border-[#E4E4E4] bg-white px-3 py-2 text-sm outline-none transition placeholder:text-[#A8A8A8] focus:border-[#999999] lg:py-1.5 xl:py-2"
                   autoComplete="tel"
                   inputMode="tel"
                   required
@@ -496,7 +521,7 @@ export default function SubscriptionCheckout() {
               </label>
             </div>
 
-            <div className="shrink-0 pb-1">
+            <div className="sticky bottom-0 shrink-0 bg-white pb-1 pt-1 sm:static sm:bg-transparent sm:pb-1 sm:pt-0">
               {submitError && (
                 <div className="mb-2 rounded-xl border border-[#F0B4B4] bg-[#FFF3F3] px-3 py-2 text-xs text-[#9B1C1C]">
                   {submitError}
@@ -508,7 +533,7 @@ export default function SubscriptionCheckout() {
                 disabled={
                   isSubmitting || isLoadingPlans || !selectedPlan || !!catalogError
                 }
-                className="bold w-full rounded-lg bg-[#333333] px-4 py-2.5 text-sm text-white transition hover:bg-black disabled:cursor-not-allowed disabled:bg-[#333333]/55"
+                className="bold w-full rounded-lg bg-[#333333] px-4 py-2.5 text-sm text-white transition hover:bg-black disabled:cursor-not-allowed disabled:bg-[#333333]/55 lg:py-2 xl:py-2.5"
               >
                 {isSubmitting
                   ? "Processing payment..."
@@ -516,7 +541,7 @@ export default function SubscriptionCheckout() {
                     ? `Pay ${formatPlanPrice(selectedPlan)}`
                     : "Pay"}
               </button>
-              <p className="mt-2 flex flex-wrap items-center gap-x-1 gap-y-0.5 text-[10px] leading-4 text-[#888888]">
+              <p className="mt-1.5 flex flex-wrap items-center gap-x-1 gap-y-0.5 text-[10px] leading-4 text-[#888888] sm:mt-2">
                 <FaLock className="mr-0.5 text-[9px]" />
                 Your PIN or MPIN stays with {paymentProvider}; we never receive
                 it. Prefer another way?
