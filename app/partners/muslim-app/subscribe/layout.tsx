@@ -8,34 +8,27 @@ export default function SubscribeLayout({
   children: React.ReactNode;
 }) {
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+    const html = document.documentElement;
+    const body = document.body;
+    const prevHtmlOverflow = html.style.overflow;
+    const prevBodyOverflow = body.style.overflow;
+    const prevHtmlHeight = html.style.height;
+    const prevBodyHeight = body.style.height;
 
-    const applyScrollLock = () => {
-      const html = document.documentElement;
-      const body = document.body;
-      const lock = mediaQuery.matches;
-
-      html.style.overflow = lock ? "hidden" : "";
-      body.style.overflow = lock ? "hidden" : "";
-      html.style.height = lock ? "100%" : "";
-      body.style.height = lock ? "100%" : "";
-    };
-
-    applyScrollLock();
-    mediaQuery.addEventListener("change", applyScrollLock);
+    html.style.overflow = "hidden";
+    body.style.overflow = "hidden";
+    html.style.height = "100%";
+    body.style.height = "100%";
 
     return () => {
-      mediaQuery.removeEventListener("change", applyScrollLock);
-      document.documentElement.style.overflow = "";
-      document.body.style.overflow = "";
-      document.documentElement.style.height = "";
-      document.body.style.height = "";
+      html.style.overflow = prevHtmlOverflow;
+      body.style.overflow = prevBodyOverflow;
+      html.style.height = prevHtmlHeight;
+      body.style.height = prevBodyHeight;
     };
   }, []);
 
   return (
-    <div className="min-h-dvh bg-white lg:fixed lg:inset-0 lg:overflow-hidden">
-      {children}
-    </div>
+    <div className="fixed inset-0 overflow-hidden bg-white">{children}</div>
   );
 }
