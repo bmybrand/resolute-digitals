@@ -33,6 +33,8 @@ export const muslimAppApiUrl =
   process.env.NEXT_PUBLIC_MUSLIM_APP_API_URL?.trim() ||
   "https://muslim-app-backend-dev--muslimapp-prod.us-east4.hosted.app";
 
+const subscriptionProxyBase = "/api/muslim-app-subscription.php";
+
 async function parseJsonResponse<T>(response: Response): Promise<T> {
   const data = await response.json().catch(() => null);
 
@@ -44,6 +46,9 @@ async function parseJsonResponse<T>(response: Response): Promise<T> {
       (data && typeof data === "object" && "detail" in data && typeof data.detail === "string"
         ? data.detail
         : null) ||
+      (data && typeof data === "object" && "error" in data && typeof data.error === "string"
+        ? data.error
+        : null) ||
       `Request failed (${response.status})`;
     throw new Error(message);
   }
@@ -52,7 +57,7 @@ async function parseJsonResponse<T>(response: Response): Promise<T> {
 }
 
 export async function fetchSubscriptionCatalog(): Promise<SubscriptionCatalog> {
-  const response = await fetch(`${muslimAppApiUrl}/subscription-requests/catalog`, {
+  const response = await fetch(`${subscriptionProxyBase}?action=catalog`, {
     method: "GET",
     headers: { Accept: "application/json" },
   });
@@ -63,7 +68,7 @@ export async function fetchSubscriptionCatalog(): Promise<SubscriptionCatalog> {
 export async function startEwalletPayment(
   payload: EwalletPaymentRequest,
 ): Promise<EwalletPaymentResponse> {
-  const response = await fetch(`${muslimAppApiUrl}/swich/ewallet`, {
+  const response = await fetch(`${subscriptionProxyBase}?action=ewallet`, {
     method: "POST",
     headers: {
       Accept: "application/json",
