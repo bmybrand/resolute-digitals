@@ -25,17 +25,17 @@ import {
 function PaymentLogo({ provider }: { provider: PaymentProvider }) {
   if (provider === "easypaisa") {
     return (
-      <span className="flex h-7 items-center gap-2" aria-label="Easypaisa">
+      <span className="flex h-6 items-center gap-1.5" aria-label="Easypaisa">
         <Image
           src="/assets/payments/easypaisa-mark.png"
           alt=""
-          width={24}
-          height={24}
-          className="h-6 w-6 shrink-0 object-contain"
+          width={20}
+          height={20}
+          className="h-5 w-5 shrink-0 object-contain"
           aria-hidden
           priority
         />
-        <span className="text-[15px] font-semibold lowercase leading-none tracking-tight text-[#00A651]">
+        <span className="text-sm font-semibold lowercase leading-none tracking-tight text-[#00A651]">
           easypaisa
         </span>
       </span>
@@ -43,13 +43,13 @@ function PaymentLogo({ provider }: { provider: PaymentProvider }) {
   }
 
   return (
-    <span className="flex h-7 items-center">
+    <span className="flex h-6 items-center">
       <Image
         src="/assets/payments/jazzcash-logo.svg"
         alt="JazzCash"
-        width={118}
-        height={32}
-        className="h-7 w-auto object-contain"
+        width={100}
+        height={28}
+        className="h-6 w-auto object-contain"
         priority
       />
     </span>
@@ -58,11 +58,11 @@ function PaymentLogo({ provider }: { provider: PaymentProvider }) {
 
 function PlanSkeleton() {
   return (
-    <div className="grid gap-2.5 sm:grid-cols-2">
+    <div className="grid gap-2 sm:grid-cols-2">
       {[0, 1].map((item) => (
         <div
           key={item}
-          className="h-[88px] animate-pulse rounded-2xl border border-[#E8E8E8] bg-[#F7F7F7]"
+          className="h-[72px] animate-pulse rounded-xl border border-[#E8E8E8] bg-[#F7F7F7]"
         />
       ))}
     </div>
@@ -207,74 +207,70 @@ export default function SubscriptionCheckout() {
   };
 
   return (
-    <div className="flex h-dvh flex-col overflow-hidden bg-white text-[#141414]">
-      <header className="shrink-0 border-b border-[#ECECEC] px-5 py-3.5 sm:px-8 lg:px-10">
-        <div className="mx-auto flex max-w-6xl items-center gap-2.5">
-          <div className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-xl bg-black p-1.5">
+    <div className="flex h-full flex-col overflow-hidden bg-white text-[#141414]">
+      <header className="shrink-0 border-b border-[#ECECEC] px-5 py-2.5 sm:px-8 lg:px-10">
+        <div className="mx-auto flex max-w-6xl items-center gap-2">
+          <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg bg-black p-1">
             <Image
               src="/assets/muslim-app-logo.png"
               alt="The Muslim App"
-              width={36}
-              height={36}
+              width={32}
+              height={32}
               className="h-full w-full object-contain"
             />
           </div>
-          <span className="bold text-base tracking-tight">The Muslim App</span>
+          <span className="bold text-sm tracking-tight">The Muslim App</span>
         </div>
       </header>
 
-      <main className="mx-auto grid min-h-0 w-full max-w-6xl flex-1 lg:grid-cols-[0.95fr_1.05fr] lg:overflow-hidden">
-        <section className="flex flex-col border-b border-[#ECECEC] bg-[#F7F7F7] px-5 py-6 sm:px-8 lg:border-b-0 lg:border-r lg:px-8 lg:py-7">
+      <main className="mx-auto grid min-h-0 w-full max-w-6xl flex-1 lg:grid-cols-[0.9fr_1.1fr] lg:overflow-hidden">
+        <section className="hidden min-h-0 flex-col overflow-y-auto border-b border-[#ECECEC] bg-[#F7F7F7] px-5 py-4 sm:px-8 lg:flex lg:border-b-0 lg:border-r lg:px-7 lg:py-5">
           <Link
             href="/partners/muslim-app/"
-            className="inline-flex items-center gap-2 text-sm text-[#666666] transition hover:text-black"
+            className="inline-flex items-center gap-1.5 text-xs text-[#666666] transition hover:text-black"
           >
             <span aria-hidden="true">←</span>
             Back to Muslim App
           </Link>
 
-          <div className="mt-5">
-            <p className="text-sm text-[#555555]">
-              Subscribe to Muslim App Pro
-            </p>
+          <div className="mt-3">
+            <p className="text-xs text-[#555555]">Subscribe to Muslim App Pro</p>
             {selectedPlan ? (
-              <div className="mt-2 flex flex-wrap items-end gap-x-2.5 gap-y-1">
-                <h1 className="bold text-[36px] leading-none tracking-[-0.03em] sm:text-[40px]">
+              <div className="mt-1 flex flex-wrap items-end gap-x-2 gap-y-0.5">
+                <h1 className="bold text-[30px] leading-none tracking-[-0.03em]">
                   {formatPlanPrice(selectedPlan)}
                 </h1>
-                <p className="pb-1 text-sm text-[#666666]">
+                <p className="pb-0.5 text-xs text-[#666666]">
                   {formatPlanDuration(selectedPlan)}
                 </p>
               </div>
             ) : (
-              <div className="mt-2 h-10 w-40 animate-pulse rounded-xl bg-black/[0.06]" />
+              <div className="mt-1 h-8 w-32 animate-pulse rounded-lg bg-black/[0.06]" />
             )}
           </div>
 
           {selectedPlan && (
-            <div className="mt-5 rounded-2xl border border-[#E4E4E4] bg-white p-4">
-              <div className="flex items-start justify-between gap-4">
+            <div className="mt-3 rounded-xl border border-[#E4E4E4] bg-white p-3">
+              <div className="flex items-start justify-between gap-3">
                 <div>
-                  <p className="bold text-sm">{selectedPlan.label}</p>
-                  <p className="mt-0.5 text-xs text-[#666666]">
+                  <p className="bold text-xs">{selectedPlan.label}</p>
+                  <p className="mt-0.5 text-[11px] text-[#666666]">
                     Muslim App Pro access
                   </p>
                 </div>
-                <p className="bold text-sm">
-                  {formatPlanPrice(selectedPlan)}
-                </p>
+                <p className="bold text-xs">{formatPlanPrice(selectedPlan)}</p>
               </div>
 
-              <div className="my-3 h-px bg-[#ECECEC]" />
+              <div className="my-2 h-px bg-[#ECECEC]" />
 
-              <div className="space-y-2.5 text-sm">
-                <div className="flex items-center justify-between gap-4">
+              <div className="space-y-1.5 text-xs">
+                <div className="flex items-center justify-between gap-3">
                   <span className="text-[#666666]">Access until</span>
                   <span className="font-medium text-[#222222]">
                     {formatAccessUntil(selectedPlan)}
                   </span>
                 </div>
-                <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center justify-between gap-3">
                   <span className="bold text-[#222222]">Total due today</span>
                   <span className="bold text-[#222222]">
                     {formatPlanPrice(selectedPlan)}
@@ -284,76 +280,79 @@ export default function SubscriptionCheckout() {
             </div>
           )}
 
-          <ul className="mt-5 space-y-2.5 text-sm text-[#555555]">
-            <li className="flex items-start gap-2.5">
-              <FaCheck className="mt-0.5 shrink-0 text-[#777777]" />
-              <span>
-                Pro activates as soon as your payment is confirmed.
-              </span>
+          <ul className="mt-3 space-y-1.5 text-xs text-[#555555]">
+            <li className="flex items-start gap-2">
+              <FaCheck className="mt-0.5 shrink-0 text-[10px] text-[#777777]" />
+              <span>Pro activates as soon as your payment is confirmed.</span>
             </li>
-            <li className="flex items-start gap-2.5">
-              <FaShieldHalved className="mt-0.5 shrink-0 text-[#777777]" />
+            <li className="flex items-start gap-2">
+              <FaShieldHalved className="mt-0.5 shrink-0 text-[10px] text-[#777777]" />
               <span>Your existing paid time is always preserved.</span>
             </li>
           </ul>
 
-          <p className="mt-5 flex items-center gap-2 text-xs text-[#888888] lg:mt-auto">
-            <FaLock className="text-[11px]" />
+          <p className="mt-3 flex items-center gap-1.5 text-[10px] text-[#888888] lg:mt-auto">
+            <FaLock className="text-[9px]" />
             Secure checkout powered by Swich
           </p>
         </section>
 
-        <section className="min-h-0 overflow-y-auto px-5 py-6 sm:px-8 lg:px-8 lg:py-7">
-          <h2 className="bold text-[28px] leading-tight tracking-[-0.03em] sm:text-[32px]">
-            Complete your subscription
-          </h2>
-          <p className="mt-2 max-w-xl text-sm leading-6 text-[#666666]">
-            Choose your wallet and approve the payment request from your phone.
-          </p>
+        <section className="flex min-h-0 flex-col overflow-hidden px-5 py-4 sm:px-8 lg:px-7 lg:py-5">
+          <div className="shrink-0">
+            <h2 className="bold text-2xl leading-tight tracking-[-0.03em]">
+              Complete your subscription
+            </h2>
+            <p className="mt-1 max-w-xl text-xs leading-5 text-[#666666]">
+              Choose your wallet and approve the payment request from your phone.
+            </p>
 
-          {catalogError && (
-            <div className="mt-4 rounded-2xl border border-[#F0B4B4] bg-[#FFF3F3] px-3.5 py-2.5 text-sm text-[#9B1C1C]">
-              {catalogError}
-            </div>
-          )}
+            {catalogError && (
+              <div className="mt-3 rounded-xl border border-[#F0B4B4] bg-[#FFF3F3] px-3 py-2 text-xs text-[#9B1C1C]">
+                {catalogError}
+              </div>
+            )}
 
-          {paymentResult && statusTone && (
-            <div
-              className={`mt-4 rounded-2xl border px-3.5 py-3 text-sm ${statusTone.container}`}
-            >
-              <div className="flex items-start gap-2.5">
-                <statusTone.icon className="mt-0.5 shrink-0 text-base" />
-                <div className="min-w-0 flex-1">
-                  <p className="bold text-sm">{paymentResult.message}</p>
-                  <p className="mt-1.5">
-                    Status:{" "}
-                    <span className="font-medium capitalize">
-                      {paymentResult.payment_status}
-                    </span>
-                  </p>
-                  {paymentResult.transaction_id && (
-                    <p className="mt-1 break-all text-xs opacity-90">
-                      Transaction ID: {paymentResult.transaction_id}
+            {paymentResult && statusTone && (
+              <div
+                className={`mt-3 rounded-xl border px-3 py-2.5 text-xs ${statusTone.container}`}
+              >
+                <div className="flex items-start gap-2">
+                  <statusTone.icon className="mt-0.5 shrink-0 text-sm" />
+                  <div className="min-w-0 flex-1">
+                    <p className="bold text-xs">{paymentResult.message}</p>
+                    <p className="mt-1">
+                      Status:{" "}
+                      <span className="font-medium capitalize">
+                        {paymentResult.payment_status}
+                      </span>
                     </p>
-                  )}
-                  {paymentResult.order_id && (
-                    <p className="mt-1 break-all text-xs opacity-90">
-                      Order ID: {paymentResult.order_id}
-                    </p>
-                  )}
+                    {paymentResult.transaction_id && (
+                      <p className="mt-0.5 break-all text-[10px] opacity-90">
+                        Transaction ID: {paymentResult.transaction_id}
+                      </p>
+                    )}
+                    {paymentResult.order_id && (
+                      <p className="mt-0.5 break-all text-[10px] opacity-90">
+                        Order ID: {paymentResult.order_id}
+                      </p>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
 
-          <form className="mt-6 space-y-6" onSubmit={handleSubmit}>
+          <form
+            className="mt-4 flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto overscroll-contain pr-0.5"
+            onSubmit={handleSubmit}
+          >
             <div>
-              <h3 className="bold text-sm text-[#222222]">Choose your plan</h3>
-              <div className="mt-3">
+              <h3 className="bold text-xs text-[#222222]">Choose your plan</h3>
+              <div className="mt-2">
                 {isLoadingPlans ? (
                   <PlanSkeleton />
                 ) : (
-                  <div className="grid gap-2.5 sm:grid-cols-2">
+                  <div className="grid gap-2 sm:grid-cols-2">
                     {plans.map((plan) => {
                       const selected = selectedPlanId === plan.id;
                       return (
@@ -361,13 +360,13 @@ export default function SubscriptionCheckout() {
                           key={plan.id}
                           type="button"
                           onClick={() => setSelectedPlanId(plan.id)}
-                          className={`rounded-2xl border px-3.5 py-3 text-left transition ${selectionCardClass(selected)}`}
+                          className={`rounded-xl border px-3 py-2.5 text-left transition ${selectionCardClass(selected)}`}
                         >
-                          <p className="text-xs text-[#666666]">{plan.label}</p>
-                          <p className="bold mt-1 text-lg leading-none tracking-[-0.02em]">
+                          <p className="text-[11px] text-[#666666]">{plan.label}</p>
+                          <p className="bold mt-0.5 text-base leading-none tracking-[-0.02em]">
                             {formatPlanPrice(plan)}
                           </p>
-                          <p className="mt-1.5 text-xs text-[#666666]">
+                          <p className="mt-1 text-[11px] text-[#666666]">
                             {formatPlanDuration(plan)}
                           </p>
                         </button>
@@ -376,15 +375,15 @@ export default function SubscriptionCheckout() {
                   </div>
                 )}
               </div>
-              <p className="mt-2.5 text-xs leading-5 text-[#666666]">
+              <p className="mt-1.5 text-[11px] leading-4 text-[#666666]">
                 If you already subscribe, this time is added to your current
                 expiry date.
               </p>
             </div>
 
             <div>
-              <h3 className="bold text-sm text-[#222222]">Pay with</h3>
-              <div className="mt-3 grid gap-2.5 sm:grid-cols-2">
+              <h3 className="bold text-xs text-[#222222]">Pay with</h3>
+              <div className="mt-2 grid gap-2 sm:grid-cols-2">
                 {(["easypaisa", "jazzcash"] as PaymentProvider[]).map((provider) => {
                   const selected = paymentMethod === provider;
                   return (
@@ -393,53 +392,51 @@ export default function SubscriptionCheckout() {
                       type="button"
                       onClick={() => setPaymentMethod(provider)}
                       aria-pressed={selected}
-                      className={`flex min-h-[58px] items-center justify-center rounded-2xl border px-4 py-3 transition ${selectionCardClass(selected)}`}
+                      className={`flex min-h-[48px] items-center justify-center rounded-xl border px-3 py-2 transition ${selectionCardClass(selected)}`}
                     >
                       <PaymentLogo provider={provider} />
                     </button>
                   );
                 })}
               </div>
-              <p className="mt-2.5 text-xs leading-5 text-[#666666]">
+              <p className="mt-1.5 text-[11px] leading-4 text-[#666666]">
                 Use its registered mobile number and keep your phone nearby to
                 approve the payment.
               </p>
             </div>
 
             <div>
-              <h3 className="bold text-sm text-[#222222]">
-                Contact information
-              </h3>
-              <div className="mt-3 grid gap-3 sm:grid-cols-2">
+              <h3 className="bold text-xs text-[#222222]">Contact information</h3>
+              <div className="mt-2 grid gap-2 sm:grid-cols-2">
                 <label className="block">
-                  <span className="mb-1.5 block text-xs text-[#555555]">Name</span>
+                  <span className="mb-1 block text-[11px] text-[#555555]">Name</span>
                   <input
                     type="text"
                     value={name}
                     onChange={(event) => setName(event.target.value)}
                     placeholder="As it appears on your account"
-                    className="w-full rounded-xl border border-[#E4E4E4] bg-white px-3.5 py-2.5 text-sm outline-none transition placeholder:text-[#A8A8A8] focus:border-[#999999]"
+                    className="w-full rounded-lg border border-[#E4E4E4] bg-white px-3 py-2 text-sm outline-none transition placeholder:text-[#A8A8A8] focus:border-[#999999]"
                     autoComplete="name"
                     required
                     disabled={isSubmitting}
                   />
                 </label>
                 <label className="block">
-                  <span className="mb-1.5 block text-xs text-[#555555]">Email</span>
+                  <span className="mb-1 block text-[11px] text-[#555555]">Email</span>
                   <input
                     type="email"
                     value={email}
                     onChange={(event) => setEmail(event.target.value)}
                     placeholder="you@example.com"
-                    className="w-full rounded-xl border border-[#E4E4E4] bg-white px-3.5 py-2.5 text-sm outline-none transition placeholder:text-[#A8A8A8] focus:border-[#999999]"
+                    className="w-full rounded-lg border border-[#E4E4E4] bg-white px-3 py-2 text-sm outline-none transition placeholder:text-[#A8A8A8] focus:border-[#999999]"
                     autoComplete="email"
                     required
                     disabled={isSubmitting}
                   />
                 </label>
               </div>
-              <label className="mt-3 block">
-                <span className="mb-1.5 block text-xs text-[#555555]">
+              <label className="mt-2 block">
+                <span className="mb-1 block text-[11px] text-[#555555]">
                   Mobile number
                 </span>
                 <input
@@ -447,7 +444,7 @@ export default function SubscriptionCheckout() {
                   value={mobile}
                   onChange={(event) => setMobile(event.target.value)}
                   placeholder="03001234567"
-                  className="w-full rounded-xl border border-[#E4E4E4] bg-white px-3.5 py-2.5 text-sm outline-none transition placeholder:text-[#A8A8A8] focus:border-[#999999]"
+                  className="w-full rounded-lg border border-[#E4E4E4] bg-white px-3 py-2 text-sm outline-none transition placeholder:text-[#A8A8A8] focus:border-[#999999]"
                   autoComplete="tel"
                   inputMode="tel"
                   required
@@ -456,9 +453,9 @@ export default function SubscriptionCheckout() {
               </label>
             </div>
 
-            <div>
+            <div className="shrink-0 pb-1">
               {submitError && (
-                <div className="mb-3 rounded-2xl border border-[#F0B4B4] bg-[#FFF3F3] px-3.5 py-2.5 text-sm text-[#9B1C1C]">
+                <div className="mb-2 rounded-xl border border-[#F0B4B4] bg-[#FFF3F3] px-3 py-2 text-xs text-[#9B1C1C]">
                   {submitError}
                 </div>
               )}
@@ -468,7 +465,7 @@ export default function SubscriptionCheckout() {
                 disabled={
                   isSubmitting || isLoadingPlans || !selectedPlan || !!catalogError
                 }
-                className="bold w-full rounded-xl bg-[#333333] px-5 py-3 text-sm text-white transition hover:bg-black disabled:cursor-not-allowed disabled:bg-[#333333]/55"
+                className="bold w-full rounded-lg bg-[#333333] px-4 py-2.5 text-sm text-white transition hover:bg-black disabled:cursor-not-allowed disabled:bg-[#333333]/55"
               >
                 {isSubmitting
                   ? "Processing payment..."
@@ -476,8 +473,8 @@ export default function SubscriptionCheckout() {
                     ? `Pay ${formatPlanPrice(selectedPlan)}`
                     : "Pay"}
               </button>
-              <p className="mt-3 flex flex-wrap items-center gap-x-1 gap-y-1 text-[11px] leading-5 text-[#888888]">
-                <FaLock className="mr-1 text-[10px]" />
+              <p className="mt-2 flex flex-wrap items-center gap-x-1 gap-y-0.5 text-[10px] leading-4 text-[#888888]">
+                <FaLock className="mr-0.5 text-[9px]" />
                 Your PIN or MPIN stays with {paymentProvider}; we never receive
                 it. Prefer another way?
                 <a
