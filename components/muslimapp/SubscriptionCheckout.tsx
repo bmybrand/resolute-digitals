@@ -209,17 +209,40 @@ export default function SubscriptionCheckout() {
   return (
     <div className="flex h-full flex-col overflow-hidden bg-white text-[#141414]">
       <header className="shrink-0 border-b border-[#ECECEC] px-5 py-2.5 sm:px-8 lg:px-10">
-        <div className="mx-auto flex max-w-6xl items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg bg-black p-1">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
+          <Link
+            href="/"
+            className="flex shrink-0 items-center transition hover:opacity-80"
+            aria-label="Resolute Digitals home"
+          >
             <Image
-              src="/assets/muslim-app-logo.png"
-              alt="The Muslim App"
-              width={32}
-              height={32}
-              className="h-full w-full object-contain"
+              src="/assets/resolute-logo-light-navbar.png"
+              alt="Resolute Digitals"
+              width={148}
+              height={36}
+              className="h-7 w-auto object-contain sm:h-8"
+              priority
             />
-          </div>
-          <span className="bold text-sm tracking-tight">The Muslim App</span>
+          </Link>
+
+          <Link
+            href="/partners/muslim-app/"
+            className="flex shrink-0 items-center gap-2 rounded-lg border border-[#E8E8E8] bg-[#FAFAFA] px-2.5 py-1.5 transition hover:border-[#D0D0D0]"
+          >
+            <div className="flex h-6 w-6 items-center justify-center overflow-hidden rounded-md bg-black p-0.5">
+              <Image
+                src="/assets/muslim-app-logo.png"
+                alt=""
+                width={24}
+                height={24}
+                className="h-full w-full object-contain"
+                aria-hidden
+              />
+            </div>
+            <span className="hidden text-xs text-[#555555] sm:inline">
+              The Muslim App
+            </span>
+          </Link>
         </div>
       </header>
 
@@ -293,7 +316,7 @@ export default function SubscriptionCheckout() {
 
           <p className="mt-3 flex items-center gap-1.5 text-[10px] text-[#888888] lg:mt-auto">
             <FaLock className="text-[9px]" />
-            Secure checkout powered by Swich
+            Resolute Digitals · Secure checkout powered by Swich
           </p>
         </section>
 
@@ -305,6 +328,26 @@ export default function SubscriptionCheckout() {
             <p className="mt-1 max-w-xl text-xs leading-5 text-[#666666]">
               Choose your wallet and approve the payment request from your phone.
             </p>
+
+            <div className="mt-2 inline-flex items-center gap-2 rounded-full border border-[#E8E8E8] bg-[#F8F8F8] px-2.5 py-1">
+              <div className="flex h-5 w-5 items-center justify-center overflow-hidden rounded bg-black p-0.5">
+                <Image
+                  src="/assets/muslim-app-logo.png"
+                  alt=""
+                  width={20}
+                  height={20}
+                  className="h-full w-full object-contain"
+                  aria-hidden
+                />
+              </div>
+              <span className="text-[11px] text-[#666666]">
+                <span className="text-[#999999]">Product</span>
+                <span aria-hidden="true" className="mx-1">
+                  ·
+                </span>
+                The Muslim App Pro
+              </span>
+            </div>
 
             {catalogError && (
               <div className="mt-3 rounded-xl border border-[#F0B4B4] bg-[#FFF3F3] px-3 py-2 text-xs text-[#9B1C1C]">
