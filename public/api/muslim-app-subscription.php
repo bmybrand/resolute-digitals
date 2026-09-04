@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") {
   exit;
 }
 
-$apiBase = rtrim(getenv("MUSLIM_APP_API_URL") ?: "https://muslim-app-backend-dev--muslimapp-prod.us-east4.hosted.app", "/");
+$apiBase = rtrim(getenv("MUSLIM_APP_API_URL") ?: "https://muslim-app-backend--muslimapp-prod.us-east4.hosted.app", "/");
 $action = $_GET["action"] ?? "";
 
 function proxy_json_response(int $status, string $body): void {

@@ -31,7 +31,7 @@ export type EwalletPaymentResponse = {
 
 export const muslimAppApiUrl =
   process.env.NEXT_PUBLIC_MUSLIM_APP_API_URL?.trim() ||
-  "https://muslim-app-backend-dev--muslimapp-prod.us-east4.hosted.app";
+  "https://muslim-app-backend--muslimapp-prod.us-east4.hosted.app";
 
 const subscriptionProxyBase = "/api/muslim-app-subscription.php";
 
