@@ -1,0 +1,7 @@
+:HL["/_next/static/chunks/5a08f38bfe4e1952.css","style"]
+:HL["/assets/rd-image134.svg","image"]
+:HL["/assets/rd-image135.svg","image"]
+:HL["/assets/rd-image136.svg","image"]
+:HL["/assets/rd-image137.svg","image"]
+:HL["/assets/rd-image138.svg","image"]
+0:{"buildId":"Jxseo7eH1qB3BEbdPc-u3","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"services","paramType":null,"paramKey":"services","hasRuntimePrefetch":false,"slots":{"children":{"name":"data-operations","paramType":null,"paramKey":"data-operations","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
