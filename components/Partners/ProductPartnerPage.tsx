@@ -363,6 +363,11 @@ export default function ProductPartnerPage({ partner }: { partner: Partner }) {
             <p className="mt-4 max-w-xl text-base leading-7 text-white/65 sm:text-lg">{content.ctaDescription}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href={content.websiteUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-full bg-white px-7 py-4 font-semibold text-black transition hover:gap-4 hover:bg-white/85">{content.ctaLinkLabel} <FaArrowRight className="-rotate-45" /></a>
+              {partner.slug === "muslim-app" && (
+                <Link href="/partners/muslim-app/subscribe/" className="flex items-center gap-3 rounded-full bg-white px-7 py-4 font-semibold text-black transition hover:gap-4 hover:bg-white/85">
+                  Subscribe to Pro <FaWallet />
+                </Link>
+              )}
               <Link href="/contact/" className="flex items-center gap-3 rounded-full border border-white/35 bg-black/20 px-7 py-4 font-semibold text-white backdrop-blur-md transition hover:gap-4 hover:bg-white hover:text-black">Start a conversation <FaArrowRight /></Link>
             </div>
            
