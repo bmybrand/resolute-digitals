@@ -37,7 +37,9 @@ jobs:
         run: test -d out
 
       - name: Add cPanel deployment config
-        run: cp .cpanel.yml out/.cpanel.yml
+        run: |
+          cp .cpanel.yml out/.cpanel.yml
+          cp vercel.json out/vercel.json
 
       - name: Publish cpanel branch
         env:

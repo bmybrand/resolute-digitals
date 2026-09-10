@@ -44,6 +44,7 @@ git clean -fdx
 Get-ChildItem -Force | Where-Object { $_.Name -ne ".git" } | Remove-Item -Recurse -Force
 Copy-Item (Join-Path $outDir "*") $worktreeDir -Recurse -Force
 Copy-Item (Join-Path $repoRoot ".cpanel.yml") $worktreeDir -Force
+Copy-Item (Join-Path $repoRoot "vercel.json") $worktreeDir -Force
 
 git add -A
 git commit -m "Deploy static site"
