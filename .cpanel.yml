@@ -1,0 +1,6 @@
+---
+# Runs after cPanel pulls the `cpanel` branch (Git Version Control → Deploy).
+# DEPLOYPATH is set by cPanel to your configured document root.
+deployment:
+  tasks:
+    - /bin/sh -c 'if command -v rsync >/dev/null 2>&1; then rsync -av --delete --exclude .git ./ "$DEPLOYPATH/"; else find . -mindepth 1 -maxdepth 1 ! -name .git -exec cp -a {} "$DEPLOYPATH/" \; ; fi'
