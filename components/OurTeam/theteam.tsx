@@ -23,18 +23,6 @@ const teamSections = [
         img: "/assets/rd-image183.webp",
         linkedin: "https://www.linkedin.com/in/shafqat-ali-shah/",
       },
-      {
-        name: "Hussain Shaja",
-        role: "Upwork Team Lead.",
-        img: "/assets/rd-image162.webp",
-        linkedin: "#",
-      },
-      {
-        name: "Ibrahim Zafar",
-        role: "Upwork Bidding Expert",
-        img: "/assets/rd-image168.webp",
-        linkedin: "#",
-      }
     ],
   },
   {
