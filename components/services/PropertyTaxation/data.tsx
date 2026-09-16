@@ -101,7 +101,8 @@ export const softwareStatsSection = {
 
 // Software Stats
 export const softwareStats = {
-  image: "/assets/rd-image123.svg",
+  image: "/assets/ax-sd-st-thumb.webp.png",
+  imageAlt: "Property tax calculation with a house model and calculator",
   stats: [
     {
       value: "800",

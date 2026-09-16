@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import {
   SoftwareStat,
   softwareStatsSection,
@@ -33,18 +34,18 @@ const ForthSec: React.FC<ForthSecProps> = ({
   features = defaultFeatures,
 }) => {
   return (
-    <div className="flex flex-col lg:flex-row 2xl:px-49 mt-20 gap-20">
-  {/* IMAGE */}
-  <div>
-    <img
-      src={softwareStats.image} // use parent image
-      alt="Software Stats Section"
-      className="w-full h-auto"
+    <div className="flex flex-col lg:flex-row 2xl:px-49 mt-20 gap-10 lg:gap-20">
+  <div className="w-full max-w-[506px] mx-auto lg:mx-0 lg:w-2/5 shrink-0">
+    <Image
+      src={softwareStats.image}
+      alt={softwareStats.imageAlt}
+      width={506}
+      height={748}
+      className="w-full h-auto rounded-2xl"
     />
   </div>
-
   {/* CONTENT */}
-  <div className="w-full lg:w-3/5 flex flex-col justify-center">
+  <div className="w-full lg:flex-1 flex flex-col justify-center">
     {/* HEADING */}
     <div className="mt-6">
       <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl xl:text-[43px] font-semibold leading-tight">

@@ -1,9 +1,15 @@
 import React from "react";
+import Image from "next/image";
 
 export const Thirdsec = () => {
-  // Avatar image array
   const avatars = [
-    1, 2, 3, 4, 5, 6
+    "/assets/1 396193.png",
+    "/assets/3 56.png",
+    "/assets/4 5.png",
+    "/assets/7 39.png",
+    "/assets/8 1.png",
+    "/assets/10 396193.png",
+    "/assets/16 1.png",
   ];
 
   return (
@@ -57,14 +63,16 @@ export const Thirdsec = () => {
 
   {/* Left: Avatars */}
   <div className="flex items-center flex-shrink-0">
-    {avatars.map((img, index) => (
-      <img
-        key={index}
-        src={`https://i.pravatar.cc/150?img=${img}`}
-        alt="user"
+    {avatars.map((src, index) => (
+      <Image
+        key={src}
+        src={src}
+        alt=""
+        width={120}
+        height={120}
         className={`
           rounded-full object-cover border-2 border-[#04102B]
-          w-[2.6rem] h-[2.6rem]
+          w-7 h-7
           sm:w-[3.2rem] sm:h-[3.2rem]
           md:w-[3.8rem] md:h-[3.8rem]
           ${index !== 0 ? "-ml-3 sm:-ml-4 md:-ml-5" : ""}

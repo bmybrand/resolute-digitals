@@ -215,8 +215,8 @@ export const FloatingNav = ({
             {/* Left image */}
             <div className="flex-shrink-0 w-full lg:w-48 h-40 lg:h-auto">
               <img
-                src="https://picsum.photos/200"
-                alt="Dropdown Image"
+                src="/assets/Group 1597884107.png"
+                alt="Resolute Digitals"
                 className="w-full h-full object-cover rounded-lg shadow-md"
               />
             </div>

@@ -1,9 +1,15 @@
 import React from "react";
+import Image from "next/image";
 
 export const Secondsec = () => {
-  // Avatar image array
   const avatars = [
-    1, 2, 3, 4, 5, 6
+    "/assets/1 396193.png",
+    "/assets/3 56.png",
+    "/assets/4 5.png",
+    "/assets/7 39.png",
+    "/assets/8 1.png",
+    "/assets/10 396193.png",
+    "/assets/16 1.png",
   ];
 
   return (
@@ -55,15 +61,17 @@ export const Secondsec = () => {
 
           {/* Left: Avatar Mapping */}
           <div className="flex items-center lg:justify-center lg:w-[70%]">
-            {avatars.map((img, index) => (
-              <img
-                key={index}
-                src={`https://i.pravatar.cc/150?img=${img}`}
-                alt="user"
+            {avatars.map((src, index) => (
+              <Image
+                key={src}
+                src={src}
+                alt=""
+                width={120}
+                height={120}
                 className={`
                   rounded-full border-3 border-[#04102B] object-cover
-                  w-[clamp(2.9rem,4vw,4.8rem)] h-[clamp(2.9rem,4vw,4.8rem)]
-                  ${index !== 0 ? "-ml-4 sm:-ml-6" : ""}
+                  w-7 h-7 sm:w-10 sm:h-10 lg:w-[clamp(2.9rem,4vw,4.8rem)] lg:h-[clamp(2.9rem,4vw,4.8rem)]
+                  ${index !== 0 ? "-ml-3 sm:-ml-4 lg:-ml-6" : ""}
                 `}
               />
             ))}

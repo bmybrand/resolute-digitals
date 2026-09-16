@@ -135,7 +135,8 @@ export const softwareStatsSection = {
 
 // Software Stats
 export const softwareStats = {
-  image: "/assets/rd-image123.svg", // parent image
+  image: "/assets/Group 1597884108.png",
+  imageAlt: "Analyst reviewing data charts on a tablet",
   stats: [
     {
       value: "360",
