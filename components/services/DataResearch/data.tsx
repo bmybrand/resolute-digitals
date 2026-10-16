@@ -146,14 +146,14 @@ export const softwareStats = {
         "We process sustainability reports, 10-K ESG disclosures, and quantitative ESG tables at scale—converting complex REIT reporting into structured datasets ready for institutional use.",
     },
     {
-      value: "5,000",
+      value: "10,000",
       highlight: "+",
       label: "ESG and Climate Metrics Standardized",
       description:
         "Our workflows normalize thousands of environmental, social, governance, and climate metrics by aligning definitions, units, and portfolio coverage across reporting periods.",
     },
     {
-      value: "95",
+      value: "97",
       highlight: "%",
       label: "QC Pass Consistency Rate",
       description:
