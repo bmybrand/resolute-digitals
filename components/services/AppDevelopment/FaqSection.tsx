@@ -13,7 +13,7 @@ const FaqSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="w-full 2xl:px-49 lg:mt-40 mt-20 ">
+    <section id="faq" className="w-full 2xl:px-49 lg:mt-40 mt-20 scroll-mt-28">
         <div className="flex flex-col divide-y divide-[#2C344A] gap-4">
           {faqs.map((item, index) => {
             const isOpen = openIndex === index;

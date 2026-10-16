@@ -67,9 +67,25 @@ const FooterSec = ({ variant = "default" }: FooterSecProps) => {
     ? "/assets/logo_dubai_footer.png"
     : "/assets/rd-image004.svg";
 
-  const normalizePath = (path: string) => path.replace(/\/+$/, "") || "/";
+  const normalizePath = (path: string) =>
+    (path.split("#")[0] || "/").replace(/\/+$/, "") || "/";
   const isActiveFooterLink = (href: string) =>
     !href.startsWith("http") && normalizePath(pathname) === normalizePath(href);
+
+  const serviceSlugMatch = pathname.match(/^\/services\/([^/]+)/);
+  const servicePagesWithFaq = new Set([
+    "software-development",
+    "app-development",
+    "digital-marketing",
+    "design-experience",
+    "property-taxation",
+    "ai-driven",
+    "data-research",
+  ]);
+  const currentServiceSlug = serviceSlugMatch?.[1] ?? "";
+  const faqHref = servicePagesWithFaq.has(currentServiceSlug)
+    ? `/services/${currentServiceSlug}/#faq`
+    : "/services/software-development/#faq";
 
   /*
    * ============================================================
@@ -128,18 +144,13 @@ const FooterSec = ({ variant = "default" }: FooterSecProps) => {
           external: false,
         },
         {
-          label: "Portfolio",
-          href: "/casestudy/",
-          external: false,
-        },
-        {
           label: "Case Studies",
           href: "/casestudy/",
           external: false,
         },
         {
           label: "FAQs",
-          href: "/services/#faq",
+          href: faqHref,
           external: false,
         },
       ],
@@ -156,11 +167,6 @@ const FooterSec = ({ variant = "default" }: FooterSecProps) => {
         {
           label: "Design & Experience",
           href: "/services/design-experience/",
-          external: false,
-        },
-        {
-          label: "Our Team",
-          href: "/about/#team",
           external: false,
         },
         {
