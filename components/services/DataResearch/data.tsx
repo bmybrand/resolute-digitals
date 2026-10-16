@@ -162,6 +162,61 @@ export const softwareStats = {
   ],
 };
 
+// Featured institutional projects (from Resolute portfolio PDF)
+export const projectHighlights = [
+  {
+    id: "walker-dunlop",
+    name: "Walker & Dunlop",
+    number: "01",
+    focus: "CRE borrower outreach & U.S. property tax research",
+    logo: "/assets/data-research/walker-dunlop.png",
+    details: [
+      "For Walker & Dunlop, we conducted targeted research and outreach to identify qualified commercial real estate borrowers. Working from a list of prospective clients, we performed skip tracing to locate and verify accurate contact information, primarily for large real estate owners with a focus on multifamily property owners. We then contacted these prospects via call, gathered relevant information about their properties and financing needs, assessed their eligibility for loan refinancing or financing opportunities based on Walker & Dunlop's criteria, and referred qualified clients to Walker & Dunlop's lending team for the next stage of the financing process.",
+      "For Walker & Dunlop, we also conducted detailed U.S. property tax research across Metropolitan Statistical Areas (MSAs), with a focus on multifamily properties containing five or more rental units. Our research covered how local tax authorities classify these properties, when tax rates were last updated, what events trigger reassessment, how frequently reassessments take place, and the typical reassessment ratio. We also collected the latest millage or tax rates, identified the factors used to calculate reassessed values, and documented any early-payment discounts or legal limits on property tax increases. This research helped Walker & Dunlop better understand local tax systems, estimate property tax obligations, and evaluate the financial impact of owning or financing multifamily real estate in different U.S. markets.",
+    ],
+  },
+  {
+    id: "ftse-russell",
+    name: "FTSE Russell",
+    number: "02",
+    focus: "REIT property-level data for index classification",
+    logo: "/assets/data-research/ftse-russell.png",
+    details: [
+      "For FTSE Russell, we collect, verify, and structure detailed property-level data covering Real Estate Investment Trusts (REITs) across multiple markets. This includes gathering information such as property locations, ownership details, building characteristics, occupancy rates, property usage, floor area, and sustainability certifications from publicly available reports and regulatory filings. The data is delivered through Walker & Dunlop, which serves as the intermediary by processing and validating it before it is used by FTSE Russell to support the classification of REITs and the publication of its globally recognized real estate indices.",
+    ],
+  },
+  {
+    id: "moodys",
+    name: "Moody's",
+    number: "03",
+    focus: "Commercial REIT asset data for risk analytics",
+    logo: "/assets/data-research/moodys.png",
+    details: [
+      "For Moody's, we collect and organize comprehensive property-level data covering commercial real estate assets owned by Real Estate Investment Trusts (REITs). The information includes property characteristics, ownership details, occupancy, building specifications, usage, and other key asset metrics sourced from public disclosures and regulatory filings. The data is provided through Walker & Dunlop, which acts as the intermediary by validating and standardizing the dataset before it is used by Moody's to strengthen its commercial real estate analytics, portfolio assessments, and risk evaluation for investors and financial institutions.",
+    ],
+  },
+  {
+    id: "nareit",
+    name: "Nareit",
+    number: "04",
+    focus: "ESG data for Annual Sustainability Report",
+    logo: "/assets/data-research/nareit.png",
+    details: [
+      "For Nareit, we collect, verify, and structure comprehensive Environmental, Social, and Governance (ESG) data covering publicly listed Real Estate Investment Trusts (REITs). Our work involves extracting and validating sustainability information from annual sustainability reports, 10-K filings, proxy statements, CDP disclosures, and other public sources. The dataset includes environmental performance metrics such as energy, water, greenhouse gas emissions, renewable energy, and green building certifications; climate risk and resilience indicators; as well as social and governance metrics covering tenant engagement, diversity, board composition, ESG oversight, sustainability targets, and responsible investment practices. Nareit uses this standardized dataset to publish its Annual Sustainability Report, providing the real estate industry, investors, and other stakeholders with a comprehensive benchmark of sustainability performance and ESG trends across publicly traded REITs.",
+    ],
+  },
+  {
+    id: "aperio",
+    name: "aperio",
+    number: "05",
+    focus: "Property & green portfolio data for ~110 REITs",
+    logo: "/assets/data-research/aperio.png",
+    details: [
+      "For Aperio, we collect, verify, and organize detailed property-level data for approximately 110 Real Estate Investment Trusts (REITs). Our research covers property names and locations, ownership percentages, building counts, property size, number of units, asset type, and other key building characteristics. We also collect information on the total area of each REIT's assets, the area covered by green-certified properties, and the percentage of the portfolio considered green. By converting information from REIT reports and public disclosures into a consistent and structured dataset, we help Aperio assess property portfolios, compare companies, and evaluate their exposure to environmentally sustainable real estate assets.",
+    ],
+  },
+];
+
 // FAQs
 export const faqs: FaqItem[] = [
   {

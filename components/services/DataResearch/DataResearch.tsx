@@ -8,8 +8,11 @@ import WorkTogether from "../workTogether";
 import Rewiewcards from "@/components/Home/rewiewcards";
 import ContactSection from "../../About/ContactSection";
 import Footersec from "../../Home/footersec";
-import CoreCapabilities from "./CoreCapabilities"
-export const dynamic = 'force-static'
+import CoreCapabilities from "./CoreCapabilities";
+import ProjectLogosSlider from "./ProjectLogosSlider";
+
+export const dynamic = "force-static";
+
 export default function AppDevelopment() {
   return (
     <div className="bg-[#000A21]  ">
@@ -25,6 +28,7 @@ export default function AppDevelopment() {
     <Thirdsec/>
     <div className=" p-5 lg:p-9">
     <Forthsec/>
+    <ProjectLogosSlider />
     <FaqSection/>
     </div> 
     
