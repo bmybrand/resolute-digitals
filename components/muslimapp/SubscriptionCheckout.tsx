@@ -563,7 +563,7 @@ export default function SubscriptionCheckout() {
               </div>
               <label className="mt-2 block lg:mt-3">
                 <span className="mb-1 block text-[11px] text-[#555555] lg:mb-1.5 lg:text-xs">
-                  Mobile number
+                  Mobile / Account Number
                 </span>
                 <input
                   type="tel"
