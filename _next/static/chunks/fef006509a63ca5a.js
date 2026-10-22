@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,9409,e=>{"use strict";var t=e.i(43476),i=e.i(71645);function a(){return(0,i.useEffect)(()=>{window.location.replace("/about/#partners")},[]),(0,t.jsx)("main",{className:"min-h-screen bg-[#000A21]","aria-hidden":"true"})}e.s(["default",()=>a])}]);

@@ -1,0 +1,5 @@
+:HL["/_next/static/chunks/c12858ef0c8a12fc.css","style"]
+:HL["/assets/rd-image031.svg","image"]
+:HL["/assets/rd-image032.svg","image"]
+:HL["/assets/rd-image102.svg","image"]
+0:{"buildId":"rz7iwnuSPWxkexp8LMXNU","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"about","paramType":null,"paramKey":"about","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
